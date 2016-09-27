@@ -3,9 +3,6 @@
   <description>Roots Coding Standards</description>
 
   <!-- Scan these files -->
-  <file>functions.php</file>
-  <file>index.php</file>
-  <file>src</file>
   <file>templates</file>
 
   <!-- Show colors in console -->
@@ -18,7 +15,7 @@
   <rule ref="PSR2"/>
 
   <!-- Exclusions below are for templates/ folder -->
-  
+
   <!-- Allow php files without any PHP in them -->
   <rule ref="Internal.NoCodeFound">
     <exclude-pattern>templates</exclude-pattern>
@@ -53,7 +50,7 @@
   <rule ref="PSR2.Namespaces.UseDeclaration.SpaceAfterLastUse">
     <exclude-pattern>templates</exclude-pattern>
   </rule>
-  
+
   <!-- Allow long lines -->
   <rule ref="Generic.Files.LineLength.TooLong">
     <exclude-pattern>templates</exclude-pattern>
@@ -62,7 +59,7 @@
   <!-- Ignore indentation rules -->
   <rule ref="Generic.WhiteSpace.ScopeIndent">
     <exclude-pattern>templates</exclude-pattern>
-  </rule>  
+  </rule>
 
   <!-- Allow PHP closing tags -->
   <rule ref="PSR2.Files.ClosingTag.NotAllowed">

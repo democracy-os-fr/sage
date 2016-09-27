@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+ 
+ if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
+     require_once $composer;
+ }

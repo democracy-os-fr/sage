@@ -1,0 +1,8 @@
+global-styling:
+  css:
+    theme:
+      dist/styles/main.css: {}
+
+bootstrap-scripts:
+  js:
+    dist/scripts/main.js: {}
