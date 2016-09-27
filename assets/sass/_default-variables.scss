@@ -11,7 +11,4 @@
  */
 
 // Set the proper directory for the Bootstrap Glyphicon font.
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-
-// Font Awesome | see: http://fontawesome.io/get-started/
-$fa-font-path:          '~font-awesome/fonts';
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
