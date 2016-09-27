@@ -2,11 +2,15 @@
   "entry": {
     "main": [
       "./scripts/main.js",
-      "./styles/style.scss"
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
     ]
   },
   "watch": [
-    "templates/**/*.php"
+    "templates/**/*.php",
+    "src/**/*.php"
   ],
   "publicPath": "/app/themes/sage",
   "devUrl": "https://example.dev",

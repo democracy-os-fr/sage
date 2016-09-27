@@ -1,21 +1,27 @@
 {
-  "name": "democracy-os-fr/sage",
-  "type": "drupal-theme",
+  "name": "roots/sage",
+  "type": "wordpress-theme",
   "license": "MIT",
-  "description": "Drupal starter theme with a modern development workflow",
-  "homepage": "https://www.drupal.org/project/bootstrap",
+  "description": "WordPress starter theme with a modern development workflow",
+  "homepage": "https://roots.io/sage/",
   "authors": [
     {
-      "name": "moustachu",
-      "email": "moustachu@democracyos.eu",
-      "homepage": "https://github.com/moustachu"
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    },
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
     }
   ],
   "keywords": [
-    "drupal"
+    "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/democracy-os-fr/sage/issues"
+    "issues": "https://github.com/roots/sage/issues",
+    "forum": "https://discourse.roots.io/"
   },
   "autoload": {
     "psr-4": {

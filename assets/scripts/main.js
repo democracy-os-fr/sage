@@ -1,6 +1,6 @@
 // import external dependencies
 import 'jquery';
-import 'bootstrap-sass/assets/javascripts/bootstrap';
+import 'bootstrap/dist/js/bootstrap';
 
 // import local dependencies
 import Router from './util/router';
