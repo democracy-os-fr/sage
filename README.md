@@ -94,12 +94,14 @@ _replace `THEMENAME` below with the name of your theme_
 2. Open `./THEMENAME/THEMENAME.info.yml` and change the name, description and any
    other properties to suite your needs. Make sure to rename the library name as
    well:  `- THEMENAME/globalstyling`.
-3. Rename the sub-theme configuration files, located at:
+3. Rename the sub-theme configuration file, located at:
    `./THEMENAME.libraries.yml`.
-4. Rename the sub-theme configuration files, located at:
+4. Rename the PHP entry point, located at:
+   `./THEMENAME.theme`.
+5. Rename the sub-theme configuration files, located at:
    `./THEMENAME/config/install/THEMENAME.settings.yml` and
    `./THEMENAME/config/schema/THEMENAME.schema.yml`.
-5. Open `./THEMENAME/config/schema/THEMENAME.schema.yml` and rename
+6. Open `./THEMENAME/config/schema/THEMENAME.schema.yml` and rename
    `- THEMENAME.settings:` and `'THEMETITLE settings'`
 
 ## Theme development
@@ -121,6 +123,8 @@ You now have all the necessary dependencies to run the build process.
 
 * `npm start` — Compile assets when file changes are made, start BrowserSync session
 * `npm run build` — Compile and optimize the files in your assets directory
+
+**The webpack assets versionning is not yet compatible with the Drupal Cache API. Use the common build for now.**
 * `npm run build:production` — Compile assets for production
 
 #### Additional commands

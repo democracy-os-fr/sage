@@ -2,8 +2,8 @@ core: 8.x
 type: theme
 base theme: bootstrap
 
-name: 'THEMETITLE'
-description: 'Uses the Bootstrap framework Sass source files and must be compiled (not for beginners).'
+name: 'agora'
+description: 'Bootstrap sass n shit'
 package: 'Bootstrap'
 
 regions:
@@ -20,5 +20,5 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'THEMENAME/global-styling'
-  - 'THEMENAME/bootstrap-scripts'
+  - 'agora/global-styling'
+  - 'agora/bootstrap-scripts'
