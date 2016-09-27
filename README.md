@@ -185,3 +185,8 @@ Keep track of development and community news.
 * Read and subscribe to the [Roots Blog](https://roots.io/blog/)
 * Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
 * Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+
+## Potential issues to be watched
++ Bootstrap parent theme need to be activated (settings conflicts)
++ The logo and favicon settings overrides
++ Production build workflow (assets versioning) vs Drupal Cache API
