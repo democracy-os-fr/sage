@@ -1,6 +1,8 @@
 # [Sage](https://roots.io/sage/)
 
-**This branch (`drupal-8`) is an attempt to adapt the [Roots.io Sage](https://roots.io/sage/) Wordpress workflow to the Drupal ecosystem.**
+**This branch (`agora`) is a customization for the [participez.nanterre.fr](https://participez.nanterre.fr) platform**
+
+**The branch (`drupal-8`) is an attempt to adapt the [Roots.io Sage](https://roots.io/sage/) Wordpress workflow to the Drupal ecosystem.**
 
 This is a **sub** theme (child theme in wordpress terms) for the [Drupal Bootstrap Theme](https://www.drupal.org/project/bootstrap).
 
