@@ -1,0 +1,22 @@
+
+.container-xs {
+  @extend .container;
+  max-width: $screen-xs;
+}
+
+.container-sm {
+  @extend .container;
+  max-width: $container-sm;
+}
+
+.container-md {
+  @extend .container;
+  max-width: $container-md;
+}
+
+// Page header.
+.page-header {
+  border: none;
+}
+
+.spacer-h { height: 35px ; }

@@ -1,0 +1,35 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+  {% set imgUrl %}
+       {{ content.field_image_browser }}
+  {% endset %}
+
+  <div class="bg-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+    <div class="jumbotron {{ container }}">
+      <h1>{{ label }}</h1>
+      {{ content.body }}
+    </div>
+  </div>
+
+
+  {{ devel_dump('- node campaign content :') }}
+  {{ devel_dump(content) }}
+
+  {% if content.field_enable_timeline|field_raw('value') %}
+    <h1>Timeline</h1>
+    <h2>{{ content.field_enable_timeline|field_value }}</h2>
+  {% endif %}
+
+  {% if content.field_enable_agenda|field_raw('value') %}
+    <h1>Agenda</h1>
+    <h2>{{ content.field_enable_agenda|field_value }}</h2>
+  {% endif %}
+
+  {% if content.field_enable_forum|field_raw('value') %}
+    <h1>Consultation(s)</h1>
+    <h2>{{ content.field_enable_forum|field_value }}</h2>
+  {% endif %}
+
+{% endblock %}

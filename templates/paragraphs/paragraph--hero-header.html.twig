@@ -1,0 +1,7 @@
+{% set imgUrl %}
+     {{ content.field_image }}
+{% endset %}
+
+<div class="bg-image" style="background-image: url('{{ imgUrl|striptags|trim }}')">
+  {{ content.field_texte }}
+</div>
