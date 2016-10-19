@@ -60,8 +60,8 @@
 
     {% if content.field_enable_forum|field_raw('value') %}
       <div role="tabpanel" class="tab-pane fade" id="forum">
-        <section>
-          <h2>forum</h2>
+        <section class="{{ container }}">
+          {{ content.field_forms|field_value }}
         </section>
       </div>
     {% endif %}
