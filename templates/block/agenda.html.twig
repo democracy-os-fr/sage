@@ -1,0 +1,36 @@
+{% set iframe_args = '?' %}
+{% if agenda_category %}
+  {% set iframe_args = iframe_args ~ 'oaq%5Bcategory%5D=' ~ agenda_category|clean_class %}
+  {{ devel_dump(agenda_category)}}
+{% endif %}
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="agenda-search">
+      <div class="cbpgsc cibulSearch" data-oasc data-cbctl="{{ agenda_id }}/{{ agenda_token }}|fr" data-lang="fr"></div>
+    </div>
+  </div>
+  <div class="cols-xs-12 col-sm-8">
+    {% if enable_filter %}
+    <div class="agenda-filter">
+      <div class="cbpgct cibulCategories" data-oact data-cbctl="{{ agenda_id }}/{{ agenda_token }}" data-lang="fr"></div>
+    </div>
+    {% endif %}
+    <div class="agenda-main-grid">
+      <iframe style="width:100%;" frameborder="0" scrolling="no" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="//openagenda.com/agendas/{{ agenda_id }}/embeds/{{ agenda_token }}/events{{ iframe_args }}"></iframe>
+    </div>
+  </div>
+  <div class="cols-xs-12 col-sm-4">
+    <div class="agenda-links">
+      <a class="btn btn-primary btn-block" href="{{ agenda_link|field_value }}/addevent"><i class="fa fa-plus"></i>&emsp;Proposer un évènement</a>
+      <a class="btn btn-default btn-sm btn-block" href="{{ agenda_link|field_value  }}/actions"><i class="fa fa-external-link"></i>&emsp;Exporter l'agenda</a>
+      <a class="btn btn-default btn-sm btn-block" href="/sites/default/files/Nanterre%20assises%202016%20Kit%20communication.zip"><i class="fa fa-download"></i>&emsp;Télécharger le kit de communication</a>
+    </div>
+    <div class="agenda-calendar">
+      <div class="cbpgcl cibulCalendar" data-oacl data-cbctl="{{ agenda_id }}/{{ agenda_token }}|fr" data-lang="fr"></div>
+    </div>
+    <div class="agenda-map">
+      <div class="cbpgmp cibulMap" data-oamp data-cbctl="{{ agenda_id }}/{{ agenda_token }}" data-lang="fr" ></div>
+    </div>
+  </div>
+</div>

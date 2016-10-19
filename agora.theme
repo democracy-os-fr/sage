@@ -19,7 +19,7 @@
  */
 function agora_theme() {
 
-  dcp('agora_theme');
+  //dcp('agora_theme');
   $hooks = Bootstrap::getThemeHooks();
   $hooks['user_login_form'] = array(
       'render element' => 'form',
@@ -30,6 +30,6 @@ function agora_theme() {
 
 function agora_form_alter(&$form, &$context1 = NULL, &$context2 = NULL){
 
-  dcp('agora_form_alter');
+  //dcp('agora_form_alter');
   // array_push($form['#attributes']['class'],'form-horizontal');
 }

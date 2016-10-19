@@ -13,23 +13,76 @@
     </div>
   </div>
 
-
   {{ devel_dump('- node campaign content :') }}
   {{ devel_dump(content) }}
 
-  {% if content.field_enable_timeline|field_raw('value') %}
-    <h1>Timeline</h1>
-    <h2>{{ content.field_enable_timeline|field_value }}</h2>
+  {% if content.field_enable_timeline|field_raw('value') or content.field_enable_agenda|field_raw('value') or content.field_enable_forum|field_raw('value') %}
+    <section class="{{ container }}">
+      <ul class="nav nav-tabs nav-justified nav-campaign" role="tablist">
+        <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Informations</a></li>
+
+        {% if content.field_enable_timeline|field_raw('value') %}
+          <li role="presentation" class=""><a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab">Étapes</a></li>
+        {% endif %}
+
+        {% if content.field_enable_forum|field_raw('value') %}
+        <li role="presentation" class=""><a href="#forum" aria-controls="forum" role="tab" data-toggle="tab">Consultation(s)</a></li>
+        {% endif %}
+
+        {% if content.field_enable_agenda|field_raw('value') %}
+          <li role="presentation" class=""><a href="#agenda" aria-controls="agenda" role="tab" data-toggle="tab">Agenda</a></li>
+        {% endif %}
+      </ul>
+    </section>
   {% endif %}
 
-  {% if content.field_enable_agenda|field_raw('value') %}
-    <h1>Agenda</h1>
-    <h2>{{ content.field_enable_agenda|field_value }}</h2>
-  {% endif %}
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="info">
+      <section class="{{ container }}">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            {{ content.field_about|field_value }}
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            {{ content.field_helper_01|field_value }}
+          </div>
+        </div>
+      </section>
+    </div>
 
-  {% if content.field_enable_forum|field_raw('value') %}
-    <h1>Consultation(s)</h1>
-    <h2>{{ content.field_enable_forum|field_value }}</h2>
-  {% endif %}
+    {% if content.field_enable_timeline|field_raw('value') %}
+      <div role="tabpanel" class="tab-pane fade" id="timeline">
+        <section>
+          {{ drupal_view('timeline','embed_1')|render }}
+        </section>
+      </div>
+    {% endif %}
+
+    {% if content.field_enable_forum|field_raw('value') %}
+      <div role="tabpanel" class="tab-pane fade" id="forum">
+        <section>
+          <h2>forum</h2>
+        </section>
+      </div>
+    {% endif %}
+
+    {% if content.field_enable_agenda|field_raw('value') %}
+      <div role="tabpanel" class="tab-pane fade" id="agenda">
+        <section class="{{ container }}">
+          {% set args = {
+              'agenda_id' : content.field_open_agenda_id|field_value,
+              'agenda_token': content.field_open_agenda_token|field_value,
+              'agenda_category': content.field_agenda_tag|field_value|safe_join(', '),
+              'agenda_link': content.field_agenda_link|field_value,
+              'enable_filter': false
+            }
+          %}
+          {% include 'agenda.html.twig' with args %}
+
+        </section>
+      </div>
+    {% endif %}
+
+  </div>
 
 {% endblock %}

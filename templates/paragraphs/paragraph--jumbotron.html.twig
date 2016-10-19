@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h2>
+    {{ content.field_title|field_value }}
+    <small>{{ content.field_subtitle|field_value }}</small>
+  </h1>
+  <p>
+    {{ content.field_content|field_value }}
+  </p>
+  <p>
+    {% for item in content.field_body %}
+      {% if content.field_body[loop.index0] is defined %}
+        {{ content.field_body[loop.index0] }}
+      {% endif %}
+    {% endfor %}
+  </p>
+</div>

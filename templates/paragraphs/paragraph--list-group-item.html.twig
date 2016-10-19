@@ -1,0 +1,9 @@
+{% if content.field_link[0]['#url'] is defined %}
+<a class="list-group-item {{ content.field_classses|field_value }}" href="{{ content.field_link[0]['#url'] }}">
+  {{ content.field_content|field_value }}
+</a>
+{% else %}
+  <div class="list-group-item {{ content.field_classses|field_value }}">
+    {{ content.field_content|field_value }}
+  </div>
+{% endif %}

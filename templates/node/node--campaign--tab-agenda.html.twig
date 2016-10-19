@@ -1,0 +1,29 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="agenda-search">
+      <div class="cbpgsc cibulSearch" data-oasc data-cbctl="{{ content.field_open_agenda_id|field_value }}/{{ content.field_open_agenda_token|field_value }}|fr" data-lang="fr"></div>
+    </div>
+  </div>
+  <div class="cols-xs-12 col-sm-8">
+    <div class="agenda-filter">
+      <div class="cbpgct cibulCategories" data-oact data-cbctl="{{ content.field_open_agenda_id|field_value }}/{{ content.field_open_agenda_token|field_value }}" data-lang="fr"></div>
+    </div>
+    <div class="agenda-main-grid">
+      <iframe style="width:100%;" frameborder="0" scrolling="no" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="//openagenda.com/agendas/{{ content.field_open_agenda_id|field_value }}/embeds/{{ content.field_open_agenda_token|field_value }}/events"></iframe>
+    </div>
+  </div>
+  <div class="cols-xs-12 col-sm-4">
+    <div class="agenda-links">
+      <a class="btn btn-primary btn-block" href="{{ content.field_open_agenda_link|field_value }}/addevent"><i class="fa fa-plus"></i>&emsp;Proposer un évènement</a>
+      <a class="btn btn-default btn-sm btn-block" href="{{ content.field_open_agenda_link|field_value }}/actions"><i class="fa fa-external-link"></i>&emsp;Exporter l'agenda</a>
+      <a class="btn btn-default btn-sm btn-block" href="/sites/default/files/Nanterre%20assises%202016%20Kit%20communication.zip"><i class="fa fa-download"></i>&emsp;Télécharger le kit de communication</a>
+    </div>
+    <div class="agenda-calendar">
+      <div class="cbpgcl cibulCalendar" data-oacl data-cbctl="{{ content.field_open_agenda_id|field_value }}/{{ content.field_open_agenda_token|field_value }}|fr" data-lang="fr"></div>
+    </div>
+    <div class="agenda-map">
+      <div class="cbpgmp cibulMap" data-oamp data-cbctl="{{ content.field_open_agenda_id|field_value }}/{{ content.field_open_agenda_token|field_value }}" data-lang="fr" ></div>
+    </div>
+  </div>
+</div>

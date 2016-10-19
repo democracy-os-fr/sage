@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {{ content.field_title|field_value }}
+    <small>{{ content.field_subtitle|field_value }}</small>
+  </div>
+  <div class="panel-body">
+    {% for item in content.field_body %}
+        {% if content.field_body[loop.index0] is defined %}
+          {{ content.field_body[loop.index0] }}
+        {% endif %}
+    {% endfor %}
+  </div>
+  {% for item in content.field_addon %}
+    {% if content.field_addon[loop.index0] is defined %}
+      {{ content.field_addon[loop.index0] }}
+    {% endif %}
+  {% endfor %}
+</div>
