@@ -29,7 +29,8 @@
     "php": ">=5.5.0",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "composer/installers": "~1.0",
-    "symfony/dependency-injection": "2.8"
+    "symfony/dependency-injection": "2.8",
+    "drupal/bootstrap": "3.x-dev"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
