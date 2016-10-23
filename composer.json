@@ -17,6 +17,9 @@
   "support": {
     "issues": "https://github.com/democracy-os-fr/sage/issues"
   },
+  "conflict": {
+      "drupal/drupal": "*"
+  },
   "autoload": {
     "psr-4": {
       "Roots\\Sage\\": "src/lib/Sage/"
@@ -24,18 +27,26 @@
   },
   "require": {
     "php": ">=5.5.0",
-    "drupal/bootstrap": "8.3.0-rc2",
-    "composer/installers": "~1.0"
+    "drupal-composer/drupal-scaffold": "^2.0.1",
+    "composer/installers": "~1.0",
+    "symfony/dependency-injection": "2.7"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
     "phpmd/phpmd": "^2.4.2"
   },
   "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "test": [
       "vendor/bin/phpcs",
       "vendor/bin/phpmd src text cleancode,codesize,controversial,design,naming,unusedcode"
     ]
   },
+  "repositories": [
+      {
+          "type": "composer",
+          "url": "https://packages.drupal.org/8"
+      }
+  ],
   "extra": {}
 }
