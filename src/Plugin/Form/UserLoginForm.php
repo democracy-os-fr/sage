@@ -5,7 +5,7 @@
  * Contains \Drupal\agora\Plugin\Form\UserLoginForm.
  */
 
-namespace Drupal\agora\Plugin\Form;
+namespace Drupal\sage\Plugin\Form;
 
 use Drupal\bootstrap\Annotation\BootstrapForm;
 use Drupal\bootstrap\Utility\Element;

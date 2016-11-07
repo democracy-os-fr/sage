@@ -20,5 +20,5 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'agora/global-styling'
-  - 'agora/bootstrap-scripts'
+  - 'sage/global-styling'
+  - 'sage/bootstrap-scripts'

@@ -4,7 +4,7 @@
  * Contains \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions.
  */
 
-namespace Drupal\agora\Plugin\Alter;
+namespace Drupal\sage\Plugin\Alter;
 
 use Drupal\bootstrap\Annotation\BootstrapAlter;
 use Drupal\bootstrap\Plugin\PluginBase;

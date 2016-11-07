@@ -17,9 +17,9 @@
  *
  * @see \Drupal\bootstrap\Bootstrap::getInfo()
  */
-function agora_theme() {
+function sage_theme() {
 
-  //dcp('agora_theme');
+  //dcp('sage_theme');
   $hooks = Bootstrap::getThemeHooks();
   $hooks['user_login_form'] = array(
       'render element' => 'form',
@@ -28,8 +28,8 @@ function agora_theme() {
   return $hooks;
 }
 
-function agora_form_alter(&$form, &$context1 = NULL, &$context2 = NULL){
+function sage_form_alter(&$form, &$context1 = NULL, &$context2 = NULL){
 
-  //dcp('agora_form_alter');
+  //dcp('sage_form_alter');
   // array_push($form['#attributes']['class'],'form-horizontal');
 }

@@ -9,7 +9,7 @@
     "src/**/*.php",
     "templates/**/*.twig"
   ],
-  "publicPath": "/themes/agora",
+  "publicPath": "/themes/contrib/sage",
   "devUrl": "http://localhost:8080",
   "proxyUrl": "https://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
