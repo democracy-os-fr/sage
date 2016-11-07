@@ -2,7 +2,7 @@ core: 8.x
 type: theme
 base theme: bootstrap
 
-name: 'agora'
+name: 'sage'
 description: 'Bootstrap sass n shit'
 package: 'Bootstrap'
 
