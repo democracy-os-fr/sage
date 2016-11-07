@@ -26,7 +26,7 @@ export default {
               // so strings will be correctly parsed:
               p[1] = decodeURIComponent(p[1].replace(/\+/g, ' '));
 
-              if (p[0].search(/\[\]/) >= 0) { // then it's an array
+              if (p[0].search(/\[]/) >= 0) { // then it's an array
                 p[0] = p[0].replace('[]', '');
 
                 if (typeof ret[p[0]] !== 'object') ret[p[0]] = [];

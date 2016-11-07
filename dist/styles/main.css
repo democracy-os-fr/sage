@@ -9587,7 +9587,7 @@ input[type="checkbox"]:disabled:checked:after,
 }
 
 /*!
- *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
@@ -9596,8 +9596,8 @@ input[type="checkbox"]:disabled:checked:after,
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/themes/agora/dist/vendor/fontawesome-webfont_25a32416.eot);
-  src: url(/themes/agora/dist/vendor/fontawesome-webfont_25a32416.eot?#iefix&v=4.6.3) format("embedded-opentype"), url(/themes/agora/dist/vendor/fontawesome-webfont_e6cf7c6e.woff2) format("woff2"), url(/themes/agora/dist/vendor/fontawesome-webfont_c8ddf1e5.woff) format("woff"), url(/themes/agora/dist/vendor/fontawesome-webfont_1dc35d25.ttf) format("truetype"), url(/themes/agora/dist/vendor/fontawesome-webfont_d7c63908.svg#fontawesomeregular) format("svg");
+  src: url(/themes/agora/dist/vendor/fontawesome-webfont_674f50d2.eot);
+  src: url(/themes/agora/dist/vendor/fontawesome-webfont_674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/themes/agora/dist/vendor/fontawesome-webfont_af7ae505.woff2) format("woff2"), url(/themes/agora/dist/vendor/fontawesome-webfont_fee66e71.woff) format("woff"), url(/themes/agora/dist/vendor/fontawesome-webfont_b06871f2.ttf) format("truetype"), url(/themes/agora/dist/vendor/fontawesome-webfont_912ec66d.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -11987,6 +11987,7 @@ input[type="checkbox"]:disabled:checked:after,
 }
 
 .fa-battery-4:before,
+.fa-battery:before,
 .fa-battery-full:before {
   content: "\F240";
 }
@@ -12441,6 +12442,184 @@ input[type="checkbox"]:disabled:checked:after,
 .fa-fa:before,
 .fa-font-awesome:before {
   content: "\F2B4";
+}
+
+.fa-handshake-o:before {
+  content: "\F2B5";
+}
+
+.fa-envelope-open:before {
+  content: "\F2B6";
+}
+
+.fa-envelope-open-o:before {
+  content: "\F2B7";
+}
+
+.fa-linode:before {
+  content: "\F2B8";
+}
+
+.fa-address-book:before {
+  content: "\F2B9";
+}
+
+.fa-address-book-o:before {
+  content: "\F2BA";
+}
+
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\F2BB";
+}
+
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\F2BC";
+}
+
+.fa-user-circle:before {
+  content: "\F2BD";
+}
+
+.fa-user-circle-o:before {
+  content: "\F2BE";
+}
+
+.fa-user-o:before {
+  content: "\F2C0";
+}
+
+.fa-id-badge:before {
+  content: "\F2C1";
+}
+
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\F2C2";
+}
+
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\F2C3";
+}
+
+.fa-quora:before {
+  content: "\F2C4";
+}
+
+.fa-free-code-camp:before {
+  content: "\F2C5";
+}
+
+.fa-telegram:before {
+  content: "\F2C6";
+}
+
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\F2C7";
+}
+
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\F2C8";
+}
+
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\F2C9";
+}
+
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\F2CA";
+}
+
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\F2CB";
+}
+
+.fa-shower:before {
+  content: "\F2CC";
+}
+
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\F2CD";
+}
+
+.fa-podcast:before {
+  content: "\F2CE";
+}
+
+.fa-window-maximize:before {
+  content: "\F2D0";
+}
+
+.fa-window-minimize:before {
+  content: "\F2D1";
+}
+
+.fa-window-restore:before {
+  content: "\F2D2";
+}
+
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\F2D3";
+}
+
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\F2D4";
+}
+
+.fa-bandcamp:before {
+  content: "\F2D5";
+}
+
+.fa-grav:before {
+  content: "\F2D6";
+}
+
+.fa-etsy:before {
+  content: "\F2D7";
+}
+
+.fa-imdb:before {
+  content: "\F2D8";
+}
+
+.fa-ravelry:before {
+  content: "\F2D9";
+}
+
+.fa-eercast:before {
+  content: "\F2DA";
+}
+
+.fa-microchip:before {
+  content: "\F2DB";
+}
+
+.fa-snowflake-o:before {
+  content: "\F2DC";
+}
+
+.fa-superpowers:before {
+  content: "\F2DD";
+}
+
+.fa-wpexplorer:before {
+  content: "\F2DE";
+}
+
+.fa-meetup:before {
+  content: "\F2E0";
 }
 
 .sr-only {

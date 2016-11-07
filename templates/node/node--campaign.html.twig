@@ -3,7 +3,7 @@
 {# Content #}
 {% block content %}
   {% set imgUrl %}
-       {{ content.field_image_browser }}
+       {{ content.field_image|field_value }}
   {% endset %}
 
   <div class="bg-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
@@ -41,10 +41,10 @@
       <section class="{{ container }}">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
-            {{ content.field_about|field_value }}
+            {{ content.field_content_main|field_value }}
           </div>
           <div class="col-xs-12 col-sm-6">
-            {{ content.field_helper_01|field_value }}
+            {{ content.field_content_side|field_value }}
           </div>
         </div>
       </section>

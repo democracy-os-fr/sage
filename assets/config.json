@@ -10,7 +10,7 @@
     "templates/**/*.twig"
   ],
   "publicPath": "/themes/agora",
-  "devUrl": "http://agorad8b.dev.dd:8083",
+  "devUrl": "http://localhost:8080",
   "proxyUrl": "https://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "browserSyncOptions": {
