@@ -328,8 +328,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/themes/agora/dist/vendor/glyphicons-halflings-regular_f4769f9b.eot);
-  src: url(/themes/agora/dist/vendor/glyphicons-halflings-regular_f4769f9b.eot?#iefix) format("embedded-opentype"), url(/themes/agora/dist/vendor/glyphicons-halflings-regular_448c34a5.woff2) format("woff2"), url(/themes/agora/dist/vendor/glyphicons-halflings-regular_fa277232.woff) format("woff"), url(/themes/agora/dist/vendor/glyphicons-halflings-regular_e18bbf61.ttf) format("truetype"), url(/themes/agora/dist/vendor/glyphicons-halflings-regular_89889688.svg#glyphicons_halflingsregular) format("svg");
+  src: url(/themes/contrib/sage/dist/vendor/glyphicons-halflings-regular_f4769f9b.eot);
+  src: url(/themes/contrib/sage/dist/vendor/glyphicons-halflings-regular_f4769f9b.eot?#iefix) format("embedded-opentype"), url(/themes/contrib/sage/dist/vendor/glyphicons-halflings-regular_448c34a5.woff2) format("woff2"), url(/themes/contrib/sage/dist/vendor/glyphicons-halflings-regular_fa277232.woff) format("woff"), url(/themes/contrib/sage/dist/vendor/glyphicons-halflings-regular_e18bbf61.ttf) format("truetype"), url(/themes/contrib/sage/dist/vendor/glyphicons-halflings-regular_89889688.svg#glyphicons_halflingsregular) format("svg");
 }
 
 .glyphicon {
@@ -9596,8 +9596,8 @@ input[type="checkbox"]:disabled:checked:after,
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/themes/agora/dist/vendor/fontawesome-webfont_674f50d2.eot);
-  src: url(/themes/agora/dist/vendor/fontawesome-webfont_674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/themes/agora/dist/vendor/fontawesome-webfont_af7ae505.woff2) format("woff2"), url(/themes/agora/dist/vendor/fontawesome-webfont_fee66e71.woff) format("woff"), url(/themes/agora/dist/vendor/fontawesome-webfont_b06871f2.ttf) format("truetype"), url(/themes/agora/dist/vendor/fontawesome-webfont_912ec66d.svg#fontawesomeregular) format("svg");
+  src: url(/themes/contrib/sage/dist/vendor/fontawesome-webfont_674f50d2.eot);
+  src: url(/themes/contrib/sage/dist/vendor/fontawesome-webfont_674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/themes/contrib/sage/dist/vendor/fontawesome-webfont_af7ae505.woff2) format("woff2"), url(/themes/contrib/sage/dist/vendor/fontawesome-webfont_fee66e71.woff) format("woff"), url(/themes/contrib/sage/dist/vendor/fontawesome-webfont_b06871f2.ttf) format("truetype"), url(/themes/contrib/sage/dist/vendor/fontawesome-webfont_912ec66d.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -12939,7 +12939,7 @@ html.js .ajax-new-content:empty {
 }
 
 .form-required:after {
-  background-image: url(/themes/agora/dist/images/required.svg);
+  background-image: url(/themes/contrib/sage/dist/images/required.svg);
   background-size: 10px 7px;
   content: "";
   display: inline-block;
@@ -13113,6 +13113,16 @@ article.campaign .nav-campaign {
 .panel-title:focus,
 .panel-title:hover {
   text-decoration: none;
+}
+
+.panel .bg-image {
+  padding: 6px 16px;
+}
+
+.panel-event .panel-heading {
+  background-color: #A91833;
+  color: #fff;
+  font-weight: bold;
 }
 
 /**
@@ -13354,10 +13364,15 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   background-position: center center;
 }
 
+.bg-image.bg-dark,
 .bg-image .jumbotron {
   background-color: transparent;
 }
 
+.bg-image.bg-dark,
+.bg-image.bg-dark h1,
+.bg-image.bg-dark h2,
+.bg-image.bg-dark h3,
 .bg-image .jumbotron,
 .bg-image .jumbotron h1,
 .bg-image .jumbotron h2,
@@ -13365,6 +13380,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   color: #fff;
 }
 
+.bg-image.bg-dark h1,
 .bg-image .jumbotron h1 {
   opacity: 0.85;
 }

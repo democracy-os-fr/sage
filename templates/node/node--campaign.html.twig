@@ -6,7 +6,7 @@
        {{ content.field_image|field_value }}
   {% endset %}
 
-  <div class="bg-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+  <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
     <div class="jumbotron {{ container }}">
       <h1>{{ label }}</h1>
       {{ content.body }}

@@ -33,3 +33,9 @@ function sage_form_alter(&$form, &$context1 = NULL, &$context2 = NULL){
   //dcp('sage_form_alter');
   // array_push($form['#attributes']['class'],'form-horizontal');
 }
+
+
+function sage_preprocess_node__event(&$variables){
+  dcp('sage_preprocess_event');
+  dcp($variables);
+}

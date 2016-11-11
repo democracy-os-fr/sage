@@ -12,7 +12,7 @@ module.exports = class {
     this.watcher = null;
     this.compiler = null;
     this.options = mergeWithConcat({
-      proxyUrl: 'https://localhost:3000',
+      proxyUrl: 'http://localhost:3000',
       callback() {},
     }, options);
   }

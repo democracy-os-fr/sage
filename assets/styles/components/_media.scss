@@ -1,7 +1,7 @@
 .bg-image {
   background-size: cover;
   background-position: center center ;
-  .jumbotron {
+  &.bg-dark, .jumbotron {
     background-color: transparent;
 
     &, h1, h2, h3 {

@@ -12,3 +12,17 @@
     text-decoration: none;
   }
 }
+
+.panel {
+  .bg-image {
+    padding: $padding-base-vertical $padding-base-horizontal ;
+  }
+}
+
+.panel-event {
+  .panel-heading {
+    background-color: $dark-red ;
+    color: $navbar-inverse-link-color;
+    font-weight: bold;
+  }
+}

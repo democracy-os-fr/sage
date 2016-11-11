@@ -1,0 +1,47 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="panel panel-event">
+
+  <div class="panel-heading">
+    {{ content.field_campaign|field_target_entity.label }}
+  </div>
+
+  {% set campaignId %}
+       {{ content.field_campaign|field_target_entity.id }}
+  {% endset %}
+  {% set imgUrl %}
+       {{ drupal_field('field_image', 'node', content.field_campaign|field_target_entity.id )|field_value }}
+  {% endset %}
+
+
+  <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+    <h1>{{ label }}</h1>
+  </div>
+
+  <div class="panel-body">
+
+    <div class="panel-infobar">
+      <i class="fa fa-calendar"></i>
+      {% if content.field_start_date|field_value %}
+        {{ content.field_start_date|field_value }}
+      {% endif %}
+      {% if content.field_end_date|field_value %}
+        {{ content.field_end_date|field_value }}
+      {% endif %}
+
+    </div>
+
+    {{ content.body }}
+    <div>
+      {{ content.field_link }}
+    </div>
+  </div>
+
+  {{ devel_dump(content.field_link) }}
+
+</div>
+
+{% endblock %}
