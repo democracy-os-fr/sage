@@ -13701,6 +13701,10 @@ form.yamlform-submission-form {
   height: 35px;
 }
 
+.path-examples .main-content {
+  margin: 15px;
+}
+
 body#tinymce {
   margin: 12px !important;
 }

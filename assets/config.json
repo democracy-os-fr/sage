@@ -10,7 +10,7 @@
     "templates/**/*.twig"
   ],
   "publicPath": "/themes/contrib/sage",
-  "devUrl": "http://localhost:8080",
+  "devUrl": "http://d8.local.dev:8080",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "browserSyncOptions": {

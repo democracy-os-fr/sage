@@ -1,0 +1,14 @@
+{% extends "page.html.twig" %}
+
+{# Main #}
+{% block main %}
+  <div role="main" class="main-container js-quickedit-main-content {{ container }}">
+    {# Content #}
+    {% block content %}
+      <a id="main-content"></a>
+      <div class="jumbotron">
+        {{ page.content }}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock %}

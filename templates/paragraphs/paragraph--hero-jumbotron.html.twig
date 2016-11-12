@@ -1,0 +1,6 @@
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+<div class="bg-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ file_url(content.field_background_image|field_target_entity.uri.value) }}')">
+  <div class="jumbotron {{ container }}">
+    {{ content.field_body }}
+  </div>
+</div>
