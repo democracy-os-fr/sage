@@ -6,20 +6,11 @@
     ]
   },
   "watch": [
-    "src/**/*.php",
-    "templates/**/*.twig"
+    "templates/**/*.php",
+    "src/**/*.php"
   ],
   "publicPath": "/themes/contrib/sage",
-  "devUrl": "http://d8.local.dev:8080",
+  "devUrl": "http://d8.local.dev",
   "proxyUrl": "http://localhost:3000",
-  "cacheBusting": "[name]_[hash:8]",
-  "browserSyncOptions": {
-    "reloadOnRestart": true,
-    "open": false,
-    "watchOptions": {
-        "ignoreInitial": false
-    },
-    "ghostMode": false,
-    "logLevel": "debug"
-  }
+  "cacheBusting": "[name]_[hash:8]"
 }

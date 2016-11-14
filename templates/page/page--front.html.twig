@@ -3,10 +3,29 @@
 {# Main #}
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
+
+    {% set imgUrl = drupal_config('agora.settings', 'image_hero') %}
+
+
+    {# Header #}
+    <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+      <div class="jumbotron {{ container }}">
+        <h1>
+          {{ drupal_config('system.site', 'name') }}
+          <br/>
+          <small>
+            {{ drupal_config('system.site', 'slogan') }}
+          </small>
+        </h1>
+      </div>
+    </div>
+
     {# Content #}
     {% block content %}
       <a id="main-content"></a>
-      {{ page.content }}
+      <div class="{{ container }}">
+        {{ page.content }}
+      </div>
     {% endblock %}
   </div>
 {% endblock %}

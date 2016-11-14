@@ -40,7 +40,8 @@ export default {
         }
 
         if (!(window.location.search) && !(getQueryString()['oaq%5Bcategory%5D'])) {
-          // const newLoc = `${window.location.href}${window.location.search ? '&' : '?'}oaq%5Bcategory%5D=<?php print $categorySlug ; ?>`;
+          // const newLoc = `${window.location.href}${window.location.search ? '&'
+          // : '?'}oaq%5Bcategory%5D=<?php print $categorySlug ; ?>`;
           // window.history.replaceState({}, document.title, newLoc);
         }
       });

@@ -1,15 +1,15 @@
 {
   "name": "sage",
   "version": "9.0.0-alpha.3",
-  "author": "moustachu <moustachu@democracyos.eu>",
-  "homepage": "https://github.com/moustachu",
+  "author": "Roots <team@roots.io>",
+  "homepage": "https://roots.io/sage/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/democracy-os-fr/sage.git"
+    "url": "git://github.com/roots/sage.git"
   },
   "bugs": {
-    "url": "https://github.com/democracy-os-fr/sage/issues"
+    "url": "https://github.com/roots/sage/issues"
   },
   "licenses": [
     {
@@ -74,10 +74,10 @@
     "webpack-hot-middleware": "^2.12.2"
   },
   "dependencies": {
+    "bootstrap": "github:twbs/bootstrap#v4-dev",
     "bootstrap-sass": "^3.3.7",
     "bootswatch": "^3.3.7",
     "font-awesome": "^4.6.3",
-    "fontawesome": "^4.5.0",
     "jquery": "1.12.4 - 3"
   }
 }

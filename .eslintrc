@@ -10,9 +10,5 @@
     "jquery": true,
     "node": true
   },
-  "parser": "babel-eslint",
-  "rules": {
-    "no-console": "off",
-    max-len: off
-  }
+  "parser": "babel-eslint"
 }

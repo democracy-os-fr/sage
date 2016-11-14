@@ -11,7 +11,6 @@ module.exports = (entry) => {
   const hotMiddlewareScript = `webpack-hot-middleware/client?${qs.stringify({
     timeout: 20000,
     reload: false,
-    path: 'http://localhost:3000/__webpack_hmr'
   })}`;
 
   Object.keys(entry).forEach((name) => {
