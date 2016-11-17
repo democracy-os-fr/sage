@@ -49,6 +49,7 @@
  * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
  * - page.footer: Items for the footer region.
+ * - page.signature: bottom footer.
  *
  * @ingroup templates
  *
@@ -176,8 +177,11 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
+    <footer class="footer" role="contentinfo">
+      <div class="{{ container }}">
+        {{ page.footer }}
+        {{ page.signature }}
+      </div>
     </footer>
   {% endblock %}
 {% endif %}

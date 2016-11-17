@@ -10,7 +10,7 @@ p:last-child,
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
-  
+
 }
 
 // Help region.
@@ -34,4 +34,8 @@ p:last-child,
   &:first-child {
     margin-top: 0;
   }
+}
+
+.text-no-select {
+  user-select: none;
 }

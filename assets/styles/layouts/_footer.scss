@@ -3,5 +3,16 @@
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+
+  background-color: $gray-dark;
+  color: $gray-light;
+
+  a, .nav > li > a {
+    color: $gray-lighter;
+    &:hover, &:focus {
+      color: $gray-light;
+      background-color: transparent;
+    }
+  }
+
 }
