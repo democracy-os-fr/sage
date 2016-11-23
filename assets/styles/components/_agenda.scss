@@ -142,6 +142,11 @@
     width: 100%;
   }
 
+  .cibulMap .map-canvas {
+    pointer-events: none;
+  }
+
+
   .cibulMap .map-canvas,
   .list-panel, .sidebar,
   .item-panel {
@@ -163,7 +168,31 @@
     display: block;
   }
 
+  .list-group-item {
+    .date {
+      text-align: center;
+      margin: 0 7px ;
+      .day {
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 25px;
+      }
+      .month {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .year {
+        font-size: 20px;
+      }
+    }
+  }
+
   .item {
+
+    .panel-footer {
+      padding-bottom: 100px ;
+    }
+
     .date {
       margin-top: 15px;
       .day {
@@ -197,10 +226,10 @@
 
     .links {
 
-      margin: 20px 15px;
+      margin: 30px 5px;
 
       &.pull-right {
-        margin-right: 25px;
+        margin-right: 5px;
       }
 
     }

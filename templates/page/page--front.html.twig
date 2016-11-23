@@ -20,12 +20,26 @@
       </div>
     </div>
 
+    {# Highlighted #}
+    {% if page.highlighted %}
+      {% block highlighted %}
+        <div class="highlighted {{ container }}">{{ page.highlighted }}</div>
+      {% endblock %}
+    {% endif %}
+
+    {# Agenda #}
+    {% if is_mod('agora_agenda') %}
+      <section class="section-with-title {{ container }}">
+        {{ drupal_block('agenda_preview') }}
+      </section>
+    {% endif %}
+
     {# Content #}
     {% block content %}
       <a id="main-content"></a>
-      <div class="{{ container }}">
+      <section class="section-with-title {{ container }}">
         {{ page.content }}
-      </div>
+      </section>
     {% endblock %}
   </div>
 {% endblock %}

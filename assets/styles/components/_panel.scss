@@ -17,6 +17,26 @@
   .bg-image {
     padding: $padding-base-vertical $padding-base-horizontal ;
   }
+
+  .panel-footer {
+    padding: $padding-base-horizontal ($padding-base-horizontal * 2) ($padding-base-horizontal * 3) ;
+  }
+
+  .media-left .fa {
+    font-size: 21px ;
+    width: 21px;
+    text-align: center;
+  }
+
+  .inline-avatar {
+    .img-responsive {
+      display: inline-block;
+      width: 40px;
+      height: 40px ;
+      vertical-align: text-bottom;
+    }
+  }
+
 }
 
 .panel-event {

@@ -26,3 +26,18 @@
     margin: 15px ;
   }
 }
+
+.section-with-title {
+  margin-top: 45px ;
+  border-top: 1px solid $gray ;
+  text-align: center;
+  .section-title, .block-title {
+    text-align: center;
+    position: relative;
+    top: -30px ;
+    display: inline-block;
+    margin: 15px auto ;
+    background-color: white;
+    padding: 0 25px ;
+  }
+}
