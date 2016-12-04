@@ -25,6 +25,10 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
    */
   public function alter(&$suggestions, &$variables = NULL, &$hook = NULL) {
 
+    // DO NOT DUMP $variables for all hook (outside the switch block) => ERR_HEADER_TOO_BIG
+
+    // dcp($hook);
+
     parent::alter($suggestions, $variables, $hook);
 
     switch ($hook) {
@@ -33,36 +37,17 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
           array_push($suggestions,'image_style__'.$variables['style_name']);
         }
         break;
-      // case 'links':
-      //   if (Unicode::strpos($variables['theme_hook_original'], 'links__dropbutton') !== FALSE) {
-      //     // Handle dropbutton "subtypes".
-      //     // @see \Drupal\bootstrap\Plugin\Prerender\Dropbutton::preRenderElement()
-      //     if ($suggestion = Unicode::substr($variables['theme_hook_original'], 17)) {
-      //       $suggestions[] = 'bootstrap_dropdown' . $suggestion;
-      //     }
-      //     $suggestions[] = 'bootstrap_dropdown';
-      //   }
+
+      // case 'page':
+      //   dcp($suggestions);
+      //   dcp($variables);
       //   break;
       //
-      // case 'fieldset':
-      // case 'details':
-      //   $suggestions[] = 'bootstrap_panel';
+      // case 'node':
+      //   dcp($suggestions);
+      //   dcp($variables);
       //   break;
-      //
-      // case 'input':
-      //   $element = Element::create($variables['element']);
-      //   if ($element->isButton()) {
-      //     if ($element->getProperty('dropbutton')) {
-      //       $suggestions[] = 'input__button__dropdown';
-      //     }
-      //     else {
-      //       $suggestions[] = $element->getProperty('split') ? 'input__button__split' : 'input__button';
-      //     }
-      //   }
-      //   elseif (!$element->isType(['checkbox', 'hidden', 'radio'])) {
-      //     $suggestions[] = 'input__form_control';
-      //   }
-      //   break;
+
     }
   }
 

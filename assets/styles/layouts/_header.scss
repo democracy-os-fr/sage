@@ -1,3 +1,18 @@
 header.navbar {
   margin-bottom: 0;
 }
+
+.agora-header {}
+
+h1, header .navbar-brand {
+  font-family: 'arc-light';
+  text-transform: uppercase;
+  small {
+    font-family: $headings-font-family;
+    text-transform: none;
+  }
+}
+
+header .navbar-brand {
+  line-height: 1.5;
+}

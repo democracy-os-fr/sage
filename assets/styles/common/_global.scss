@@ -39,3 +39,7 @@ p:last-child,
 .text-no-select {
   user-select: none;
 }
+
+.pad-bottom, .pad-bottom:last-child {
+  margin-bottom: $padding-large-vertical ;
+}

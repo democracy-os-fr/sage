@@ -16,6 +16,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 // Font Awesome | see: http://fontawesome.io/get-started/
 $fa-font-path:          '~font-awesome/fonts';
 
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&subset=latin-ext";
+
 $font-size-base:          14px;
 
 $font-size-h1:            34px;
@@ -25,14 +27,7 @@ $font-size-h4:            18px;
 $font-size-h5:            16px;
 $font-size-h6:            16px;
 
-// $font-size-base:          13px;
-//
-// $font-size-h1:            24px;
-// $font-size-h2:            20px;
-// $font-size-h3:            18px;
-// $font-size-h4:            16px;
-// $font-size-h5:            14px;
-// $font-size-h6:            14px;
+$jumbotron-heading-font-size:     48px;
 
 $navbar-border-radius: 0;
 
@@ -40,17 +35,18 @@ $dark-red: #A91833;
 $red: #D81E41;
 $purple: #6D1F80;
 
+// #303030,#464545,#999,#EBEBEB,#2C3E50,#18BC9C,#F39C12,#E74C3C,#FFFF00,#01E629,#FF4500,#00BFFF
+
 // Reset inverted navbar basics
-$navbar-inverse-color:                      $gray-light;
-$navbar-inverse-bg:                         $red;
+$navbar-inverse-bg:                         #222222;
 $navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;
-$navbar-inverse-link-hover-color:           lighten($red, 30%);
+$navbar-inverse-link-hover-color:           $brand-success;
 $navbar-inverse-link-hover-bg:              transparent;
-$navbar-inverse-link-active-color:          $navbar-inverse-link-color;
-$navbar-inverse-link-active-bg:             $dark-red;
+$navbar-inverse-link-active-color:          $brand-success;
+$navbar-inverse-link-active-bg:             transparent;
 $navbar-inverse-link-disabled-color:        #444;
 $navbar-inverse-link-disabled-bg:           transparent;
 

@@ -1,10 +1,10 @@
 /**
  * Navbar styling.
  */
-$mobile:  "screen and (max-width: #{$screen-xs-max})";
-$tablet:  "screen and (min-width: #{$screen-sm-min})";
-$normal:  "screen and (min-width: #{$screen-md-min})";
-$wide:    "screen and (min-width: #{$screen-lg-min})";
+$mobile: "screen and (max-width: #{$screen-xs-max})";
+$tablet: "screen and (min-width: #{$screen-sm-min})";
+$normal: "screen and (min-width: #{$screen-md-min})";
+$wide: "screen and (min-width: #{$screen-lg-min})";
 
 body {
   // Fix horizontal scrolling on iOS devices.
@@ -14,23 +14,25 @@ body {
   &.navbar-is-static-top {
     margin-top: 0;
   }
+
   &.navbar-is-fixed-top {
     margin-top: ($navbar-height + ($grid-gutter-width / 2));
   }
+
   &.navbar-is-fixed-bottom {
     padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
   }
-
   @media #{$tablet} {
     margin-top: ($grid-gutter-width / 2);
   }
   @media #{$mobile} {
     &.toolbar-vertical {
-      &.navbar-is-fixed-top,
-      &.navbar-is-fixed-bottom {
+      &.navbar-is-fixed-bottom,
+      &.navbar-is-fixed-top {
         .toolbar-bar {
           position: fixed;
         }
+
         header {
           z-index: 500;
         }
@@ -43,6 +45,7 @@ body {
     }
   }
 }
+
 .navbar.container {
   @media #{$tablet} {
     max-width: (($container-sm - $grid-gutter-width));
@@ -54,9 +57,38 @@ body {
     max-width: (($container-lg - $grid-gutter-width));
   }
 }
+
 .navbar.container > .container,
 .navbar.container-fluid > .container-fluid {
   margin: 0;
   padding: 0;
   width: auto;
+}
+
+.btn-lang {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+$icon-avatar-size: 46px ;
+
+.icon-avatar {
+  @include square($icon-avatar-size);
+  padding: 12px 14px; // TODO : calculate this sh*t
+  border-radius: $icon-avatar-size / 2 ;
+  background-color: $brand-primary;
+  font-weight: 300;
+  color: $navbar-inverse-link-color;
+  &:hover {
+    color: $brand-success;
+  }
+}
+
+.path-frontpage .navbar {}
+
+.taskbar {
+  position: absolute;
+  width: 100%;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  z-index: 1000;
 }

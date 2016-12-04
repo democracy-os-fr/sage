@@ -28,12 +28,17 @@
     appearance: none;
     line-height: 1;
     padding-right: 2em;
+
+    &, &:focus {
+      background-image: none;
+    }
+
     &::-ms-expand {
       opacity: 0;
     }
   }
   &:after {
-    color: $brand-primary;
+    color: $gray;
     content: '▼';
     font-style: normal;
     font-weight: 400;
@@ -84,4 +89,67 @@ form.yamlform-submission-form {
 
   margin: 15px auto 25px ;
 
+}
+
+
+.agora-page-form {
+  padding-top: $padding-base-horizontal * 2 ;
+  padding-bottom: $padding-base-horizontal * 3 ;
+  .form-actions button:not(:last-child) {
+    margin-right: $padding-large-vertical ;
+  }
+}
+
+.form-options {
+  width: auto;
+  display: inline-block;
+  margin-top: $padding-large-vertical ;
+
+  &.list-group {
+    .list-group-item {
+      padding: $padding-large-vertical $padding-base-horizontal;
+    }
+  }
+
+  .form-inline label {
+    margin-right: $padding-base-horizontal;
+  }
+}
+
+.edit-name input[type=text] {
+  font-size: $font-size-h2;
+}
+
+.form-item[class*="form-item-field-address-"][class*="-country-code"],
+.filter-wrapper {
+  display: none;
+}
+
+.control-label {
+  margin-left: $padding-small-vertical;
+}
+
+.form-textarea-wrapper {
+  margin-top: $padding-small-horizontal;
+  .cke_chrome {
+    border: 2px solid $input-border ;
+    border-radius: $input-border-radius;
+  }
+  .cke_top {
+    border-bottom: 1px solid $input-border ;
+  }
+  .cke_contents {
+    padding: $padding-small-vertical $padding-small-horizontal;
+  }
+}
+
+
+// Paragraphs
+
+.js .field--widget-entity-reference-paragraphs td {
+  padding: $table-cell-padding;
+}
+
+.paragraphs-dropbutton-wrapper button:not(:last-child) {
+  margin-right: $padding-large-vertical ;
 }

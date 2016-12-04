@@ -1,0 +1,41 @@
+{% extends "page.html.twig" %}
+{# Main #}
+{% block main %}
+
+  {# Taskbar #}
+  <div class="taskbar">
+    <div class="{{ container }}">
+      <div class="pull-right" role="heading">
+        {{ drupal_block('sage_local_tasks') }}
+      </div>
+    </div>
+  </div>
+
+  {%
+    set is_full_width =
+      'page__node__edit' not in theme_hook_suggestions
+      and 'page__node__add' not in theme_hook_suggestions
+      and 'page__node__delete' not in theme_hook_suggestions
+  %}
+
+  {% set section_classes = is_full_width ? '' : container %}
+
+  <section role="main" class="main-container js-quickedit-main-content {{ section_classes }}">
+
+    {# Header #}
+    {% if ( not is_full_width ) and page.header %}
+      {% block header %}
+        <section class="agora-header col-sm-12" role="heading">
+          {{ page.header|without('sage_local_tasks') }}
+        </section>
+      {% endblock %}
+    {% endif %}
+
+    {# Content #}
+    {% block content %}
+      <a id="main-content"></a>
+      {{ page.content }}
+    {% endblock %}
+
+  </section>
+{% endblock %}

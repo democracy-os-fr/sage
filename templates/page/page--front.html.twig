@@ -4,11 +4,10 @@
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
 
-    {% set imgUrl = drupal_config('agora.settings', 'image_hero') %}
-
+    {% set imgUrl = file_url(drupal_config('agora.settings', 'image_hero_path')) %}
 
     {# Header #}
-    <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+    <section class="agora-header bg-image bg-dark"  role="heading" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
       <div class="jumbotron {{ container }}">
         <h1>
           {{ drupal_config('system.site', 'name') }}
@@ -18,12 +17,12 @@
           </small>
         </h1>
       </div>
-    </div>
+    </section>
 
     {# Highlighted #}
     {% if page.highlighted %}
       {% block highlighted %}
-        <div class="highlighted {{ container }}">{{ page.highlighted }}</div>
+        <section class="highlighted {{ container }}">{{ page.highlighted }}</section>
       {% endblock %}
     {% endif %}
 
@@ -37,7 +36,7 @@
     {# Content #}
     {% block content %}
       <a id="main-content"></a>
-      <section class="section-with-title {{ container }}">
+      <section class="{{ container }}">
         {{ page.content }}
       </section>
     {% endblock %}

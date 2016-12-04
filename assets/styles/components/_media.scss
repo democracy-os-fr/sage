@@ -6,10 +6,14 @@
 
     &, h1, h2, h3 {
       color: $navbar-inverse-link-color;
-    }
+      small {
+        color: $navbar-inverse-link-color;
+        font-size: 60%;
+        opacity: 0.85 ;
+        font-weight: 300;
+      }
 
-    h1 {
-      opacity: 0.85 ;
+      font-weight: 300;
     }
 
   }

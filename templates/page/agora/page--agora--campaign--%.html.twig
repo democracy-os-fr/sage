@@ -1,0 +1,27 @@
+{% extends "page.html.twig" %}
+
+{# Main #}
+{% block main %}
+  <section role="main" class="main-container js-quickedit-main-content">
+
+    {# Header #}
+    <div class="taskbar">
+      <div class="{{ container }}">
+        <div class="pull-right" role="heading">
+          {{ drupal_block('sage_local_tasks') }}
+        </div>
+      </div>
+    </div>
+
+    {{ devel_dump(page.content.field_name|field_label) }}
+
+    <pre>{{ page.content.field_name }}</pre>
+
+    {# Content #}
+    {% block content %}
+      <a id="main-content"></a>
+      {{ page.content }}
+    {% endblock %}
+
+  </section>
+{% endblock %}

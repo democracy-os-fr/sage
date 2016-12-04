@@ -1,11 +1,14 @@
 // Variables overrides
-@import "~bootswatch/paper/variables";
+@import "~bootswatch/flatly/variables";
 @import "common/variables";
 
 // Import npm dependencies
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~bootswatch/paper/bootswatch";
+@import "~bootswatch/flatly/bootswatch";
 @import "~font-awesome/scss/font-awesome";
+
+// Additional fonts
+@import "common/fonts";
 
 // @todo these should be their own CSS files and only included when
 // specific Drupal libraries are used.
@@ -37,3 +40,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
