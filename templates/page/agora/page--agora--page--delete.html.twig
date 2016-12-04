@@ -17,7 +17,9 @@
     {% block content %}
       <a id="main-content"></a>
       <div class="{{ container }}">
-        {{ page.content }}
+        <div class="jumbotron">
+          {{ page.content }}
+        </div>
       </div>
     {% endblock %}
 
