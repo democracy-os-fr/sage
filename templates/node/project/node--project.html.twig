@@ -124,21 +124,10 @@
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <!-- GALLERY -->
-                <div class="panel panel-default pad-bottom">
-                  <div class="panel-body">
-                    <div id="project-gallery">
-                      {% for image in content.field_images|field_target_entity %}
-                        <img class="img-responsive" src="{{ file_url(image.uri.value) }}" alt="{{ content.field_images|field_raw('alt')[loop.index0] }}">
-                      {% endfor %}
-                    </div>
-                    <hr/>
-                    <div id="project-gallery-nav">
-                      {% for image in content.field_images|field_target_entity %}
-                        <img class="img-responsive img-rounded" src="{{ image.uri.value | image_style('thumbnail') }}" alt="{{ content.field_images|field_raw('alt')[loop.index0] }}">
-                      {% endfor %}
-                    </div>
-                  </div>
-                </div>
+
+              {{ content.field_images|field_value }}
+
+
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="well">
@@ -157,7 +146,8 @@
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="well">
-                  {{ content.field_info_yearly_cost }}
+                  <b>{{ content.field_info_block_rent|field_label }}</b>
+                  <p>{{ node.field_info_block_rent.summary }}</p>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3">
@@ -187,6 +177,19 @@
                   {{ content.field_info_block_selection|field_value }}
                 </div>
               </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-xs-12 col-md-6">
+                <h2>{{ content.field_info_block_rent|field_label }}</h2>
+                <div class="lead">
+                  {{ content.field_info_block_rent|field_value }}
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6"></div>
 
             </div>
 
