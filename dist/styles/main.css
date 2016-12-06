@@ -13222,6 +13222,10 @@ form.yamlform-submission-form {
   padding: 0 25px;
 }
 
+.views-row {
+  margin: 18px auto;
+}
+
 body#tinymce {
   margin: 12px !important;
 }
