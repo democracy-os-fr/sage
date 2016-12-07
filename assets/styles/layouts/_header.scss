@@ -16,7 +16,7 @@ h1, h2, header .navbar-brand {
 
 h1, h2, h3, h4 {
   &.alt {
-    font-family: 'arc-bold';
+    font-family: 'arc';
     text-transform: uppercase;
   }
   &.alt-light {
@@ -24,7 +24,6 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
   }
 }
-
 
 header .navbar-brand {
   line-height: 1.5;

@@ -14,7 +14,14 @@ article.campaign .nav-campaign {
   margin-bottom: $padding-base-horizontal * 2 ;
 }
 
+p, ul, ol  {
+  font-weight: $font-weight-base;
+}
+
 p {
   font-size: 120%;
-  font-weight: 300;
 }
+
+// .page-node-type-project .leaflet-container {
+//   pointer-events: none;
+// }

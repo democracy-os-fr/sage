@@ -12515,9 +12515,14 @@ article.campaign .nav-campaign {
   margin-bottom: 30px;
 }
 
+p,
+ul,
+ol {
+  font-weight: 300;
+}
+
 p {
   font-size: 120%;
-  font-weight: 300;
 }
 
 /**
@@ -13186,7 +13191,7 @@ h1.alt,
 h2.alt,
 h3.alt,
 h4.alt {
-  font-family: 'arc-bold';
+  font-family: 'arc';
   text-transform: uppercase;
 }
 

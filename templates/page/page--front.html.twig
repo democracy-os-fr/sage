@@ -9,13 +9,14 @@
     {# Header #}
     <section class="agora-header bg-image bg-dark"  role="heading" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
       <div class="jumbotron {{ container }}">
-        <h1>
+        <h1 class="text-center">
           {{ drupal_config('system.site', 'name') }}
           <br/>
           <small>
             {{ drupal_config('system.site', 'slogan') }}
           </small>
         </h1>
+
         <div class="linkbar text-center">
           <a class="btn btn-success" href="/Inscription">Rejoindre le réseau </a>
           <a class="btn btn-success" href="/projets"> Répondre aux appels à projet </a>

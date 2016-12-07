@@ -35,5 +35,12 @@ export default {
       dots: true,
       focusOnSelect: true,
     });
+    // $('.page-node-type-project .leaflet-container').click(function () {
+    //   console.log('CLICK that bitch');
+    //   $(this).css('pointer-events', 'auto');
+    // }).mouseleave(function () {
+    //   console.log('mouse leave');
+    //   $(this).css('pointer-events', 'none');
+    // });
   },
 };
