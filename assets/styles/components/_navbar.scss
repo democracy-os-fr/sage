@@ -92,3 +92,19 @@ $icon-avatar-size: 46px ;
   padding: $padding-base-vertical $padding-base-horizontal;
   z-index: 1000;
 }
+
+.linkbar {
+  margin: ($padding-large-vertical * 2) auto $padding-base-vertical ;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    @include button-size($padding-base-vertical, $padding-base-horizontal * 2, $font-size-base, $line-height-base, $btn-border-radius-base);
+    margin-right: $padding-base-horizontal ;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}

@@ -12479,6 +12479,26 @@ form.navbar.yamlform-submission-form > .container-md,
   z-index: 1000;
 }
 
+.linkbar {
+  margin: 36px auto 10px;
+}
+
+.linkbar:last-child {
+  margin-bottom: 0;
+}
+
+.linkbar .btn {
+  padding: 10px 30px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.linkbar .btn:last-child {
+  margin-right: 0;
+}
+
 /**
  * Node styling.
  */
@@ -13164,8 +13184,18 @@ header .navbar-brand small {
 
 h1.alt,
 h2.alt,
-header .navbar-brand.alt {
+h3.alt,
+h4.alt {
   font-family: 'arc-bold';
+  text-transform: uppercase;
+}
+
+h1.alt-light,
+h2.alt-light,
+h3.alt-light,
+h4.alt-light {
+  font-family: 'arc-bold';
+  text-transform: uppercase;
 }
 
 header .navbar-brand {
