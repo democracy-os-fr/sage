@@ -178,6 +178,13 @@
         </div>
 
         <div class="col-xs-12 pad-bottom">
+          <h2>{{ content.field_info_block_context|field_label }}</h2>
+          <div>
+            {{ content.field_info_block_context|field_value }}
+          </div>
+        </div>
+
+        <div class="col-xs-12 pad-bottom">
           <h2>{{ content.field_info_block_selection|field_label }}</h2>
           <div>
             {{ content.field_info_block_selection|field_value }}
@@ -202,7 +209,8 @@
         </div>
 
         <div class="col-xs-12 col-md-6 pad-bottom">
-          <img class="img-responsive" src="http://placehold.it/800x450" alt="mapbox"/>
+          <!-- <img class="img-responsive" src="http://placehold.it/800x450" alt="mapbox"/> -->
+          {{ content.field_geofield|field_value }}
         </div>
         <div class="col-xs-12 col-md-6">
           <h3>{{ content.field_address|field_label }}</h3>
