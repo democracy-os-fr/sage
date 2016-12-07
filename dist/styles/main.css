@@ -12495,6 +12495,11 @@ article.campaign .nav-campaign {
   margin-bottom: 30px;
 }
 
+p {
+  font-size: 120%;
+  font-weight: 300;
+}
+
 /**
  * Panel styling.
  */
@@ -13144,15 +13149,23 @@ header.navbar {
 }
 
 h1,
+h2,
 header .navbar-brand {
   font-family: 'arc-light';
   text-transform: uppercase;
 }
 
 h1 small,
+h2 small,
 header .navbar-brand small {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
+}
+
+h1.alt,
+h2.alt,
+header .navbar-brand.alt {
+  font-family: 'arc-bold';
 }
 
 header .navbar-brand {

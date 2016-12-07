@@ -4,13 +4,18 @@ header.navbar {
 
 .agora-header {}
 
-h1, header .navbar-brand {
+h1, h2, header .navbar-brand {
   font-family: 'arc-light';
   text-transform: uppercase;
   small {
     font-family: $headings-font-family;
     text-transform: none;
   }
+
+  &.alt {
+    font-family: 'arc-bold';
+  }
+
 }
 
 header .navbar-brand {
