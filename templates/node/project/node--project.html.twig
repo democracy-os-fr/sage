@@ -67,7 +67,6 @@
 #}
 
 {{ devel_dump('node--project.html.twig') }}
-{{ devel_dump() }}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {%
   set classes = [
@@ -153,7 +152,7 @@
                   {{ content.field_info_calendar|field_value }}
                 </p>
               </li>
-              <li class="list-group-item">
+              <!-- <li class="list-group-item">
                 <h5 class="list-group-item-heading">
                   Recevoir les nouvelles de ce projet
                 </h5>
@@ -165,7 +164,7 @@
                     </span>
                   </div>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
