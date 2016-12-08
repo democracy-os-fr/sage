@@ -17,13 +17,9 @@
           </small>
         </h1>
 
-        <div class="linkbar text-center">
-          <a class="btn btn-success" href="/Inscription">Rejoindre le réseau </a>
-          <a class="btn btn-success" href="/projets"> Répondre aux appels à projet </a>
-          <a class="btn btn-info" href="/presentation-arc"> En savoir plus </a>
-        </div>
-      </div>
+        {{ drupal_field('description', 'agora_page', 1) }}
 
+      </div>
     </section>
 
     {# Highlighted #}
@@ -43,9 +39,7 @@
     {# Content #}
     {% block content %}
       <a id="main-content"></a>
-      <section class="{{ container }}">
-        {{ page.content }}
-      </section>
+      {{ drupal_field('body', 'agora_page', 1) }}
     {% endblock %}
   </div>
 {% endblock %}

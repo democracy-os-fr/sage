@@ -18,7 +18,7 @@ p, ul, ol  {
   font-weight: $font-weight-base;
 }
 
-p {
+p, .field--type-text-long ul, .field--type-text-long ol {
   font-size: 120%;
 }
 

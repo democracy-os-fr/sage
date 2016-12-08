@@ -2,7 +2,11 @@ header.navbar {
   margin-bottom: 0;
 }
 
-.agora-header {}
+.agora-header {
+  .jumbotron {
+    margin-bottom: 0;
+  }
+}
 
 h1, h2, header .navbar-brand {
   font-family: 'arc-light';

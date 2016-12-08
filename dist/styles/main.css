@@ -12320,6 +12320,10 @@ form.yamlform-submission-form {
   padding: 6px 9px;
 }
 
+.form-actions {
+  margin-top: 10px;
+}
+
 .js .field--widget-entity-reference-paragraphs td {
   padding: 8px;
 }
@@ -12521,7 +12525,9 @@ ol {
   font-weight: 300;
 }
 
-p {
+p,
+.field--type-text-long ul,
+.field--type-text-long ol {
   font-size: 120%;
 }
 
@@ -13169,7 +13175,23 @@ p:last-child,
   margin-bottom: 18px;
 }
 
+.blue-background {
+  background-color: #5BBAF8;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.green-background {
+  background-color: #0FEEC7;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
 header.navbar {
+  margin-bottom: 0;
+}
+
+.agora-header .jumbotron {
   margin-bottom: 0;
 }
 

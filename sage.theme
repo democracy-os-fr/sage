@@ -29,13 +29,22 @@ function sage_theme() {
 }
 
 function sage_form_alter(&$form, &$context1 = NULL, &$context2 = NULL){
-
   //dcp('sage_form_alter');
   // array_push($form['#attributes']['class'],'form-horizontal');
 }
 
-
 function sage_preprocess_node__event(&$variables){
-  dcp('sage_preprocess_event');
-  dcp($variables);
+  // dcp('sage_preprocess_event');
+  // dcp($variables);
 }
+
+// function sage_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+//   dcp('sage_theme_suggestions_page_alter');
+//   dcp($suggestions);
+//   dcp($variables);
+//   dcp(\Drupal::routeMatch()->getParameter('uid'));
+//   if ($node = \Drupal::routeMatch()->getParameter('node')) {
+//     $content_type = $node->bundle();
+//     $suggestions[] = 'page__'.$content_type;
+//   }
+// }

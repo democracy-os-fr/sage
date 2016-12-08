@@ -46,8 +46,12 @@ p:last-child,
 
 .blue-background {
   background-color : #5BBAF8 ;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
 }
 
 .green-background {
   background-color : #0FEEC7 ;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
 }
