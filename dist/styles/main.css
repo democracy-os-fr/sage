@@ -2011,7 +2011,7 @@ pre code {
 .container,
 .container-xs,
 .container-sm,
-form.yamlform-submission-form,
+form.webform-submission-form,
 .container-md {
   margin-right: auto;
   margin-left: auto;
@@ -2022,12 +2022,12 @@ form.yamlform-submission-form,
 .container:before,
 .container-xs:before,
 .container-sm:before,
-form.yamlform-submission-form:before,
+form.webform-submission-form:before,
 .container-md:before,
 .container:after,
 .container-xs:after,
 .container-sm:after,
-form.yamlform-submission-form:after,
+form.webform-submission-form:after,
 .container-md:after {
   content: " ";
   display: table;
@@ -2036,7 +2036,7 @@ form.yamlform-submission-form:after,
 .container:after,
 .container-xs:after,
 .container-sm:after,
-form.yamlform-submission-form:after,
+form.webform-submission-form:after,
 .container-md:after {
   clear: both;
 }
@@ -2045,7 +2045,7 @@ form.yamlform-submission-form:after,
   .container,
   .container-xs,
   .container-sm,
-  form.yamlform-submission-form,
+  form.webform-submission-form,
   .container-md {
     width: 750px;
   }
@@ -2055,7 +2055,7 @@ form.yamlform-submission-form:after,
   .container,
   .container-xs,
   .container-sm,
-  form.yamlform-submission-form,
+  form.webform-submission-form,
   .container-md {
     width: 970px;
   }
@@ -2065,7 +2065,7 @@ form.yamlform-submission-form:after,
   .container,
   .container-xs,
   .container-sm,
-  form.yamlform-submission-form,
+  form.webform-submission-form,
   .container-md {
     width: 1170px;
   }
@@ -5483,12 +5483,12 @@ tbody.collapse.in {
 .container > .navbar-header,
 .container-xs > .navbar-header,
 .container-sm > .navbar-header,
-form.yamlform-submission-form > .navbar-header,
+form.webform-submission-form > .navbar-header,
 .container-md > .navbar-header,
 .container > .navbar-collapse,
 .container-xs > .navbar-collapse,
 .container-sm > .navbar-collapse,
-form.yamlform-submission-form > .navbar-collapse,
+form.webform-submission-form > .navbar-collapse,
 .container-md > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
@@ -5500,12 +5500,12 @@ form.yamlform-submission-form > .navbar-collapse,
   .container > .navbar-header,
   .container-xs > .navbar-header,
   .container-sm > .navbar-header,
-  form.yamlform-submission-form > .navbar-header,
+  form.webform-submission-form > .navbar-header,
   .container-md > .navbar-header,
   .container > .navbar-collapse,
   .container-xs > .navbar-collapse,
   .container-sm > .navbar-collapse,
-  form.yamlform-submission-form > .navbar-collapse,
+  form.webform-submission-form > .navbar-collapse,
   .container-md > .navbar-collapse,
   .container-fluid > .navbar-header,
   .container-fluid > .navbar-collapse {
@@ -5572,7 +5572,7 @@ form.yamlform-submission-form > .navbar-collapse,
   .navbar > .container .navbar-brand,
   .navbar > .container-xs .navbar-brand,
   .navbar > .container-sm .navbar-brand,
-  .navbar > form.yamlform-submission-form .navbar-brand,
+  .navbar > form.webform-submission-form .navbar-brand,
   .navbar > .container-md .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
@@ -6440,7 +6440,7 @@ a.badge:focus {
 .container .jumbotron,
 .container-xs .jumbotron,
 .container-sm .jumbotron,
-form.yamlform-submission-form .jumbotron,
+form.webform-submission-form .jumbotron,
 .container-md .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
@@ -6451,7 +6451,7 @@ form.yamlform-submission-form .jumbotron,
 .jumbotron .container,
 .jumbotron .container-xs,
 .jumbotron .container-sm,
-.jumbotron form.yamlform-submission-form,
+.jumbotron form.webform-submission-form,
 .jumbotron .container-md {
   max-width: 100%;
 }
@@ -6465,7 +6465,7 @@ form.yamlform-submission-form .jumbotron,
   .container .jumbotron,
   .container-xs .jumbotron,
   .container-sm .jumbotron,
-  form.yamlform-submission-form .jumbotron,
+  form.webform-submission-form .jumbotron,
   .container-md .jumbotron,
   .container-fluid .jumbotron {
     padding-left: 60px;
@@ -12263,8 +12263,12 @@ html.js .ajax-new-content:empty {
   width: 10px;
 }
 
-form.yamlform-submission-form {
+form.webform-submission-form {
   margin: 15px auto 25px;
+}
+
+.webform-progress {
+  margin-bottom: 18px;
 }
 
 .agora-page-form {
@@ -12400,7 +12404,7 @@ body.navbar-is-fixed-bottom {
   .navbar.container,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.navbar.yamlform-submission-form,
+  form.navbar.webform-submission-form,
   .navbar.container-md {
     max-width: 720px;
   }
@@ -12410,7 +12414,7 @@ body.navbar-is-fixed-bottom {
   .navbar.container,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.navbar.yamlform-submission-form,
+  form.navbar.webform-submission-form,
   .navbar.container-md {
     max-width: 940px;
   }
@@ -12420,7 +12424,7 @@ body.navbar-is-fixed-bottom {
   .navbar.container,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.navbar.yamlform-submission-form,
+  form.navbar.webform-submission-form,
   .navbar.container-md {
     max-width: 1140px;
   }
@@ -12429,27 +12433,27 @@ body.navbar-is-fixed-bottom {
 .navbar.container > .container,
 .navbar.container-xs > .container,
 .navbar.container-sm > .container,
-form.navbar.yamlform-submission-form > .container,
+form.navbar.webform-submission-form > .container,
 .navbar.container-md > .container,
 .navbar.container > .container-xs,
 .navbar.container-xs > .container-xs,
 .navbar.container-sm > .container-xs,
-form.navbar.yamlform-submission-form > .container-xs,
+form.navbar.webform-submission-form > .container-xs,
 .navbar.container-md > .container-xs,
 .navbar.container > .container-sm,
 .navbar.container-xs > .container-sm,
 .navbar.container-sm > .container-sm,
-form.navbar.yamlform-submission-form > .container-sm,
+form.navbar.webform-submission-form > .container-sm,
 .navbar.container-md > .container-sm,
-.navbar.container > form.yamlform-submission-form,
-.navbar.container-xs > form.yamlform-submission-form,
-.navbar.container-sm > form.yamlform-submission-form,
-form.navbar.yamlform-submission-form > form.yamlform-submission-form,
-.navbar.container-md > form.yamlform-submission-form,
+.navbar.container > form.webform-submission-form,
+.navbar.container-xs > form.webform-submission-form,
+.navbar.container-sm > form.webform-submission-form,
+form.navbar.webform-submission-form > form.webform-submission-form,
+.navbar.container-md > form.webform-submission-form,
 .navbar.container > .container-md,
 .navbar.container-xs > .container-md,
 .navbar.container-sm > .container-md,
-form.navbar.yamlform-submission-form > .container-md,
+form.navbar.webform-submission-form > .container-md,
 .navbar.container-md > .container-md,
 .navbar.container-fluid > .container-fluid {
   margin: 0;
@@ -13255,7 +13259,7 @@ header .navbar-brand {
 }
 
 .container-sm,
-form.yamlform-submission-form {
+form.webform-submission-form {
   max-width: 750px;
 }
 

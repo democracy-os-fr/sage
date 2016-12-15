@@ -84,13 +84,16 @@
   width: 10px;
 }
 
-form.yamlform-submission-form {
+form.webform-submission-form {
   @extend .container-sm;
 
   margin: 15px auto 25px ;
 
 }
 
+.webform-progress {
+  margin-bottom: $padding-large-vertical ;
+}
 
 .agora-page-form {
   padding-top: $padding-base-horizontal * 2 ;
