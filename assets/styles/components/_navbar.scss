@@ -108,3 +108,45 @@ $icon-avatar-size: 46px ;
   }
 
 }
+
+.project .nav-pills {
+  margin-bottom: $padding-base-vertical ;
+  li {
+    text-align: center;
+    a {
+      display: inline;
+      font-family: 'arc-light';
+      font-size: $font-size-h4;
+      padding: 15px 20px 10px ;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: 1px solid $gray-lighter;
+      color: $gray;
+    }
+    a:hover, a:focus {
+      border-color: $gray-light;
+      color: $gray;
+    }
+
+    &.active a {
+      background-color: $brand-primary;
+      color: $navbar-inverse-link-color;
+      border: none;
+    }
+
+    &.nav-highlight a {
+      border-color: transparentize($brand-success, 0.4) ;
+      color: transparentize($brand-success, 0.2) ;
+      &:hover, &:focus {
+      border-color: $brand-success;
+      color: $brand-success;
+      }
+    }
+
+    &.nav-highlight.active a {
+      background-color: $brand-success;
+      color: $navbar-inverse-link-color;
+      border: none;
+    }
+  }
+}

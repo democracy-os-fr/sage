@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the token tree link.
+ *
+ * Available variables:
+ * - url: The URL to the token tree page.
+ * - text: The text to be displayed in the link.
+ * - attributes: Attributes for the anchor tag.
+ * - link: The complete link.
+ *
+ * @see template_preprocess_token_tree_link()
+ *
+ * @ingroup themeable
+ */
+#}
+<a href="{{ url }}" {{ attributes.addClass('btn btn-xs btn-link pull-right') }}>{{ text }}</a>

@@ -160,3 +160,36 @@ form.webform-submission-form {
 .paragraphs-dropbutton-wrapper button:not(:last-child) {
   margin-right: $padding-large-vertical ;
 }
+
+.node-form #edit-field-form-0-status--wrapper legend {
+  margin-bottom: 5px;
+  margin-left: 6px;
+  font-weight: bold;
+  font-size: $font-size-base;
+}
+
+#webform-submission-candidature-aap-form {
+  .webform-submission-navigation, details[data-webform-element-id="candidature_aap--submission_information"] {
+    display: none;
+  }
+  .description.help-block {
+    margin-left: $padding-large-vertical;
+  }
+  .js-form-managed-file {
+    .description {
+      @extend .pull-right;
+      @extend .clearfix;
+      margin-top: $padding-small-horizontal / 2 ;
+      margin-bottom: $padding-small-horizontal / 2 ;
+    }
+    button.js-form-submit.btn-danger {
+      @extend .pull-right;
+      @extend .btn-xs;
+    }
+  }
+}
+
+#webform-submission-candidature-aap-form > ul {
+  list-style-type: none;
+  padding-left: 0;
+}

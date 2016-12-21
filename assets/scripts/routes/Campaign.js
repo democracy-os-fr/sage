@@ -1,6 +1,6 @@
 export default {
   init() {
-    console.log('campaign init');
+    // console.log('campaign init');
 
     jQuery.cachedScript = (url, options) => {
       // Allow user to set any option except for dataType, cache, and url
@@ -55,14 +55,11 @@ export default {
       });
     });
     jQuery(window).load(() => {
-      console.log('campaign init window load');
+      // console.log('campaign init window load');
       const search = jQuery('.cibulSearch');
       search.append('<button role="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>');
     });
 
-    console.log('campaign init end');
-  },
-  finalize() {
-    console.log('campaign finalize');
+    // console.log('campaign init end');
   },
 };

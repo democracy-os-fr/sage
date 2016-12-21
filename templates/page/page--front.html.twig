@@ -7,7 +7,7 @@
     {% set imgUrl = file_url(drupal_config('agora.settings', 'image_hero_path')) %}
 
     {# Header #}
-    <section class="agora-header bg-image bg-dark"  role="heading" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+    <section class="agora-header bg-image bg-dark bg-no-image"  role="heading">
       <div class="jumbotron {{ container }}">
         <h1 class="text-center">
           {{ drupal_config('system.site', 'name') }}

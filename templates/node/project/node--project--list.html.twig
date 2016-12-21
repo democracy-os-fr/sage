@@ -79,8 +79,8 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
+  <div class="media media-panel">
+    <div class="media-left">
       {% if content.field_images|field_target_entity%}
         {{ content.field_images|field_value }}
       {% else %}
@@ -89,14 +89,18 @@
         </a>
       {% endif %}
     </div>
-    <div class="col-xs-12 col-sm-8">
+    <div class="media-body">
       {% if content.field_display_title[0]['#markup'] %}
-        <h3>{{ label }}</h3>
+        <h3 class="alt-light">{{ label }}</h3>
       {% endif %}
       {{ content.field_hero_text|field_value }}
-      <div class="form-group">
-        <a class="btn btn-primary" href="{{url}}">{{ 'En savoir plus'|t }}</a>
-      </div>
+      <p class="text-right">
+        <a class="btn btn-link" href="{{url}}">
+          {{ 'En savoir plus'|t }}
+          &nbsp;
+          <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+        </a>
+      </p>
     </div>
   </div>
 </article>

@@ -1917,7 +1917,8 @@ blockquote .small:before {
 }
 
 .blockquote-reverse,
-blockquote.pull-right {
+blockquote.pull-right,
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #ecf0f1;
@@ -1929,8 +1930,11 @@ blockquote.pull-right {
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
 blockquote.pull-right footer:before,
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description footer:before,
 blockquote.pull-right small:before,
-blockquote.pull-right .small:before {
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description small:before,
+blockquote.pull-right .small:before,
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:before {
   content: '';
 }
 
@@ -1938,8 +1942,11 @@ blockquote.pull-right .small:before {
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
 blockquote.pull-right footer:after,
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description footer:after,
 blockquote.pull-right small:after,
-blockquote.pull-right .small:after {
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description small:after,
+blockquote.pull-right .small:after,
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:after {
   content: '\A0   \2014';
 }
 
@@ -4565,7 +4572,8 @@ fieldset[disabled] .btn-link:focus {
 }
 
 .btn-xs,
-.btn-group-xs > .btn {
+.btn-group-xs > .btn,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger {
   padding: 1px 5px;
   font-size: 13px;
   line-height: 1.5;
@@ -4669,7 +4677,9 @@ tbody.collapse.in {
   background-clip: padding-box;
 }
 
-.dropdown-menu.pull-right {
+.dropdown-menu.pull-right,
+#webform-submission-candidature-aap-form .js-form-managed-file .dropdown-menu.description,
+#webform-submission-candidature-aap-form .js-form-managed-file button.dropdown-menu.js-form-submit.btn-danger {
   right: 0;
   left: auto;
 }
@@ -4758,7 +4768,9 @@ tbody.collapse.in {
   z-index: 990;
 }
 
-.pull-right > .dropdown-menu {
+.pull-right > .dropdown-menu,
+#webform-submission-candidature-aap-form .js-form-managed-file .description > .dropdown-menu,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -5794,7 +5806,8 @@ form.webform-submission-form > .navbar-collapse,
 }
 
 .navbar-btn.btn-xs,
-.btn-group-xs > .navbar-btn.btn {
+.btn-group-xs > .navbar-btn.btn,
+#webform-submission-candidature-aap-form .js-form-managed-file button.navbar-btn.js-form-submit.btn-danger {
   margin-top: 19px;
   margin-bottom: 19px;
 }
@@ -6003,7 +6016,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #101010;
+  border-color: #111111;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -6384,6 +6397,7 @@ a.label:focus {
 
 .btn-xs .badge,
 .btn-group-xs > .btn .badge,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger .badge,
 .btn-group-xs > .btn .badge {
   top: 0;
   padding: 1px 5px;
@@ -6733,7 +6747,11 @@ a.thumbnail.active {
 }
 
 .media-right,
-.media > .pull-right {
+.media > .pull-right,
+#webform-submission-candidature-aap-form .js-form-managed-file
+.media > .description,
+#webform-submission-candidature-aap-form .js-form-managed-file
+.media > button.js-form-submit.btn-danger {
   padding-left: 10px;
 }
 
@@ -8225,14 +8243,17 @@ button.close {
 
 .clearfix:before,
 .filter-wrapper:before,
+#webform-submission-candidature-aap-form .js-form-managed-file .description:before,
 .clearfix:after,
-.filter-wrapper:after {
+.filter-wrapper:after,
+#webform-submission-candidature-aap-form .js-form-managed-file .description:after {
   content: " ";
   display: table;
 }
 
 .clearfix:after,
-.filter-wrapper:after {
+.filter-wrapper:after,
+#webform-submission-candidature-aap-form .js-form-managed-file .description:after {
   clear: both;
 }
 
@@ -8242,7 +8263,9 @@ button.close {
   margin-right: auto;
 }
 
-.pull-right {
+.pull-right,
+#webform-submission-candidature-aap-form .js-form-managed-file .description,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger {
   float: right !important;
 }
 
@@ -8980,7 +9003,9 @@ a.list-group-item-danger.active:focus {
 
 /* Deprecated as of 4.4.0 */
 
-.pull-right {
+.pull-right,
+#webform-submission-candidature-aap-form .js-form-managed-file .description,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger {
   float: right;
 }
 
@@ -8992,7 +9017,9 @@ a.list-group-item-danger.active:focus {
   margin-right: .3em;
 }
 
-.fa.pull-right {
+.fa.pull-right,
+#webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
+#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger {
   margin-left: .3em;
 }
 
@@ -12019,7 +12046,7 @@ html.js .btn .ajax-throbber {
 }
 
 html.js .form-item .input-group-addon .glyphicon {
-  color: #b4bcc2;
+  color: #999;
   opacity: .5;
   transition: 150ms color, 150ms opacity;
 }
@@ -12219,7 +12246,7 @@ html.js .ajax-new-content:empty {
 }
 
 .select-wrapper:after {
-  color: #95a5a6;
+  color: #464545;
   content: '\25BC';
   font-style: normal;
   font-weight: 400;
@@ -12334,6 +12361,32 @@ form.webform-submission-form {
 
 .paragraphs-dropbutton-wrapper button:not(:last-child) {
   margin-right: 18px;
+}
+
+.node-form #edit-field-form-0-status--wrapper legend {
+  margin-bottom: 5px;
+  margin-left: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#webform-submission-candidature-aap-form .webform-submission-navigation,
+#webform-submission-candidature-aap-form details[data-webform-element-id="candidature_aap--submission_information"] {
+  display: none;
+}
+
+#webform-submission-candidature-aap-form .description.help-block {
+  margin-left: 18px;
+}
+
+#webform-submission-candidature-aap-form .js-form-managed-file .description {
+  margin-top: 4.5px;
+  margin-bottom: 4.5px;
+}
+
+#webform-submission-candidature-aap-form > ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 /**
@@ -12507,6 +12560,54 @@ form.navbar.webform-submission-form > .container-md,
   margin-right: 0;
 }
 
+.project .nav-pills {
+  margin-bottom: 10px;
+}
+
+.project .nav-pills li {
+  text-align: center;
+}
+
+.project .nav-pills li a {
+  display: inline;
+  font-family: 'arc-light';
+  font-size: 18px;
+  padding: 15px 20px 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #EBEBEB;
+  color: #464545;
+}
+
+.project .nav-pills li a:hover,
+.project .nav-pills li a:focus {
+  border-color: #999;
+  color: #464545;
+}
+
+.project .nav-pills li.active a {
+  background-color: #2C3E50;
+  color: #fff;
+  border: none;
+}
+
+.project .nav-pills li.nav-highlight a {
+  border-color: rgba(24, 188, 156, 0.6);
+  color: rgba(24, 188, 156, 0.8);
+}
+
+.project .nav-pills li.nav-highlight a:hover,
+.project .nav-pills li.nav-highlight a:focus {
+  border-color: #18BC9C;
+  color: #18BC9C;
+}
+
+.project .nav-pills li.nav-highlight.active a {
+  background-color: #18BC9C;
+  color: #fff;
+  border: none;
+}
+
 /**
  * Node styling.
  */
@@ -12625,7 +12726,7 @@ p,
 }
 
 .tabledrag-handle {
-  color: #b4bcc2;
+  color: #999;
   cursor: move;
   float: left;
   font-size: 125%;
@@ -12858,6 +12959,54 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   font-weight: 300;
 }
 
+.bg-image.bg-dark.bg-no-image,
+.bg-image .jumbotron.bg-no-image {
+  background-color: #303030;
+}
+
+.media.media-panel {
+  margin-bottom: 21px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border-color: #ecf0f1;
+}
+
+.media.media-panel > .panel-heading {
+  color: #2C3E50;
+  background-color: #ecf0f1;
+  border-color: #ecf0f1;
+}
+
+.media.media-panel > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ecf0f1;
+}
+
+.media.media-panel > .panel-heading .badge {
+  color: #ecf0f1;
+  background-color: #2C3E50;
+}
+
+.media.media-panel > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ecf0f1;
+}
+
+.media.media-panel .media-body {
+  padding-left: 5px;
+}
+
+.media.media-panel .media-body h1,
+.media.media-panel .media-body .h1,
+.media.media-panel .media-body h2,
+.media.media-panel .media-body .h2,
+.media.media-panel .media-body h3,
+.media.media-panel .media-body .h3 {
+  margin-top: 0;
+}
+
 .agenda-search .cibulSearch input {
   max-width: 970px;
   margin: 0 auto;
@@ -12951,7 +13100,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 
 .agenda-calendar .ccal .calbody li.calprev span,
 .agenda-calendar .ccal .calbody li.calnext span {
-  color: #b4bcc2;
+  color: #999;
   background: transparent;
 }
 
@@ -12965,14 +13114,14 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 
 .agenda-calendar .ccal .calbody li.hasdates,
 .agenda-calendar .ccal .calbody li.exists {
-  background-color: #ecf0f1;
+  background-color: #EBEBEB;
 }
 
 .agenda-calendar .ccal .calbody li.selected span,
 .agenda-calendar .ccal .calbody li.preselected span {
   border: #2C3E50 1px solid;
   background-color: transparent;
-  color: #7b8a8b !important;
+  color: #303030 !important;
 }
 
 .agenda-map {
@@ -13060,7 +13209,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 
 .agenda-preview .item .time .fa,
 .agenda-preview .item .location .fa {
-  color: #7b8a8b;
+  color: #303030;
 }
 
 .agenda-preview .item .time {
@@ -13077,7 +13226,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   margin: 30px 5px;
 }
 
-.agenda-preview .item .links.pull-right {
+.agenda-preview .item .links.pull-right,
+.agenda-preview .item #webform-submission-candidature-aap-form .js-form-managed-file .links.description,
+#webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item .links.description,
+.agenda-preview .item #webform-submission-candidature-aap-form .js-form-managed-file button.links.js-form-submit.btn-danger,
+#webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item button.links.js-form-submit.btn-danger {
   margin-right: 5px;
 }
 
@@ -13159,7 +13312,7 @@ p:last-child,
 
 .help-block,
 .control-group .help-inline {
-  color: #b4bcc2;
+  color: #999;
   font-size: 12px;
   margin: 5px 0 10px;
   padding: 0;
@@ -13237,20 +13390,20 @@ header .navbar-brand {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
-  background-color: #7b8a8b;
-  color: #b4bcc2;
+  background-color: #303030;
+  color: #999;
 }
 
 .footer a,
 .footer .nav > li > a {
-  color: #ecf0f1;
+  color: #EBEBEB;
 }
 
 .footer a:hover,
 .footer a:focus,
 .footer .nav > li > a:hover,
 .footer .nav > li > a:focus {
-  color: #b4bcc2;
+  color: #999;
   background-color: transparent;
 }
 
@@ -13281,7 +13434,7 @@ form.webform-submission-form {
 
 .section-with-title {
   margin-top: 45px;
-  border-top: 1px solid #95a5a6;
+  border-top: 1px solid #464545;
   text-align: center;
 }
 

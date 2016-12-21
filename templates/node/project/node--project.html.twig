@@ -65,8 +65,6 @@
  *   in different view modes.
  */
 #}
-
-{{ devel_dump('node--project.html.twig') }}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {%
   set classes = [
@@ -91,8 +89,9 @@
 
     {% set bg_class = content.field_hero_style[0]['#markup'] == 'dark' ? 'bg-dark' : '' %}
     {% set bg_gradient = content.field_hero_style[0]['#markup'] == 'dark' ? 'linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)),' : '' %}
+    {% set bg_url = file_url(content.field_hero_image|field_target_entity.uri.value) %}
 
-    <div class="bg-image {{ bg_class }}" style="background-image: {{ bg_gradient }} url('{{ file_url(content.field_hero_image|field_target_entity.uri.value) }}')">
+    <div class="bg-image {{ bg_class }} bg-no-image">
       <div class="jumbotron {{ container }}">
         {% if content.field_display_title[0]['#markup'] %}
           <h1>{{ label }}</h1>
@@ -107,129 +106,39 @@
 
   {# Content #}
   {% block content %}
-    <div{{ content_attributes.addClass('content').addClass(container) }}>
+    <div {{ content_attributes.addClass('content') }}>
 
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <!-- GALLERY -->
+      <div id="nav-project" class="{{container}}">
+        <ul class="nav nav-pills nav-justified">
+          <li>
+            <a href="#tab-project-main" data-toggle="tab">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              &nbsp;
+              {{ 'Informations'|t }}
+            </a>
+          </li>
+          <li class="nav-highlight">
+            <a href="#tab-project-form" data-toggle="tab">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              &nbsp;
+              {{ 'Candidature'|t }}
+            </a>
+          </li>
+        </ul>
+      </div>
 
-          {{ content.field_images|field_value }}
-
-
-          {{ content.field_files|field_value }}
-
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <div class="panel panel-default">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <h4 class="list-group-item-heading">{{ content.field_info_author|field_label }}</h4>
-                <p class="list-group-item-text">
-                  {{ content.field_info_author|field_value }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h4 class="list-group-item-heading">{{ content.field_info_area|field_label }}</h4>
-                <p class="list-group-item-text">
-                  {{ content.field_info_area|field_value }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h4 class="list-group-item-heading">{{ content.field_address|field_label }}</h4>
-                <p class="list-group-item-text">
-                  {{ content.field_address|field_value }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h4 class="list-group-item-heading">{{ content.field_info_availability|field_label }}</h4>
-                <p class="list-group-item-text">
-                  {{ content.field_info_availability|field_value }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h4 class="list-group-item-heading">{{ content.field_info_calendar|field_label }}</h4>
-                <p class="list-group-item-text">
-                  {{ content.field_info_calendar|field_value }}
-                </p>
-              </li>
-              <!-- <li class="list-group-item">
-                <h5 class="list-group-item-heading">
-                  Recevoir les nouvelles de ce projet
-                </h5>
-                <div class="list-group-item-text">
-                  <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                      <button class="btn btn-success" type="button">{{ 'Candidature'|t }}</button>
-                    </span>
-                  </div>
-                </div>
-              </li> -->
-            </ul>
+      <div id="nav-project-content" class="tab-content tab-content-node">
+        <section class="tab-pane fade" id="tab-project-main">
+          <div class="{{container}}">
+            {% include 'node--project--info.html.twig' %}
           </div>
-        </div>
-
-        <div class="col-xs-12 pad-bottom">
-          <h2>{{ content.field_info_default|field_label }}</h2>
-          <div>
-            {{ content.field_info_default|field_value }}
+        </section>
+        <section class="tab-pane fade" id="tab-project-form">
+          <div class="{{container}}">
+              {{ content.field_form|field_value }}
           </div>
-        </div>
-
-        <div class="col-xs-12 pad-bottom">
-          <h2>{{ content.field_info_block_context|field_label }}</h2>
-          <div>
-            {{ content.field_info_block_context|field_value }}
-          </div>
-        </div>
-
-        <div class="col-xs-12 pad-bottom">
-          <h2>{{ content.field_info_block_selection|field_label }}</h2>
-          <div>
-            {{ content.field_info_block_selection|field_value }}
-          </div>
-        </div>
-
-        <div class="col-xs-12">
-          <div class="panel panel-default pad-bottom">
-            <div class="panel-heading">
-              <b>{{ content.field_info_block_rent|field_label }}</b>
-            </div>
-            <div class="panel-body">
-              <div>
-                {{ content.field_info_block_rent|field_value }}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 pad-bottom">
-          <h2>{{ content.field_info_block_location|field_label }}</h2>
-        </div>
-
-        <div class="col-xs-12 col-md-6 pad-bottom">
-          <!-- <img class="img-responsive" src="http://placehold.it/800x450" alt="mapbox"/> -->
-          {{ content.field_geofield|field_value }}
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <h3>{{ content.field_address|field_label }}</h3>
-          <div>
-            {{ content.field_address|field_value }}
-          </div>
-          <h3>{{ content.field_info_block_transport|field_label }}</h3>
-          <div>
-            {{ content.field_info_block_transport|field_value }}
-          </div>
-        </div>
-
-        <div class="col-xs-12">
-          <div>
-            {{ content.field_info_block_location|field_value }}
-          </div>
-        </div>
-
-      </div> <!-- end row -->
-    </div> <!-- end container -->
+        </section>
+      </div>
 
     </div>
   {% endblock %}

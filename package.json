@@ -59,6 +59,7 @@
     "lodash": "^4.15.0",
     "minimist": "^1.2.0",
     "monkey-hot-loader": "github:rmarscher/monkey-hot-loader#webpack2-import",
+    "mout": "^1.0.0",
     "node-sass": "^3.9.3",
     "optimize-css-assets-webpack-plugin": "^1.3.0",
     "postcss": "^5.2.0",
@@ -79,6 +80,7 @@
     "bootswatch": "^3.3.7",
     "font-awesome": "^4.6.3",
     "jquery": "1.12.4 - 3",
+    "mout": "^1.0.0",
     "slick-carousel": "^1.6.0"
   }
 }
