@@ -18,7 +18,7 @@ function getCodeMirror(target) {
 
 export default {
   init() {
-    console.log('JS sage :: routes/project :: init');
+    // console.log('JS sage :: routes/project :: init');
 
     // $('#project-gallery').slick({
     //   slidesToShow: 1,
@@ -42,6 +42,17 @@ export default {
     }).on('hide.bs.tab', () => {
       window.location.hash = '';
     });
+
+    $('#nav-project a[href="#tab-project-main"]').on('shown.bs.tab', () => {
+      if (drupalSettings.leaflet['leaflet-map']) {
+        if (Array.isArray(drupalSettings.leaflet['leaflet-map'])) {
+          drupalSettings.leaflet['leaflet-map'][0].lMap.invalidateSize(false);
+        } else {
+          drupalSettings.leaflet['leaflet-map'].lMap.invalidateSize(false);
+        }
+      }
+    });
+
 
     if (window.location.hash) {
       switch (window.location.hash) {
