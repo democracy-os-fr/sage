@@ -1,0 +1,17 @@
+.map-tooltip {
+  padding: $padding-small-vertical ;
+  h3 {
+    margin-top: 7px;
+  }
+  & > p {
+    margin: 0 0 ($line-height-computed / 2);
+  }
+  .btn-link i.fa {
+    vertical-align: middle;
+  }
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 4px;
+  right: 6px;
+}

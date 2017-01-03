@@ -30,6 +30,8 @@ $font-size-h6:            16px;
 
 $jumbotron-heading-font-size:     48px;
 
+$link-hover-decoration: none;
+
 $navbar-border-radius: 0;
 
 $dark-red: #A91833;
@@ -59,12 +61,13 @@ $navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;
-$navbar-inverse-link-hover-color:           $brand-success;
+$navbar-inverse-link-hover-color:           transparentize($brand-yellow, 0.3) ;
 $navbar-inverse-link-hover-bg:              transparent;
-$navbar-inverse-link-active-color:          $brand-success;
+$navbar-inverse-link-active-color:          $brand-blue;
 $navbar-inverse-link-active-bg:             transparent;
 $navbar-inverse-link-disabled-color:        #444;
 $navbar-inverse-link-disabled-bg:           transparent;
+$navbar-inverse-brand-hover-color:          transparentize($brand-yellow, 0.3) ;
 
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        36px;

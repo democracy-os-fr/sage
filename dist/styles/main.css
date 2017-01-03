@@ -1436,7 +1436,7 @@ a {
 a:hover,
 a:focus {
   color: #18BC9C;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:focus {
@@ -4543,7 +4543,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #18BC9C;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 
@@ -5969,7 +5969,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #2C3E50;
+  color: rgba(255, 255, 0, 0.6);
   background-color: transparent;
 }
 
@@ -5983,14 +5983,14 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #18BC9C;
+  color: rgba(255, 255, 0, 0.6);
   background-color: transparent;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  color: #18BC9C;
+  color: #00BFFF;
   background-color: transparent;
 }
 
@@ -6023,7 +6023,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: transparent;
-  color: #18BC9C;
+  color: #00BFFF;
 }
 
 @media (max-width: 767px) {
@@ -6041,14 +6041,14 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #18BC9C;
+    color: rgba(255, 255, 0, 0.6);
     background-color: transparent;
   }
 
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #18BC9C;
+    color: #00BFFF;
     background-color: transparent;
   }
 
@@ -6065,7 +6065,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-link:hover {
-  color: #18BC9C;
+  color: rgba(255, 255, 0, 0.6);
 }
 
 .navbar-inverse .btn-link {
@@ -6074,7 +6074,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .navbar-inverse .btn-link:hover,
 .navbar-inverse .btn-link:focus {
-  color: #18BC9C;
+  color: rgba(255, 255, 0, 0.6);
 }
 
 .navbar-inverse .btn-link[disabled]:hover,
@@ -13232,6 +13232,27 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .agenda-preview .item #webform-submission-candidature-aap-form .js-form-managed-file button.links.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item button.links.js-form-submit.btn-danger {
   margin-right: 5px;
+}
+
+.map-tooltip {
+  padding: 6px;
+}
+
+.map-tooltip h3 {
+  margin-top: 7px;
+}
+
+.map-tooltip > p {
+  margin: 0 0 10.5px;
+}
+
+.map-tooltip .btn-link i.fa {
+  vertical-align: middle;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 4px;
+  right: 6px;
 }
 
 /**
