@@ -45,7 +45,7 @@ $gray:                   #464545 ;
 $gray-light:             #999 ;
 $gray-lighter:           #EBEBEB ;
 
-$brand-yellow:          transparentize(#FFFF00, 0.2) ;
+$brand-yellow:          transparentize(#FFFF00, 0.1) ;
 $brand-green:           transparentize(#01E629, 0.3) ;
 $brand-red:             transparentize(#FF4500, 0.3) ;
 $brand-blue:            transparentize(#00BFFF, 0.2) ;
@@ -70,9 +70,9 @@ $navbar-inverse-link-disabled-color:        #444;
 $navbar-inverse-link-disabled-bg:           transparent;
 $navbar-inverse-brand-hover-color:          $brand-yellow ;
 
-// $btn-primary-bg:                            $brand-primary;
-// $btn-primary-color:                         $brand-yellow;
-// $btn-primary-border:                        $brand-primary;
+$btn-primary-bg:                            $brand-primary;
+$btn-primary-color:                         #fff;
+$btn-primary-border:                        $brand-primary;
 
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        36px;
