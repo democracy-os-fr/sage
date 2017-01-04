@@ -76,11 +76,12 @@ $icon-avatar-size: 46px ;
   @include square($icon-avatar-size);
   padding: 12px 14px; // TODO : calculate this sh*t
   border-radius: $icon-avatar-size / 2 ;
-  background-color: $brand-primary;
+  background-color: $brand-yellow;
   font-weight: 300;
-  color: $navbar-inverse-link-color;
+  color: $gray-darker;
+  text-transform: uppercase;
   &:hover {
-    color: $brand-success;
+    background-color: opacify($brand-yellow,1);
   }
 }
 
@@ -90,7 +91,12 @@ $icon-avatar-size: 46px ;
   position: absolute;
   width: 100%;
   padding: $padding-base-vertical $padding-base-horizontal;
-  z-index: 1000;
+  z-index: 999;
+
+  .nav-pills {
+
+  }
+
 }
 
 .linkbar {
@@ -122,6 +128,11 @@ $icon-avatar-size: 46px ;
       background-color: transparent;
       border: 1px solid $gray-lighter;
       color: $gray;
+
+      @media #{$mobile} {
+        display: block;
+      }
+
     }
     a:hover, a:focus {
       border-color: $gray-light;

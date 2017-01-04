@@ -38,11 +38,11 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         }
         break;
 
-      case 'page':
-        dcp('page ThemeSuggestions');
-        dcp($suggestions);
-        dcp($variables);
-        break;
+      // case 'page':
+      //   dcp('page ThemeSuggestions');
+      //   dcp($suggestions);
+      //   dcp($variables);
+      //   break;
       //
       // case 'node':
       //   dcp($suggestions);

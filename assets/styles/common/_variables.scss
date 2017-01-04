@@ -45,15 +45,16 @@ $gray:                   #464545 ;
 $gray-light:             #999 ;
 $gray-lighter:           #EBEBEB ;
 
-$brand-primary:         #2C3E50 ;
+$brand-yellow:          transparentize(#FFFF00, 0.2) ;
+$brand-green:           transparentize(#01E629, 0.3) ;
+$brand-red:             transparentize(#FF4500, 0.3) ;
+$brand-blue:            transparentize(#00BFFF, 0.2) ;
+
+$brand-primary:         $gray-dark ;
 $brand-success:         #18BC9C ;
-$brand-info:            #3498DB ;
+$brand-info:            $brand-blue;
 $brand-warning:         #F39C12 ;
-$brand-danger:          #E74C3C ;
-$brand-yellow:          #FFFF00 ;
-$brand-green:          #01E629 ;
-$brand-red:          #FF4500 ;
-$brand-blue:          #00BFFF ;
+$brand-danger:          $brand-red ;
 
 // Reset inverted navbar basics
 $navbar-inverse-bg:                         $gray-darker;
@@ -61,13 +62,17 @@ $navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;
-$navbar-inverse-link-hover-color:           transparentize($brand-yellow, 0.3) ;
+$navbar-inverse-link-hover-color:           $brand-yellow ;
 $navbar-inverse-link-hover-bg:              transparent;
-$navbar-inverse-link-active-color:          $brand-blue;
+$navbar-inverse-link-active-color:          $brand-yellow;
 $navbar-inverse-link-active-bg:             transparent;
 $navbar-inverse-link-disabled-color:        #444;
 $navbar-inverse-link-disabled-bg:           transparent;
-$navbar-inverse-brand-hover-color:          transparentize($brand-yellow, 0.3) ;
+$navbar-inverse-brand-hover-color:          $brand-yellow ;
+
+// $btn-primary-bg:                            $brand-primary;
+// $btn-primary-color:                         $brand-yellow;
+// $btn-primary-border:                        $brand-primary;
 
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        36px;

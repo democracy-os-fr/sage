@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 ol, ul {
   padding-left: 1.5em;
   .popover &:last-child {
@@ -42,6 +46,12 @@ p:last-child,
 
 .pad-bottom, .pad-bottom:last-child {
   margin-bottom: $padding-large-vertical ;
+}
+
+.dark-background {
+  background-color : #5BBAF8 ;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
 }
 
 .blue-background {
