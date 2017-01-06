@@ -48,6 +48,12 @@ p:last-child,
   margin-bottom: $padding-large-vertical ;
 }
 
+a.btn.btn-primary {
+  &:hover {
+    color: $brand-yellow ;
+  }
+}
+
 .dark-background {
   background-color : $gray-darker ;
   color: $brand-yellow;

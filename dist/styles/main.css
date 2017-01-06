@@ -4231,8 +4231,8 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary,
 .view-header > ul.links li a {
   color: #fff;
-  background-color: #303030;
-  border-color: #303030;
+  background-color: #222222;
+  border-color: #222222;
 }
 
 .btn-primary:focus,
@@ -4240,15 +4240,15 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.focus,
 .view-header > ul.links li a.focus {
   color: #fff;
-  background-color: #171717;
+  background-color: #090909;
   border-color: black;
 }
 
 .btn-primary:hover,
 .view-header > ul.links li a:hover {
   color: #fff;
-  background-color: #171717;
-  border-color: #111111;
+  background-color: #090909;
+  border-color: #040404;
 }
 
 .btn-primary:active,
@@ -4259,8 +4259,8 @@ fieldset[disabled] .btn-default.focus {
 .view-header > ul.links li
   .open > a.dropdown-toggle {
   color: #fff;
-  background-color: #171717;
-  border-color: #111111;
+  background-color: #090909;
+  border-color: #040404;
 }
 
 .btn-primary:active:hover,
@@ -4285,7 +4285,7 @@ fieldset[disabled] .btn-default.focus {
 .view-header > ul.links li
     .open > a.dropdown-toggle.focus {
   color: #fff;
-  background-color: #050505;
+  background-color: black;
   border-color: black;
 }
 
@@ -4323,13 +4323,13 @@ fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .view-header > ul.links li a.focus,
 .view-header > ul.links li
   fieldset[disabled] a.focus {
-  background-color: #303030;
-  border-color: #303030;
+  background-color: #222222;
+  border-color: #222222;
 }
 
 .btn-primary .badge,
 .view-header > ul.links li a .badge {
-  color: #303030;
+  color: #222222;
   background-color: #fff;
 }
 
@@ -13572,6 +13572,11 @@ p:last-child,
 .pad-bottom,
 .pad-bottom:last-child {
   margin-bottom: 18px;
+}
+
+a.btn.btn-primary:hover,
+.view-header > ul.links li a:hover {
+  color: rgba(255, 255, 0, 0.9);
 }
 
 .dark-background {

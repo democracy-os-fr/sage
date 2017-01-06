@@ -7,15 +7,12 @@
     {% set imgUrl = file_url(drupal_config('agora.settings', 'image_hero_path')) %}
 
     {# Header #}
-    <section class="agora-header bg-image bg-dark bg-no-image"  role="heading">
+    {% if imgUrl %}
+      <section class="agora-header bg-image bg-dark" role="heading" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl }}')">
+    {% else %}
+      <section class="agora-header bg-image bg-dark bg-no-image" role="heading">
+    {% endif %}
       <div class="jumbotron {{ container }}">
-        <h1 class="text-center">
-          {{ drupal_config('system.site', 'name') }}
-          <br/>
-          <small>
-            {{ drupal_config('system.site', 'slogan') }}
-          </small>
-        </h1>
 
         {{ drupal_field('description', 'agora_page', 1) }}
 
