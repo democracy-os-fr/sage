@@ -93,7 +93,12 @@
       {% if content.field_display_title[0]['#markup'] %}
         <h3 class="alt-light">{{ label }}</h3>
       {% endif %}
-      {{ content.field_hero_text|field_value }}
+      <p>
+        {{ content.field_hero_text|field_value }}
+      </p>
+      <p>
+        {{ content.field_info_area|field_value }}
+      </p>
       <p class="text-right">
         <a class="btn btn-link" href="{{url}}">
           {{ 'En savoir plus'|t }}

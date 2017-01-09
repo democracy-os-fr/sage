@@ -45,3 +45,12 @@
 .views-row {
   margin: $padding-large-vertical auto ;
 }
+
+.project-list {
+  & > .view-header {
+    text-align: left;
+  }
+  & > .view-content {
+    @extend .container;
+  }
+}

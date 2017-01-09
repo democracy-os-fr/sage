@@ -1,0 +1,29 @@
+a.btn.btn-primary {
+  &:hover {
+    color: $brand-yellow;
+  }
+}
+
+.button {
+  @extend .btn;
+}
+
+.button--primary {
+  @extend .btn-primary;
+}
+.button--success {
+  @extend .btn-success;
+}
+.button--info {
+  @extend .btn-info;
+}
+.button--danger {
+  @extend .btn-danger;
+}
+.button--warning {
+  @extend .btn-warning;
+}
+
+.button--small {
+  @extend .btn-sm;
+}
