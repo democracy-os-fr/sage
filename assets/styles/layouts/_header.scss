@@ -9,28 +9,14 @@ header.navbar {
 }
 
 h1, h2, header .navbar-brand {
-  font-family: 'arc-light';
-  text-transform: uppercase;
   small {
     font-family: $headings-font-family;
-    text-transform: none;
   }
 
-}
-
-h1, h2, h3, h4 {
-  &.alt {
-    font-family: 'arc';
-    text-transform: uppercase;
-  }
-  &.alt-light {
-    font-family: 'arc-light';
-    text-transform: uppercase;
-  }
 }
 
 header .navbar-brand {
-  line-height: 1.5;
+
 }
 
 header.navbar ul.nav.navbar-nav.navbar-right {
@@ -50,5 +36,41 @@ header.navbar ul.nav.navbar-nav.navbar-right {
       @extend .btn-sm;
       @extend .btn-primary;
     }
+  }
+}
+
+
+.agora-header {
+
+  font-weight: 400;
+  padding: 50px ($padding-base-vertical * 2) ;
+  text-align: center;
+
+  &.bg-dark {
+    color: $gray-lighter;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: ($padding-base-vertical * 3);
+    font-weight: bold;
+    &.bg-dark {
+      color: $gray-lighter;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .sitename {
+    font-size: 70px;
+    margin-top: 45px;
+  }
+
+  .slogan {
+    text-align: center;
+    margin-bottom: $padding-base-horizontal * 3 ;
+    font-size: 48px;
+    font-weight: normal;
   }
 }

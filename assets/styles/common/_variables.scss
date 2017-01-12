@@ -45,34 +45,19 @@ $gray:                   #464545 ;
 $gray-light:             #999 ;
 $gray-lighter:           #EBEBEB ;
 
-$brand-yellow:          transparentize(#FFFF00, 0.1) ;
-$brand-green:           transparentize(#01E629, 0.3) ;
-$brand-red:             transparentize(#FF4500, 0.3) ;
-$brand-blue:            transparentize(#00BFFF, 0.2) ;
-
-$brand-primary:         $gray-dark ;
-$brand-success:         #18BC9C ;
-$brand-info:            $brand-blue;
-$brand-warning:         #F39C12 ;
-$brand-danger:          $brand-red ;
-
 // Reset inverted navbar basics
-$navbar-inverse-bg:                         $gray-darker;
+$navbar-inverse-color:                      $gray-light;
+$navbar-inverse-bg:                         $red;
 $navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;
-$navbar-inverse-link-hover-color:           $brand-yellow ;
+$navbar-inverse-link-hover-color:           lighten($red, 30%);
 $navbar-inverse-link-hover-bg:              transparent;
-$navbar-inverse-link-active-color:          $brand-yellow;
-$navbar-inverse-link-active-bg:             transparent;
+$navbar-inverse-link-active-color:          $navbar-inverse-link-color;
+$navbar-inverse-link-active-bg:             $dark-red;
 $navbar-inverse-link-disabled-color:        #444;
 $navbar-inverse-link-disabled-bg:           transparent;
-$navbar-inverse-brand-hover-color:          $brand-yellow ;
-
-$btn-primary-bg:                            $gray-darker;
-$btn-primary-color:                         #fff;
-$btn-primary-border:                        $gray-darker;
 
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        36px;

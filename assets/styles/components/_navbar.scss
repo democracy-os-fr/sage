@@ -76,12 +76,12 @@ $icon-avatar-size: 46px ;
   @include square($icon-avatar-size);
   padding: 12px 14px; // TODO : calculate this sh*t
   border-radius: $icon-avatar-size / 2 ;
-  background-color: $brand-yellow;
+  background-color: #fff;
   font-weight: 300;
   color: $gray-darker;
   text-transform: uppercase;
   &:hover {
-    background-color: opacify($brand-yellow,1);
+    background-color: opacify(#fff,1);
   }
 }
 
@@ -121,7 +121,6 @@ $icon-avatar-size: 46px ;
     text-align: center;
     a {
       display: inline;
-      font-family: 'arc-light';
       font-size: $font-size-h4;
       padding: 15px 20px 10px ;
       text-transform: uppercase;
