@@ -193,3 +193,10 @@ form.webform-submission-form {
   list-style-type: none;
   padding-left: 0;
 }
+
+.webform-details-toggle-state {
+  @extend .btn;
+  @extend .btn-xs;
+  @extend .btn-info;
+  margin-bottom: $padding-base-vertical;
+}
