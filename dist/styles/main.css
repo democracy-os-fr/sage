@@ -14003,6 +14003,11 @@ form.webform-submission-form {
   margin-bottom: 6px;
 }
 
+#edit-user-type--wrapper legend {
+  margin-bottom: 0;
+  border: none;
+}
+
 /**
  * Icon styles.
  */

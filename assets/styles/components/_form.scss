@@ -200,3 +200,10 @@ form.webform-submission-form {
   @extend .btn-info;
   margin-bottom: $padding-base-vertical;
 }
+
+#edit-user-type--wrapper {
+  legend {
+    margin-bottom: 0;
+    border: none;
+  }
+}
