@@ -1,0 +1,29 @@
+{% extends "node.html.twig" %}
+{# Content #}
+{% block content %}
+
+<div class="panel panel-event">
+
+  <div class="panel-heading"></div>
+
+  {% set imgUrl %}
+       {{ content.field_image|field_value }}
+  {% endset %}
+
+  <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
+    <h1 class="padding-bottom">{{ label }}</h1>
+  </div>
+
+  <div class="panel-body">
+
+    <div class="panel-infobar">
+
+    </div>
+
+    {{ content.body }}
+
+  </div>
+
+</div>
+
+{% endblock %}

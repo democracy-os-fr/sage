@@ -53,8 +53,9 @@
     {% if content.field_enable_timeline|field_raw('value') %}
       <div role="tabpanel" class="tab-pane fade" id="timeline">
         <section>
-          {{ drupal_view('timeline','embed_1')|render }}
+          {{ drupal_view('timeline','page_1') }}
         </section>
+        <span>TIMELINE END MOD</span>
       </div>
     {% endif %}
 

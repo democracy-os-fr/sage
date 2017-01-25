@@ -45,4 +45,16 @@
     color: $navbar-inverse-link-color;
     font-weight: bold;
   }
+
+  .panel-body {
+    .field--type-text-with-summary {
+      & , & > * {
+        text-align: left !important;
+      }
+      h1, h1 > span {
+        font-size: $font-size-h3 !important;
+      }
+    }
+  }
+
 }
