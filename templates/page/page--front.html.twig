@@ -33,10 +33,25 @@
       </section>
     {% endif %}
 
+    <section class="{{ container }}">
+      {{ drupal_view('forum_list','home') }}
+    </section>
+
+    <section class="{{ container }} section-with-title">
+      <h2 class="section-title">
+        {{ 'Découvrir les projets'|t }}
+      </h2>
+      <div class="text-align-left">
+        {{ drupal_view('forum_grid','block') }}
+      </div>
+    </section>
+
     {# Content #}
     {% block content %}
       <a id="main-content"></a>
-      {{ drupal_field('body', 'agora_page', 1) }}
+      <section class="{{ container }} section-with-title">
+        {{ drupal_field('body', 'agora_page', 1) }}
+      </section>
     {% endblock %}
   </div>
 {% endblock %}

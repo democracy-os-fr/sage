@@ -1,0 +1,44 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="panel panel-event">
+
+  <div class="panel-heading">
+    <h2 class="pad-bottom">{{ label }}</h2>
+  </div>
+
+  <div class="panel-body">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        {{ content.field_image|field_value }}
+      </div>
+      <div class="col-xs-12 col-sm-8">
+        <div class="panel-infobar">
+          <i class="fa fa-calendar"></i>
+
+          {% if "now"|date('Ymd') > content.field_end_date|field_raw('value')|date('Ymd') %}
+            {% if content.field_end_date|field_value %}
+              {{ content.field_end_date|field_value }}
+            {% endif %}
+          {% else %}
+            {% if content.field_start_date|field_value %}
+              {{ content.field_start_date|field_value }}
+            {% endif %}
+          {% endif %}
+
+        </div>
+        {{ content.body }}
+      </div>
+      <div>
+        {{ content.field_link }}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

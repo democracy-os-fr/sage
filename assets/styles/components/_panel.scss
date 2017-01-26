@@ -18,6 +18,16 @@
     padding: $padding-base-vertical $padding-base-horizontal ;
   }
 
+  .panel-heading {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      margin: $padding-small-vertical auto;
+    }
+  }
+
+  .panel-infobar {
+    margin-bottom: $padding-small-vertical;
+  }
+
   .panel-footer {
     padding: $padding-base-horizontal ($padding-base-horizontal * 2) ($padding-base-horizontal * 3) ;
   }

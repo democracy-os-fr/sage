@@ -18,29 +18,42 @@
 
 
   <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
-    <h1>{{ label }}</h1>
+    <h2>{{ label }}</h2>
   </div>
 
   <div class="panel-body">
 
     <div class="panel-infobar">
       <i class="fa fa-calendar"></i>
-      {% if content.field_start_date|field_value %}
-        {{ content.field_start_date|field_value }}
-      {% endif %}
-      {% if content.field_end_date|field_value %}
-        {{ content.field_end_date|field_value }}
+
+      {% if "now"|date('Ymd') > content.field_end_date|field_raw('value')|date('Ymd') %}
+        {% if content.field_end_date|field_value %}
+          {{ content.field_end_date|field_value }}
+        {% endif %}
+      {% else %}
+        {% if content.field_start_date|field_value %}
+          {{ content.field_start_date|field_value }}
+        {% endif %}
       {% endif %}
 
     </div>
 
-    {{ content.body }}
+    <div class="pad-bottom">
+      {{ content.body }}
+    </div>
+
     <div>
-      {{ content.field_link }}
+      <a class="btn btn-default btn-sm" href="{{ path('entity.node.canonical', {'node': content.field_campaign|field_target_entity.id}) }}">
+        {{ 'En savoir plus'|t }}
+      </a>
+      {{ devel_dump(content.field_link) }}
+      {% if content.field_link|field_value %}
+        <a class="btn btn-primary btn-sm" href="{{ content.field_link|field_raw('link') }}">
+          {{ content.field_link|field_raw('title') }}
+        </a>
+      {% endif %}
     </div>
   </div>
-
-  {{ devel_dump(content.field_link) }}
 
 </div>
 

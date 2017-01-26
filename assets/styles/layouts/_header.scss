@@ -15,8 +15,11 @@ h1, h2, header .navbar-brand {
 
 }
 
-header .navbar-brand {
-
+header.navbar-inverse .navbar-brand {
+  line-height: 16px;
+  &:hover, &:focus {
+    color: $navbar-inverse-link-color;
+  }
 }
 
 header.navbar ul.nav.navbar-nav.navbar-right {

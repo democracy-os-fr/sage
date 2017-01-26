@@ -8,22 +8,17 @@
 
   <div class="bg-image bg-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('{{ imgUrl|striptags|trim }}')">
     <div class="jumbotron {{ container }}">
-      <h1>{{ label }}</h1>
+      {% if content.field_display_title|field_raw('value') %}
+        <h1>{{ label }}</h1>
+      {% endif %}
       {{ content.body }}
     </div>
   </div>
 
-  {{ devel_dump('- node campaign content :') }}
-  {{ devel_dump(content) }}
-
   {% if content.field_enable_timeline|field_raw('value') or content.field_enable_agenda|field_raw('value') or content.field_enable_forum|field_raw('value') %}
     <section class="{{ container }}">
-      <ul class="nav nav-tabs nav-justified nav-campaign" role="tablist">
+      <ul class="nav nav-pills nav-justified nav-campaign" role="tablist">
         <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Informations</a></li>
-
-        {% if content.field_enable_timeline|field_raw('value') %}
-          <li role="presentation" class=""><a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab">Étapes</a></li>
-        {% endif %}
 
         {% if content.field_enable_forum|field_raw('value') %}
         <li role="presentation" class=""><a href="#forum" aria-controls="forum" role="tab" data-toggle="tab">Consultation(s)</a></li>
@@ -38,26 +33,25 @@
 
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="info">
+      {% if content.field_enable_timeline|field_raw('value') %}
+        <section class="{{ container }}">
+          {{ attach_library('views_timelinejs/timelinejs.local') }}
+          {{ drupal_view('timeline','page',node.id) }}
+        </section>
+      {% endif %}
       <section class="{{ container }}">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            {{ content.field_content_main|field_value }}
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            {{ content.field_content_side|field_value }}
-          </div>
+        {{ drupal_view('forum_list','block',node.id) }}
+      </section>
+      <section class="{{ container }} section-with-title">
+        <h2 class="section-title">
+          {{ 'Participez aux autres campagnes de concertation'|t }}
+        </h2>
+        <div class="text-align-left">
+          {{ drupal_view('forum_grid','block',node.id) }}
         </div>
       </section>
-    </div>
 
-    {% if content.field_enable_timeline|field_raw('value') %}
-      <div role="tabpanel" class="tab-pane fade" id="timeline">
-        <section>
-          {{ drupal_view('timeline','page_1') }}
-        </section>
-        <span>TIMELINE END MOD</span>
-      </div>
-    {% endif %}
+    </div>
 
     {% if content.field_enable_forum|field_raw('value') %}
       <div role="tabpanel" class="tab-pane fade" id="forum">

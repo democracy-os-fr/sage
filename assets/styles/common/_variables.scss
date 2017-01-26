@@ -19,7 +19,7 @@ $fa-font-path:          '~font-awesome/fonts';
 $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&subset=latin-ext";
 
 $font-size-base:          14px;
-$font-weight-base:        300;
+$font-weight-base:        400;
 
 $font-size-h1:            34px;
 $font-size-h2:            24px;
@@ -37,8 +37,6 @@ $navbar-border-radius: 0;
 $dark-red: #A91833;
 $red: #D81E41;
 $purple: #6D1F80;
-
-$test: $btn-primary-color;
 
 $gray-base:              #000 ;
 $gray-darker:            lighten($gray-base, 13.5%) ;

@@ -1,0 +1,46 @@
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              #212121;
+$gray:                   #666;
+$gray-light:             #bbb;
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+$brand-primary:         #2196F3;
+$brand-success:         #4CAF50;
+$brand-info:            #9C27B0;
+$brand-warning:         #ff9800;
+$brand-danger:          #e51c23;
+
+
+$body-bg:               #fff;
+//** Global text color on `<body>`.
+$text-color:            $gray;
+//** Global textual link color.
+$link-color:            $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: none;
+
+$btn-default-color:              #444;
+$btn-default-bg:                 #fff;
+$btn-default-border:             transparent;
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             transparent;
+
+$pagination-color:                     $link-color;
+$pagination-bg:                        #fff;
+$pagination-border:                    #ddd;
+
+$pagination-hover-color:               $link-hover-color;
+$pagination-hover-bg:                  $gray-lighter;
+$pagination-hover-border:              #ddd;
+
+$pagination-active-color:              #fff;
+$pagination-active-bg:                 $brand-primary;
+$pagination-active-border:             $brand-primary;
+
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               #fff;
+$pagination-disabled-border:           #ddd;

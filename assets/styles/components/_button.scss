@@ -27,3 +27,8 @@ a.btn.btn-primary {
 .button--small {
   @extend .btn-sm;
 }
+
+.more-link a {
+  @extend .btn;
+  @extend .btn-default;
+}
