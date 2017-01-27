@@ -37,7 +37,9 @@
       <h2 class="section-title">
         {{ 'En ce moment'|t }}
       </h2>
-      {{ drupal_view('forum_list','home') }}
+      <div class="text-align-left">
+        {{ drupal_view('forum_list','home') }}
+      </div>
     </section>
 
     <section class="{{ container }} section-with-title">
