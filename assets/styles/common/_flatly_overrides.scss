@@ -25,9 +25,28 @@ $link-hover-decoration: none;
 $btn-default-color:              #444;
 $btn-default-bg:                 #fff;
 $btn-default-border:             transparent;
+
 $btn-primary-color:              #fff;
 $btn-primary-bg:                 $brand-primary;
 $btn-primary-border:             transparent;
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             transparent;
+
+$btn-info-color:                 #fff;
+$btn-info-bg:                    $gray;
+$btn-info-border:                transparent;
+
+$btn-warning-color:              #fff;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             transparent;
+
+$btn-danger-color:               #fff;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              transparent;
+
+$btn-link-disabled-color:        $gray-light;
 
 $pagination-color:                     $link-color;
 $pagination-bg:                        #fff;
@@ -44,3 +63,57 @@ $pagination-active-border:             $brand-primary;
 $pagination-disabled-color:            $gray-light;
 $pagination-disabled-bg:               #fff;
 $pagination-disabled-border:           #ddd;
+
+$navbar-default-color:             $gray-light;
+$navbar-default-bg:                #fff;
+$navbar-default-border:            transparent;
+
+// Navbar links
+$navbar-default-link-color:                $gray;
+$navbar-default-link-hover-color:          $gray-dark;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         $gray-dark;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
+$navbar-default-link-disabled-color:       #ccc;
+$navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
+$navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           transparent;
+$navbar-default-toggle-icon-bar-bg:        rgba(0,0,0,0.5);
+$navbar-default-toggle-border-color:       transparent;
+
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color:                      $gray-light;
+$navbar-inverse-bg:                         $brand-primary;
+$navbar-inverse-border:                     transparent;
+
+// Inverted navbar links
+$navbar-inverse-link-color:                 lighten($brand-primary, 30%);
+$navbar-inverse-link-hover-color:           #fff;
+$navbar-inverse-link-hover-bg:              transparent;
+$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color;
+$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%);
+$navbar-inverse-link-disabled-color:        #444;
+$navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:                $navbar-inverse-link-color;
+$navbar-inverse-brand-hover-color:          #fff;
+$navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle\
+$navbar-inverse-toggle-hover-bg:            transparent;
+$navbar-inverse-toggle-icon-bar-bg:         rgba(0,0,0,0.5);
+$navbar-inverse-toggle-border-color:        transparent;
+
+$nav-link-hover-bg:                         $gray-lighter;
+
+$nav-disabled-link-color:                   $gray-light;
+$nav-disabled-link-hover-color:             $gray-light;

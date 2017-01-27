@@ -25,3 +25,7 @@ p, .field--type-text-long ul, .field--type-text-long ol {
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;
 // }
+
+.page-node-type-campaign .link-campaign {
+  display: none;
+}

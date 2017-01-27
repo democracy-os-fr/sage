@@ -25,16 +25,18 @@
     {# Header #}
     {% if ( not is_full_width ) and page.header %}
       {% block header %}
-        <section class="agora-header col-sm-12" role="heading">
+        <div class="agora-header" role="heading">
           {{ page.header|without('sage_local_tasks') }}
-        </section>
+        </div>
       {% endblock %}
     {% endif %}
 
     {# Content #}
     {% block content %}
       <a id="main-content"></a>
-      {{ page.content }}
+      <div>
+        {{ page.content }}
+      </div>
     {% endblock %}
 
   </section>

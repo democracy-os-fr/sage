@@ -38,6 +38,10 @@ function sage_preprocess_node__event(&$variables){
   // dcp($variables);
 }
 
+function sage_preprocess_vertical_tabs(&$variables) {
+  dcp('sage_preprocess_vertical_tabs');
+}
+
 // function sage_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 //   dcp('sage_theme_suggestions_page_alter');
 //   dcp($suggestions);

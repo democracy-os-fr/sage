@@ -33,7 +33,10 @@
       </section>
     {% endif %}
 
-    <section class="{{ container }}">
+    <section class="{{ container }} section-with-title">
+      <h2 class="section-title">
+        {{ 'En ce moment'|t }}
+      </h2>
       {{ drupal_view('forum_list','home') }}
     </section>
 
@@ -42,7 +45,7 @@
         {{ 'Découvrir les projets'|t }}
       </h2>
       <div class="text-align-left">
-        {{ drupal_view('forum_grid','block') }}
+        {{ drupal_view('forum_grid','home') }}
       </div>
     </section>
 
