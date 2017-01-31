@@ -40,19 +40,19 @@
           {{ content.body }}
         </div>
 
+        <div>
+          <a class="btn btn-default link-campaign" href="{{ path('entity.node.canonical', {'node': content.field_campaign|field_target_entity.id}) }}">
+            {{ 'En savoir plus'|t }}
+          </a>
+          {% if content.field_link|field_value %}
+            <a class="btn btn-primary" href="{{ content.field_link[0]['#plain_text'] }}">
+              {{ content.field_link|field_raw('title') }}
+            </a>
+          {% endif %}
+        </div>
+
       </div>
     </div> <!-- END row  -->
-
-    <div class="text-center">
-      <a class="btn btn-default link-campaign" href="{{ path('entity.node.canonical', {'node': content.field_campaign|field_target_entity.id}) }}">
-        {{ 'En savoir plus'|t }}
-      </a>
-      {% if content.field_link|field_value %}
-        <a class="btn btn-primary" href="{{ content.field_link[0]['#plain_text'] }}">
-          {{ content.field_link|field_raw('title') }}
-        </a>
-      {% endif %}
-    </div>
 
   </div>
 

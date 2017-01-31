@@ -15018,6 +15018,10 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   margin-top: 0;
 }
 
+.jumbotron p {
+  font-weight: 400;
+}
+
 .agenda-search .cibulSearch input {
   max-width: 970px;
   margin: 0 auto;
@@ -15417,7 +15421,8 @@ header.navbar-inverse .navbar-brand {
 }
 
 header.navbar-inverse .navbar-brand:hover,
-header.navbar-inverse .navbar-brand:focus {
+header.navbar-inverse .navbar-brand:focus,
+header.navbar-inverse .navbar-brand:visited {
   color: #fff;
 }
 
