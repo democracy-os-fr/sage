@@ -18,6 +18,10 @@ p, ul, ol  {
   font-weight: $font-weight-base;
 }
 
+.field--type-text-long ul, .field--type-text-long ol {
+  margin-bottom: $padding-small-vertical
+}
+
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;
 // }

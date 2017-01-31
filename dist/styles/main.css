@@ -14609,10 +14609,9 @@ ol {
   font-weight: 400;
 }
 
-p,
 .field--type-text-long ul,
 .field--type-text-long ol {
-  font-size: 120%;
+  margin-bottom: 6px;
 }
 
 .page-node-type-campaign .link-campaign {
