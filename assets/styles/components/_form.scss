@@ -2,6 +2,13 @@
  * Form styles.
  */
 
+ input[type="checkbox"],
+ .checkbox input[type="checkbox"],
+ .checkbox-inline input[type="checkbox"] {
+   position: absolute;
+   margin-top: 3px;
+ }
+
 // Browsers do not recognize pseudo :after selectors, we must create a wrapper
 // around the select element to style it properly.
 // $see http://stackoverflow.com/q/21103542

@@ -14126,6 +14126,13 @@ a.btn-primary.webform-details-toggle-state:hover,
  * Form styles.
  */
 
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-top: 3px;
+}
+
 .select-wrapper {
   display: inline-block;
   position: relative;
