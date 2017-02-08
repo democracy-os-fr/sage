@@ -1923,7 +1923,8 @@ blockquote .small:before {
 
 .blockquote-reverse,
 blockquote.pull-right,
-#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description {
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description,
+.page-node-type-article blockquote.taskbar {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #ecf0f1;
@@ -1936,10 +1937,13 @@ blockquote.pull-right,
 .blockquote-reverse .small:before,
 blockquote.pull-right footer:before,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description footer:before,
+.page-node-type-article blockquote.taskbar footer:before,
 blockquote.pull-right small:before,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description small:before,
+.page-node-type-article blockquote.taskbar small:before,
 blockquote.pull-right .small:before,
-#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:before {
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:before,
+.page-node-type-article blockquote.taskbar .small:before {
   content: '';
 }
 
@@ -1948,10 +1952,13 @@ blockquote.pull-right .small:before,
 .blockquote-reverse .small:after,
 blockquote.pull-right footer:after,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description footer:after,
+.page-node-type-article blockquote.taskbar footer:after,
 blockquote.pull-right small:after,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description small:after,
+.page-node-type-article blockquote.taskbar small:after,
 blockquote.pull-right .small:after,
-#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:after {
+#webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:after,
+.page-node-type-article blockquote.taskbar .small:after {
   content: '\A0   \2014';
 }
 
@@ -4955,7 +4962,8 @@ tbody.collapse.in {
 .dropdown-menu.pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file .dropdown-menu.description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.dropdown-menu.js-form-submit.btn-danger,
-#webform-submission-candidature-aap-form .js-form-managed-file button.dropdown-menu.js-form-submit.button--danger {
+#webform-submission-candidature-aap-form .js-form-managed-file button.dropdown-menu.js-form-submit.button--danger,
+.page-node-type-article .dropdown-menu.taskbar {
   right: 0;
   left: auto;
 }
@@ -5047,7 +5055,8 @@ tbody.collapse.in {
 .pull-right > .dropdown-menu,
 #webform-submission-candidature-aap-form .js-form-managed-file .description > .dropdown-menu,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger > .dropdown-menu,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger > .dropdown-menu {
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger > .dropdown-menu,
+.page-node-type-article .taskbar > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -7229,7 +7238,9 @@ a.thumbnail.active {
 #webform-submission-candidature-aap-form .js-form-managed-file
 .media > button.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file
-.media > button.js-form-submit.button--danger {
+.media > button.js-form-submit.button--danger,
+.page-node-type-article
+.media > .taskbar {
   padding-left: 10px;
 }
 
@@ -8751,16 +8762,19 @@ button.close {
 .clearfix:before,
 .filter-wrapper:before,
 #webform-submission-candidature-aap-form .js-form-managed-file .description:before,
+.page-node-type-article .taskbar:before,
 .clearfix:after,
 .filter-wrapper:after,
-#webform-submission-candidature-aap-form .js-form-managed-file .description:after {
+#webform-submission-candidature-aap-form .js-form-managed-file .description:after,
+.page-node-type-article .taskbar:after {
   content: " ";
   display: table;
 }
 
 .clearfix:after,
 .filter-wrapper:after,
-#webform-submission-candidature-aap-form .js-form-managed-file .description:after {
+#webform-submission-candidature-aap-form .js-form-managed-file .description:after,
+.page-node-type-article .taskbar:after {
   clear: both;
 }
 
@@ -8773,7 +8787,8 @@ button.close {
 .pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file .description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger {
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger,
+.page-node-type-article .taskbar {
   float: right !important;
 }
 
@@ -9518,7 +9533,8 @@ a.list-group-item-danger.active:focus {
 .pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file .description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger {
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger,
+.page-node-type-article .taskbar {
   float: right;
 }
 
@@ -9533,7 +9549,8 @@ a.list-group-item-danger.active:focus {
 .fa.pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger,
-#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger {
+#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger,
+.page-node-type-article .fa.taskbar {
   margin-left: .3em;
 }
 
@@ -13182,7 +13199,8 @@ article.campaign .nav-campaign {
 
 p,
 ul,
-ol {
+ol,
+time {
   font-weight: 300;
 }
 
@@ -13190,6 +13208,30 @@ p,
 .field--type-text-long ul,
 .field--type-text-long ol {
   font-size: 120%;
+}
+
+mark,
+.mark {
+  background-color: rgba(255, 255, 0, 0.6);
+  padding: .1em .3em;
+  border-radius: 6px;
+}
+
+.page-node-type-article .taskbar {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.field .field--label.badge {
+  margin-bottom: .4em;
+}
+
+.field .field--label.badge::after {
+  content: '';
+}
+
+.field.field--label-inline .field--label.badge {
+  margin-right: .4em;
 }
 
 /**
@@ -13792,7 +13834,9 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .agenda-preview .item #webform-submission-candidature-aap-form .js-form-managed-file button.links.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item button.links.js-form-submit.btn-danger,
 .agenda-preview .item #webform-submission-candidature-aap-form .js-form-managed-file button.links.js-form-submit.button--danger,
-#webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item button.links.js-form-submit.button--danger {
+#webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item button.links.js-form-submit.button--danger,
+.agenda-preview .item .page-node-type-article .links.taskbar,
+.page-node-type-article .agenda-preview .item .links.taskbar {
   margin-right: 5px;
 }
 

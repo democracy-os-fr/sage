@@ -14,12 +14,46 @@ article.campaign .nav-campaign {
   margin-bottom: $padding-base-horizontal * 2 ;
 }
 
-p, ul, ol  {
+p, ul, ol, time  {
   font-weight: $font-weight-base;
 }
 
 p, .field--type-text-long ul, .field--type-text-long ol {
   font-size: 120%;
+}
+
+mark,
+.mark {
+  background-color: transparentize($brand-yellow, 0.3) ;
+  padding: .1em .3em;
+  border-radius: $border-radius-large;
+}
+
+.page-node-type-article {
+  .taskbar {
+    position: relative;
+    @extend .pull-right;
+    @extend .clearfix;
+    margin-bottom: $padding-base-vertical;
+  }
+}
+
+.field {
+
+  .field--label.badge {
+    margin-bottom: .4em ;
+  }
+
+  .field--label.badge::after {
+    content: '';
+  }
+
+  &.field--label-inline {
+    .field--label.badge {
+      margin-right: .4em ;
+    }
+  }
+
 }
 
 // .page-node-type-project .leaflet-container {

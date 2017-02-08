@@ -1,0 +1,18 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="{{ container }}">
+  <div class="page-header">
+    <h1>{{ label }}</h1>
+    {{ content.field_date }}
+  </div>
+  {{ content.body }}
+</div>
+
+  {{ devel_dump(content) }}
+
+</div>
+
+{% endblock %}
