@@ -12629,6 +12629,18 @@ html.js .ajax-new-content:empty {
   content: ':';
 }
 
+.field--label.badge {
+  margin-bottom: .4em;
+}
+
+.field--label.badge::after {
+  content: '';
+}
+
+.field--label-inline .field--label.badge {
+  margin-right: .4em;
+}
+
 /**
  * File (and Image Widget) styles.
  */
@@ -13222,16 +13234,24 @@ mark,
   margin-bottom: 10px;
 }
 
-.field .field--label.badge {
-  margin-bottom: .4em;
+article.article.teaser h1,
+article.article.teaser h2,
+article.article.teaser h3,
+article.article.teaser h4 {
+  margin-top: 0;
 }
 
-.field .field--label.badge::after {
-  content: '';
+article.article.teaser .field--name-body {
+  margin-top: 10px;
 }
 
-.field.field--label-inline .field--label.badge {
-  margin-right: .4em;
+article.article.teaser .field--name-body h1,
+article.article.teaser .field--name-body h2,
+article.article.teaser .field--name-body h3,
+article.article.teaser .field--name-body h4 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 
 /**

@@ -38,23 +38,20 @@ mark,
   }
 }
 
-.field {
-
-  .field--label.badge {
-    margin-bottom: .4em ;
+article.article.teaser {
+  h1, h2, h3, h4 {
+    margin-top: 0;
   }
-
-  .field--label.badge::after {
-    content: '';
-  }
-
-  &.field--label-inline {
-    .field--label.badge {
-      margin-right: .4em ;
+  .field--name-body {
+    margin-top: $padding-base-vertical;
+    h1, h2, h3, h4 {
+      font-family: $font-family-sans-serif !important;
+      text-transform: lowercase;;
+      font-variant: small-caps;
     }
   }
-
 }
+
 
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;
