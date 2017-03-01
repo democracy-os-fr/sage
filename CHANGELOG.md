@@ -1,3 +1,39 @@
+### HEAD
+* Add option to configure build settings ([#1822](https://github.com/roots/sage/pull/1822))
+* Add support for HTML injection ([#1817](https://github.com/roots/sage/pull/1817))
+
+### 9.0.0-beta.2: January 19th, 2016
+* Fix Browersync ([#1815](https://github.com/roots/sage/pull/1815))
+* Add option to select CSS framework, add Foundation as an option ([#1813](https://github.com/roots/sage/pull/1813))
+* Add option to add Font Awesome ([#1812](https://github.com/roots/sage/pull/1812))
+* Add option to change theme file headers ([#1811](https://github.com/roots/sage/pull/1811))
+* Add option to remove Bootstrap ([#1810](https://github.com/roots/sage/pull/1810))
+* Remove Font Awesome ([#1809](https://github.com/roots/sage/pull/1809))
+* Remove grid defaults ([#1808](https://github.com/roots/sage/pull/1808))
+* Fix for `publicPath` ([#1806](https://github.com/roots/sage/pull/1806))
+* Update clean task name ([#1800](https://github.com/roots/sage/pull/1800))
+* Allow browser versions to be configured in `config.json` ([#1798](https://github.com/roots/sage/pull/1798))
+* Use stock ESLint ([#1796](https://github.com/roots/sage/pull/1796))
+
+### 9.0.0-beta.1: January 10th, 2016
+* Update to Bootstrap 4 Alpha 6 ([#1792](https://github.com/roots/sage/pull/1792))
+* Add Blade ([#1765](https://github.com/roots/sage/pull/1765) and [#1777](https://github.com/roots/sage/pull/1777))
+* Remove sidebar defaults ([#1760](https://github.com/roots/sage/pull/1760))
+* Remove post formats ([#1759](https://github.com/roots/sage/pull/1759))
+
+### 9.0.0-alpha.4: November 16th, 2016
+* Use new webpack api schema ([8ac5f15](https://github.com/roots/sage/commit/e6e60aa))
+* Update dependencies ([70ebba7](https://github.com/roots/sage/commit/70ebba7))
+* Variables organization ([8ac5f15](https://github.com/roots/sage/commit/8ac5f15))
+* Use `$.fn.ready()` (reverts [724d550](https://github.com/roots/sage/commit/724d550)) ([e7fccbe](https://github.com/roots/sage/commit/e7fccbe))
+* Theme activation updates 'stylesheet' option instead of 'template' ([fb19145](https://github.com/roots/sage/commit/fb19145))
+* Reorganize and refactor build routine ([8c9ba05](https://github.com/roots/sage/commit/8c9ba05))
+* Switch assets manifest plugin ([c1bb2b3](https://github.com/roots/sage/commit/c1bb2b3))
+* Add images to assets manifest ([c49793c](https://github.com/roots/sage/commit/c49793c))
+* Switch from babel to buble ([0d38ab8](https://github.com/roots/sage/commit/0d38ab8))
+* Update dependencies & webpack compatibility ([eae52fd](https://github.com/roots/sage/commit/eae52fd))
+* Use http by default (not https) to be consistent with Trellis ([e6f2f49](https://github.com/roots/sage/commit/e6f2f49))
+
 ### 9.0.0-alpha.3: September 11th, 2016
 * Fix webpack HMR ([#1713](https://github.com/roots/sage/issues/1713))
 * Remove minor edits from CHANGELOG.md ([3516629](https://github.com/roots/sage/commit/3516629))
@@ -52,6 +88,11 @@
 * Fix: page title not displaying ([9283bbb](https://github.com/roots/sage/commit/9283bbb))
 * Rename interfaces, unset after unwrapping ([97906e9](https://github.com/roots/sage/commit/97906e9))
 * Restructure theme, use autoloader ([9eaffa3](https://github.com/roots/sage/commit/9eaffa3a2d4df462dd8020a10551334208bd32a3))
+
+### 8.5.0: September 20th, 2016
+* Update installation instructions
+* Update dependencies
+* Update to Bootstrap 4.0.0-alpha.4 ([5eb01fd](https://github.com/roots/sage/commit/5eb01fd0319a7b6576e31579dc50e16b023abb74))
 
 ### 8.4.2: February 19th, 2016
 * Add Composer vendor directory to gitignore ([#1618](https://github.com/roots/sage/issues/1618))
