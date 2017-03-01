@@ -1,4 +1,8 @@
 # [Sage](https://roots.io/sage/)
+[![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
+[![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
+[![Build Status](https://img.shields.io/travis/roots/sage.svg?style=flat-square)](https://travis-ci.org/roots/sage)
+[![Sponsored by ES6.io](https://img.shields.io/badge/%F0%9F%92%9A_Sponsored_by-ES6.io%20Tutorials-brightgreen.svg?style=flat-square)](https://roots.io/r/es6)
 
 **This branch (`agora`) is a customization for the [participez.nanterre.fr](https://participez.nanterre.fr) platform**
 
@@ -54,37 +58,45 @@ Install Sage from git in your Drupal themes directory (replace `THEMENAME` below
 $ git clone https://github.com/democracy-os-fr/sage.git THEMENAME
 ```
 
+During theme installation you will have the options to:
+
+* Update theme headers (theme name, description, author, etc.)
+* Select a CSS framework (Bootstrap, Foundation, none)
+* Add Font Awesome
+* Configure Browsersync (path to theme, local development URL)
+
 ## Theme structure
 
 _replace `THEMENAME` below with the name of your theme_
 
 ```shell
-themes/your-theme-name/              # → Root of your Sage based theme
-├── assets                           # → Front-end assets
-│   ├── config.json                  # → Settings for compiled assets
-│   ├── build/                       # → Webpack and ESLint config
-│   ├── fonts/                       # → Theme fonts
-│   ├── images/                      # → Theme images
-│   ├── scripts/                     # → Theme JS
-│   └── styles/                      # → Theme stylesheets
-├── config/                          # → Theme Config
-│   ├── install/                     # → Theme Settings overrides
-│   │   └── THEMENAME.settings.yml   # TO BE RENAMED !
-│   ├── schema/                      # → Theme Settings schema
-│   │   └── THEMENAME.schema.yml     # TO BE RENAMED !
-├── composer.json                    # → Autoloading for `src/` files
-├── composer.lock                    # → Composer lock file (never edit)
-├── dist/                            # → Built theme assets (never edit)
-├── node_modules/                    # → Node.js packages (never edit)
-├── package.json                     # → Node.js dependencies and scripts
-├── screenshot.png                   # → Theme screenshot for Drupal admin
-├── templates/                       # → Theme templates
-│   ├── layouts/                     # → Base templates
-│   └── partials/                    # → Partial templates
-├── THEMENAME.libraries.yml          # → Theme assets information TO BE RENAMED !
-├── THEMENAME.starterkit.yml         # → Theme meta information TO BE RENAMED !
-├── THEMENAME.theme                  # → Theme PHP entry point TO BE RENAMED !
-└── vendor/                          # → Composer packages (never edit)
+themes/your-theme-name/   # → Root of your Sage based theme
+├── assets                # → Front-end assets
+│   ├── config.json       # → Settings for compiled assets
+│   ├── build/            # → Webpack and ESLint config
+│   ├── fonts/            # → Theme fonts
+│   ├── images/           # → Theme images
+│   ├── scripts/          # → Theme JS
+│   └── styles/           # → Theme stylesheets
+├── composer.json         # → Autoloading for `src/` files
+├── composer.lock         # → Composer lock file (never edit)
+├── dist/                 # → Built theme assets (never edit)
+├── functions.php         # → Composer autoloader, theme includes
+├── index.php             # → Never manually edit
+├── node_modules/         # → Node.js packages (never edit)
+├── package.json          # → Node.js dependencies and scripts
+├── screenshot.png        # → Theme screenshot for WP admin
+├── src/                  # → Theme PHP
+│   ├── lib/Sage/         # → Blade implementation, asset manifest
+│   ├── admin.php         # → Theme customizer setup
+│   ├── filters.php       # → Theme filters
+│   ├── helpers.php       # → Helper functions
+│   └── setup.php         # → Theme setup
+├── style.css             # → Theme meta information
+├── templates/            # → Theme templates
+│   ├── layouts/          # → Base templates
+│   └── partials/         # → Partial templates
+└── vendor/               # → Composer packages (never edit)
 ```
 
 ## Theme setup
@@ -112,32 +124,30 @@ Sage uses [Webpack](https://webpack.github.io/) as a build tool and [npm](https:
 
 ### Install dependencies
 
-From the command line on your host machine (not on your Vagrant development box), navigate to the theme directory then run `npm install`:
+From the command line on your host machine (not on your Vagrant development box), navigate to the theme directory then run `yarn`:
 
 ```shell
-# @ example.com/site/web/app/themes/your-theme-name
-$ npm install
+# @ themes/your-theme-name/
+$ yarn
 ```
 
 You now have all the necessary dependencies to run the build process.
 
 ### Build commands
 
-* `npm start` — Compile assets when file changes are made, start BrowserSync session
-* `npm run build` — Compile and optimize the files in your assets directory
-
-**The webpack assets versionning is not yet compatible with the Drupal Cache API. Use the common build for now.**
-* `npm run build:production` — Compile assets for production
+* `yarn run start` — Compile assets when file changes are made, start Browsersync session
+* `yarn run build` — Compile and optimize the files in your assets directory
+* `yarn run build:production` — Compile assets for production
 
 #### Additional commands
 
-* `npm run clean` — Remove your `dist/` folder
-* `npm run lint` — Run eslint against your assets and build scripts
-* `composer test` — Check your PHP for code smells with `phpmd` and PSR-2 compliance with `phpcs`
+* `yarn run rmdist` — Remove your `dist/` folder
+* `yarn run lint` — Run ESLint against your assets and build scripts
+* `composer test` — Check your PHP for PSR-2 compliance with `phpcs`
 
-### Using BrowserSync
+### Using Browsersync
 
-To use BrowserSync during `npm start` you need to update `devUrl` at the bottom of `assets/config.json` to reflect your local development hostname.
+To use Browsersync you need to update `devUrl` at the bottom of `assets/config.json` to reflect your local development hostname.
 
 If your local development URL is `https://project-name.dev`, update the file to read:
 ```json
@@ -150,13 +160,13 @@ If you are not using [Bedrock](https://roots.io/bedrock/), update `publicPath` t
 
 ```json
 ...
-  "publicPath": "/wp-content/themes/sage/"
+  "publicPath": "/wp-content/themes/sage"
 ...
 ```
 
-By default, BrowserSync will use webpack's [HMR](https://webpack.github.io/docs/hot-module-replacement.html), which won't trigger a page reload in your browser.
+By default, Browsersync will use webpack's [HMR](https://webpack.github.io/docs/hot-module-replacement.html), which won't trigger a page reload in your browser.
 
-If you would like to force BrowserSync to reload the page whenever certain file types are edited, then add them to `watch` in `assets/config.json`.
+If you would like to force Browsersync to reload the page whenever certain file types are edited, then add them to `watch` in `assets/config.json`.
 
 ```json
 ...
@@ -172,7 +182,7 @@ If you would like to force BrowserSync to reload the page whenever certain file 
 
 Sage 8 documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
 
-Sage 9 documention is currently in progress and can be viewed at [https://github.com/roots/docs/tree/sage-9/sage](https://github.com/roots/docs/tree/sage-9/sage).
+Sage 9 documentation is currently in progress and can be viewed at [https://github.com/roots/docs/tree/sage-9/sage](https://github.com/roots/docs/tree/sage-9/sage).
 
 ## Contributing
 

@@ -12,5 +12,10 @@
   "publicPath": "/themes/contrib/sage",
   "devUrl": "http://d8.clone.local.dev",
   "proxyUrl": "http://localhost:3000",
-  "cacheBusting": "[name]_[hash:8]"
+  "cacheBusting": "[name]_[hash:8]",
+  "browsers": [
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ]
 }
