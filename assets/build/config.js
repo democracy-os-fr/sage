@@ -1,9 +1,8 @@
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
-const glob = require('glob-all');
-const merge = require('lodash/merge');
+const uniq = require('lodash/uniq');
+const merge = require('webpack-merge');
 
-const mergeWithConcat = require('./util/mergeWithConcat');
 const userConfig = require('../config');
 
 const isProduction = !!((argv.env && argv.env.production) || argv.p);
@@ -11,8 +10,8 @@ const rootPath = (userConfig.paths && userConfig.paths.root)
   ? userConfig.paths.root
   : process.cwd();
 
-const config = mergeWithConcat({
-  copy: ['images/**/*'],
+const config = merge({
+  copy: 'images/**/*',
   proxyUrl: 'http://localhost:3000',
   cacheBusting: '[name]_[hash]',
   paths: {
@@ -22,27 +21,38 @@ const config = mergeWithConcat({
   },
   enabled: {
     sourceMaps: !isProduction,
-    minify: isProduction,
+    optimize: isProduction,
     cacheBusting: isProduction,
     watcher: !!argv.watch,
-    uglifyJs: !(argv.p || argv.optimizeMinimize),
   },
   watch: [],
+  browsers: [],
 }, userConfig);
 
-Object.keys(config.entry).forEach(id =>
-  config.entry[id].unshift(path.join(__dirname, 'public-path.js')));
+config.watch.push(`${path.basename(config.paths.assets)}/${config.copy}`);
+config.watch = uniq(config.watch);
 
-module.exports = mergeWithConcat(config, {
-  env: merge({ production: isProduction, development: !isProduction }, argv.env),
-  entry: {
-    get files() {
-      return glob.sync(config.copy, {
-        cwd: config.paths.assets,
-        mark: true,
-      }).filter(file => !((file.slice(-1) === '/') || (!file.indexOf('*') === -1)))
-        .map(file => path.join(config.paths.assets, file));
-    },
-  },
+module.exports = merge(config, {
+  env: Object.assign({ production: isProduction, development: !isProduction }, argv.env),
   publicPath: `${config.publicPath}/${path.basename(config.paths.dist)}/`,
+  manifest: {},
 });
+
+/**
+ * If your publicPath differs between environments, but you know it at compile time,
+ * then set SAGE_DIST_PATH as an environment variable before compiling.
+ * Example:
+ *   SAGE_DIST_PATH=/wp-content/themes/sage/dist yarn build:production
+ */
+if (process.env.SAGE_DIST_PATH) {
+  module.exports.publicPath = process.env.SAGE_DIST_PATH;
+}
+
+/**
+ * If you don't know your publicPath at compile time, then uncomment the lines
+ * below and use WordPress's wp_localize_script() to set SAGE_DIST_PATH global.
+ * Example:
+ *   wp_localize_script('sage/main.js', 'SAGE_DIST_PATH', get_theme_file_uri('dist/'))
+ */
+// Object.keys(module.exports.entry).forEach(id =>
+//   module.exports.entry[id].unshift(path.join(__dirname, 'public-path.js')));
