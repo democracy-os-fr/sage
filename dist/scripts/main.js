@@ -2609,10 +2609,17 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = {
   init: function init() {
     // JavaScript to be fired on all pages
     // console.log('JS sage :: routes/common :: init');
+    $('.carousel').carousel({
+        interval: 5000,
+    }).on('slide.bs.carousel', function (e)
+    {
+        var nextH = $(e.relatedTarget).outerHeight();
+        $(this).find('.active.item').parent().animate({ height: nextH }, 500);
+    });
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
@@ -2620,6 +2627,7 @@ if (typeof jQuery === 'undefined') {
   },
 };
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 7 */

@@ -42,4 +42,37 @@
 
 }
 
-// Panel contents
+.carousel {
+
+  .carousel-control {
+    &.left, &.right {
+      background: none;
+    }
+  }
+
+  .item {
+    padding-bottom: $padding-large-vertical;
+    transition-property: opacity;
+  }
+
+  .item,
+  .active.left,
+  .active.right {
+      opacity: 0;
+  }
+
+  .active,
+  .next.left,
+  .prev.right {
+      opacity: 1;
+  }
+
+  .next,
+  .prev,
+  .active.left,
+  .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+  }
+
+}

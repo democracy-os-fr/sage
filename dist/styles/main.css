@@ -305,10 +305,13 @@ th {
   .btn > .caret,
   .button > .caret,
   .view-header > ul.links li a > .caret,
+  .slider-sidebar .more-link > .caret,
   .dropup > .btn > .caret,
   .dropup > .button > .caret,
   .view-header > ul.links li
-  .dropup > a > .caret {
+  .dropup > a > .caret,
+  .slider-sidebar
+  .dropup > .more-link > .caret {
     border-top-color: #000 !important;
   }
 
@@ -1920,7 +1923,9 @@ blockquote .small:before {
 .blockquote-reverse,
 blockquote.pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description,
-.page-node-type-article blockquote.taskbar {
+.page-node-type-article blockquote.taskbar,
+.page-node-type-evenement blockquote.taskbar,
+.slider-sidebar blockquote.more-link {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #ecf0f1;
@@ -1934,12 +1939,18 @@ blockquote.pull-right,
 blockquote.pull-right footer:before,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description footer:before,
 .page-node-type-article blockquote.taskbar footer:before,
+.page-node-type-evenement blockquote.taskbar footer:before,
+.slider-sidebar blockquote.more-link footer:before,
 blockquote.pull-right small:before,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description small:before,
 .page-node-type-article blockquote.taskbar small:before,
+.page-node-type-evenement blockquote.taskbar small:before,
+.slider-sidebar blockquote.more-link small:before,
 blockquote.pull-right .small:before,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:before,
-.page-node-type-article blockquote.taskbar .small:before {
+.page-node-type-article blockquote.taskbar .small:before,
+.page-node-type-evenement blockquote.taskbar .small:before,
+.slider-sidebar blockquote.more-link .small:before {
   content: '';
 }
 
@@ -1949,12 +1960,18 @@ blockquote.pull-right .small:before,
 blockquote.pull-right footer:after,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description footer:after,
 .page-node-type-article blockquote.taskbar footer:after,
+.page-node-type-evenement blockquote.taskbar footer:after,
+.slider-sidebar blockquote.more-link footer:after,
 blockquote.pull-right small:after,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description small:after,
 .page-node-type-article blockquote.taskbar small:after,
+.page-node-type-evenement blockquote.taskbar small:after,
+.slider-sidebar blockquote.more-link small:after,
 blockquote.pull-right .small:after,
 #webform-submission-candidature-aap-form .js-form-managed-file blockquote.description .small:after,
-.page-node-type-article blockquote.taskbar .small:after {
+.page-node-type-article blockquote.taskbar .small:after,
+.page-node-type-evenement blockquote.taskbar .small:after,
+.slider-sidebar blockquote.more-link .small:after {
   content: '\A0   \2014';
 }
 
@@ -3497,6 +3514,8 @@ input[type="search"] {
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > .input-group-btn > input[type="date"].button,
+  .slider-sidebar
+  .input-group-sm > .input-group-btn > input[type="date"].more-link,
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
@@ -3504,6 +3523,8 @@ input[type="search"] {
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].button,
+  .slider-sidebar
+  .input-group-sm > .input-group-btn > input[type="time"].more-link,
   .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
@@ -3512,6 +3533,8 @@ input[type="search"] {
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].button,
+  .slider-sidebar
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].more-link,
   .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
@@ -3520,6 +3543,8 @@ input[type="search"] {
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].button,
+  .slider-sidebar
+  .input-group-sm > .input-group-btn > input[type="month"].more-link,
   .input-group-sm
   input[type="month"] {
     line-height: 35px;
@@ -3531,6 +3556,8 @@ input[type="search"] {
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > .input-group-btn > input[type="date"].button,
+  .slider-sidebar
+  .input-group-lg > .input-group-btn > input[type="date"].more-link,
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
@@ -3538,6 +3565,8 @@ input[type="search"] {
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].button,
+  .slider-sidebar
+  .input-group-lg > .input-group-btn > input[type="time"].more-link,
   .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
@@ -3546,6 +3575,8 @@ input[type="search"] {
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].button,
+  .slider-sidebar
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].more-link,
   .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
@@ -3554,6 +3585,8 @@ input[type="search"] {
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].button,
+  .slider-sidebar
+  .input-group-lg > .input-group-btn > input[type="month"].more-link,
   .input-group-lg
   input[type="month"] {
     line-height: 66px;
@@ -3653,6 +3686,8 @@ fieldset[disabled]
 .input-group-lg > .input-group-btn > .form-control-static.button,
 .view-header > ul.links li
   .input-group-lg > .input-group-btn > a.form-control-static,
+.slider-sidebar
+  .input-group-lg > .input-group-btn > .form-control-static.more-link,
 .form-control-static.input-sm,
 .input-group-sm > .form-control-static.form-control,
 .agenda-search .cibulSearch .input-group-sm > input.form-control-static,
@@ -3660,7 +3695,9 @@ fieldset[disabled]
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 .input-group-sm > .input-group-btn > .form-control-static.button,
 .view-header > ul.links li
-  .input-group-sm > .input-group-btn > a.form-control-static {
+  .input-group-sm > .input-group-btn > a.form-control-static,
+.slider-sidebar
+  .input-group-sm > .input-group-btn > .form-control-static.more-link {
   padding-left: 0;
   padding-right: 0;
 }
@@ -3672,7 +3709,9 @@ fieldset[disabled]
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .button,
 .view-header > ul.links li
-.input-group-sm > .input-group-btn > a {
+.input-group-sm > .input-group-btn > a,
+.slider-sidebar
+.input-group-sm > .input-group-btn > .more-link {
   height: 35px;
   padding: 6px 9px;
   font-size: 13px;
@@ -3684,7 +3723,9 @@ select.input-sm,
 .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
-.input-group-sm > .input-group-btn > select.button {
+.input-group-sm > .input-group-btn > select.button,
+.slider-sidebar
+.input-group-sm > .input-group-btn > select.more-link {
   height: 35px;
   line-height: 35px;
 }
@@ -3694,11 +3735,15 @@ textarea.input-sm,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .input-group-sm > .input-group-btn > textarea.button,
+.slider-sidebar
+.input-group-sm > .input-group-btn > textarea.more-link,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
-.input-group-sm > .input-group-btn > select[multiple].button {
+.input-group-sm > .input-group-btn > select[multiple].button,
+.slider-sidebar
+.input-group-sm > .input-group-btn > select[multiple].more-link {
   height: auto;
 }
 
@@ -3737,7 +3782,9 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .button,
 .view-header > ul.links li
-.input-group-lg > .input-group-btn > a {
+.input-group-lg > .input-group-btn > a,
+.slider-sidebar
+.input-group-lg > .input-group-btn > .more-link {
   height: 66px;
   padding: 18px 27px;
   font-size: 19px;
@@ -3749,7 +3796,9 @@ select.input-lg,
 .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
-.input-group-lg > .input-group-btn > select.button {
+.input-group-lg > .input-group-btn > select.button,
+.slider-sidebar
+.input-group-lg > .input-group-btn > select.more-link {
   height: 66px;
   line-height: 66px;
 }
@@ -3759,11 +3808,15 @@ textarea.input-lg,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .input-group-lg > .input-group-btn > textarea.button,
+.slider-sidebar
+.input-group-lg > .input-group-btn > textarea.more-link,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
-.input-group-lg > .input-group-btn > select[multiple].button {
+.input-group-lg > .input-group-btn > select[multiple].button,
+.slider-sidebar
+.input-group-lg > .input-group-btn > select[multiple].more-link {
   height: auto;
 }
 
@@ -3826,6 +3879,8 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .button + .form-control-feedback,
 .view-header > ul.links li
 .input-group-lg > .input-group-btn > a + .form-control-feedback,
+.slider-sidebar
+.input-group-lg > .input-group-btn > .more-link + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback,
 .form-group-lg .agenda-search .cibulSearch input + .form-control-feedback,
@@ -3844,6 +3899,8 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .button + .form-control-feedback,
 .view-header > ul.links li
 .input-group-sm > .input-group-btn > a + .form-control-feedback,
+.slider-sidebar
+.input-group-sm > .input-group-btn > .more-link + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback,
 .form-group-sm .agenda-search .cibulSearch input + .form-control-feedback,
@@ -4105,7 +4162,8 @@ select[multiple].input-lg,
 
 .btn,
 .button,
-.view-header > ul.links li a {
+.view-header > ul.links li a,
+.slider-sidebar .more-link {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4130,21 +4188,27 @@ select[multiple].input-lg,
 .btn:focus,
 .button:focus,
 .view-header > ul.links li a:focus,
+.slider-sidebar .more-link:focus,
 .btn.focus,
 .focus.button,
 .view-header > ul.links li a.focus,
+.slider-sidebar .focus.more-link,
 .btn:active:focus,
 .button:active:focus,
 .view-header > ul.links li a:active:focus,
+.slider-sidebar .more-link:active:focus,
 .btn:active.focus,
 .button:active.focus,
 .view-header > ul.links li a:active.focus,
+.slider-sidebar .more-link:active.focus,
 .btn.active:focus,
 .active.button:focus,
 .view-header > ul.links li a.active:focus,
+.slider-sidebar .active.more-link:focus,
 .btn.active.focus,
 .active.focus.button,
-.view-header > ul.links li a.active.focus {
+.view-header > ul.links li a.active.focus,
+.slider-sidebar .active.focus.more-link {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -4152,12 +4216,15 @@ select[multiple].input-lg,
 .btn:hover,
 .button:hover,
 .view-header > ul.links li a:hover,
+.slider-sidebar .more-link:hover,
 .btn:focus,
 .button:focus,
 .view-header > ul.links li a:focus,
+.slider-sidebar .more-link:focus,
 .btn.focus,
 .focus.button,
-.view-header > ul.links li a.focus {
+.view-header > ul.links li a.focus,
+.slider-sidebar .focus.more-link {
   color: #fff;
   text-decoration: none;
 }
@@ -4165,9 +4232,11 @@ select[multiple].input-lg,
 .btn:active,
 .button:active,
 .view-header > ul.links li a:active,
+.slider-sidebar .more-link:active,
 .btn.active,
 .active.button,
-.view-header > ul.links li a.active {
+.view-header > ul.links li a.active,
+.slider-sidebar .active.more-link {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -4176,14 +4245,19 @@ select[multiple].input-lg,
 .btn.disabled,
 .disabled.button,
 .view-header > ul.links li a.disabled,
+.slider-sidebar .disabled.more-link,
 .btn[disabled],
 [disabled].button,
 .view-header > ul.links li a[disabled],
+.slider-sidebar [disabled].more-link,
 fieldset[disabled] .btn,
 fieldset[disabled] .button,
 fieldset[disabled] .view-header > ul.links li a,
 .view-header > ul.links li
-  fieldset[disabled] a {
+  fieldset[disabled] a,
+fieldset[disabled] .slider-sidebar .more-link,
+.slider-sidebar
+  fieldset[disabled] .more-link {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -4193,11 +4267,15 @@ fieldset[disabled] .view-header > ul.links li a,
 a.btn.disabled,
 a.disabled.button,
 .view-header > ul.links li a.disabled,
+.slider-sidebar a.disabled.more-link,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.button,
 fieldset[disabled] .view-header > ul.links li a,
 .view-header > ul.links li
-fieldset[disabled] a {
+fieldset[disabled] a,
+fieldset[disabled] .slider-sidebar a.more-link,
+.slider-sidebar
+fieldset[disabled] a.more-link {
   pointer-events: none;
 }
 
@@ -4268,7 +4346,8 @@ fieldset[disabled] .btn-default.focus {
 
 .btn-primary,
 .button--primary,
-.view-header > ul.links li a {
+.view-header > ul.links li a,
+.slider-sidebar .more-link {
   color: #fff;
   background-color: #222222;
   border-color: #222222;
@@ -4277,9 +4356,11 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:focus,
 .button--primary:focus,
 .view-header > ul.links li a:focus,
+.slider-sidebar .more-link:focus,
 .btn-primary.focus,
 .focus.button--primary,
-.view-header > ul.links li a.focus {
+.view-header > ul.links li a.focus,
+.slider-sidebar .focus.more-link {
   color: #fff;
   background-color: #090909;
   border-color: black;
@@ -4287,7 +4368,8 @@ fieldset[disabled] .btn-default.focus {
 
 .btn-primary:hover,
 .button--primary:hover,
-.view-header > ul.links li a:hover {
+.view-header > ul.links li a:hover,
+.slider-sidebar .more-link:hover {
   color: #fff;
   background-color: #090909;
   border-color: #040404;
@@ -4296,13 +4378,17 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:active,
 .button--primary:active,
 .view-header > ul.links li a:active,
+.slider-sidebar .more-link:active,
 .btn-primary.active,
 .active.button--primary,
 .view-header > ul.links li a.active,
+.slider-sidebar .active.more-link,
 .open > .btn-primary.dropdown-toggle,
 .open > .dropdown-toggle.button--primary,
 .view-header > ul.links li
-  .open > a.dropdown-toggle {
+  .open > a.dropdown-toggle,
+.slider-sidebar
+  .open > .dropdown-toggle.more-link {
   color: #fff;
   background-color: #090909;
   border-color: #040404;
@@ -4311,33 +4397,45 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:active:hover,
 .button--primary:active:hover,
 .view-header > ul.links li a:active:hover,
+.slider-sidebar .more-link:active:hover,
 .btn-primary:active:focus,
 .button--primary:active:focus,
 .view-header > ul.links li a:active:focus,
+.slider-sidebar .more-link:active:focus,
 .btn-primary:active.focus,
 .button--primary:active.focus,
 .view-header > ul.links li a:active.focus,
+.slider-sidebar .more-link:active.focus,
 .btn-primary.active:hover,
 .active.button--primary:hover,
 .view-header > ul.links li a.active:hover,
+.slider-sidebar .active.more-link:hover,
 .btn-primary.active:focus,
 .active.button--primary:focus,
 .view-header > ul.links li a.active:focus,
+.slider-sidebar .active.more-link:focus,
 .btn-primary.active.focus,
 .active.focus.button--primary,
 .view-header > ul.links li a.active.focus,
+.slider-sidebar .active.focus.more-link,
 .open > .btn-primary.dropdown-toggle:hover,
 .open > .dropdown-toggle.button--primary:hover,
 .view-header > ul.links li
     .open > a.dropdown-toggle:hover,
+.slider-sidebar
+    .open > .dropdown-toggle.more-link:hover,
 .open > .btn-primary.dropdown-toggle:focus,
 .open > .dropdown-toggle.button--primary:focus,
 .view-header > ul.links li
     .open > a.dropdown-toggle:focus,
+.slider-sidebar
+    .open > .dropdown-toggle.more-link:focus,
 .open > .btn-primary.dropdown-toggle.focus,
 .open > .dropdown-toggle.focus.button--primary,
 .view-header > ul.links li
-    .open > a.dropdown-toggle.focus {
+    .open > a.dropdown-toggle.focus,
+.slider-sidebar
+    .open > .dropdown-toggle.focus.more-link {
   color: #fff;
   background-color: black;
   border-color: black;
@@ -4346,56 +4444,76 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:active,
 .button--primary:active,
 .view-header > ul.links li a:active,
+.slider-sidebar .more-link:active,
 .btn-primary.active,
 .active.button--primary,
 .view-header > ul.links li a.active,
+.slider-sidebar .active.more-link,
 .open > .btn-primary.dropdown-toggle,
 .open > .dropdown-toggle.button--primary,
 .view-header > ul.links li
-  .open > a.dropdown-toggle {
+  .open > a.dropdown-toggle,
+.slider-sidebar
+  .open > .dropdown-toggle.more-link {
   background-image: none;
 }
 
 .btn-primary.disabled:hover,
 .disabled.button--primary:hover,
 .view-header > ul.links li a.disabled:hover,
+.slider-sidebar .disabled.more-link:hover,
 .btn-primary.disabled:focus,
 .disabled.button--primary:focus,
 .view-header > ul.links li a.disabled:focus,
+.slider-sidebar .disabled.more-link:focus,
 .btn-primary.disabled.focus,
 .disabled.focus.button--primary,
 .view-header > ul.links li a.disabled.focus,
+.slider-sidebar .disabled.focus.more-link,
 .btn-primary[disabled]:hover,
 [disabled].button--primary:hover,
 .view-header > ul.links li a[disabled]:hover,
+.slider-sidebar [disabled].more-link:hover,
 .btn-primary[disabled]:focus,
 [disabled].button--primary:focus,
 .view-header > ul.links li a[disabled]:focus,
+.slider-sidebar [disabled].more-link:focus,
 .btn-primary[disabled].focus,
 [disabled].focus.button--primary,
 .view-header > ul.links li a[disabled].focus,
+.slider-sidebar [disabled].focus.more-link,
 fieldset[disabled] .btn-primary:hover,
 fieldset[disabled] .button--primary:hover,
 fieldset[disabled] .view-header > ul.links li a:hover,
 .view-header > ul.links li
   fieldset[disabled] a:hover,
+fieldset[disabled] .slider-sidebar .more-link:hover,
+.slider-sidebar
+  fieldset[disabled] .more-link:hover,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .button--primary:focus,
 fieldset[disabled] .view-header > ul.links li a:focus,
 .view-header > ul.links li
   fieldset[disabled] a:focus,
+fieldset[disabled] .slider-sidebar .more-link:focus,
+.slider-sidebar
+  fieldset[disabled] .more-link:focus,
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .focus.button--primary,
 fieldset[disabled] .view-header > ul.links li a.focus,
 .view-header > ul.links li
-  fieldset[disabled] a.focus {
+  fieldset[disabled] a.focus,
+fieldset[disabled] .slider-sidebar .focus.more-link,
+.slider-sidebar
+  fieldset[disabled] .focus.more-link {
   background-color: #222222;
   border-color: #222222;
 }
 
 .btn-primary .badge,
 .button--primary .badge,
-.view-header > ul.links li a .badge {
+.view-header > ul.links li a .badge,
+.slider-sidebar .more-link .badge {
   color: #222222;
   background-color: #fff;
 }
@@ -4816,7 +4934,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn,
 .btn-group-lg > .button,
-.view-header > ul.links li .btn-group-lg > a {
+.view-header > ul.links li .btn-group-lg > a,
+.slider-sidebar .btn-group-lg > .more-link {
   padding: 18px 27px;
   font-size: 19px;
   line-height: 1.33333;
@@ -4827,7 +4946,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-sm > .btn,
 .btn-group-sm > .button,
 .button--small,
-.view-header > ul.links li a {
+.view-header > ul.links li a,
+.slider-sidebar .more-link {
   padding: 6px 9px;
   font-size: 13px;
   line-height: 1.5;
@@ -4838,6 +4958,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-xs > .btn,
 .btn-group-xs > .button,
 .view-header > ul.links li .btn-group-xs > a,
+.slider-sidebar .btn-group-xs > .more-link,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger {
   padding: 1px 5px;
@@ -4949,7 +5070,9 @@ tbody.collapse.in {
 #webform-submission-candidature-aap-form .js-form-managed-file .dropdown-menu.description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.dropdown-menu.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.dropdown-menu.js-form-submit.button--danger,
-.page-node-type-article .dropdown-menu.taskbar {
+.page-node-type-article .dropdown-menu.taskbar,
+.page-node-type-evenement .dropdown-menu.taskbar,
+.slider-sidebar .dropdown-menu.more-link {
   right: 0;
   left: auto;
 }
@@ -5042,7 +5165,9 @@ tbody.collapse.in {
 #webform-submission-candidature-aap-form .js-form-managed-file .description > .dropdown-menu,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger > .dropdown-menu,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger > .dropdown-menu,
-.page-node-type-article .taskbar > .dropdown-menu {
+.page-node-type-article .taskbar > .dropdown-menu,
+.page-node-type-evenement .taskbar > .dropdown-menu,
+.slider-sidebar .more-link > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -5084,10 +5209,13 @@ tbody.collapse.in {
 .btn-group > .btn,
 .btn-group > .button,
 .view-header > ul.links li .btn-group > a,
+.slider-sidebar .btn-group > .more-link,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .button,
 .view-header > ul.links li
-  .btn-group-vertical > a {
+  .btn-group-vertical > a,
+.slider-sidebar
+  .btn-group-vertical > .more-link {
   position: relative;
   float: left;
 }
@@ -5095,31 +5223,43 @@ tbody.collapse.in {
 .btn-group > .btn:hover,
 .btn-group > .button:hover,
 .view-header > ul.links li .btn-group > a:hover,
+.slider-sidebar .btn-group > .more-link:hover,
 .btn-group > .btn:focus,
 .btn-group > .button:focus,
 .view-header > ul.links li .btn-group > a:focus,
+.slider-sidebar .btn-group > .more-link:focus,
 .btn-group > .btn:active,
 .btn-group > .button:active,
 .view-header > ul.links li .btn-group > a:active,
+.slider-sidebar .btn-group > .more-link:active,
 .btn-group > .btn.active,
 .btn-group > .active.button,
 .view-header > ul.links li .btn-group > a.active,
+.slider-sidebar .btn-group > .active.more-link,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .button:hover,
 .view-header > ul.links li
     .btn-group-vertical > a:hover,
+.slider-sidebar
+    .btn-group-vertical > .more-link:hover,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .button:focus,
 .view-header > ul.links li
     .btn-group-vertical > a:focus,
+.slider-sidebar
+    .btn-group-vertical > .more-link:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .button:active,
 .view-header > ul.links li
     .btn-group-vertical > a:active,
+.slider-sidebar
+    .btn-group-vertical > .more-link:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.button,
 .view-header > ul.links li
-    .btn-group-vertical > a.active {
+    .btn-group-vertical > a.active,
+.slider-sidebar
+    .btn-group-vertical > .active.more-link {
   z-index: 2;
 }
 
@@ -5127,26 +5267,50 @@ tbody.collapse.in {
 .btn-group .button + .btn,
 .btn-group .view-header > ul.links li a + .btn,
 .view-header > ul.links li .btn-group a + .btn,
+.btn-group .slider-sidebar .more-link + .btn,
+.slider-sidebar .btn-group .more-link + .btn,
 .btn-group .btn + .button,
 .btn-group .button + .button,
 .btn-group .view-header > ul.links li a + .button,
 .view-header > ul.links li .btn-group a + .button,
+.btn-group .slider-sidebar .more-link + .button,
+.slider-sidebar .btn-group .more-link + .button,
 .btn-group .view-header > ul.links li .btn + a,
 .view-header > ul.links li .btn-group .btn + a,
 .btn-group .view-header > ul.links li .button + a,
 .view-header > ul.links li .btn-group .button + a,
 .btn-group .view-header > ul.links li a + a,
 .view-header > ul.links li .btn-group a + a,
+.btn-group .slider-sidebar .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .btn-group .slider-sidebar .more-link + a,
+.slider-sidebar .btn-group .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .slider-sidebar .btn-group .more-link + a,
+.btn-group .slider-sidebar .btn + .more-link,
+.slider-sidebar .btn-group .btn + .more-link,
+.btn-group .slider-sidebar .button + .more-link,
+.slider-sidebar .btn-group .button + .more-link,
+.btn-group .view-header > ul.links li .slider-sidebar a + .more-link,
+.slider-sidebar .btn-group .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .btn-group .slider-sidebar a + .more-link,
+.slider-sidebar .view-header > ul.links li .btn-group a + .more-link,
+.btn-group .slider-sidebar .more-link + .more-link,
+.slider-sidebar .btn-group .more-link + .more-link,
 .btn-group .btn + .btn-group,
 .btn-group .button + .btn-group,
 .btn-group .view-header > ul.links li a + .btn-group,
 .view-header > ul.links li
 .btn-group a + .btn-group,
+.btn-group .slider-sidebar .more-link + .btn-group,
+.slider-sidebar
+.btn-group .more-link + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .button,
 .btn-group .view-header > ul.links li .btn-group + a,
 .view-header > ul.links li
 .btn-group .btn-group + a,
+.btn-group .slider-sidebar .btn-group + .more-link,
+.slider-sidebar
+.btn-group .btn-group + .more-link,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -5169,6 +5333,8 @@ tbody.collapse.in {
 .btn-toolbar .button,
 .btn-toolbar .view-header > ul.links li a,
 .view-header > ul.links li .btn-toolbar a,
+.btn-toolbar .slider-sidebar .more-link,
+.slider-sidebar .btn-toolbar .more-link,
 .btn-toolbar .btn-group,
 .btn-toolbar .input-group {
   float: left;
@@ -5177,6 +5343,7 @@ tbody.collapse.in {
 .btn-toolbar > .btn,
 .btn-toolbar > .button,
 .view-header > ul.links li .btn-toolbar > a,
+.slider-sidebar .btn-toolbar > .more-link,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
@@ -5184,19 +5351,22 @@ tbody.collapse.in {
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .btn-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle),
-.view-header > ul.links li .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.view-header > ul.links li .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.slider-sidebar .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 .btn-group > .btn:first-child,
 .btn-group > .button:first-child,
-.view-header > ul.links li .btn-group > a:first-child {
+.view-header > ul.links li .btn-group > a:first-child,
+.slider-sidebar .btn-group > .more-link:first-child {
   margin-left: 0;
 }
 
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle),
 .btn-group > .button:first-child:not(:last-child):not(.dropdown-toggle),
-.view-header > ul.links li .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
+.view-header > ul.links li .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle),
+.slider-sidebar .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5204,6 +5374,7 @@ tbody.collapse.in {
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .button:last-child:not(:first-child),
 .view-header > ul.links li .btn-group > a:last-child:not(:first-child),
+.slider-sidebar .btn-group > .more-link:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -5215,13 +5386,15 @@ tbody.collapse.in {
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn,
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .button,
-.view-header > ul.links li .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
+.view-header > ul.links li .btn-group > .btn-group:not(:first-child):not(:last-child) > a,
+.slider-sidebar .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link {
   border-radius: 0;
 }
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .button:last-child,
 .view-header > ul.links li .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
+.slider-sidebar .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -5229,7 +5402,8 @@ tbody.collapse.in {
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
 .btn-group > .btn-group:last-child:not(:first-child) > .button:first-child,
-.view-header > ul.links li .btn-group > .btn-group:last-child:not(:first-child) > a:first-child {
+.view-header > ul.links li .btn-group > .btn-group:last-child:not(:first-child) > a:first-child,
+.slider-sidebar .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5241,7 +5415,8 @@ tbody.collapse.in {
 
 .btn-group > .btn + .dropdown-toggle,
 .btn-group > .button + .dropdown-toggle,
-.view-header > ul.links li .btn-group > a + .dropdown-toggle {
+.view-header > ul.links li .btn-group > a + .dropdown-toggle,
+.slider-sidebar .btn-group > .more-link + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -5249,7 +5424,8 @@ tbody.collapse.in {
 .btn-group > .btn-lg + .dropdown-toggle,
 .btn-group-lg.btn-group > .btn + .dropdown-toggle,
 .btn-group-lg.btn-group > .button + .dropdown-toggle,
-.view-header > ul.links li .btn-group-lg.btn-group > a + .dropdown-toggle {
+.view-header > ul.links li .btn-group-lg.btn-group > a + .dropdown-toggle,
+.slider-sidebar .btn-group-lg.btn-group > .more-link + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -5264,14 +5440,16 @@ tbody.collapse.in {
 
 .btn .caret,
 .button .caret,
-.view-header > ul.links li a .caret {
+.view-header > ul.links li a .caret,
+.slider-sidebar .more-link .caret {
   margin-left: 0;
 }
 
 .btn-lg .caret,
 .btn-group-lg > .btn .caret,
 .btn-group-lg > .button .caret,
-.view-header > ul.links li .btn-group-lg > a .caret {
+.view-header > ul.links li .btn-group-lg > a .caret,
+.slider-sidebar .btn-group-lg > .more-link .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
@@ -5280,18 +5458,23 @@ tbody.collapse.in {
 .dropup .btn-group-lg > .btn .caret,
 .dropup .btn-group-lg > .button .caret,
 .dropup .view-header > ul.links li .btn-group-lg > a .caret,
-.view-header > ul.links li .dropup .btn-group-lg > a .caret {
+.view-header > ul.links li .dropup .btn-group-lg > a .caret,
+.dropup .slider-sidebar .btn-group-lg > .more-link .caret,
+.slider-sidebar .dropup .btn-group-lg > .more-link .caret {
   border-width: 0 5px 5px;
 }
 
 .btn-group-vertical > .btn,
 .btn-group-vertical > .button,
 .view-header > ul.links li .btn-group-vertical > a,
+.slider-sidebar .btn-group-vertical > .more-link,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .button,
 .view-header > ul.links li
-.btn-group-vertical > .btn-group > a {
+.btn-group-vertical > .btn-group > a,
+.slider-sidebar
+.btn-group-vertical > .btn-group > .more-link {
   display: block;
   float: none;
   width: 100%;
@@ -5310,27 +5493,41 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .button,
-.view-header > ul.links li .btn-group-vertical > .btn-group > a {
+.view-header > ul.links li .btn-group-vertical > .btn-group > a,
+.slider-sidebar .btn-group-vertical > .btn-group > .more-link {
   float: none;
 }
 
 .btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .button + .btn,
 .view-header > ul.links li .btn-group-vertical > a + .btn,
+.slider-sidebar .btn-group-vertical > .more-link + .btn,
 .btn-group-vertical > .btn + .button,
 .btn-group-vertical > .button + .button,
 .view-header > ul.links li .btn-group-vertical > a + .button,
+.slider-sidebar .btn-group-vertical > .more-link + .button,
 .view-header > ul.links li .btn-group-vertical > .btn + a,
 .view-header > ul.links li .btn-group-vertical > .button + a,
 .view-header > ul.links li .btn-group-vertical > a + a,
+.slider-sidebar .view-header > ul.links li .btn-group-vertical > .more-link + a,
+.view-header > ul.links li .slider-sidebar .btn-group-vertical > .more-link + a,
+.slider-sidebar .btn-group-vertical > .btn + .more-link,
+.slider-sidebar .btn-group-vertical > .button + .more-link,
+.view-header > ul.links li .slider-sidebar .btn-group-vertical > a + .more-link,
+.slider-sidebar .view-header > ul.links li .btn-group-vertical > a + .more-link,
+.slider-sidebar .btn-group-vertical > .more-link + .more-link,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .button + .btn-group,
 .view-header > ul.links li
 .btn-group-vertical > a + .btn-group,
+.slider-sidebar
+.btn-group-vertical > .more-link + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .button,
 .view-header > ul.links li
 .btn-group-vertical > .btn-group + a,
+.slider-sidebar
+.btn-group-vertical > .btn-group + .more-link,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
@@ -5338,13 +5535,15 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child),
 .btn-group-vertical > .button:not(:first-child):not(:last-child),
-.view-header > ul.links li .btn-group-vertical > a:not(:first-child):not(:last-child) {
+.view-header > ul.links li .btn-group-vertical > a:not(:first-child):not(:last-child),
+.slider-sidebar .btn-group-vertical > .more-link:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
 .btn-group-vertical > .btn:first-child:not(:last-child),
 .btn-group-vertical > .button:first-child:not(:last-child),
-.view-header > ul.links li .btn-group-vertical > a:first-child:not(:last-child) {
+.view-header > ul.links li .btn-group-vertical > a:first-child:not(:last-child),
+.slider-sidebar .btn-group-vertical > .more-link:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
@@ -5353,7 +5552,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn:last-child:not(:first-child),
 .btn-group-vertical > .button:last-child:not(:first-child),
-.view-header > ul.links li .btn-group-vertical > a:last-child:not(:first-child) {
+.view-header > ul.links li .btn-group-vertical > a:last-child:not(:first-child),
+.slider-sidebar .btn-group-vertical > .more-link:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
@@ -5362,13 +5562,15 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn,
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .button,
-.view-header > ul.links li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
+.view-header > ul.links li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a,
+.slider-sidebar .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link {
   border-radius: 0;
 }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .button:last-child,
 .view-header > ul.links li .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
+.slider-sidebar .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -5376,7 +5578,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child,
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .button:first-child,
-.view-header > ul.links li .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child {
+.view-header > ul.links li .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child,
+.slider-sidebar .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5391,6 +5594,7 @@ tbody.collapse.in {
 .btn-group-justified > .btn,
 .btn-group-justified > .button,
 .view-header > ul.links li .btn-group-justified > a,
+.slider-sidebar .btn-group-justified > .more-link,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
@@ -5400,7 +5604,9 @@ tbody.collapse.in {
 .btn-group-justified > .btn-group .btn,
 .btn-group-justified > .btn-group .button,
 .btn-group-justified > .btn-group .view-header > ul.links li a,
-.view-header > ul.links li .btn-group-justified > .btn-group a {
+.view-header > ul.links li .btn-group-justified > .btn-group a,
+.btn-group-justified > .btn-group .slider-sidebar .more-link,
+.slider-sidebar .btn-group-justified > .btn-group .more-link {
   width: 100%;
 }
 
@@ -5411,18 +5617,25 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .button input[type="radio"],
 .view-header > ul.links li [data-toggle="buttons"] > a input[type="radio"],
+.slider-sidebar [data-toggle="buttons"] > .more-link input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .button input[type="checkbox"],
 .view-header > ul.links li
 [data-toggle="buttons"] > a input[type="checkbox"],
+.slider-sidebar
+[data-toggle="buttons"] > .more-link input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .button input[type="radio"],
 .view-header > ul.links li
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
+.slider-sidebar
+[data-toggle="buttons"] > .btn-group > .more-link input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .button input[type="checkbox"],
 .view-header > ul.links li
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > a input[type="checkbox"],
+.slider-sidebar
+[data-toggle="buttons"] > .btn-group > .more-link input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -5499,7 +5712,9 @@ tbody.collapse.in {
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > .input-group-addon.button,
 .view-header > ul.links li
-  .input-group-sm > .input-group-btn > a.input-group-addon {
+  .input-group-sm > .input-group-btn > a.input-group-addon,
+.slider-sidebar
+  .input-group-sm > .input-group-btn > .input-group-addon.more-link {
   padding: 6px 9px;
   font-size: 13px;
   border-radius: 3px;
@@ -5511,7 +5726,9 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > .input-group-addon.button,
 .view-header > ul.links li
-  .input-group-lg > .input-group-btn > a.input-group-addon {
+  .input-group-lg > .input-group-btn > a.input-group-addon,
+.slider-sidebar
+  .input-group-lg > .input-group-btn > .input-group-addon.more-link {
   padding: 18px 27px;
   font-size: 19px;
   border-radius: 6px;
@@ -5530,19 +5747,27 @@ tbody.collapse.in {
 .input-group-btn:first-child > .button,
 .view-header > ul.links li
 .input-group-btn:first-child > a,
+.slider-sidebar
+.input-group-btn:first-child > .more-link,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > .button,
 .view-header > ul.links li
 .input-group-btn:first-child > .btn-group > a,
+.slider-sidebar
+.input-group-btn:first-child > .btn-group > .more-link,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .button:not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li
 .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
+.slider-sidebar
+.input-group-btn:last-child > .more-link:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .button,
 .view-header > ul.links li
-.input-group-btn:last-child > .btn-group:not(:last-child) > a {
+.input-group-btn:last-child > .btn-group:not(:last-child) > a,
+.slider-sidebar
+.input-group-btn:last-child > .btn-group:not(:last-child) > .more-link {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5559,19 +5784,27 @@ tbody.collapse.in {
 .input-group-btn:last-child > .button,
 .view-header > ul.links li
 .input-group-btn:last-child > a,
+.slider-sidebar
+.input-group-btn:last-child > .more-link,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > .button,
 .view-header > ul.links li
 .input-group-btn:last-child > .btn-group > a,
+.slider-sidebar
+.input-group-btn:last-child > .btn-group > .more-link,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .button:not(:first-child),
 .view-header > ul.links li
 .input-group-btn:first-child > a:not(:first-child),
+.slider-sidebar
+.input-group-btn:first-child > .more-link:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .button,
 .view-header > ul.links li
-.input-group-btn:first-child > .btn-group:not(:first-child) > a {
+.input-group-btn:first-child > .btn-group:not(:first-child) > a,
+.slider-sidebar
+.input-group-btn:first-child > .btn-group:not(:first-child) > .more-link {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5588,37 +5821,51 @@ tbody.collapse.in {
 
 .input-group-btn > .btn,
 .input-group-btn > .button,
-.view-header > ul.links li .input-group-btn > a {
+.view-header > ul.links li .input-group-btn > a,
+.slider-sidebar .input-group-btn > .more-link {
   position: relative;
 }
 
 .input-group-btn > .btn + .btn,
 .input-group-btn > .button + .btn,
 .view-header > ul.links li .input-group-btn > a + .btn,
+.slider-sidebar .input-group-btn > .more-link + .btn,
 .input-group-btn > .btn + .button,
 .input-group-btn > .button + .button,
 .view-header > ul.links li .input-group-btn > a + .button,
+.slider-sidebar .input-group-btn > .more-link + .button,
 .view-header > ul.links li .input-group-btn > .btn + a,
 .view-header > ul.links li .input-group-btn > .button + a,
-.view-header > ul.links li .input-group-btn > a + a {
+.view-header > ul.links li .input-group-btn > a + a,
+.slider-sidebar .view-header > ul.links li .input-group-btn > .more-link + a,
+.view-header > ul.links li .slider-sidebar .input-group-btn > .more-link + a,
+.slider-sidebar .input-group-btn > .btn + .more-link,
+.slider-sidebar .input-group-btn > .button + .more-link,
+.view-header > ul.links li .slider-sidebar .input-group-btn > a + .more-link,
+.slider-sidebar .view-header > ul.links li .input-group-btn > a + .more-link,
+.slider-sidebar .input-group-btn > .more-link + .more-link {
   margin-left: -1px;
 }
 
 .input-group-btn > .btn:hover,
 .input-group-btn > .button:hover,
 .view-header > ul.links li .input-group-btn > a:hover,
+.slider-sidebar .input-group-btn > .more-link:hover,
 .input-group-btn > .btn:focus,
 .input-group-btn > .button:focus,
 .view-header > ul.links li .input-group-btn > a:focus,
+.slider-sidebar .input-group-btn > .more-link:focus,
 .input-group-btn > .btn:active,
 .input-group-btn > .button:active,
-.view-header > ul.links li .input-group-btn > a:active {
+.view-header > ul.links li .input-group-btn > a:active,
+.slider-sidebar .input-group-btn > .more-link:active {
   z-index: 2;
 }
 
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .button,
 .view-header > ul.links li .input-group-btn:first-child > a,
+.slider-sidebar .input-group-btn:first-child > .more-link,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
@@ -5626,6 +5873,7 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .button,
 .view-header > ul.links li .input-group-btn:last-child > a,
+.slider-sidebar .input-group-btn:last-child > .more-link,
 .input-group-btn:last-child > .btn-group {
   z-index: 2;
   margin-left: -1px;
@@ -6251,7 +6499,8 @@ form.webform-submission-form > .navbar-collapse,
 .btn-group-sm > .navbar-btn.btn,
 .btn-group-sm > .navbar-btn.button,
 .navbar-btn.button--small,
-.view-header > ul.links li a.navbar-btn {
+.view-header > ul.links li a.navbar-btn,
+.slider-sidebar .navbar-btn.more-link {
   margin-top: 12.5px;
   margin-bottom: 12.5px;
 }
@@ -6260,6 +6509,7 @@ form.webform-submission-form > .navbar-collapse,
 .btn-group-xs > .navbar-btn.btn,
 .btn-group-xs > .navbar-btn.button,
 .view-header > ul.links li .btn-group-xs > a.navbar-btn,
+.slider-sidebar .btn-group-xs > .navbar-btn.more-link,
 #webform-submission-candidature-aap-form .js-form-managed-file button.navbar-btn.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.navbar-btn.js-form-submit.button--danger {
   margin-top: 19px;
@@ -6761,7 +7011,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 .btn .label,
 .button .label,
-.view-header > ul.links li a .label {
+.view-header > ul.links li a .label,
+.slider-sidebar .more-link .label {
   position: relative;
   top: -1px;
 }
@@ -6848,7 +7099,8 @@ a.label:focus {
 
 .btn .badge,
 .button .badge,
-.view-header > ul.links li a .badge {
+.view-header > ul.links li a .badge,
+.slider-sidebar .more-link .badge {
   position: relative;
   top: -1px;
 }
@@ -6857,12 +7109,15 @@ a.label:focus {
 .btn-group-xs > .btn .badge,
 .btn-group-xs > .button .badge,
 .view-header > ul.links li .btn-group-xs > a .badge,
+.slider-sidebar .btn-group-xs > .more-link .badge,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger .badge,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger .badge,
 .btn-group-xs > .btn .badge,
 .btn-group-xs > .button .badge,
 .view-header > ul.links li
-  .btn-group-xs > a .badge {
+  .btn-group-xs > a .badge,
+.slider-sidebar
+  .btn-group-xs > .more-link .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -7230,7 +7485,11 @@ a.thumbnail.active {
 #webform-submission-candidature-aap-form .js-form-managed-file
 .media > button.js-form-submit.button--danger,
 .page-node-type-article
-.media > .taskbar {
+.media > .taskbar,
+.page-node-type-evenement
+.media > .taskbar,
+.slider-sidebar
+.media > .more-link {
   padding-left: 10px;
 }
 
@@ -8135,16 +8394,34 @@ button.close {
 .modal-footer .button + .btn,
 .modal-footer .view-header > ul.links li a + .btn,
 .view-header > ul.links li .modal-footer a + .btn,
+.modal-footer .slider-sidebar .more-link + .btn,
+.slider-sidebar .modal-footer .more-link + .btn,
 .modal-footer .btn + .button,
 .modal-footer .button + .button,
 .modal-footer .view-header > ul.links li a + .button,
 .view-header > ul.links li .modal-footer a + .button,
+.modal-footer .slider-sidebar .more-link + .button,
+.slider-sidebar .modal-footer .more-link + .button,
 .modal-footer .view-header > ul.links li .btn + a,
 .view-header > ul.links li .modal-footer .btn + a,
 .modal-footer .view-header > ul.links li .button + a,
 .view-header > ul.links li .modal-footer .button + a,
 .modal-footer .view-header > ul.links li a + a,
-.view-header > ul.links li .modal-footer a + a {
+.view-header > ul.links li .modal-footer a + a,
+.modal-footer .slider-sidebar .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .modal-footer .slider-sidebar .more-link + a,
+.slider-sidebar .modal-footer .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .slider-sidebar .modal-footer .more-link + a,
+.modal-footer .slider-sidebar .btn + .more-link,
+.slider-sidebar .modal-footer .btn + .more-link,
+.modal-footer .slider-sidebar .button + .more-link,
+.slider-sidebar .modal-footer .button + .more-link,
+.modal-footer .view-header > ul.links li .slider-sidebar a + .more-link,
+.slider-sidebar .modal-footer .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .modal-footer .slider-sidebar a + .more-link,
+.slider-sidebar .view-header > ul.links li .modal-footer a + .more-link,
+.modal-footer .slider-sidebar .more-link + .more-link,
+.slider-sidebar .modal-footer .more-link + .more-link {
   margin-left: 5px;
   margin-bottom: 0;
 }
@@ -8153,16 +8430,34 @@ button.close {
 .modal-footer .btn-group .button + .btn,
 .modal-footer .btn-group .view-header > ul.links li a + .btn,
 .view-header > ul.links li .modal-footer .btn-group a + .btn,
+.modal-footer .btn-group .slider-sidebar .more-link + .btn,
+.slider-sidebar .modal-footer .btn-group .more-link + .btn,
 .modal-footer .btn-group .btn + .button,
 .modal-footer .btn-group .button + .button,
 .modal-footer .btn-group .view-header > ul.links li a + .button,
 .view-header > ul.links li .modal-footer .btn-group a + .button,
+.modal-footer .btn-group .slider-sidebar .more-link + .button,
+.slider-sidebar .modal-footer .btn-group .more-link + .button,
 .modal-footer .btn-group .view-header > ul.links li .btn + a,
 .view-header > ul.links li .modal-footer .btn-group .btn + a,
 .modal-footer .btn-group .view-header > ul.links li .button + a,
 .view-header > ul.links li .modal-footer .btn-group .button + a,
 .modal-footer .btn-group .view-header > ul.links li a + a,
-.view-header > ul.links li .modal-footer .btn-group a + a {
+.view-header > ul.links li .modal-footer .btn-group a + a,
+.modal-footer .btn-group .slider-sidebar .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .modal-footer .btn-group .slider-sidebar .more-link + a,
+.slider-sidebar .modal-footer .btn-group .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .slider-sidebar .modal-footer .btn-group .more-link + a,
+.modal-footer .btn-group .slider-sidebar .btn + .more-link,
+.slider-sidebar .modal-footer .btn-group .btn + .more-link,
+.modal-footer .btn-group .slider-sidebar .button + .more-link,
+.slider-sidebar .modal-footer .btn-group .button + .more-link,
+.modal-footer .btn-group .view-header > ul.links li .slider-sidebar a + .more-link,
+.slider-sidebar .modal-footer .btn-group .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .modal-footer .btn-group .slider-sidebar a + .more-link,
+.slider-sidebar .view-header > ul.links li .modal-footer .btn-group a + .more-link,
+.modal-footer .btn-group .slider-sidebar .more-link + .more-link,
+.slider-sidebar .modal-footer .btn-group .more-link + .more-link {
   margin-left: -1px;
 }
 
@@ -8586,7 +8881,7 @@ button.close {
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
-  color: #fff;
+  color: rgba(255, 255, 0, 0.9);
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background-color: transparent;
@@ -8613,7 +8908,7 @@ button.close {
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
-  color: #fff;
+  color: rgba(255, 255, 0, 0.9);
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
@@ -8676,7 +8971,7 @@ button.close {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 0, 0.9);
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
@@ -8687,7 +8982,7 @@ button.close {
   margin: 0;
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 0, 0.9);
 }
 
 .carousel-caption {
@@ -8698,7 +8993,7 @@ button.close {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
+  color: rgba(255, 255, 0, 0.9);
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -8706,7 +9001,9 @@ button.close {
 .carousel-caption .btn,
 .carousel-caption .button,
 .carousel-caption .view-header > ul.links li a,
-.view-header > ul.links li .carousel-caption a {
+.view-header > ul.links li .carousel-caption a,
+.carousel-caption .slider-sidebar .more-link,
+.slider-sidebar .carousel-caption .more-link {
   text-shadow: none;
 }
 
@@ -8746,10 +9043,12 @@ button.close {
 .filter-wrapper:before,
 #webform-submission-candidature-aap-form .js-form-managed-file .description:before,
 .page-node-type-article .taskbar:before,
+.page-node-type-evenement .taskbar:before,
 .clearfix:after,
 .filter-wrapper:after,
 #webform-submission-candidature-aap-form .js-form-managed-file .description:after,
-.page-node-type-article .taskbar:after {
+.page-node-type-article .taskbar:after,
+.page-node-type-evenement .taskbar:after {
   content: " ";
   display: table;
 }
@@ -8757,7 +9056,8 @@ button.close {
 .clearfix:after,
 .filter-wrapper:after,
 #webform-submission-candidature-aap-form .js-form-managed-file .description:after,
-.page-node-type-article .taskbar:after {
+.page-node-type-article .taskbar:after,
+.page-node-type-evenement .taskbar:after {
   clear: both;
 }
 
@@ -8771,7 +9071,9 @@ button.close {
 #webform-submission-candidature-aap-form .js-form-managed-file .description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger,
-.page-node-type-article .taskbar {
+.page-node-type-article .taskbar,
+.page-node-type-evenement .taskbar,
+.slider-sidebar .more-link {
   float: right !important;
 }
 
@@ -9093,13 +9395,15 @@ button.close {
 
 .btn,
 .button,
-.view-header > ul.links li a {
+.view-header > ul.links li a,
+.slider-sidebar .more-link {
   border-width: 2px;
 }
 
 .btn:active,
 .button:active,
-.view-header > ul.links li a:active {
+.view-header > ul.links li a:active,
+.slider-sidebar .more-link:active {
   box-shadow: none;
 }
 
@@ -9132,8 +9436,8 @@ button.close {
   color: rgba(0, 191, 255, 0.8);
 }
 
-table a:not(.btn):not(.button):not(.view-header > ul.links li a),
-.table a:not(.btn):not(.button):not(.view-header > ul.links li a) {
+table a:not(.btn):not(.button):not(.view-header > ul.links li a):not(.slider-sidebar .more-link),
+.table a:not(.btn):not(.button):not(.view-header > ul.links li a):not(.slider-sidebar .more-link) {
   text-decoration: underline;
 }
 
@@ -9511,7 +9815,9 @@ a.list-group-item-danger.active:focus {
 #webform-submission-candidature-aap-form .js-form-managed-file .description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger,
-.page-node-type-article .taskbar {
+.page-node-type-article .taskbar,
+.page-node-type-evenement .taskbar,
+.slider-sidebar .more-link {
   float: right;
 }
 
@@ -9527,7 +9833,9 @@ a.list-group-item-danger.active:focus {
 #webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger,
-.page-node-type-article .fa.taskbar {
+.page-node-type-article .fa.taskbar,
+.page-node-type-evenement .fa.taskbar,
+.slider-sidebar .fa.more-link {
   margin-left: .3em;
 }
 
@@ -12599,7 +12907,9 @@ a .glyphicon-spin {
 html.js .btn .ajax-throbber,
 html.js .button .ajax-throbber,
 html.js .view-header > ul.links li a .ajax-throbber,
-.view-header > ul.links li html.js a .ajax-throbber {
+.view-header > ul.links li html.js a .ajax-throbber,
+html.js .slider-sidebar .more-link .ajax-throbber,
+.slider-sidebar html.js .more-link .ajax-throbber {
   margin-left: .5em;
   margin-right: -.25em;
 }
@@ -12773,7 +13083,8 @@ a.btn.btn-primary:hover,
 a.btn-primary.button:hover,
 a.button.button--primary:hover,
 a.btn.button--primary:hover,
-.view-header > ul.links li a:hover {
+.view-header > ul.links li a:hover,
+.slider-sidebar a.more-link:hover {
   color: rgba(255, 255, 0, 0.9);
 }
 
@@ -12984,14 +13295,16 @@ a.icon-after .glyphicon {
 
 .btn.icon-before .glyphicon,
 .icon-before.button .glyphicon,
-.view-header > ul.links li a.icon-before .glyphicon {
+.view-header > ul.links li a.icon-before .glyphicon,
+.slider-sidebar .icon-before.more-link .glyphicon {
   margin-left: -.25em;
   margin-right: .25em;
 }
 
 .btn.icon-after .glyphicon,
 .icon-after.button .glyphicon,
-.view-header > ul.links li a.icon-after .glyphicon {
+.view-header > ul.links li a.icon-after .glyphicon,
+.slider-sidebar .icon-after.more-link .glyphicon {
   margin-left: .25em;
   margin-right: -.25em;
 }
@@ -13151,7 +13464,9 @@ form.project-list.navbar.webform-submission-form > .view-content,
 .linkbar .btn,
 .linkbar .button,
 .linkbar .view-header > ul.links li a,
-.view-header > ul.links li .linkbar a {
+.view-header > ul.links li .linkbar a,
+.linkbar .slider-sidebar .more-link,
+.slider-sidebar .linkbar .more-link {
   padding: 10px 30px;
   font-size: 14px;
   line-height: 1.42857;
@@ -13162,7 +13477,9 @@ form.project-list.navbar.webform-submission-form > .view-content,
 .linkbar .btn:last-child,
 .linkbar .button:last-child,
 .linkbar .view-header > ul.links li a:last-child,
-.view-header > ul.links li .linkbar a:last-child {
+.view-header > ul.links li .linkbar a:last-child,
+.linkbar .slider-sidebar .more-link:last-child,
+.slider-sidebar .linkbar .more-link:last-child {
   margin-right: 0;
 }
 
@@ -13256,26 +13573,62 @@ mark,
   border-radius: 6px;
 }
 
-.page-node-type-article .taskbar {
+.field--item .fa {
+  margin-right: 5px;
+}
+
+.btn-title {
+  font-family: 'arc-light';
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.page-node-type-article .taskbar,
+.page-node-type-evenement .taskbar {
   position: relative;
   margin-bottom: 10px;
+}
+
+article.article.teaser .panel-heading,
+article.evenement.teaser article.article.teaser .panel-heading,
+article.evenement.list .panel-heading {
+  font-size: 80%;
+  padding: 5px 7px;
 }
 
 article.article.teaser h1,
 article.article.teaser h2,
 article.article.teaser h3,
-article.article.teaser h4 {
+article.article.teaser h4,
+article.evenement.teaser article.article.teaser h1,
+article.evenement.teaser article.article.teaser h2,
+article.evenement.teaser article.article.teaser h3,
+article.evenement.teaser article.article.teaser h4,
+article.evenement.list h1,
+article.evenement.list h2,
+article.evenement.list h3,
+article.evenement.list h4 {
   margin-top: 0;
 }
 
-article.article.teaser .field--name-body {
+article.article.teaser .field--name-body,
+article.evenement.teaser article.article.teaser .field--name-body,
+article.evenement.list .field--name-body {
   margin-top: 10px;
 }
 
 article.article.teaser .field--name-body h1,
 article.article.teaser .field--name-body h2,
 article.article.teaser .field--name-body h3,
-article.article.teaser .field--name-body h4 {
+article.article.teaser .field--name-body h4,
+article.evenement.teaser article.article.teaser .field--name-body h1,
+article.evenement.teaser article.article.teaser .field--name-body h2,
+article.evenement.teaser article.article.teaser .field--name-body h3,
+article.evenement.teaser article.article.teaser .field--name-body h4,
+article.evenement.list .field--name-body h1,
+article.evenement.list .field--name-body h2,
+article.evenement.list .field--name-body h3,
+article.evenement.list .field--name-body h4 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   text-transform: lowercase;
   font-variant: small-caps;
@@ -13651,6 +14004,39 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   margin-top: 0;
 }
 
+.carousel .carousel-control.left,
+.carousel .carousel-control.right {
+  background: none;
+}
+
+.carousel .item {
+  padding-bottom: 18px;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel .item,
+.carousel .active.left,
+.carousel .active.right {
+  opacity: 0;
+}
+
+.carousel .active,
+.carousel .next.left,
+.carousel .prev.right {
+  opacity: 1;
+}
+
+.carousel .next,
+.carousel .prev,
+.carousel .active.left,
+.carousel .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 .agenda-search .cibulSearch input {
   max-width: 970px;
   margin: 0 auto;
@@ -13677,7 +14063,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .agenda-search .cibulSearch
   .input-group-sm > .input-group-btn > input.btn,
 .agenda-search .cibulSearch
-  .input-group-sm > .input-group-btn > input.button {
+  .input-group-sm > .input-group-btn > input.button,
+.agenda-search .cibulSearch .slider-sidebar
+  .input-group-sm > .input-group-btn > input.more-link,
+.slider-sidebar .agenda-search .cibulSearch
+  .input-group-sm > .input-group-btn > input.more-link {
   font-size: 13px;
 }
 
@@ -13686,7 +14076,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .agenda-search .cibulSearch
   .input-group-lg > .input-group-btn > input.btn,
 .agenda-search .cibulSearch
-  .input-group-lg > .input-group-btn > input.button {
+  .input-group-lg > .input-group-btn > input.button,
+.agenda-search .cibulSearch .slider-sidebar
+  .input-group-lg > .input-group-btn > input.more-link,
+.slider-sidebar .agenda-search .cibulSearch
+  .input-group-lg > .input-group-btn > input.more-link {
   font-size: 19px;
 }
 
@@ -13879,7 +14273,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .agenda-preview .item #webform-submission-candidature-aap-form .js-form-managed-file button.links.js-form-submit.button--danger,
 #webform-submission-candidature-aap-form .js-form-managed-file .agenda-preview .item button.links.js-form-submit.button--danger,
 .agenda-preview .item .page-node-type-article .links.taskbar,
-.page-node-type-article .agenda-preview .item .links.taskbar {
+.page-node-type-article .agenda-preview .item .links.taskbar,
+.agenda-preview .item .page-node-type-evenement .links.taskbar,
+.page-node-type-evenement .agenda-preview .item .links.taskbar,
+.agenda-preview .item .slider-sidebar .links.more-link,
+.slider-sidebar .agenda-preview .item .links.more-link {
   margin-right: 5px;
 }
 
@@ -14126,6 +14524,16 @@ form.webform-submission-form {
   border: none;
 }
 
+h1.h-message,
+h2.h-message,
+h3.h-message,
+h4.h-message {
+  font-family: 'arc-light';
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: #fff;
+}
+
 .spacer-h {
   height: 35px;
 }
@@ -14157,6 +14565,11 @@ form.webform-submission-form {
 
 .project-list > .view-header {
   text-align: left;
+}
+
+.slider-sidebar {
+  max-width: 300px;
+  margin: 54px auto 27px;
 }
 
 body#tinymce {

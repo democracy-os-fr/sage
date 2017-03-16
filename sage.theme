@@ -48,3 +48,18 @@ function sage_preprocess_node__event(&$variables){
 //     $suggestions[] = 'page__'.$content_type;
 //   }
 // }
+
+function sage_project_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  dcp('sage_project_presave');
+  dcp($entity);
+}
+
+function sage_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  dcp('sage_entity_presave');
+  dcp($entity);
+}
+
+function sage_node_presave(Drupal\node\NodeInterface $node) {
+  dcp('sage_node_presave');
+  dcp($node);
+}

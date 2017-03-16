@@ -12,10 +12,23 @@
     {% else %}
       <section class="agora-header bg-image bg-dark bg-no-image" role="heading">
     {% endif %}
-      <div class="jumbotron {{ container }}">
 
-        {{ drupal_field('description', 'agora_page', 1) }}
-
+      <div class="{{container}}">
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+              {% set slider = drupal_field('field_slider', 'agora_page', 1)|field_value %}
+              {% if slider %}
+                {{ slider }}
+              {% else %}
+                {{ drupal_field('description', 'agora_page', 1) }}
+              {% endif %}
+            </div>
+          <div class="hidden-xs hidden-sm col-md-4">
+            <div class="slider-sidebar clearfix">
+              {{ drupal_view('news','sidebar_home') }}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -78,3 +78,13 @@ $btn-primary-border:                        $gray-darker;
 $dl-horizontal-offset:        36px;
 //** Point at which .dl-horizontal becomes horizontal
 $dl-horizontal-breakpoint:    $grid-float-breakpoint;
+
+$carousel-control-color:                     $brand-yellow;
+$carousel-control-width:                      15% !default;
+$carousel-control-opacity:                    .5 !default;
+$carousel-control-font-size:                  20px !default;
+
+$carousel-indicator-active-bg:                $brand-yellow;
+$carousel-indicator-border-color:             $brand-yellow;
+
+$carousel-caption-color:                      $brand-yellow;

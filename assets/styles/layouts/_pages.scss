@@ -19,6 +19,16 @@
   border: none;
 }
 
+h1.h-message,
+h2.h-message,
+h3.h-message,
+h4.h-message {
+  font-family: 'arc-light';
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: $navbar-inverse-link-color;
+}
+
 .spacer-h { height: 35px ; }
 
 .path-examples {
@@ -52,5 +62,16 @@
   }
   & > .view-content {
     @extend .container;
+  }
+}
+
+.slider-sidebar {
+  max-width: 300px;
+  margin: ($padding-large-horizontal * 2) auto $padding-large-horizontal;
+  .more-link {
+    @extend .pull-right;
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-primary;
   }
 }

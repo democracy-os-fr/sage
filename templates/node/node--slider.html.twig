@@ -1,0 +1,36 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div id="slider_{{node.id}}" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {% for slide in content.field_slider_content|field_value %}
+      <li data-target="#slider_{{node.id}}" data-slide-to="{{loop.index0}}" class="{{loop.first ? 'active'}}"></li>
+    {% endfor %}
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    {% for slide in content.field_slider_content|field_value %}
+      <div class="item {{loop.first ? 'active'}}">
+        {{ slide }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#slider_{{node.id}}" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Précédent</span>
+  </a>
+  <a class="right carousel-control" href="#slider_{{node.id}}" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Suivant</span>
+  </a> -->
+
+</div>
+
+
+{% endblock %}
