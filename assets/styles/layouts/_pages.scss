@@ -66,12 +66,21 @@ h4.h-message {
 }
 
 .slider-sidebar {
-  max-width: 300px;
+  max-width: 350px;
   margin: ($padding-large-horizontal * 2) auto $padding-large-horizontal;
   .more-link {
-    @extend .pull-right;
     @extend .btn;
+    @extend .btn-block;
     @extend .btn-sm;
     @extend .btn-primary;
+  }
+}
+
+.view-acteurs {
+  .more-link a {
+    @extend .btn;
+    @extend .btn-block;
+    @extend .btn-sm;
+    @extend .btn-default;
   }
 }

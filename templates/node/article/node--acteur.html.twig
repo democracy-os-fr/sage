@@ -1,0 +1,27 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="container-xs text-center">
+
+  {% if content.field_image_acteur|field_value %}
+    {{ content.field_image_acteur|field_value }}
+  {% else %}
+    <div class="font-avatar">
+      {{ label|field_value[0]['#context']['value'][:1]|upper }}
+    </div>
+  {% endif %}
+
+  <h3 class="alt">
+  {% if content.field_site_internet|field_value %}
+    <a href="{{content.field_site_internet|field_value[0]['#title']}}">{{ label }}</a>
+  {% else %}
+    {{ label }}
+  {% endif %}
+  </h3>
+  {{ content.body }}
+
+</div>
+
+{% endblock %}

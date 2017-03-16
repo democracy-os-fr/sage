@@ -69,6 +69,22 @@ article.article.teaser, article.evenement.list, {
   }
 }
 
+$font-avatar-size: 150px ;
+
+.font-avatar {
+  @include square($font-avatar-size);
+  padding: 12px 14px; // TODO : calculate this sh*t
+  border-radius: $border-radius-large ;
+  background-color: $gray-darker;
+  font-family: 'arc';
+  font-size: 76px;
+  line-height: 136px;
+  font-weight: 300;
+  color: $brand-yellow;
+  text-transform: uppercase;
+  margin: $padding-base-vertical auto;
+}
+
 
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;

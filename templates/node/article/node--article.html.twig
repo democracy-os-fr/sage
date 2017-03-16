@@ -8,9 +8,13 @@
     <div class="col-xs-12 col-lg-8">
       <div class="page-header">
         <h1>{{ label }}</h1>
-        {{ content.field_date }}
+        <div class="well well-sm">
+          {{ content.field_date }}
+        </div>
       </div>
-      {{ content.body }}
+      <div class="pad-bottom">
+        {{ content.body }}
+      </div>
     </div>
     <div class="col-xs-12 col-lg-4">
       {{ drupal_view('news','sidebar',node.id) }}
