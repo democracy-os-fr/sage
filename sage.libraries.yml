@@ -9,3 +9,12 @@ bootstrap-scripts:
   dependencies:
     - core/jquery
     - core/jquery.once
+
+views-exposed-form:
+  js:
+    dist/scripts/viewsExposedForm.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupalSettings

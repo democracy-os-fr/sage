@@ -13497,11 +13497,6 @@ form.webform-submission-form {
   font-size: 24px;
 }
 
-.form-item[class*="form-item-field-address-"][class*="-country-code"],
-.filter-wrapper {
-  display: none;
-}
-
 .control-label {
   margin-left: 6px;
 }
@@ -13535,7 +13530,7 @@ form.webform-submission-form {
   margin-right: 18px;
 }
 
-.node-form #edit-field-form-0-status--wrapper legend {
+.node-form .form-item.form-wrapper legend {
   margin-bottom: 5px;
   margin-left: 6px;
   font-weight: bold;
@@ -13559,6 +13554,31 @@ form.webform-submission-form {
 #webform-submission-candidature-aap-form > ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.view-filters {
+  margin: 18px auto;
+  text-align: center;
+}
+
+.views-exposed-form .filter-sort .filter-sort-order {
+  display: none;
+}
+
+.views-exposed-form .filter-sort .filter-sort-order.toggle-active {
+  display: inline-block;
+}
+
+.views-exposed-form .dropdown-menu .form-item.radio,
+.views-exposed-form .dropdown-menu .form-item.checkbox {
+  display: block;
+}
+
+.views-exposed-form .dropdown-menu .form-item.radio input[type="radio"],
+.views-exposed-form .dropdown-menu .form-item.radio input[type="checkbox"],
+.views-exposed-form .dropdown-menu .form-item.checkbox input[type="radio"],
+.views-exposed-form .dropdown-menu .form-item.checkbox input[type="checkbox"] {
+  margin-right: 7px;
 }
 
 /**

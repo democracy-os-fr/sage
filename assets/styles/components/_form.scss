@@ -125,7 +125,7 @@ form.webform-submission-form {
 
 .form-item[class*="form-item-field-address-"][class*="-country-code"],
 .filter-wrapper {
-  display: none;
+  // display: none;
 }
 
 .control-label {
@@ -161,7 +161,7 @@ form.webform-submission-form {
   margin-right: $padding-large-vertical ;
 }
 
-.node-form #edit-field-form-0-status--wrapper legend {
+.node-form .form-item.form-wrapper legend {
   margin-bottom: 5px;
   margin-left: 6px;
   font-weight: bold;
@@ -192,4 +192,32 @@ form.webform-submission-form {
 #webform-submission-candidature-aap-form > ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.form-line {
+  .control-label:first-child {
+
+  }
+}
+
+.view-filters {
+  margin: $padding-large-vertical auto;
+  text-align: center;
+}
+
+.views-exposed-form {
+  .filter-sort .filter-sort-order {
+    display: none;
+    &.toggle-active {
+      display: inline-block;
+    }
+  }
+  .dropdown-menu {
+    .form-item.radio, .form-item.checkbox {
+      display: block;
+      input[type="radio"], input[type="checkbox"] {
+        margin-right: 7px;
+      }
+    }
+  }
 }

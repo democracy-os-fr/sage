@@ -3,7 +3,8 @@
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"
-    ]
+    ],
+    "viewsExposedForm" : "./scripts/attached/viewsExposedForm.js"
   },
   "watch": [
     "templates/**/*.php",

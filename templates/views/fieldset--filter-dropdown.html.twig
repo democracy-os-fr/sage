@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a fieldset element and its children.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the <fieldset> element.
+ * - errors: (optional) Any errors for this <fieldset> element, may not be set.
+ * - required: Boolean indicating whether the <fieldeset> element is required.
+ * - legend: The <legend> element containing the following properties:
+ *   - title: Title of the <fieldset>, intended for use as the text
+       of the <legend>.
+ *   - attributes: HTML attributes to apply to the <legend> element.
+ * - description: The description element containing the following properties:
+ *   - content: The description content of the <fieldset>.
+ *   - attributes: HTML attributes to apply to the description container.
+ * - children: The rendered child elements of the <fieldset>.
+ * - prefix: The content to add before the <fieldset> children.
+ * - suffix: The content to add after the <fieldset> children.
+ *
+ * @see template_preprocess_fieldset()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ devel_dump('fieldset--filter-dropdown') }}
+{{ devel_dump() }}
+{%
+  set classes = [
+    'js-form-item',
+    'form-item',
+    'js-form-wrapper',
+    'form-wrapper',
+    'form-group',
+    'form-actions',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="{{element['#id']}}-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      {%
+        set legend_span_classes = [
+          'fieldset-legend',
+          required ? 'js-form-required',
+          required ? 'form-required',
+        ]
+      %}
+      <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
+      <span class="caret"></span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="{{element['#id']}}-dropdown">
+      {{ children }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+{{ devel_dump('views_exposed_form filter_sort') }}
+{{ devel_dump() }}
+
+{{ attach_library('sage/views-exposed-form') }}
+
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+  {{ devel_dump('QUERY q = ') }}
+  {{ devel_dump(q) }}
+  {{ q }}
+{% endif %}
+<div class="well">
+  <div class="form--inline form-inline clearfix">
+    {{ form|without('sort_by','sort_order','actions') }}
+    <div class="form-group form-actions">
+
+      {% set val_sort_by = form.sort_by['#value'] is not empty ? form.sort_by['#value'] : '' %}
+      {% set val_sort_order = form.sort_order['#value'] is not empty ? form.sort_order['#value'] : form.sort_order['#default_value'] %}
+
+      <div class="btn-group" data-toggle="buttons">
+
+        {% for key, value in form.sort_by['#options'] %}
+
+          {% if val_sort_by is not empty %}
+            {% set active_sort_by = val_sort_by == key %}
+          {% else %}
+            {% if loop.first %}
+              {% set val_sort_by = key %}
+              {% set active_sort_by = true %}
+            {% else %}
+              {% set active_sort_by = false %}
+            {% endif %}
+          {% endif %}
+
+          <label class="btn btn-default filter-sort {{ active_sort_by ? 'active' }}"
+            data-filter-toggle="{{ active_sort_by ? 'on':'off' }}"
+            data-filter-sort="{{key}}"
+          >
+            <input type="radio" name="filter-sort" id="filter-sort-{{key}}"
+              autocomplete="off"
+              {{ active_sort_by ? 'checked="checked"' }} />
+            <span class="filter-sort-by">{{ value }}</span>
+            <span>&nbsp;</span>
+
+            {% for _key, _value in form.sort_order['#options'] %}
+              {% if active_sort_by %}
+                {% set active_sort_order = _key == val_sort_order %}
+              {% else %}
+                {% set active_sort_order = _key == form.sort_order['#default_value'] %}
+              {% endif %}
+              <span class="filter-sort-order {{ active_sort_order ? 'toggle-active' }}" data-filter-sort="{{_key}}">
+                {% if _value starts with 'fa ' %}
+                  <i class="{{ _value }}"></i>
+                {% else %}
+                  {{ _value }}
+                {% endif %}
+              </span>
+            {% endfor %}
+
+          </label>
+
+        {% endfor %}
+
+      </div>
+
+      <input type="hidden" name="sort_by" id="{{ form.sort_by['#id'] }}" value="{{val_sort_by}}" />
+      <input type="hidden" name="sort_order" id="{{ form.sort_order['#id'] }}" value="{{val_sort_order}}" />
+
+    </div>
+    {{ form.actions }}
+  </div>
+</div>
