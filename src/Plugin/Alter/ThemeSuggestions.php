@@ -38,6 +38,18 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         }
         break;
 
+
+      case 'views_view':
+        dcp('views_view ThemeSuggestions');
+        dcp($suggestions);
+        dcp($variables['view']->id());
+        dcp($variables['view']->current_display);
+
+        array_push($suggestions,implode('__',['views_view',$variables['view']->id()]));
+        array_push($suggestions,implode('__',['views_view',$variables['view']->id(),$variables['view']->current_display]));
+
+        break;
+
       case 'views_exposed_form':
         // dcp('views_exposed_form ThemeSuggestions');
         // dcp($suggestions);
@@ -55,7 +67,7 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         // dcp('form_element ThemeSuggestions');
         // dcp($suggestions);
         // dcp($variables);
-        
+
         if( isset($variables['element']['#sage']) ) {
           $keys = ['filter_search'];
           if ( in_array($variables['element']['#sage'], $keys) ) {

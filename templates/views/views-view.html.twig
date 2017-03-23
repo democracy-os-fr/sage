@@ -43,21 +43,24 @@
 %}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if title %}
-    {{ title }}
-  {% endif %}
-  {{ title_suffix }}
-  {% if header %}
-    <div class="view-header">
-      {{ header }}
-    </div>
-  {% endif %}
-  {% if exposed %}
-    <div class="view-filters {{ container }} form-group">
-      {{ exposed }}
-    </div>
-  {% endif %}
+  {% block viewHeader %}
+    {{ title_prefix }}
+    {% if title %}
+      {{ title }}
+    {% endif %}
+    {{ title_suffix }}
+    {% if header %}
+      <div class="view-header">
+        {{ header }}
+      </div>
+    {% endif %}
+    {% if exposed %}
+      <div class="view-filters {{ container }} form-group">
+        {{ exposed }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}

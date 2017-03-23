@@ -13556,6 +13556,11 @@ form.webform-submission-form {
   padding-left: 0;
 }
 
+table th.views-field-operations,
+table td.views-field-operations {
+  min-width: 130px;
+}
+
 .view-filters {
   margin: 18px auto;
   text-align: center;
@@ -13953,6 +13958,14 @@ article.evenement.list .field--name-body h4 {
   color: rgba(255, 255, 0, 0.9);
   text-transform: uppercase;
   margin: 10px auto;
+}
+
+blockquote.info .field--item {
+  font-weight: 300;
+}
+
+blockquote.info .field--type-address {
+  font-size: 14px;
 }
 
 /**
@@ -14731,6 +14744,71 @@ p:last-child,
   margin-bottom: 18px;
 }
 
+.btn-yellow {
+  color: #fff;
+  background-color: rgba(255, 255, 0, 0.9);
+  border-color: #95a5a6;
+}
+
+.btn-yellow:focus,
+.btn-yellow.focus {
+  color: #fff;
+  background-color: rgba(204, 204, 0, 0.9);
+  border-color: #566566;
+}
+
+.btn-yellow:hover {
+  color: #fff;
+  background-color: rgba(204, 204, 0, 0.9);
+  border-color: #74898a;
+}
+
+.btn-yellow:active,
+.btn-yellow.active,
+.open > .btn-yellow.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(204, 204, 0, 0.9);
+  border-color: #74898a;
+}
+
+.btn-yellow:active:hover,
+.btn-yellow:active:focus,
+.btn-yellow:active.focus,
+.btn-yellow.active:hover,
+.btn-yellow.active:focus,
+.btn-yellow.active.focus,
+.open > .btn-yellow.dropdown-toggle:hover,
+.open > .btn-yellow.dropdown-toggle:focus,
+.open > .btn-yellow.dropdown-toggle.focus {
+  color: #fff;
+  background-color: rgba(168, 168, 0, 0.9);
+  border-color: #566566;
+}
+
+.btn-yellow:active,
+.btn-yellow.active,
+.open > .btn-yellow.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-yellow.disabled:hover,
+.btn-yellow.disabled:focus,
+.btn-yellow.disabled.focus,
+.btn-yellow[disabled]:hover,
+.btn-yellow[disabled]:focus,
+.btn-yellow[disabled].focus,
+fieldset[disabled] .btn-yellow:hover,
+fieldset[disabled] .btn-yellow:focus,
+fieldset[disabled] .btn-yellow.focus {
+  background-color: rgba(255, 255, 0, 0.9);
+  border-color: #95a5a6;
+}
+
+.btn-yellow .badge {
+  color: rgba(255, 255, 0, 0.9);
+  background-color: #fff;
+}
+
 .dark-background {
   background-color: #222222;
   color: rgba(255, 255, 0, 0.9);
@@ -14797,10 +14875,6 @@ header .navbar-brand {
     position: absolute;
     right: 15px;
   }
-}
-
-.view-header {
-  text-align: right;
 }
 
 .view-header > ul.links {

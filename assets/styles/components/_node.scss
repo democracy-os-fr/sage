@@ -85,6 +85,14 @@ $font-avatar-size: 150px ;
   margin: $padding-base-vertical auto;
 }
 
+blockquote.info {
+  .field--item {
+    font-weight: 300;
+  }
+  .field--type-address {
+    font-size: $font-size-base;
+  }
+}
 
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;

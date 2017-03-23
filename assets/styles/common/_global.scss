@@ -48,6 +48,10 @@ p:last-child,
   margin-bottom: $padding-large-vertical ;
 }
 
+.btn-yellow {
+  @include button-variant($btn-primary-color, $brand-yellow, $btn-default-border);
+}
+
 .dark-background {
   background-color : $gray-darker ;
   color: $brand-yellow;

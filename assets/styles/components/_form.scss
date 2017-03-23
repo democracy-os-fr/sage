@@ -200,6 +200,12 @@ form.webform-submission-form {
   }
 }
 
+table {
+  th.views-field-operations, td.views-field-operations {
+    min-width: 130px;
+  }
+}
+
 .view-filters {
   margin: $padding-large-vertical auto;
   text-align: center;
@@ -219,5 +225,11 @@ form.webform-submission-form {
         margin-right: 7px;
       }
     }
+  }
+}
+
+.view-id-projects.view-display-id-page_filter {
+  .form-item-combine, .form-actions#edit-actions {
+    // display: block !important;
   }
 }
