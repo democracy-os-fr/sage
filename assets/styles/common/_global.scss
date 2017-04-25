@@ -49,7 +49,11 @@ p:last-child,
 }
 
 .btn-yellow {
-  @include button-variant($btn-primary-color, $brand-yellow, $btn-default-border);
+  @include button-variant($gray-darker, $brand-yellow, $brand-yellow);
+
+  & > a {
+    color: $gray-darker;
+  }
 }
 
 .dark-background {

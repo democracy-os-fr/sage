@@ -14338,6 +14338,16 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   margin-top: 0;
 }
 
+.carousel .carousel-indicators {
+  bottom: 0;
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-inner > .item {
+  min-height: 500px;
+  overflow: hidden;
+}
+
 .carousel .carousel-control.left,
 .carousel .carousel-control.right {
   background: none;
@@ -14744,69 +14754,114 @@ p:last-child,
   margin-bottom: 18px;
 }
 
-.btn-yellow {
-  color: #fff;
+.btn-yellow,
+.agora-header .more-link {
+  color: #222222;
   background-color: rgba(255, 255, 0, 0.9);
-  border-color: #95a5a6;
+  border-color: rgba(255, 255, 0, 0.9);
 }
 
 .btn-yellow:focus,
-.btn-yellow.focus {
-  color: #fff;
+.agora-header .more-link:focus,
+.btn-yellow.focus,
+.agora-header .focus.more-link {
+  color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
-  border-color: #566566;
+  border-color: rgba(128, 128, 0, 0.9);
 }
 
-.btn-yellow:hover {
-  color: #fff;
+.btn-yellow:hover,
+.agora-header .more-link:hover {
+  color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
-  border-color: #74898a;
+  border-color: rgba(194, 194, 0, 0.9);
 }
 
 .btn-yellow:active,
+.agora-header .more-link:active,
 .btn-yellow.active,
-.open > .btn-yellow.dropdown-toggle {
-  color: #fff;
+.agora-header .active.more-link,
+.open > .btn-yellow.dropdown-toggle,
+.agora-header
+  .open > .dropdown-toggle.more-link {
+  color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
-  border-color: #74898a;
+  border-color: rgba(194, 194, 0, 0.9);
 }
 
 .btn-yellow:active:hover,
+.agora-header .more-link:active:hover,
 .btn-yellow:active:focus,
+.agora-header .more-link:active:focus,
 .btn-yellow:active.focus,
+.agora-header .more-link:active.focus,
 .btn-yellow.active:hover,
+.agora-header .active.more-link:hover,
 .btn-yellow.active:focus,
+.agora-header .active.more-link:focus,
 .btn-yellow.active.focus,
+.agora-header .active.focus.more-link,
 .open > .btn-yellow.dropdown-toggle:hover,
+.agora-header
+    .open > .dropdown-toggle.more-link:hover,
 .open > .btn-yellow.dropdown-toggle:focus,
-.open > .btn-yellow.dropdown-toggle.focus {
-  color: #fff;
+.agora-header
+    .open > .dropdown-toggle.more-link:focus,
+.open > .btn-yellow.dropdown-toggle.focus,
+.agora-header
+    .open > .dropdown-toggle.focus.more-link {
+  color: #222222;
   background-color: rgba(168, 168, 0, 0.9);
-  border-color: #566566;
+  border-color: rgba(128, 128, 0, 0.9);
 }
 
 .btn-yellow:active,
+.agora-header .more-link:active,
 .btn-yellow.active,
-.open > .btn-yellow.dropdown-toggle {
+.agora-header .active.more-link,
+.open > .btn-yellow.dropdown-toggle,
+.agora-header
+  .open > .dropdown-toggle.more-link {
   background-image: none;
 }
 
 .btn-yellow.disabled:hover,
+.agora-header .disabled.more-link:hover,
 .btn-yellow.disabled:focus,
+.agora-header .disabled.more-link:focus,
 .btn-yellow.disabled.focus,
+.agora-header .disabled.focus.more-link,
 .btn-yellow[disabled]:hover,
+.agora-header [disabled].more-link:hover,
 .btn-yellow[disabled]:focus,
+.agora-header [disabled].more-link:focus,
 .btn-yellow[disabled].focus,
+.agora-header [disabled].focus.more-link,
 fieldset[disabled] .btn-yellow:hover,
+fieldset[disabled] .agora-header .more-link:hover,
+.agora-header
+  fieldset[disabled] .more-link:hover,
 fieldset[disabled] .btn-yellow:focus,
-fieldset[disabled] .btn-yellow.focus {
+fieldset[disabled] .agora-header .more-link:focus,
+.agora-header
+  fieldset[disabled] .more-link:focus,
+fieldset[disabled] .btn-yellow.focus,
+fieldset[disabled] .agora-header .focus.more-link,
+.agora-header
+  fieldset[disabled] .focus.more-link {
   background-color: rgba(255, 255, 0, 0.9);
-  border-color: #95a5a6;
+  border-color: rgba(255, 255, 0, 0.9);
 }
 
-.btn-yellow .badge {
+.btn-yellow .badge,
+.agora-header .more-link .badge {
   color: rgba(255, 255, 0, 0.9);
-  background-color: #fff;
+  background-color: #222222;
+}
+
+.btn-yellow > a,
+.agora-header .more-link > a {
+  color: #222222;
 }
 
 .dark-background {
@@ -14834,6 +14889,11 @@ header.navbar {
 
 .agora-header .jumbotron {
   margin-bottom: 0;
+}
+
+.agora-header .carousel-inner {
+  height: 650px !important;
+  overflow: hidden;
 }
 
 h1,

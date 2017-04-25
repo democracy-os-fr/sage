@@ -1,7 +1,6 @@
 {% set iframe_args = '?' %}
 {% if agenda_category %}
   {% set iframe_args = iframe_args ~ 'oaq%5Bcategory%5D=' ~ agenda_category|clean_class %}
-  {{ devel_dump(agenda_category)}}
 {% endif %}
 
 <div class="row">

@@ -44,6 +44,17 @@
 
 .carousel {
 
+  .carousel-indicators {
+    bottom: 0;
+  }
+
+  .carousel-inner {
+    &, & > .item {
+      min-height: 500px;
+      overflow: hidden;
+    }
+  }
+
   .carousel-control {
     &.left, &.right {
       background: none;

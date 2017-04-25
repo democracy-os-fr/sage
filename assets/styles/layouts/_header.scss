@@ -6,6 +6,12 @@ header.navbar {
   .jumbotron {
     margin-bottom: 0;
   }
+
+  .carousel-inner {
+    height: 650px !important;
+    overflow: hidden;
+  }
+
 }
 
 h1, h2, header .navbar-brand {

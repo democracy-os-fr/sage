@@ -27,3 +27,7 @@ a.btn.btn-primary {
 .button--small {
   @extend .btn-sm;
 }
+
+.agora-header .more-link {
+  @extend .btn-yellow;
+}

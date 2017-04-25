@@ -4,7 +4,8 @@ export default {
     // console.log('JS sage :: routes/common :: init');
     $('.carousel').carousel({
         interval: 5000,
-    }).on('slide.bs.carousel', function (e)
+    })
+    .on('slide.bs.carousel', function (e)
     {
         var nextH = $(e.relatedTarget).outerHeight();
         $(this).find('.active.item').parent().animate({ height: nextH }, 500);

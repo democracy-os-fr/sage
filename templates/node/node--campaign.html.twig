@@ -13,9 +13,6 @@
     </div>
   </div>
 
-  {{ devel_dump('- node campaign content :') }}
-  {{ devel_dump(content) }}
-
   {% if content.field_enable_timeline|field_raw('value') or content.field_enable_agenda|field_raw('value') or content.field_enable_forum|field_raw('value') %}
     <section class="{{ container }}">
       <ul class="nav nav-tabs nav-justified nav-campaign" role="tablist">
