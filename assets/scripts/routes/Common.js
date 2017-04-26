@@ -1,3 +1,21 @@
+/* global drupalSettings */
+import endsWith from 'mout/string/endsWith';
+
+function getCodeMirror(target) {
+  let $target = target instanceof jQuery ? target : $(target);
+  if ($target.length === 0) {
+    throw new Error('Element does not reference a CodeMirror instance.');
+  }
+
+  if (!$target.hasClass('CodeMirror')) {
+    if ($target.is('textarea')) {
+      $target = $target.next('.CodeMirror');
+    }
+  }
+
+  return $target.get(0).CodeMirror;
+}
+
 export default {
   init() {
     // JavaScript to be fired on all pages
@@ -10,6 +28,16 @@ export default {
         var nextH = $(e.relatedTarget).outerHeight();
         $(this).find('.active.item').parent().animate({ height: nextH }, 500);
     });
+
+    // console.log(drupalSettings.path.currentPath); // eslint-disable-line no-console
+
+    if (endsWith(drupalSettings.path.currentPath, 'add/project') || endsWith(drupalSettings.path.currentPath, 'edit') ) {
+      $('.path-node .node-form a[href="#edit-group-form"]').on('show.bs.tab', () => {
+        const cm = getCodeMirror('#edit-field-form-0-settings-default-data');
+        cm.refresh();
+      });
+    }
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

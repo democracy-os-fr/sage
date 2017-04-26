@@ -1,20 +1,4 @@
 /* global drupalSettings */
-import endsWith from 'mout/string/endsWith';
-
-function getCodeMirror(target) {
-  let $target = target instanceof jQuery ? target : $(target);
-  if ($target.length === 0) {
-    throw new Error('Element does not reference a CodeMirror instance.');
-  }
-
-  if (!$target.hasClass('CodeMirror')) {
-    if ($target.is('textarea')) {
-      $target = $target.next('.CodeMirror');
-    }
-  }
-
-  return $target.get(0).CodeMirror;
-}
 
 export default {
   init() {
@@ -65,12 +49,5 @@ export default {
       $('#nav-project a[href="#tab-project-main"]').tab('show');
     }
 
-    // Only in edit mode
-    if (endsWith(drupalSettings.path.currentPath, 'edit')) {
-      $('#node-project-edit-form a[href="#edit-group-form"]').on('show.bs.tab', () => {
-        const cm = getCodeMirror('#edit-field-form-0-default-data');
-        cm.refresh();
-      });
-    }
   },
 };

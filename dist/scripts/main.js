@@ -2609,44 +2609,6 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = {
-  init: function init() {
-    // JavaScript to be fired on all pages
-    // console.log('JS sage :: routes/common :: init');
-    $('.carousel').carousel({
-        interval: 5000,
-    })
-    .on('slide.bs.carousel', function (e)
-    {
-        var nextH = $(e.relatedTarget).outerHeight();
-        $(this).find('.active.item').parent().animate({ height: nextH }, 500);
-    });
-  },
-  finalize: function finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
-    // console.log('JS sage :: routes/common :: finalize');
-  },
-};
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
-
-/***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = {
-  init: function init() {
-    // JavaScript to be fired on the home page
-  },
-};
-
-
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mout_string_endsWith__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mout_string_endsWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mout_string_endsWith__);
 /* global drupalSettings */
@@ -2666,6 +2628,56 @@ function getCodeMirror(target) {
 
   return $target.get(0).CodeMirror;
 }
+
+/* harmony default export */ __webpack_exports__["a"] = {
+  init: function init() {
+    // JavaScript to be fired on all pages
+    // console.log('JS sage :: routes/common :: init');
+    $('.carousel').carousel({
+        interval: 5000,
+    })
+    .on('slide.bs.carousel', function (e)
+    {
+        var nextH = $(e.relatedTarget).outerHeight();
+        $(this).find('.active.item').parent().animate({ height: nextH }, 500);
+    });
+
+    // console.log(drupalSettings.path.currentPath); // eslint-disable-line no-console
+
+    if (__WEBPACK_IMPORTED_MODULE_0_mout_string_endsWith___default()(drupalSettings.path.currentPath, 'add/project') || __WEBPACK_IMPORTED_MODULE_0_mout_string_endsWith___default()(drupalSettings.path.currentPath, 'edit') ) {
+      $('.path-node .node-form a[href="#edit-group-form"]').on('show.bs.tab', function () {
+        var cm = getCodeMirror('#edit-field-form-0-settings-default-data');
+        cm.refresh();
+      });
+    }
+
+  },
+  finalize: function finalize() {
+    // JavaScript to be fired on all pages, after page specific JS is fired
+    // console.log('JS sage :: routes/common :: finalize');
+  },
+};
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = {
+  init: function init() {
+    // JavaScript to be fired on the home page
+  },
+};
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* global drupalSettings */
 
 /* harmony default export */ __webpack_exports__["a"] = {
   init: function init() {
@@ -2716,17 +2728,10 @@ function getCodeMirror(target) {
       $('#nav-project a[href="#tab-project-main"]').tab('show');
     }
 
-    // Only in edit mode
-    if (__WEBPACK_IMPORTED_MODULE_0_mout_string_endsWith___default()(drupalSettings.path.currentPath, 'edit')) {
-      $('#node-project-edit-form a[href="#edit-group-form"]').on('show.bs.tab', function () {
-        var cm = getCodeMirror('#edit-field-form-0-default-data');
-        cm.refresh();
-      });
-    }
   },
 };
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 9 */
