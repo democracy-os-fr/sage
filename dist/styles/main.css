@@ -13586,6 +13586,13 @@ table td.views-field-operations {
   margin-right: 7px;
 }
 
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  padding-top: 0;
+}
+
 .form-horizontal .form-exposed-group {
   padding-left: 45px;
 }

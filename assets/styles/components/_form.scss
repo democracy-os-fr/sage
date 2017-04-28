@@ -237,6 +237,12 @@ table {
 
 
 .form-horizontal {
+
+  .radio, .checkbox,
+  .radio-inline, .checkbox-inline {
+    padding-top: 0;
+  }
+
   .form-exposed-group {
     padding-left: 45px;
     .form-exposed-group-inner {
