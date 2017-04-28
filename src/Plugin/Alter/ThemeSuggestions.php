@@ -27,7 +27,7 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
 
     // DO NOT DUMP $variables for all hook (outside the switch block) => ERR_HEADER_TOO_BIG
 
-    //dcp($hook);
+    ////dcp($hook);
 
     parent::alter($suggestions, $variables, $hook);
 
@@ -40,10 +40,10 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
 
 
       case 'views_view':
-        dcp('views_view ThemeSuggestions');
-        dcp($suggestions);
-        dcp($variables['view']->id());
-        dcp($variables['view']->current_display);
+        //dcp('views_view ThemeSuggestions');
+        //dcp($suggestions);
+        //dcp($variables['view']->id());
+        //dcp($variables['view']->current_display);
 
         array_push($suggestions,implode('__',['views_view',$variables['view']->id()]));
         array_push($suggestions,implode('__',['views_view',$variables['view']->id(),$variables['view']->current_display]));
@@ -51,9 +51,9 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         break;
 
       case 'views_exposed_form':
-        // dcp('views_exposed_form ThemeSuggestions');
-        // dcp($suggestions);
-        // dcp($variables);
+        // //dcp('views_exposed_form ThemeSuggestions');
+        // //dcp($suggestions);
+        // //dcp($variables);
 
         if( isset($variables['form']['#sage']) ) {
           $keys = ['filter_sort'];
@@ -64,9 +64,9 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         break;
 
       case 'form_element':
-        // dcp('form_element ThemeSuggestions');
-        // dcp($suggestions);
-        // dcp($variables);
+        // //dcp('form_element ThemeSuggestions');
+        // //dcp($suggestions);
+        // //dcp($variables);
 
         if( isset($variables['element']['#sage']) ) {
           $keys = ['filter_search'];
@@ -77,9 +77,9 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         break;
 
       case 'fieldset':
-        // dcp('fieldset ThemeSuggestions');
-        // dcp($suggestions);
-        // dcp($variables);
+        // //dcp('fieldset ThemeSuggestions');
+        // //dcp($suggestions);
+        // //dcp($variables);
 
         if( isset($variables['element']['#sage']) ) {
           $keys = ['filter_dropdown','filter_search'];
@@ -91,14 +91,14 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
 
 
       // case 'page':
-      //   dcp('page ThemeSuggestions');
-      //   dcp($suggestions);
-      //   dcp($variables);
+      //   //dcp('page ThemeSuggestions');
+      //   //dcp($suggestions);
+      //   //dcp($variables);
       //   break;
       //
       // case 'node':
-      //   dcp($suggestions);
-      //   dcp($variables);
+      //   //dcp($suggestions);
+      //   //dcp($variables);
       //   break;
 
     }

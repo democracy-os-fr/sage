@@ -22,11 +22,23 @@
  */
 function sage_theme() {
 
-  //dcp('sage_theme');
+  ////dcp('sage_theme');
   $hooks = Bootstrap::getThemeHooks();
   $hooks['user_login_form'] = array(
       'render element' => 'form',
   );
-  //dcp($hooks);
+  ////dcp($hooks);
   return $hooks;
+}
+
+function sage_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $result = $view->result;
+  $list = array();
+  foreach ($view->result as $key => $value) {
+    $list[] = $value->nid;
+  }
+  $variables['list'] = $list;
+  $variables['title'] = $view->getTitle();
+  $variables['serial'] = $view->serialize();
 }

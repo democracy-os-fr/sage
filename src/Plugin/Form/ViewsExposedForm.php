@@ -24,14 +24,14 @@ class ViewsExposedForm extends \Drupal\bootstrap\Plugin\Form\FormBase {
    * {@inheritdoc}
    */
   public function alterForm(array &$form, FormStateInterface $form_state, $form_id = NULL) {
-    dcp("ViewsExposedForm alterForm");
-    dcp($form);
-    //array_push($form['#attributes']['class'],'form-horizontal');
+    // //dcp("ViewsExposedForm alterForm");
+    // //dcp($form);
+    // array_push($form['#attributes']['class'],'form-horizontal');
 
     foreach ($form['#info'] as $key => $info) {
       if( preg_match('#^filter-#', $key) ) {
-        dcp('found filter');
-        dcp($form[$info['value']]);
+        // //dcp('found filter');
+        // //dcp($form[$info['value']]);
         if ( $form[$info['value']]['#type'] == 'select' ) {
 
           foreach ($form[$info['value']]['#options'] as $opt_key => $opt_value) {

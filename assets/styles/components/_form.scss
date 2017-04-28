@@ -233,3 +233,26 @@ table {
     // display: block !important;
   }
 }
+
+
+
+.form-horizontal {
+  .form-exposed-group {
+    padding-left: 45px;
+    .form-exposed-group-inner {
+      padding: 0 24px 0 6px;
+    }
+  }
+
+  .form-exposed-actions {
+    text-align: right;
+    padding-right: 25px;
+  }
+
+  .form-btn-justified {
+    text-align: center;
+    .form-group {
+      margin: auto;
+    }
+  }
+}

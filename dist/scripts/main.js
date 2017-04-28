@@ -2728,6 +2728,10 @@ function getCodeMirror(target) {
       $('#nav-project a[href="#tab-project-main"]').tab('show');
     }
 
+    $('.btn-back-to-list').click( function () {
+        // window.history.back();
+    });
+
   },
 };
 

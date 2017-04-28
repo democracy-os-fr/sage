@@ -1,0 +1,55 @@
+{% extends "views-view.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+
+{% block viewHeader %}
+
+  <div class="dark-background pad-bottom">
+    <div class="{{ container }}">
+      <h1 class="alt">
+        {{ title_prefix }}
+        {% if title %}
+          {{ title }}
+        {% endif %}
+        {{ title_suffix }}
+      </h1>
+    </div>
+  </div>
+
+  <div class=" {{ container }} pad-bottom">
+
+    <div class="row">
+      {% if header %}
+      <div class="hidden-xs hidden-sm col-md-12">
+        <div class="view-header pad-bottom">
+          {{ header }}
+        </div>
+      </div>
+      {% endif %}
+      <div class="col-xs-12 col-md-6">
+        <div class="view-header pad-bottom">
+          {{ drupal_view('carte_aap','module', 400, list|safe_join('+')) }}
+        </div>
+      </div>
+      {% if exposed %}
+      <div class="col-xs-12 col-md-6">
+        <a name="filter"></a>
+        <div class="view-filters form-group">
+          {{ exposed }}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+{% endblock %}
+
+{% block viewFooter %}
+  {% if footer %}
+    <div class="{{ container }} pad-bottom">
+      <div class="view-footer">
+        {{ footer }}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

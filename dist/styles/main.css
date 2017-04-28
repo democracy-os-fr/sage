@@ -13586,6 +13586,27 @@ table td.views-field-operations {
   margin-right: 7px;
 }
 
+.form-horizontal .form-exposed-group {
+  padding-left: 45px;
+}
+
+.form-horizontal .form-exposed-group .form-exposed-group-inner {
+  padding: 0 24px 0 6px;
+}
+
+.form-horizontal .form-exposed-actions {
+  text-align: right;
+  padding-right: 25px;
+}
+
+.form-horizontal .form-btn-justified {
+  text-align: center;
+}
+
+.form-horizontal .form-btn-justified .form-group {
+  margin: auto;
+}
+
 /**
  * Icon styles.
  */
@@ -14913,7 +14934,8 @@ header .navbar-brand small {
 h1.alt,
 h2.alt,
 h3.alt,
-h4.alt {
+h4.alt,
+label.alt {
   font-family: 'arc';
   text-transform: uppercase;
 }
@@ -14921,7 +14943,8 @@ h4.alt {
 h1.alt-light,
 h2.alt-light,
 h3.alt-light,
-h4.alt-light {
+h4.alt-light,
+label.alt-light {
   font-family: 'arc-light';
   text-transform: uppercase;
 }

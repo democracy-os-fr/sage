@@ -24,7 +24,7 @@ class UserLoginForm extends \Drupal\bootstrap\Plugin\Form\FormBase {
    * {@inheritdoc}
    */
   public function alterForm(array &$form, FormStateInterface $form_state, $form_id = NULL) {
-    //dcp($form);
+    ////dcp($form);
     //array_push($form['#attributes']['class'],'form-horizontal');
   }
 

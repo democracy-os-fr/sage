@@ -49,5 +49,9 @@ export default {
       $('#nav-project a[href="#tab-project-main"]').tab('show');
     }
 
+    $('.btn-back-to-list').click( () => {
+        // window.history.back();
+    });
+
   },
 };
