@@ -32,3 +32,8 @@ a.btn.btn-primary {
   @extend .btn;
   @extend .btn-default;
 }
+
+.label-default {
+  background-color: $gray-light;
+  color: #fff;
+}

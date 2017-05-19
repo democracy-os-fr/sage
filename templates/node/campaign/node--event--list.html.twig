@@ -25,13 +25,26 @@
           <i class="fa fa-calendar"></i>
 
           {% if "now"|date('Ymd') > content.field_end_date|field_raw('value')|date('Ymd') %}
+            {% set stateTxt = 'terminé'|t %}
+            {% set stateClass = 'default' %}
             {% if content.field_end_date|field_value %}
               {{ content.field_end_date|field_value }}
             {% endif %}
           {% else %}
             {% if content.field_start_date|field_value %}
-              {{ content.field_start_date|field_value }}
+              {% if "now"|date('Ymd') > content.field_start_date|field_raw('value')|date('Ymd') %}
+                {% set stateTxt = 'en cours'|t %}
+                {% set stateClass = 'success' %}
+                {{ content.field_start_date|field_value }}
+              {% else %}
+                {% set stateTxt = 'à venir'|t %}
+                {% set stateClass = 'warning' %}
+              {% endif %}
             {% endif %}
+          {% endif %}
+
+          {% if stateTxt %}
+            &emsp;<span class="label label-{{stateClass}}">{{stateTxt}}</span>
           {% endif %}
 
         </div>

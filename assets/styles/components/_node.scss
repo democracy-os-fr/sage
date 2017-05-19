@@ -29,3 +29,53 @@ p, ul, ol  {
 .page-node-type-campaign .link-campaign {
   display: none;
 }
+
+.section-social {
+
+  @include make-row();
+
+  text-align: center;
+  padding: $padding-large-vertical 0 ;
+  background-color: $red;
+  color: $navbar-inverse-link-color;
+  p .fa {
+    margin-right: 15px;
+  }
+
+  .btn-social {
+    @extend .btn ;
+    @extend .btn-primary;
+
+    margin: $padding-base-vertical * 2;
+    min-width: 235px;
+
+    &.btn-facebook {
+      color: $navbar-inverse-link-color;
+      background-color: #43609C;
+      &:hover {
+        color: $navbar-inverse-link-color;
+        background-color: darken(#43609C, 15%);
+      }
+    }
+
+    &.btn-twitter {
+      color: $navbar-inverse-link-color;
+      background-color: #57AFE7;
+      &:hover {
+        color: $navbar-inverse-link-color;
+        background-color: darken(#57AFE7, 15%);
+      }
+    }
+
+    &.btn-message {
+      color: $navbar-inverse-link-color;
+      background-color: #444444;
+      &:hover {
+        color: $navbar-inverse-link-color;
+        background-color: darken(#444444, 15%);
+      }
+    }
+
+  }
+
+}
