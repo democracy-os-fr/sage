@@ -33,11 +33,10 @@
       </section>
     {% endif %}
 
-    <section class="{{ container }}">
-      <div class="text-align-left">
-        {{ drupal_view('forum_list','home') }}
-      </div>
-    </section>
+    {% set slider = drupal_field('field_slider', 'agora_page', 1)|field_value %}
+    {% if slider %}
+      <div class="page-header"> {{ slider }} </div>
+    {% endif %}
 
     <section class="{{ container }} section-with-title">
       <h2 class="section-title">

@@ -63,3 +63,13 @@ $navbar-inverse-link-disabled-bg:           transparent;
 $dl-horizontal-offset:        36px;
 //** Point at which .dl-horizontal becomes horizontal
 $dl-horizontal-breakpoint:    $grid-float-breakpoint;
+
+$carousel-control-color:                     $dark-red;
+$carousel-control-width:                      15% !default;
+$carousel-control-opacity:                    .5 !default;
+$carousel-control-font-size:                  20px !default;
+
+$carousel-indicator-active-bg:                $dark-red;
+$carousel-indicator-border-color:             $dark-red;
+
+$carousel-caption-color:                      $dark-red;
