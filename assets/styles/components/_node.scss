@@ -16,10 +16,9 @@ article.campaign .nav-campaign {
 
 p, ul, ol, time  {
   font-weight: $font-weight-base;
-}
-
-p, .field--type-text-long ul, .field--type-text-long ol {
-  font-size: 120%;
+  .content & {
+    font-size: 120%;
+  }
 }
 
 mark,
@@ -50,8 +49,8 @@ mark,
   }
 }
 
-article.article.teaser, article.evenement.teaser
-article.article.teaser, article.evenement.list, {
+article.article.teaser, article.evenement.teaser,
+article.article.teaser, article.evenement.list {
   .panel-heading {
     font-size: 80%;
     padding: 5px 7px;
@@ -66,6 +65,9 @@ article.article.teaser, article.evenement.list, {
       text-transform: lowercase;;
       font-variant: small-caps;
     }
+  }
+  blockquote.info {
+    margin-bottom: 0;
   }
 }
 

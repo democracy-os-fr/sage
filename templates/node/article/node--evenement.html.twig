@@ -14,9 +14,12 @@
           {{ content.field_address }}
         </blockquote>
       </div>
-      {{ content.body }}
+      <div class="content">
+        {{ content.body }}
+      </div>
     </div>
     <div class="col-xs-12 col-lg-4">
+      {{ drupal_block('newsletter_form') }}
       {{ drupal_view('news','sidebar',node.id) }}
     </div>
   </div>

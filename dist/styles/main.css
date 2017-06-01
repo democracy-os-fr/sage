@@ -13586,6 +13586,10 @@ table td.views-field-operations {
   margin-right: 7px;
 }
 
+.form-group-inline-repsonsive {
+  line-height: 45px;
+}
+
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -13899,9 +13903,10 @@ time {
   font-weight: 300;
 }
 
-p,
-.field--type-text-long ul,
-.field--type-text-long ol {
+.content p,
+.content ul,
+.content ol,
+.content time {
   font-size: 120%;
 }
 
@@ -13929,7 +13934,8 @@ mark,
 }
 
 article.article.teaser .panel-heading,
-article.evenement.teaser article.article.teaser .panel-heading,
+article.evenement.teaser .panel-heading,
+article.article.teaser .panel-heading,
 article.evenement.list .panel-heading {
   font-size: 80%;
   padding: 5px 7px;
@@ -13939,10 +13945,14 @@ article.article.teaser h1,
 article.article.teaser h2,
 article.article.teaser h3,
 article.article.teaser h4,
-article.evenement.teaser article.article.teaser h1,
-article.evenement.teaser article.article.teaser h2,
-article.evenement.teaser article.article.teaser h3,
-article.evenement.teaser article.article.teaser h4,
+article.evenement.teaser h1,
+article.evenement.teaser h2,
+article.evenement.teaser h3,
+article.evenement.teaser h4,
+article.article.teaser h1,
+article.article.teaser h2,
+article.article.teaser h3,
+article.article.teaser h4,
 article.evenement.list h1,
 article.evenement.list h2,
 article.evenement.list h3,
@@ -13951,7 +13961,8 @@ article.evenement.list h4 {
 }
 
 article.article.teaser .field--name-body,
-article.evenement.teaser article.article.teaser .field--name-body,
+article.evenement.teaser .field--name-body,
+article.article.teaser .field--name-body,
 article.evenement.list .field--name-body {
   margin-top: 10px;
 }
@@ -13960,10 +13971,14 @@ article.article.teaser .field--name-body h1,
 article.article.teaser .field--name-body h2,
 article.article.teaser .field--name-body h3,
 article.article.teaser .field--name-body h4,
-article.evenement.teaser article.article.teaser .field--name-body h1,
-article.evenement.teaser article.article.teaser .field--name-body h2,
-article.evenement.teaser article.article.teaser .field--name-body h3,
-article.evenement.teaser article.article.teaser .field--name-body h4,
+article.evenement.teaser .field--name-body h1,
+article.evenement.teaser .field--name-body h2,
+article.evenement.teaser .field--name-body h3,
+article.evenement.teaser .field--name-body h4,
+article.article.teaser .field--name-body h1,
+article.article.teaser .field--name-body h2,
+article.article.teaser .field--name-body h3,
+article.article.teaser .field--name-body h4,
 article.evenement.list .field--name-body h1,
 article.evenement.list .field--name-body h2,
 article.evenement.list .field--name-body h3,
@@ -13971,6 +13986,13 @@ article.evenement.list .field--name-body h4 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   text-transform: lowercase;
   font-variant: small-caps;
+}
+
+article.article.teaser blockquote.info,
+article.evenement.teaser blockquote.info,
+article.article.teaser blockquote.info,
+article.evenement.list blockquote.info {
+  margin-bottom: 0;
 }
 
 .font-avatar {
