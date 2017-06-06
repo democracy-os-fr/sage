@@ -1,0 +1,36 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="{{ container }}">
+  <div class="row">
+    <div class="col-xs-12 col-lg-8">
+      <div class="page-header">
+        <h1>{{ label }}</h1>
+      </div>
+      <div class="content">
+        {{ content.body }}
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <div class="page-header pad-bottom">
+        <h3>Information pratiques
+        </h3>
+        <p>Contact presse : <b>Alexis Dousselain</b>
+          <br />
+          <a href="mailto:alexis.dousselain@paris.fr">alexis.dousselain@paris.fr</a>
+        </p>
+        <h3>Matériel graphique
+        </h3>
+        <p><a class="btn btn-primary" href="/sites/default/files/upload/ARC-COMPLET-HD_0.png">Téléchargez le logo de l'Arc</a>
+        </p>
+        <p><a class="btn btn-primary" href="/sites/default/files/upload/files/Charte%20graphique%20Arc%20Inno.zip">Téléchargez le kit graphique de l'Arc</a>
+        </p>
+      </div>
+      {{ drupal_view('press','sidebar',node.id) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
