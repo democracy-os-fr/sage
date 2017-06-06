@@ -1,1 +1,16 @@
-{% extends "node--article--teaser.html.twig" %}
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+{{ devel_dump(content.field_article_link) }}
+<div>
+  <p>&nbsp;</p>
+  <div class="pad-bottom">
+    <a href="{{ content.field_article_link|field_value }}" title="{{ label|field_raw('value') }}"><h1>{{ label }}</h1></a>
+  </div>
+  <div class="content">
+    {{ content.body }}
+  </div>
+</div>
+
+{% endblock %}

@@ -84,3 +84,8 @@ h4.h-message {
     @extend .btn-default;
   }
 }
+
+.inner-col-md {
+  max-width: 45% !important;
+  margin: 0 auto !important;
+}

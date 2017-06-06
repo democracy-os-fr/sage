@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.min.js';
 // import local dependencies
 import Router from './util/router';
 import common from './routes/Common';
-import home from './routes/Home';
+import pathFrontpage from './routes/Home';
 import aboutUs from './routes/About';
 import pageNodeTypeCampaign from './routes/Campaign';
 import pageNodeTypeProject from './routes/Project';
@@ -19,7 +19,7 @@ const routes = new Router({
   /** All pages */
   common,
   /** Home page */
-  home,
+  pathFrontpage,
   /** About Us page, note the change from about-us to aboutUs. */
   aboutUs,
   pageNodeTypeCampaign,

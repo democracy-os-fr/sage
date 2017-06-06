@@ -19,7 +19,7 @@ function getCodeMirror(target) {
 export default {
   init() {
     // JavaScript to be fired on all pages
-    // console.log('JS sage :: routes/common :: init');
+    // console.log('JS sage :: routes/common :: init');  // eslint-disable-line no-console
     $('.carousel').carousel({
         interval: 5000,
     })
@@ -41,6 +41,6 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
-    // console.log('JS sage :: routes/common :: finalize');
+    // console.log('JS sage :: routes/common :: finalize'); // eslint-disable-line no-console
   },
 };

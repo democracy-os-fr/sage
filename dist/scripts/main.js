@@ -111,7 +111,7 @@ var routes = new __WEBPACK_IMPORTED_MODULE_3__util_router__["a" /* default */]({
   /** All pages */
   common: __WEBPACK_IMPORTED_MODULE_4__routes_Common__["a" /* default */],
   /** Home page */
-  home: __WEBPACK_IMPORTED_MODULE_5__routes_Home__["a" /* default */],
+  pathFrontpage: __WEBPACK_IMPORTED_MODULE_5__routes_Home__["a" /* default */],
   /** About Us page, note the change from about-us to aboutUs. */
   aboutUs: __WEBPACK_IMPORTED_MODULE_6__routes_About__["a" /* default */],
   pageNodeTypeCampaign: __WEBPACK_IMPORTED_MODULE_7__routes_Campaign__["a" /* default */],
@@ -2632,7 +2632,7 @@ function getCodeMirror(target) {
 /* harmony default export */ __webpack_exports__["a"] = {
   init: function init() {
     // JavaScript to be fired on all pages
-    // console.log('JS sage :: routes/common :: init');
+    console.log('JS sage :: routes/common :: init');  // eslint-disable-line no-console
     $('.carousel').carousel({
         interval: 5000,
     })
@@ -2655,6 +2655,19 @@ function getCodeMirror(target) {
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
     // console.log('JS sage :: routes/common :: finalize');
+    // console.log('HOME INIT'); // eslint-disable-line no-console
+    // function isEmpty( el ){
+    //   let ws = el.html().replace(/^\s+/, '').replace(/\s+$/, '') ;
+    //   console.dir(ws); // eslint-disable-line no-console
+    //   return !$.trim(ws);
+    // }
+    //
+    // let news = $('#newsstand');
+    // let events = news.find('.view-id-next_events.view-display-id-home') ;
+    //
+    // if( isEmpty(events) ){
+    //   console.log('empty !!'); // eslint-disable-line no-console
+    // }
   },
 };
 
@@ -2665,12 +2678,37 @@ function getCodeMirror(target) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = {
   init: function init() {
     // JavaScript to be fired on the home page
+
+    // #newsstand
+
+    // .view-id-next_events.view-display-id-home
+
+    // .view-id-acteurs.view-display-id-home
+
+    // .view-twitter
+    console.log('HOME INIT'); // eslint-disable-line no-console
+    function isEmpty( el ){
+      return !$.trim( el.html());
+    }
+
+    var news = $('#newsstand');
+    var events = news.find('.view-id-next_events.view-display-id-home') ;
+
+    if( isEmpty(events) ){
+      console.log('empty !!'); // eslint-disable-line no-console
+      news.children().first().remove();
+      news.children().addClass('col-md-6 col-lg-6');
+    } else {
+      news.children().addClass('col-md-4 col-lg-4');
+    }
+
   },
 };
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 8 */

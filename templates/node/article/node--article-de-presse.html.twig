@@ -2,12 +2,13 @@
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Content #}
 {% block content %}
-
+{{ devel_dump(content.field_article_link) }}
 <div class="{{ container }}">
+  <p>&nbsp;</p>
   <div class="row">
     <div class="col-xs-12 col-lg-8">
       <div class="page-header">
-        <h1>{{ label }}</h1>
+        <a href="{{ content.field_article_link|field_value }}" title="{{ label|field_raw('value') }}"><h1>{{ label }}</h1></a>
       </div>
       <div class="content">
         {{ content.body }}

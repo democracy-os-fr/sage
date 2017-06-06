@@ -28,6 +28,11 @@ a.btn.btn-primary {
   @extend .btn-sm;
 }
 
-.agora-header .more-link {
-  @extend .btn-yellow;
+.agora-header,
+.view-display-id-home {
+  .more-link {
+    @extend .btn;
+    @extend .btn-block;
+    @extend .btn-yellow;
+  }
 }

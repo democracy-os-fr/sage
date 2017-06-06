@@ -304,11 +304,17 @@ th {
 
   .btn > .caret,
   .button > .caret,
+  .agora-header .more-link > .caret,
+  .view-display-id-home .more-link > .caret,
   .view-header > ul.links li a > .caret,
   .slider-sidebar .more-link > .caret,
   .view-acteurs .more-link a > .caret,
   .dropup > .btn > .caret,
   .dropup > .button > .caret,
+  .agora-header
+  .dropup > .more-link > .caret,
+  .view-display-id-home
+  .dropup > .more-link > .caret,
   .view-header > ul.links li
   .dropup > a > .caret,
   .slider-sidebar
@@ -3510,6 +3516,10 @@ input[type="search"] {
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > .input-group-btn > input[type="date"].button,
+  .agora-header
+  .input-group-sm > .input-group-btn > input[type="date"].more-link,
+  .view-display-id-home
+  .input-group-sm > .input-group-btn > input[type="date"].more-link,
   .slider-sidebar
   .input-group-sm > .input-group-btn > input[type="date"].more-link,
   .input-group-sm input[type="date"],
@@ -3519,6 +3529,10 @@ input[type="search"] {
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].button,
+  .agora-header
+  .input-group-sm > .input-group-btn > input[type="time"].more-link,
+  .view-display-id-home
+  .input-group-sm > .input-group-btn > input[type="time"].more-link,
   .slider-sidebar
   .input-group-sm > .input-group-btn > input[type="time"].more-link,
   .input-group-sm
@@ -3529,6 +3543,10 @@ input[type="search"] {
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].button,
+  .agora-header
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].more-link,
+  .view-display-id-home
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].more-link,
   .slider-sidebar
   .input-group-sm > .input-group-btn > input[type="datetime-local"].more-link,
   .input-group-sm
@@ -3539,6 +3557,10 @@ input[type="search"] {
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].button,
+  .agora-header
+  .input-group-sm > .input-group-btn > input[type="month"].more-link,
+  .view-display-id-home
+  .input-group-sm > .input-group-btn > input[type="month"].more-link,
   .slider-sidebar
   .input-group-sm > .input-group-btn > input[type="month"].more-link,
   .input-group-sm
@@ -3552,6 +3574,10 @@ input[type="search"] {
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > .input-group-btn > input[type="date"].button,
+  .agora-header
+  .input-group-lg > .input-group-btn > input[type="date"].more-link,
+  .view-display-id-home
+  .input-group-lg > .input-group-btn > input[type="date"].more-link,
   .slider-sidebar
   .input-group-lg > .input-group-btn > input[type="date"].more-link,
   .input-group-lg input[type="date"],
@@ -3561,6 +3587,10 @@ input[type="search"] {
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].button,
+  .agora-header
+  .input-group-lg > .input-group-btn > input[type="time"].more-link,
+  .view-display-id-home
+  .input-group-lg > .input-group-btn > input[type="time"].more-link,
   .slider-sidebar
   .input-group-lg > .input-group-btn > input[type="time"].more-link,
   .input-group-lg
@@ -3571,6 +3601,10 @@ input[type="search"] {
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].button,
+  .agora-header
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].more-link,
+  .view-display-id-home
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].more-link,
   .slider-sidebar
   .input-group-lg > .input-group-btn > input[type="datetime-local"].more-link,
   .input-group-lg
@@ -3581,6 +3615,10 @@ input[type="search"] {
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].button,
+  .agora-header
+  .input-group-lg > .input-group-btn > input[type="month"].more-link,
+  .view-display-id-home
+  .input-group-lg > .input-group-btn > input[type="month"].more-link,
   .slider-sidebar
   .input-group-lg > .input-group-btn > input[type="month"].more-link,
   .input-group-lg
@@ -3680,6 +3718,10 @@ fieldset[disabled]
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
 .input-group-lg > .input-group-btn > .form-control-static.button,
+.agora-header
+  .input-group-lg > .input-group-btn > .form-control-static.more-link,
+.view-display-id-home
+  .input-group-lg > .input-group-btn > .form-control-static.more-link,
 .view-header > ul.links li
   .input-group-lg > .input-group-btn > a.form-control-static,
 .slider-sidebar
@@ -3692,6 +3734,10 @@ fieldset[disabled]
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 .input-group-sm > .input-group-btn > .form-control-static.button,
+.agora-header
+  .input-group-sm > .input-group-btn > .form-control-static.more-link,
+.view-display-id-home
+  .input-group-sm > .input-group-btn > .form-control-static.more-link,
 .view-header > ul.links li
   .input-group-sm > .input-group-btn > a.form-control-static,
 .slider-sidebar
@@ -3708,6 +3754,10 @@ fieldset[disabled]
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .button,
+.agora-header
+.input-group-sm > .input-group-btn > .more-link,
+.view-display-id-home
+.input-group-sm > .input-group-btn > .more-link,
 .view-header > ul.links li
 .input-group-sm > .input-group-btn > a,
 .slider-sidebar
@@ -3726,6 +3776,10 @@ select.input-sm,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
 .input-group-sm > .input-group-btn > select.button,
+.agora-header
+.input-group-sm > .input-group-btn > select.more-link,
+.view-display-id-home
+.input-group-sm > .input-group-btn > select.more-link,
 .slider-sidebar
 .input-group-sm > .input-group-btn > select.more-link {
   height: 35px;
@@ -3737,6 +3791,10 @@ textarea.input-sm,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .input-group-sm > .input-group-btn > textarea.button,
+.agora-header
+.input-group-sm > .input-group-btn > textarea.more-link,
+.view-display-id-home
+.input-group-sm > .input-group-btn > textarea.more-link,
 .slider-sidebar
 .input-group-sm > .input-group-btn > textarea.more-link,
 select[multiple].input-sm,
@@ -3744,6 +3802,10 @@ select[multiple].input-sm,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
 .input-group-sm > .input-group-btn > select[multiple].button,
+.agora-header
+.input-group-sm > .input-group-btn > select[multiple].more-link,
+.view-display-id-home
+.input-group-sm > .input-group-btn > select[multiple].more-link,
 .slider-sidebar
 .input-group-sm > .input-group-btn > select[multiple].more-link {
   height: auto;
@@ -3783,6 +3845,10 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .button,
+.agora-header
+.input-group-lg > .input-group-btn > .more-link,
+.view-display-id-home
+.input-group-lg > .input-group-btn > .more-link,
 .view-header > ul.links li
 .input-group-lg > .input-group-btn > a,
 .slider-sidebar
@@ -3801,6 +3867,10 @@ select.input-lg,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
 .input-group-lg > .input-group-btn > select.button,
+.agora-header
+.input-group-lg > .input-group-btn > select.more-link,
+.view-display-id-home
+.input-group-lg > .input-group-btn > select.more-link,
 .slider-sidebar
 .input-group-lg > .input-group-btn > select.more-link {
   height: 66px;
@@ -3812,6 +3882,10 @@ textarea.input-lg,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .input-group-lg > .input-group-btn > textarea.button,
+.agora-header
+.input-group-lg > .input-group-btn > textarea.more-link,
+.view-display-id-home
+.input-group-lg > .input-group-btn > textarea.more-link,
 .slider-sidebar
 .input-group-lg > .input-group-btn > textarea.more-link,
 select[multiple].input-lg,
@@ -3819,6 +3893,10 @@ select[multiple].input-lg,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
 .input-group-lg > .input-group-btn > select[multiple].button,
+.agora-header
+.input-group-lg > .input-group-btn > select[multiple].more-link,
+.view-display-id-home
+.input-group-lg > .input-group-btn > select[multiple].more-link,
 .slider-sidebar
 .input-group-lg > .input-group-btn > select[multiple].more-link {
   height: auto;
@@ -3881,6 +3959,10 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .input-group-btn > .button + .form-control-feedback,
+.agora-header
+.input-group-lg > .input-group-btn > .more-link + .form-control-feedback,
+.view-display-id-home
+.input-group-lg > .input-group-btn > .more-link + .form-control-feedback,
 .view-header > ul.links li
 .input-group-lg > .input-group-btn > a + .form-control-feedback,
 .slider-sidebar
@@ -3903,6 +3985,10 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .input-group-btn > .button + .form-control-feedback,
+.agora-header
+.input-group-sm > .input-group-btn > .more-link + .form-control-feedback,
+.view-display-id-home
+.input-group-sm > .input-group-btn > .more-link + .form-control-feedback,
 .view-header > ul.links li
 .input-group-sm > .input-group-btn > a + .form-control-feedback,
 .slider-sidebar
@@ -4170,6 +4256,8 @@ select[multiple].input-lg,
 
 .btn,
 .button,
+.agora-header .more-link,
+.view-display-id-home .more-link,
 .view-header > ul.links li a,
 .slider-sidebar .more-link,
 .view-acteurs .more-link a {
@@ -4196,31 +4284,43 @@ select[multiple].input-lg,
 
 .btn:focus,
 .button:focus,
+.agora-header .more-link:focus,
+.view-display-id-home .more-link:focus,
 .view-header > ul.links li a:focus,
 .slider-sidebar .more-link:focus,
 .view-acteurs .more-link a:focus,
 .btn.focus,
 .focus.button,
+.agora-header .focus.more-link,
+.view-display-id-home .focus.more-link,
 .view-header > ul.links li a.focus,
 .slider-sidebar .focus.more-link,
 .view-acteurs .more-link a.focus,
 .btn:active:focus,
 .button:active:focus,
+.agora-header .more-link:active:focus,
+.view-display-id-home .more-link:active:focus,
 .view-header > ul.links li a:active:focus,
 .slider-sidebar .more-link:active:focus,
 .view-acteurs .more-link a:active:focus,
 .btn:active.focus,
 .button:active.focus,
+.agora-header .more-link:active.focus,
+.view-display-id-home .more-link:active.focus,
 .view-header > ul.links li a:active.focus,
 .slider-sidebar .more-link:active.focus,
 .view-acteurs .more-link a:active.focus,
 .btn.active:focus,
 .active.button:focus,
+.agora-header .active.more-link:focus,
+.view-display-id-home .active.more-link:focus,
 .view-header > ul.links li a.active:focus,
 .slider-sidebar .active.more-link:focus,
 .view-acteurs .more-link a.active:focus,
 .btn.active.focus,
 .active.focus.button,
+.agora-header .active.focus.more-link,
+.view-display-id-home .active.focus.more-link,
 .view-header > ul.links li a.active.focus,
 .slider-sidebar .active.focus.more-link,
 .view-acteurs .more-link a.active.focus {
@@ -4230,16 +4330,22 @@ select[multiple].input-lg,
 
 .btn:hover,
 .button:hover,
+.agora-header .more-link:hover,
+.view-display-id-home .more-link:hover,
 .view-header > ul.links li a:hover,
 .slider-sidebar .more-link:hover,
 .view-acteurs .more-link a:hover,
 .btn:focus,
 .button:focus,
+.agora-header .more-link:focus,
+.view-display-id-home .more-link:focus,
 .view-header > ul.links li a:focus,
 .slider-sidebar .more-link:focus,
 .view-acteurs .more-link a:focus,
 .btn.focus,
 .focus.button,
+.agora-header .focus.more-link,
+.view-display-id-home .focus.more-link,
 .view-header > ul.links li a.focus,
 .slider-sidebar .focus.more-link,
 .view-acteurs .more-link a.focus {
@@ -4249,11 +4355,15 @@ select[multiple].input-lg,
 
 .btn:active,
 .button:active,
+.agora-header .more-link:active,
+.view-display-id-home .more-link:active,
 .view-header > ul.links li a:active,
 .slider-sidebar .more-link:active,
 .view-acteurs .more-link a:active,
 .btn.active,
 .active.button,
+.agora-header .active.more-link,
+.view-display-id-home .active.more-link,
 .view-header > ul.links li a.active,
 .slider-sidebar .active.more-link,
 .view-acteurs .more-link a.active {
@@ -4264,16 +4374,27 @@ select[multiple].input-lg,
 
 .btn.disabled,
 .disabled.button,
+.agora-header .disabled.more-link,
+.view-display-id-home .disabled.more-link,
 .view-header > ul.links li a.disabled,
 .slider-sidebar .disabled.more-link,
 .view-acteurs .more-link a.disabled,
 .btn[disabled],
 [disabled].button,
+.agora-header [disabled].more-link,
+.view-display-id-home [disabled].more-link,
 .view-header > ul.links li a[disabled],
 .slider-sidebar [disabled].more-link,
 .view-acteurs .more-link a[disabled],
 fieldset[disabled] .btn,
 fieldset[disabled] .button,
+fieldset[disabled] .agora-header .more-link,
+.agora-header
+  fieldset[disabled] .more-link,
+fieldset[disabled]
+  .view-display-id-home .more-link,
+.view-display-id-home
+  fieldset[disabled] .more-link,
 fieldset[disabled] .view-header > ul.links li a,
 .view-header > ul.links li
   fieldset[disabled] a,
@@ -4291,11 +4412,20 @@ fieldset[disabled] .view-acteurs .more-link a,
 
 a.btn.disabled,
 a.disabled.button,
+.agora-header a.disabled.more-link,
+.view-display-id-home a.disabled.more-link,
 .view-header > ul.links li a.disabled,
 .slider-sidebar a.disabled.more-link,
 .view-acteurs .more-link a.disabled,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.button,
+fieldset[disabled] .agora-header a.more-link,
+.agora-header
+fieldset[disabled] a.more-link,
+fieldset[disabled]
+.view-display-id-home a.more-link,
+.view-display-id-home
+fieldset[disabled] a.more-link,
 fieldset[disabled] .view-header > ul.links li a,
 .view-header > ul.links li
 fieldset[disabled] a,
@@ -5003,6 +5133,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn,
 .btn-group-lg > .button,
+.agora-header .btn-group-lg > .more-link,
+.view-display-id-home .btn-group-lg > .more-link,
 .view-header > ul.links li .btn-group-lg > a,
 .slider-sidebar .btn-group-lg > .more-link,
 .view-acteurs .more-link .btn-group-lg > a {
@@ -5015,6 +5147,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-sm,
 .btn-group-sm > .btn,
 .btn-group-sm > .button,
+.agora-header .btn-group-sm > .more-link,
+.view-display-id-home .btn-group-sm > .more-link,
 .button--small,
 .view-header > ul.links li a,
 .slider-sidebar .more-link,
@@ -5028,6 +5162,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-xs,
 .btn-group-xs > .btn,
 .btn-group-xs > .button,
+.agora-header .btn-group-xs > .more-link,
+.view-display-id-home .btn-group-xs > .more-link,
 .view-header > ul.links li .btn-group-xs > a,
 .slider-sidebar .btn-group-xs > .more-link,
 .view-acteurs .more-link .btn-group-xs > a,
@@ -5040,6 +5176,8 @@ fieldset[disabled] .btn-link:focus {
 }
 
 .btn-block,
+.agora-header .more-link,
+.view-display-id-home .more-link,
 .slider-sidebar .more-link,
 .view-acteurs .more-link a {
   display: block;
@@ -5047,13 +5185,29 @@ fieldset[disabled] .btn-link:focus {
 }
 
 .btn-block + .btn-block,
+.agora-header .more-link + .btn-block,
+.view-display-id-home .more-link + .btn-block,
 .slider-sidebar .more-link + .btn-block,
 .view-acteurs .more-link a + .btn-block,
+.agora-header .btn-block + .more-link,
+.agora-header .more-link + .more-link,
+.view-acteurs .more-link .agora-header a + .more-link,
+.agora-header .view-acteurs .more-link a + .more-link,
+.view-display-id-home .btn-block + .more-link,
+.view-display-id-home .more-link + .more-link,
+.view-acteurs .more-link
+.view-display-id-home a + .more-link,
+.view-display-id-home .view-acteurs .more-link a + .more-link,
 .slider-sidebar .btn-block + .more-link,
 .slider-sidebar .more-link + .more-link,
 .view-acteurs .more-link .slider-sidebar a + .more-link,
 .slider-sidebar .view-acteurs .more-link a + .more-link,
 .view-acteurs .more-link .btn-block + a,
+.agora-header .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .agora-header .more-link + a,
+.view-display-id-home .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link
+.view-display-id-home .more-link + a,
 .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .slider-sidebar .more-link + a,
 .view-acteurs .more-link a + a {
@@ -5061,10 +5215,16 @@ fieldset[disabled] .btn-link:focus {
 }
 
 input[type="submit"].btn-block,
+.agora-header input[type="submit"].more-link,
+.view-display-id-home input[type="submit"].more-link,
 .slider-sidebar input[type="submit"].more-link,
 input[type="reset"].btn-block,
+.agora-header input[type="reset"].more-link,
+.view-display-id-home input[type="reset"].more-link,
 .slider-sidebar input[type="reset"].more-link,
 input[type="button"].btn-block,
+.agora-header input[type="button"].more-link,
+.view-display-id-home input[type="button"].more-link,
 .slider-sidebar input[type="button"].more-link {
   width: 100%;
 }
@@ -5293,11 +5453,17 @@ tbody.collapse.in {
 
 .btn-group > .btn,
 .btn-group > .button,
+.agora-header .btn-group > .more-link,
+.view-display-id-home .btn-group > .more-link,
 .view-header > ul.links li .btn-group > a,
 .slider-sidebar .btn-group > .more-link,
 .view-acteurs .more-link .btn-group > a,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .button,
+.agora-header
+  .btn-group-vertical > .more-link,
+.view-display-id-home
+  .btn-group-vertical > .more-link,
 .view-header > ul.links li
   .btn-group-vertical > a,
 .slider-sidebar
@@ -5310,26 +5476,38 @@ tbody.collapse.in {
 
 .btn-group > .btn:hover,
 .btn-group > .button:hover,
+.agora-header .btn-group > .more-link:hover,
+.view-display-id-home .btn-group > .more-link:hover,
 .view-header > ul.links li .btn-group > a:hover,
 .slider-sidebar .btn-group > .more-link:hover,
 .view-acteurs .more-link .btn-group > a:hover,
 .btn-group > .btn:focus,
 .btn-group > .button:focus,
+.agora-header .btn-group > .more-link:focus,
+.view-display-id-home .btn-group > .more-link:focus,
 .view-header > ul.links li .btn-group > a:focus,
 .slider-sidebar .btn-group > .more-link:focus,
 .view-acteurs .more-link .btn-group > a:focus,
 .btn-group > .btn:active,
 .btn-group > .button:active,
+.agora-header .btn-group > .more-link:active,
+.view-display-id-home .btn-group > .more-link:active,
 .view-header > ul.links li .btn-group > a:active,
 .slider-sidebar .btn-group > .more-link:active,
 .view-acteurs .more-link .btn-group > a:active,
 .btn-group > .btn.active,
 .btn-group > .active.button,
+.agora-header .btn-group > .active.more-link,
+.view-display-id-home .btn-group > .active.more-link,
 .view-header > ul.links li .btn-group > a.active,
 .slider-sidebar .btn-group > .active.more-link,
 .view-acteurs .more-link .btn-group > a.active,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .button:hover,
+.agora-header
+    .btn-group-vertical > .more-link:hover,
+.view-display-id-home
+    .btn-group-vertical > .more-link:hover,
 .view-header > ul.links li
     .btn-group-vertical > a:hover,
 .slider-sidebar
@@ -5338,6 +5516,10 @@ tbody.collapse.in {
     .btn-group-vertical > a:hover,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .button:focus,
+.agora-header
+    .btn-group-vertical > .more-link:focus,
+.view-display-id-home
+    .btn-group-vertical > .more-link:focus,
 .view-header > ul.links li
     .btn-group-vertical > a:focus,
 .slider-sidebar
@@ -5346,6 +5528,10 @@ tbody.collapse.in {
     .btn-group-vertical > a:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .button:active,
+.agora-header
+    .btn-group-vertical > .more-link:active,
+.view-display-id-home
+    .btn-group-vertical > .more-link:active,
 .view-header > ul.links li
     .btn-group-vertical > a:active,
 .slider-sidebar
@@ -5354,6 +5540,10 @@ tbody.collapse.in {
     .btn-group-vertical > a:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.button,
+.agora-header
+    .btn-group-vertical > .active.more-link,
+.view-display-id-home
+    .btn-group-vertical > .active.more-link,
 .view-header > ul.links li
     .btn-group-vertical > a.active,
 .slider-sidebar
@@ -5365,6 +5555,11 @@ tbody.collapse.in {
 
 .btn-group .btn + .btn,
 .btn-group .button + .btn,
+.btn-group .agora-header .more-link + .btn,
+.agora-header .btn-group .more-link + .btn,
+.btn-group
+.view-display-id-home .more-link + .btn,
+.view-display-id-home .btn-group .more-link + .btn,
 .btn-group .view-header > ul.links li a + .btn,
 .view-header > ul.links li .btn-group a + .btn,
 .btn-group .slider-sidebar .more-link + .btn,
@@ -5373,16 +5568,66 @@ tbody.collapse.in {
 .view-acteurs .more-link .btn-group a + .btn,
 .btn-group .btn + .button,
 .btn-group .button + .button,
+.btn-group .agora-header .more-link + .button,
+.agora-header .btn-group .more-link + .button,
+.btn-group
+.view-display-id-home .more-link + .button,
+.view-display-id-home .btn-group .more-link + .button,
 .btn-group .view-header > ul.links li a + .button,
 .view-header > ul.links li .btn-group a + .button,
 .btn-group .slider-sidebar .more-link + .button,
 .slider-sidebar .btn-group .more-link + .button,
 .btn-group .view-acteurs .more-link a + .button,
 .view-acteurs .more-link .btn-group a + .button,
+.btn-group .agora-header .btn + .more-link,
+.agora-header .btn-group .btn + .more-link,
+.btn-group .agora-header .button + .more-link,
+.agora-header .btn-group .button + .more-link,
+.btn-group .agora-header .more-link + .more-link,
+.agora-header .btn-group .more-link + .more-link,
+.btn-group .view-header > ul.links li .agora-header a + .more-link,
+.agora-header .btn-group .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .btn-group .agora-header a + .more-link,
+.agora-header .view-header > ul.links li .btn-group a + .more-link,
+.btn-group .view-acteurs .more-link .agora-header a + .more-link,
+.agora-header .btn-group .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .btn-group .agora-header a + .more-link,
+.agora-header .view-acteurs .more-link .btn-group a + .more-link,
+.btn-group
+.view-display-id-home .btn + .more-link,
+.view-display-id-home .btn-group .btn + .more-link,
+.btn-group
+.view-display-id-home .button + .more-link,
+.view-display-id-home .btn-group .button + .more-link,
+.btn-group .view-display-id-home .more-link + .more-link,
+.view-display-id-home .btn-group .more-link + .more-link,
+.btn-group .view-header > ul.links li
+.view-display-id-home a + .more-link,
+.view-display-id-home .btn-group .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .btn-group
+.view-display-id-home a + .more-link,
+.view-display-id-home .view-header > ul.links li .btn-group a + .more-link,
+.btn-group .view-acteurs .more-link
+.view-display-id-home a + .more-link,
+.view-display-id-home .btn-group .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .btn-group
+.view-display-id-home a + .more-link,
+.view-display-id-home .view-acteurs .more-link .btn-group a + .more-link,
 .btn-group .view-header > ul.links li .btn + a,
 .view-header > ul.links li .btn-group .btn + a,
 .btn-group .view-header > ul.links li .button + a,
 .view-header > ul.links li .btn-group .button + a,
+.btn-group .agora-header .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .btn-group .agora-header .more-link + a,
+.agora-header .btn-group .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .agora-header .btn-group .more-link + a,
+.btn-group
+.view-display-id-home .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .btn-group
+.view-display-id-home .more-link + a,
+.view-display-id-home .btn-group .view-header > ul.links li .more-link + a,
+.view-header > ul.links li
+.view-display-id-home .btn-group .more-link + a,
 .btn-group .view-header > ul.links li a + a,
 .view-header > ul.links li .btn-group a + a,
 .btn-group .slider-sidebar .view-header > ul.links li .more-link + a,
@@ -5408,6 +5653,17 @@ tbody.collapse.in {
 .view-acteurs .more-link .btn-group .btn + a,
 .btn-group .view-acteurs .more-link .button + a,
 .view-acteurs .more-link .btn-group .button + a,
+.btn-group .agora-header .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .btn-group .agora-header .more-link + a,
+.agora-header .btn-group .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .agora-header .btn-group .more-link + a,
+.btn-group
+.view-display-id-home .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .btn-group
+.view-display-id-home .more-link + a,
+.view-display-id-home .btn-group .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link
+.view-display-id-home .btn-group .more-link + a,
 .btn-group .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .btn-group .slider-sidebar .more-link + a,
 .slider-sidebar .btn-group .view-acteurs .more-link .more-link + a,
@@ -5416,6 +5672,13 @@ tbody.collapse.in {
 .view-acteurs .more-link .btn-group a + a,
 .btn-group .btn + .btn-group,
 .btn-group .button + .btn-group,
+.btn-group .agora-header .more-link + .btn-group,
+.agora-header
+.btn-group .more-link + .btn-group,
+.btn-group
+.view-display-id-home .more-link + .btn-group,
+.view-display-id-home
+.btn-group .more-link + .btn-group,
 .btn-group .view-header > ul.links li a + .btn-group,
 .view-header > ul.links li
 .btn-group a + .btn-group,
@@ -5427,6 +5690,13 @@ tbody.collapse.in {
 .btn-group a + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .button,
+.btn-group .agora-header .btn-group + .more-link,
+.agora-header
+.btn-group .btn-group + .more-link,
+.btn-group
+.view-display-id-home .btn-group + .more-link,
+.view-display-id-home
+.btn-group .btn-group + .more-link,
 .btn-group .view-header > ul.links li .btn-group + a,
 .view-header > ul.links li
 .btn-group .btn-group + a,
@@ -5456,6 +5726,11 @@ tbody.collapse.in {
 
 .btn-toolbar .btn,
 .btn-toolbar .button,
+.btn-toolbar .agora-header .more-link,
+.agora-header .btn-toolbar .more-link,
+.btn-toolbar
+  .view-display-id-home .more-link,
+.view-display-id-home .btn-toolbar .more-link,
 .btn-toolbar .view-header > ul.links li a,
 .view-header > ul.links li .btn-toolbar a,
 .btn-toolbar .slider-sidebar .more-link,
@@ -5469,6 +5744,8 @@ tbody.collapse.in {
 
 .btn-toolbar > .btn,
 .btn-toolbar > .button,
+.agora-header .btn-toolbar > .more-link,
+.view-display-id-home .btn-toolbar > .more-link,
 .view-header > ul.links li .btn-toolbar > a,
 .slider-sidebar .btn-toolbar > .more-link,
 .view-acteurs .more-link .btn-toolbar > a,
@@ -5479,6 +5756,8 @@ tbody.collapse.in {
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .btn-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.agora-header .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.view-display-id-home .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .slider-sidebar .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .view-acteurs .more-link .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
@@ -5487,6 +5766,8 @@ tbody.collapse.in {
 
 .btn-group > .btn:first-child,
 .btn-group > .button:first-child,
+.agora-header .btn-group > .more-link:first-child,
+.view-display-id-home .btn-group > .more-link:first-child,
 .view-header > ul.links li .btn-group > a:first-child,
 .slider-sidebar .btn-group > .more-link:first-child,
 .view-acteurs .more-link .btn-group > a:first-child {
@@ -5495,6 +5776,8 @@ tbody.collapse.in {
 
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle),
 .btn-group > .button:first-child:not(:last-child):not(.dropdown-toggle),
+.agora-header .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle),
+.view-display-id-home .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle),
 .slider-sidebar .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle),
 .view-acteurs .more-link .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -5504,6 +5787,8 @@ tbody.collapse.in {
 
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .button:last-child:not(:first-child),
+.agora-header .btn-group > .more-link:last-child:not(:first-child),
+.view-display-id-home .btn-group > .more-link:last-child:not(:first-child),
 .view-header > ul.links li .btn-group > a:last-child:not(:first-child),
 .slider-sidebar .btn-group > .more-link:last-child:not(:first-child),
 .view-acteurs .more-link .btn-group > a:last-child:not(:first-child),
@@ -5518,6 +5803,8 @@ tbody.collapse.in {
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn,
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .button,
+.agora-header .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link,
+.view-display-id-home .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-header > ul.links li .btn-group > .btn-group:not(:first-child):not(:last-child) > a,
 .slider-sidebar .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-acteurs .more-link .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
@@ -5526,6 +5813,8 @@ tbody.collapse.in {
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .button:last-child,
+.agora-header .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
+.view-display-id-home .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-header > ul.links li .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
 .slider-sidebar .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-acteurs .more-link .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
@@ -5536,6 +5825,8 @@ tbody.collapse.in {
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
 .btn-group > .btn-group:last-child:not(:first-child) > .button:first-child,
+.agora-header .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child,
+.view-display-id-home .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-header > ul.links li .btn-group > .btn-group:last-child:not(:first-child) > a:first-child,
 .slider-sidebar .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-acteurs .more-link .btn-group > .btn-group:last-child:not(:first-child) > a:first-child {
@@ -5550,6 +5841,8 @@ tbody.collapse.in {
 
 .btn-group > .btn + .dropdown-toggle,
 .btn-group > .button + .dropdown-toggle,
+.agora-header .btn-group > .more-link + .dropdown-toggle,
+.view-display-id-home .btn-group > .more-link + .dropdown-toggle,
 .view-header > ul.links li .btn-group > a + .dropdown-toggle,
 .slider-sidebar .btn-group > .more-link + .dropdown-toggle,
 .view-acteurs .more-link .btn-group > a + .dropdown-toggle {
@@ -5560,6 +5853,8 @@ tbody.collapse.in {
 .btn-group > .btn-lg + .dropdown-toggle,
 .btn-group-lg.btn-group > .btn + .dropdown-toggle,
 .btn-group-lg.btn-group > .button + .dropdown-toggle,
+.agora-header .btn-group-lg.btn-group > .more-link + .dropdown-toggle,
+.view-display-id-home .btn-group-lg.btn-group > .more-link + .dropdown-toggle,
 .view-header > ul.links li .btn-group-lg.btn-group > a + .dropdown-toggle,
 .slider-sidebar .btn-group-lg.btn-group > .more-link + .dropdown-toggle,
 .view-acteurs .more-link .btn-group-lg.btn-group > a + .dropdown-toggle {
@@ -5577,6 +5872,8 @@ tbody.collapse.in {
 
 .btn .caret,
 .button .caret,
+.agora-header .more-link .caret,
+.view-display-id-home .more-link .caret,
 .view-header > ul.links li a .caret,
 .slider-sidebar .more-link .caret,
 .view-acteurs .more-link a .caret {
@@ -5586,6 +5883,8 @@ tbody.collapse.in {
 .btn-lg .caret,
 .btn-group-lg > .btn .caret,
 .btn-group-lg > .button .caret,
+.agora-header .btn-group-lg > .more-link .caret,
+.view-display-id-home .btn-group-lg > .more-link .caret,
 .view-header > ul.links li .btn-group-lg > a .caret,
 .slider-sidebar .btn-group-lg > .more-link .caret,
 .view-acteurs .more-link .btn-group-lg > a .caret {
@@ -5596,6 +5895,11 @@ tbody.collapse.in {
 .dropup .btn-lg .caret,
 .dropup .btn-group-lg > .btn .caret,
 .dropup .btn-group-lg > .button .caret,
+.dropup .agora-header .btn-group-lg > .more-link .caret,
+.agora-header .dropup .btn-group-lg > .more-link .caret,
+.dropup
+.view-display-id-home .btn-group-lg > .more-link .caret,
+.view-display-id-home .dropup .btn-group-lg > .more-link .caret,
 .dropup .view-header > ul.links li .btn-group-lg > a .caret,
 .view-header > ul.links li .dropup .btn-group-lg > a .caret,
 .dropup .slider-sidebar .btn-group-lg > .more-link .caret,
@@ -5607,12 +5911,18 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn,
 .btn-group-vertical > .button,
+.agora-header .btn-group-vertical > .more-link,
+.view-display-id-home .btn-group-vertical > .more-link,
 .view-header > ul.links li .btn-group-vertical > a,
 .slider-sidebar .btn-group-vertical > .more-link,
 .view-acteurs .more-link .btn-group-vertical > a,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .button,
+.agora-header
+.btn-group-vertical > .btn-group > .more-link,
+.view-display-id-home
+.btn-group-vertical > .btn-group > .more-link,
 .view-header > ul.links li
 .btn-group-vertical > .btn-group > a,
 .slider-sidebar
@@ -5637,6 +5947,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .button,
+.agora-header .btn-group-vertical > .btn-group > .more-link,
+.view-display-id-home .btn-group-vertical > .btn-group > .more-link,
 .view-header > ul.links li .btn-group-vertical > .btn-group > a,
 .slider-sidebar .btn-group-vertical > .btn-group > .more-link,
 .view-acteurs .more-link .btn-group-vertical > .btn-group > a {
@@ -5645,16 +5957,41 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .button + .btn,
+.agora-header .btn-group-vertical > .more-link + .btn,
+.view-display-id-home .btn-group-vertical > .more-link + .btn,
 .view-header > ul.links li .btn-group-vertical > a + .btn,
 .slider-sidebar .btn-group-vertical > .more-link + .btn,
 .view-acteurs .more-link .btn-group-vertical > a + .btn,
 .btn-group-vertical > .btn + .button,
 .btn-group-vertical > .button + .button,
+.agora-header .btn-group-vertical > .more-link + .button,
+.view-display-id-home .btn-group-vertical > .more-link + .button,
 .view-header > ul.links li .btn-group-vertical > a + .button,
 .slider-sidebar .btn-group-vertical > .more-link + .button,
 .view-acteurs .more-link .btn-group-vertical > a + .button,
+.agora-header .btn-group-vertical > .btn + .more-link,
+.agora-header .btn-group-vertical > .button + .more-link,
+.agora-header .btn-group-vertical > .more-link + .more-link,
+.view-header > ul.links li .agora-header .btn-group-vertical > a + .more-link,
+.agora-header .view-header > ul.links li .btn-group-vertical > a + .more-link,
+.view-acteurs .more-link .agora-header .btn-group-vertical > a + .more-link,
+.agora-header .view-acteurs .more-link .btn-group-vertical > a + .more-link,
+.view-display-id-home .btn-group-vertical > .btn + .more-link,
+.view-display-id-home .btn-group-vertical > .button + .more-link,
+.view-display-id-home .btn-group-vertical > .more-link + .more-link,
+.view-header > ul.links li
+.view-display-id-home .btn-group-vertical > a + .more-link,
+.view-display-id-home .view-header > ul.links li .btn-group-vertical > a + .more-link,
+.view-acteurs .more-link
+.view-display-id-home .btn-group-vertical > a + .more-link,
+.view-display-id-home .view-acteurs .more-link .btn-group-vertical > a + .more-link,
 .view-header > ul.links li .btn-group-vertical > .btn + a,
 .view-header > ul.links li .btn-group-vertical > .button + a,
+.agora-header .view-header > ul.links li .btn-group-vertical > .more-link + a,
+.view-header > ul.links li .agora-header .btn-group-vertical > .more-link + a,
+.view-display-id-home .view-header > ul.links li .btn-group-vertical > .more-link + a,
+.view-header > ul.links li
+.view-display-id-home .btn-group-vertical > .more-link + a,
 .view-header > ul.links li .btn-group-vertical > a + a,
 .slider-sidebar .view-header > ul.links li .btn-group-vertical > .more-link + a,
 .view-header > ul.links li .slider-sidebar .btn-group-vertical > .more-link + a,
@@ -5667,12 +6004,21 @@ tbody.collapse.in {
 .slider-sidebar .view-acteurs .more-link .btn-group-vertical > a + .more-link,
 .view-acteurs .more-link .btn-group-vertical > .btn + a,
 .view-acteurs .more-link .btn-group-vertical > .button + a,
+.agora-header .view-acteurs .more-link .btn-group-vertical > .more-link + a,
+.view-acteurs .more-link .agora-header .btn-group-vertical > .more-link + a,
+.view-display-id-home .view-acteurs .more-link .btn-group-vertical > .more-link + a,
+.view-acteurs .more-link
+.view-display-id-home .btn-group-vertical > .more-link + a,
 .view-acteurs .more-link .view-header > ul.links li .btn-group-vertical > a + a,
 .slider-sidebar .view-acteurs .more-link .btn-group-vertical > .more-link + a,
 .view-acteurs .more-link .slider-sidebar .btn-group-vertical > .more-link + a,
 .view-acteurs .more-link .btn-group-vertical > a + a,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .button + .btn-group,
+.agora-header
+.btn-group-vertical > .more-link + .btn-group,
+.view-display-id-home
+.btn-group-vertical > .more-link + .btn-group,
 .view-header > ul.links li
 .btn-group-vertical > a + .btn-group,
 .slider-sidebar
@@ -5681,6 +6027,10 @@ tbody.collapse.in {
 .btn-group-vertical > a + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .button,
+.agora-header
+.btn-group-vertical > .btn-group + .more-link,
+.view-display-id-home
+.btn-group-vertical > .btn-group + .more-link,
 .view-header > ul.links li
 .btn-group-vertical > .btn-group + a,
 .slider-sidebar
@@ -5694,6 +6044,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child),
 .btn-group-vertical > .button:not(:first-child):not(:last-child),
+.agora-header .btn-group-vertical > .more-link:not(:first-child):not(:last-child),
+.view-display-id-home .btn-group-vertical > .more-link:not(:first-child):not(:last-child),
 .view-header > ul.links li .btn-group-vertical > a:not(:first-child):not(:last-child),
 .slider-sidebar .btn-group-vertical > .more-link:not(:first-child):not(:last-child),
 .view-acteurs .more-link .btn-group-vertical > a:not(:first-child):not(:last-child) {
@@ -5702,6 +6054,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn:first-child:not(:last-child),
 .btn-group-vertical > .button:first-child:not(:last-child),
+.agora-header .btn-group-vertical > .more-link:first-child:not(:last-child),
+.view-display-id-home .btn-group-vertical > .more-link:first-child:not(:last-child),
 .view-header > ul.links li .btn-group-vertical > a:first-child:not(:last-child),
 .slider-sidebar .btn-group-vertical > .more-link:first-child:not(:last-child),
 .view-acteurs .more-link .btn-group-vertical > a:first-child:not(:last-child) {
@@ -5713,6 +6067,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn:last-child:not(:first-child),
 .btn-group-vertical > .button:last-child:not(:first-child),
+.agora-header .btn-group-vertical > .more-link:last-child:not(:first-child),
+.view-display-id-home .btn-group-vertical > .more-link:last-child:not(:first-child),
 .view-header > ul.links li .btn-group-vertical > a:last-child:not(:first-child),
 .slider-sidebar .btn-group-vertical > .more-link:last-child:not(:first-child),
 .view-acteurs .more-link .btn-group-vertical > a:last-child:not(:first-child) {
@@ -5724,6 +6080,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn,
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .button,
+.agora-header .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link,
+.view-display-id-home .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-header > ul.links li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a,
 .slider-sidebar .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-acteurs .more-link .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
@@ -5732,6 +6090,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .button:last-child,
+.agora-header .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
+.view-display-id-home .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-header > ul.links li .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
 .slider-sidebar .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-acteurs .more-link .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
@@ -5742,6 +6102,8 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child,
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .button:first-child,
+.agora-header .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child,
+.view-display-id-home .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-header > ul.links li .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child,
 .slider-sidebar .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-acteurs .more-link .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child {
@@ -5758,6 +6120,8 @@ tbody.collapse.in {
 
 .btn-group-justified > .btn,
 .btn-group-justified > .button,
+.agora-header .btn-group-justified > .more-link,
+.view-display-id-home .btn-group-justified > .more-link,
 .view-header > ul.links li .btn-group-justified > a,
 .slider-sidebar .btn-group-justified > .more-link,
 .view-acteurs .more-link .btn-group-justified > a,
@@ -5769,6 +6133,11 @@ tbody.collapse.in {
 
 .btn-group-justified > .btn-group .btn,
 .btn-group-justified > .btn-group .button,
+.btn-group-justified > .btn-group .agora-header .more-link,
+.agora-header .btn-group-justified > .btn-group .more-link,
+.btn-group-justified > .btn-group
+  .view-display-id-home .more-link,
+.view-display-id-home .btn-group-justified > .btn-group .more-link,
 .btn-group-justified > .btn-group .view-header > ul.links li a,
 .view-header > ul.links li .btn-group-justified > .btn-group a,
 .btn-group-justified > .btn-group .slider-sidebar .more-link,
@@ -5784,11 +6153,17 @@ tbody.collapse.in {
 
 [data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .button input[type="radio"],
+.agora-header [data-toggle="buttons"] > .more-link input[type="radio"],
+.view-display-id-home [data-toggle="buttons"] > .more-link input[type="radio"],
 .view-header > ul.links li [data-toggle="buttons"] > a input[type="radio"],
 .slider-sidebar [data-toggle="buttons"] > .more-link input[type="radio"],
 .view-acteurs .more-link [data-toggle="buttons"] > a input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .button input[type="checkbox"],
+.agora-header
+[data-toggle="buttons"] > .more-link input[type="checkbox"],
+.view-display-id-home
+[data-toggle="buttons"] > .more-link input[type="checkbox"],
 .view-header > ul.links li
 [data-toggle="buttons"] > a input[type="checkbox"],
 .slider-sidebar
@@ -5797,6 +6172,10 @@ tbody.collapse.in {
 [data-toggle="buttons"] > a input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .button input[type="radio"],
+.agora-header
+[data-toggle="buttons"] > .btn-group > .more-link input[type="radio"],
+.view-display-id-home
+[data-toggle="buttons"] > .btn-group > .more-link input[type="radio"],
 .view-header > ul.links li
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
 .slider-sidebar
@@ -5805,6 +6184,10 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .button input[type="checkbox"],
+.agora-header
+[data-toggle="buttons"] > .btn-group > .more-link input[type="checkbox"],
+.view-display-id-home
+[data-toggle="buttons"] > .btn-group > .more-link input[type="checkbox"],
 .view-header > ul.links li
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"],
 .slider-sidebar
@@ -5886,6 +6269,10 @@ tbody.collapse.in {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > .input-group-addon.button,
+.agora-header
+  .input-group-sm > .input-group-btn > .input-group-addon.more-link,
+.view-display-id-home
+  .input-group-sm > .input-group-btn > .input-group-addon.more-link,
 .view-header > ul.links li
   .input-group-sm > .input-group-btn > a.input-group-addon,
 .slider-sidebar
@@ -5902,6 +6289,10 @@ tbody.collapse.in {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > .input-group-addon.button,
+.agora-header
+  .input-group-lg > .input-group-btn > .input-group-addon.more-link,
+.view-display-id-home
+  .input-group-lg > .input-group-btn > .input-group-addon.more-link,
 .view-header > ul.links li
   .input-group-lg > .input-group-btn > a.input-group-addon,
 .slider-sidebar
@@ -5924,6 +6315,10 @@ tbody.collapse.in {
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .button,
+.agora-header
+.input-group-btn:first-child > .more-link,
+.view-display-id-home
+.input-group-btn:first-child > .more-link,
 .view-header > ul.links li
 .input-group-btn:first-child > a,
 .slider-sidebar
@@ -5932,6 +6327,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > a,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > .button,
+.agora-header
+.input-group-btn:first-child > .btn-group > .more-link,
+.view-display-id-home
+.input-group-btn:first-child > .btn-group > .more-link,
 .view-header > ul.links li
 .input-group-btn:first-child > .btn-group > a,
 .slider-sidebar
@@ -5941,6 +6340,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .button:not(:last-child):not(.dropdown-toggle),
+.agora-header
+.input-group-btn:last-child > .more-link:not(:last-child):not(.dropdown-toggle),
+.view-display-id-home
+.input-group-btn:last-child > .more-link:not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li
 .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
 .slider-sidebar
@@ -5949,6 +6352,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .button,
+.agora-header
+.input-group-btn:last-child > .btn-group:not(:last-child) > .more-link,
+.view-display-id-home
+.input-group-btn:last-child > .btn-group:not(:last-child) > .more-link,
 .view-header > ul.links li
 .input-group-btn:last-child > .btn-group:not(:last-child) > a,
 .slider-sidebar
@@ -5969,6 +6376,10 @@ tbody.collapse.in {
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .button,
+.agora-header
+.input-group-btn:last-child > .more-link,
+.view-display-id-home
+.input-group-btn:last-child > .more-link,
 .view-header > ul.links li
 .input-group-btn:last-child > a,
 .slider-sidebar
@@ -5977,6 +6388,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > a,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > .button,
+.agora-header
+.input-group-btn:last-child > .btn-group > .more-link,
+.view-display-id-home
+.input-group-btn:last-child > .btn-group > .more-link,
 .view-header > ul.links li
 .input-group-btn:last-child > .btn-group > a,
 .slider-sidebar
@@ -5986,6 +6401,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .button:not(:first-child),
+.agora-header
+.input-group-btn:first-child > .more-link:not(:first-child),
+.view-display-id-home
+.input-group-btn:first-child > .more-link:not(:first-child),
 .view-header > ul.links li
 .input-group-btn:first-child > a:not(:first-child),
 .slider-sidebar
@@ -5994,6 +6413,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > a:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .button,
+.agora-header
+.input-group-btn:first-child > .btn-group:not(:first-child) > .more-link,
+.view-display-id-home
+.input-group-btn:first-child > .btn-group:not(:first-child) > .more-link,
 .view-header > ul.links li
 .input-group-btn:first-child > .btn-group:not(:first-child) > a,
 .slider-sidebar
@@ -6016,6 +6439,8 @@ tbody.collapse.in {
 
 .input-group-btn > .btn,
 .input-group-btn > .button,
+.agora-header .input-group-btn > .more-link,
+.view-display-id-home .input-group-btn > .more-link,
 .view-header > ul.links li .input-group-btn > a,
 .slider-sidebar .input-group-btn > .more-link,
 .view-acteurs .more-link .input-group-btn > a {
@@ -6024,16 +6449,41 @@ tbody.collapse.in {
 
 .input-group-btn > .btn + .btn,
 .input-group-btn > .button + .btn,
+.agora-header .input-group-btn > .more-link + .btn,
+.view-display-id-home .input-group-btn > .more-link + .btn,
 .view-header > ul.links li .input-group-btn > a + .btn,
 .slider-sidebar .input-group-btn > .more-link + .btn,
 .view-acteurs .more-link .input-group-btn > a + .btn,
 .input-group-btn > .btn + .button,
 .input-group-btn > .button + .button,
+.agora-header .input-group-btn > .more-link + .button,
+.view-display-id-home .input-group-btn > .more-link + .button,
 .view-header > ul.links li .input-group-btn > a + .button,
 .slider-sidebar .input-group-btn > .more-link + .button,
 .view-acteurs .more-link .input-group-btn > a + .button,
+.agora-header .input-group-btn > .btn + .more-link,
+.agora-header .input-group-btn > .button + .more-link,
+.agora-header .input-group-btn > .more-link + .more-link,
+.view-header > ul.links li .agora-header .input-group-btn > a + .more-link,
+.agora-header .view-header > ul.links li .input-group-btn > a + .more-link,
+.view-acteurs .more-link .agora-header .input-group-btn > a + .more-link,
+.agora-header .view-acteurs .more-link .input-group-btn > a + .more-link,
+.view-display-id-home .input-group-btn > .btn + .more-link,
+.view-display-id-home .input-group-btn > .button + .more-link,
+.view-display-id-home .input-group-btn > .more-link + .more-link,
+.view-header > ul.links li
+    .view-display-id-home .input-group-btn > a + .more-link,
+.view-display-id-home .view-header > ul.links li .input-group-btn > a + .more-link,
+.view-acteurs .more-link
+    .view-display-id-home .input-group-btn > a + .more-link,
+.view-display-id-home .view-acteurs .more-link .input-group-btn > a + .more-link,
 .view-header > ul.links li .input-group-btn > .btn + a,
 .view-header > ul.links li .input-group-btn > .button + a,
+.agora-header .view-header > ul.links li .input-group-btn > .more-link + a,
+.view-header > ul.links li .agora-header .input-group-btn > .more-link + a,
+.view-display-id-home .view-header > ul.links li .input-group-btn > .more-link + a,
+.view-header > ul.links li
+    .view-display-id-home .input-group-btn > .more-link + a,
 .view-header > ul.links li .input-group-btn > a + a,
 .slider-sidebar .view-header > ul.links li .input-group-btn > .more-link + a,
 .view-header > ul.links li .slider-sidebar .input-group-btn > .more-link + a,
@@ -6046,6 +6496,11 @@ tbody.collapse.in {
 .slider-sidebar .view-acteurs .more-link .input-group-btn > a + .more-link,
 .view-acteurs .more-link .input-group-btn > .btn + a,
 .view-acteurs .more-link .input-group-btn > .button + a,
+.agora-header .view-acteurs .more-link .input-group-btn > .more-link + a,
+.view-acteurs .more-link .agora-header .input-group-btn > .more-link + a,
+.view-display-id-home .view-acteurs .more-link .input-group-btn > .more-link + a,
+.view-acteurs .more-link
+    .view-display-id-home .input-group-btn > .more-link + a,
 .view-acteurs .more-link .view-header > ul.links li .input-group-btn > a + a,
 .slider-sidebar .view-acteurs .more-link .input-group-btn > .more-link + a,
 .view-acteurs .more-link .slider-sidebar .input-group-btn > .more-link + a,
@@ -6055,16 +6510,22 @@ tbody.collapse.in {
 
 .input-group-btn > .btn:hover,
 .input-group-btn > .button:hover,
+.agora-header .input-group-btn > .more-link:hover,
+.view-display-id-home .input-group-btn > .more-link:hover,
 .view-header > ul.links li .input-group-btn > a:hover,
 .slider-sidebar .input-group-btn > .more-link:hover,
 .view-acteurs .more-link .input-group-btn > a:hover,
 .input-group-btn > .btn:focus,
 .input-group-btn > .button:focus,
+.agora-header .input-group-btn > .more-link:focus,
+.view-display-id-home .input-group-btn > .more-link:focus,
 .view-header > ul.links li .input-group-btn > a:focus,
 .slider-sidebar .input-group-btn > .more-link:focus,
 .view-acteurs .more-link .input-group-btn > a:focus,
 .input-group-btn > .btn:active,
 .input-group-btn > .button:active,
+.agora-header .input-group-btn > .more-link:active,
+.view-display-id-home .input-group-btn > .more-link:active,
 .view-header > ul.links li .input-group-btn > a:active,
 .slider-sidebar .input-group-btn > .more-link:active,
 .view-acteurs .more-link .input-group-btn > a:active {
@@ -6073,6 +6534,8 @@ tbody.collapse.in {
 
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .button,
+.agora-header .input-group-btn:first-child > .more-link,
+.view-display-id-home .input-group-btn:first-child > .more-link,
 .view-header > ul.links li .input-group-btn:first-child > a,
 .slider-sidebar .input-group-btn:first-child > .more-link,
 .view-acteurs .more-link .input-group-btn:first-child > a,
@@ -6082,6 +6545,8 @@ tbody.collapse.in {
 
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .button,
+.agora-header .input-group-btn:last-child > .more-link,
+.view-display-id-home .input-group-btn:last-child > .more-link,
 .view-header > ul.links li .input-group-btn:last-child > a,
 .slider-sidebar .input-group-btn:last-child > .more-link,
 .view-acteurs .more-link .input-group-btn:last-child > a,
@@ -6709,6 +7174,8 @@ form.webform-submission-form > .navbar-collapse,
 .navbar-btn.btn-sm,
 .btn-group-sm > .navbar-btn.btn,
 .btn-group-sm > .navbar-btn.button,
+.agora-header .btn-group-sm > .navbar-btn.more-link,
+.view-display-id-home .btn-group-sm > .navbar-btn.more-link,
 .navbar-btn.button--small,
 .view-header > ul.links li a.navbar-btn,
 .slider-sidebar .navbar-btn.more-link,
@@ -6720,6 +7187,8 @@ form.webform-submission-form > .navbar-collapse,
 .navbar-btn.btn-xs,
 .btn-group-xs > .navbar-btn.btn,
 .btn-group-xs > .navbar-btn.button,
+.agora-header .btn-group-xs > .navbar-btn.more-link,
+.view-display-id-home .btn-group-xs > .navbar-btn.more-link,
 .view-header > ul.links li .btn-group-xs > a.navbar-btn,
 .slider-sidebar .btn-group-xs > .navbar-btn.more-link,
 .view-acteurs .more-link .btn-group-xs > a.navbar-btn,
@@ -7224,6 +7693,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 .btn .label,
 .button .label,
+.agora-header .more-link .label,
+.view-display-id-home .more-link .label,
 .view-header > ul.links li a .label,
 .slider-sidebar .more-link .label,
 .view-acteurs .more-link a .label {
@@ -7313,6 +7784,8 @@ a.label:focus {
 
 .btn .badge,
 .button .badge,
+.agora-header .more-link .badge,
+.view-display-id-home .more-link .badge,
 .view-header > ul.links li a .badge,
 .slider-sidebar .more-link .badge,
 .view-acteurs .more-link a .badge {
@@ -7323,6 +7796,8 @@ a.label:focus {
 .btn-xs .badge,
 .btn-group-xs > .btn .badge,
 .btn-group-xs > .button .badge,
+.agora-header .btn-group-xs > .more-link .badge,
+.view-display-id-home .btn-group-xs > .more-link .badge,
 .view-header > ul.links li .btn-group-xs > a .badge,
 .slider-sidebar .btn-group-xs > .more-link .badge,
 .view-acteurs .more-link .btn-group-xs > a .badge,
@@ -7330,6 +7805,10 @@ a.label:focus {
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger .badge,
 .btn-group-xs > .btn .badge,
 .btn-group-xs > .button .badge,
+.agora-header
+  .btn-group-xs > .more-link .badge,
+.view-display-id-home
+  .btn-group-xs > .more-link .badge,
 .view-header > ul.links li
   .btn-group-xs > a .badge,
 .slider-sidebar
@@ -8608,6 +9087,11 @@ button.close {
 
 .modal-footer .btn + .btn,
 .modal-footer .button + .btn,
+.modal-footer .agora-header .more-link + .btn,
+.agora-header .modal-footer .more-link + .btn,
+.modal-footer
+  .view-display-id-home .more-link + .btn,
+.view-display-id-home .modal-footer .more-link + .btn,
 .modal-footer .view-header > ul.links li a + .btn,
 .view-header > ul.links li .modal-footer a + .btn,
 .modal-footer .slider-sidebar .more-link + .btn,
@@ -8616,16 +9100,66 @@ button.close {
 .view-acteurs .more-link .modal-footer a + .btn,
 .modal-footer .btn + .button,
 .modal-footer .button + .button,
+.modal-footer .agora-header .more-link + .button,
+.agora-header .modal-footer .more-link + .button,
+.modal-footer
+  .view-display-id-home .more-link + .button,
+.view-display-id-home .modal-footer .more-link + .button,
 .modal-footer .view-header > ul.links li a + .button,
 .view-header > ul.links li .modal-footer a + .button,
 .modal-footer .slider-sidebar .more-link + .button,
 .slider-sidebar .modal-footer .more-link + .button,
 .modal-footer .view-acteurs .more-link a + .button,
 .view-acteurs .more-link .modal-footer a + .button,
+.modal-footer .agora-header .btn + .more-link,
+.agora-header .modal-footer .btn + .more-link,
+.modal-footer .agora-header .button + .more-link,
+.agora-header .modal-footer .button + .more-link,
+.modal-footer .agora-header .more-link + .more-link,
+.agora-header .modal-footer .more-link + .more-link,
+.modal-footer .view-header > ul.links li .agora-header a + .more-link,
+.agora-header .modal-footer .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .modal-footer .agora-header a + .more-link,
+.agora-header .view-header > ul.links li .modal-footer a + .more-link,
+.modal-footer .view-acteurs .more-link .agora-header a + .more-link,
+.agora-header .modal-footer .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .modal-footer .agora-header a + .more-link,
+.agora-header .view-acteurs .more-link .modal-footer a + .more-link,
+.modal-footer
+  .view-display-id-home .btn + .more-link,
+.view-display-id-home .modal-footer .btn + .more-link,
+.modal-footer
+  .view-display-id-home .button + .more-link,
+.view-display-id-home .modal-footer .button + .more-link,
+.modal-footer .view-display-id-home .more-link + .more-link,
+.view-display-id-home .modal-footer .more-link + .more-link,
+.modal-footer .view-header > ul.links li
+  .view-display-id-home a + .more-link,
+.view-display-id-home .modal-footer .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .modal-footer
+  .view-display-id-home a + .more-link,
+.view-display-id-home .view-header > ul.links li .modal-footer a + .more-link,
+.modal-footer .view-acteurs .more-link
+  .view-display-id-home a + .more-link,
+.view-display-id-home .modal-footer .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .modal-footer
+  .view-display-id-home a + .more-link,
+.view-display-id-home .view-acteurs .more-link .modal-footer a + .more-link,
 .modal-footer .view-header > ul.links li .btn + a,
 .view-header > ul.links li .modal-footer .btn + a,
 .modal-footer .view-header > ul.links li .button + a,
 .view-header > ul.links li .modal-footer .button + a,
+.modal-footer .agora-header .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .modal-footer .agora-header .more-link + a,
+.agora-header .modal-footer .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .agora-header .modal-footer .more-link + a,
+.modal-footer
+  .view-display-id-home .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .modal-footer
+  .view-display-id-home .more-link + a,
+.view-display-id-home .modal-footer .view-header > ul.links li .more-link + a,
+.view-header > ul.links li
+  .view-display-id-home .modal-footer .more-link + a,
 .modal-footer .view-header > ul.links li a + a,
 .view-header > ul.links li .modal-footer a + a,
 .modal-footer .slider-sidebar .view-header > ul.links li .more-link + a,
@@ -8651,6 +9185,17 @@ button.close {
 .view-acteurs .more-link .modal-footer .btn + a,
 .modal-footer .view-acteurs .more-link .button + a,
 .view-acteurs .more-link .modal-footer .button + a,
+.modal-footer .agora-header .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .modal-footer .agora-header .more-link + a,
+.agora-header .modal-footer .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .agora-header .modal-footer .more-link + a,
+.modal-footer
+  .view-display-id-home .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .modal-footer
+  .view-display-id-home .more-link + a,
+.view-display-id-home .modal-footer .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link
+  .view-display-id-home .modal-footer .more-link + a,
 .modal-footer .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .modal-footer .slider-sidebar .more-link + a,
 .slider-sidebar .modal-footer .view-acteurs .more-link .more-link + a,
@@ -8663,6 +9208,11 @@ button.close {
 
 .modal-footer .btn-group .btn + .btn,
 .modal-footer .btn-group .button + .btn,
+.modal-footer .btn-group .agora-header .more-link + .btn,
+.agora-header .modal-footer .btn-group .more-link + .btn,
+.modal-footer .btn-group
+  .view-display-id-home .more-link + .btn,
+.view-display-id-home .modal-footer .btn-group .more-link + .btn,
 .modal-footer .btn-group .view-header > ul.links li a + .btn,
 .view-header > ul.links li .modal-footer .btn-group a + .btn,
 .modal-footer .btn-group .slider-sidebar .more-link + .btn,
@@ -8671,16 +9221,66 @@ button.close {
 .view-acteurs .more-link .modal-footer .btn-group a + .btn,
 .modal-footer .btn-group .btn + .button,
 .modal-footer .btn-group .button + .button,
+.modal-footer .btn-group .agora-header .more-link + .button,
+.agora-header .modal-footer .btn-group .more-link + .button,
+.modal-footer .btn-group
+  .view-display-id-home .more-link + .button,
+.view-display-id-home .modal-footer .btn-group .more-link + .button,
 .modal-footer .btn-group .view-header > ul.links li a + .button,
 .view-header > ul.links li .modal-footer .btn-group a + .button,
 .modal-footer .btn-group .slider-sidebar .more-link + .button,
 .slider-sidebar .modal-footer .btn-group .more-link + .button,
 .modal-footer .btn-group .view-acteurs .more-link a + .button,
 .view-acteurs .more-link .modal-footer .btn-group a + .button,
+.modal-footer .btn-group .agora-header .btn + .more-link,
+.agora-header .modal-footer .btn-group .btn + .more-link,
+.modal-footer .btn-group .agora-header .button + .more-link,
+.agora-header .modal-footer .btn-group .button + .more-link,
+.modal-footer .btn-group .agora-header .more-link + .more-link,
+.agora-header .modal-footer .btn-group .more-link + .more-link,
+.modal-footer .btn-group .view-header > ul.links li .agora-header a + .more-link,
+.agora-header .modal-footer .btn-group .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .modal-footer .btn-group .agora-header a + .more-link,
+.agora-header .view-header > ul.links li .modal-footer .btn-group a + .more-link,
+.modal-footer .btn-group .view-acteurs .more-link .agora-header a + .more-link,
+.agora-header .modal-footer .btn-group .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .modal-footer .btn-group .agora-header a + .more-link,
+.agora-header .view-acteurs .more-link .modal-footer .btn-group a + .more-link,
+.modal-footer .btn-group
+  .view-display-id-home .btn + .more-link,
+.view-display-id-home .modal-footer .btn-group .btn + .more-link,
+.modal-footer .btn-group
+  .view-display-id-home .button + .more-link,
+.view-display-id-home .modal-footer .btn-group .button + .more-link,
+.modal-footer .btn-group .view-display-id-home .more-link + .more-link,
+.view-display-id-home .modal-footer .btn-group .more-link + .more-link,
+.modal-footer .btn-group .view-header > ul.links li
+  .view-display-id-home a + .more-link,
+.view-display-id-home .modal-footer .btn-group .view-header > ul.links li a + .more-link,
+.view-header > ul.links li .modal-footer .btn-group
+  .view-display-id-home a + .more-link,
+.view-display-id-home .view-header > ul.links li .modal-footer .btn-group a + .more-link,
+.modal-footer .btn-group .view-acteurs .more-link
+  .view-display-id-home a + .more-link,
+.view-display-id-home .modal-footer .btn-group .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .modal-footer .btn-group
+  .view-display-id-home a + .more-link,
+.view-display-id-home .view-acteurs .more-link .modal-footer .btn-group a + .more-link,
 .modal-footer .btn-group .view-header > ul.links li .btn + a,
 .view-header > ul.links li .modal-footer .btn-group .btn + a,
 .modal-footer .btn-group .view-header > ul.links li .button + a,
 .view-header > ul.links li .modal-footer .btn-group .button + a,
+.modal-footer .btn-group .agora-header .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .modal-footer .btn-group .agora-header .more-link + a,
+.agora-header .modal-footer .btn-group .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .agora-header .modal-footer .btn-group .more-link + a,
+.modal-footer .btn-group
+  .view-display-id-home .view-header > ul.links li .more-link + a,
+.view-header > ul.links li .modal-footer .btn-group
+  .view-display-id-home .more-link + a,
+.view-display-id-home .modal-footer .btn-group .view-header > ul.links li .more-link + a,
+.view-header > ul.links li
+  .view-display-id-home .modal-footer .btn-group .more-link + a,
 .modal-footer .btn-group .view-header > ul.links li a + a,
 .view-header > ul.links li .modal-footer .btn-group a + a,
 .modal-footer .btn-group .slider-sidebar .view-header > ul.links li .more-link + a,
@@ -8706,6 +9306,17 @@ button.close {
 .view-acteurs .more-link .modal-footer .btn-group .btn + a,
 .modal-footer .btn-group .view-acteurs .more-link .button + a,
 .view-acteurs .more-link .modal-footer .btn-group .button + a,
+.modal-footer .btn-group .agora-header .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .modal-footer .btn-group .agora-header .more-link + a,
+.agora-header .modal-footer .btn-group .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .agora-header .modal-footer .btn-group .more-link + a,
+.modal-footer .btn-group
+  .view-display-id-home .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .modal-footer .btn-group
+  .view-display-id-home .more-link + a,
+.view-display-id-home .modal-footer .btn-group .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link
+  .view-display-id-home .modal-footer .btn-group .more-link + a,
 .modal-footer .btn-group .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .modal-footer .btn-group .slider-sidebar .more-link + a,
 .slider-sidebar .modal-footer .btn-group .view-acteurs .more-link .more-link + a,
@@ -8716,10 +9327,34 @@ button.close {
 }
 
 .modal-footer .btn-block + .btn-block,
+.modal-footer .agora-header .more-link + .btn-block,
+.agora-header .modal-footer .more-link + .btn-block,
+.modal-footer
+  .view-display-id-home .more-link + .btn-block,
+.view-display-id-home .modal-footer .more-link + .btn-block,
 .modal-footer .slider-sidebar .more-link + .btn-block,
 .slider-sidebar .modal-footer .more-link + .btn-block,
 .modal-footer .view-acteurs .more-link a + .btn-block,
 .view-acteurs .more-link .modal-footer a + .btn-block,
+.modal-footer .agora-header .btn-block + .more-link,
+.agora-header .modal-footer .btn-block + .more-link,
+.modal-footer .agora-header .more-link + .more-link,
+.agora-header .modal-footer .more-link + .more-link,
+.modal-footer .view-acteurs .more-link .agora-header a + .more-link,
+.agora-header .modal-footer .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .modal-footer .agora-header a + .more-link,
+.agora-header .view-acteurs .more-link .modal-footer a + .more-link,
+.modal-footer
+  .view-display-id-home .btn-block + .more-link,
+.view-display-id-home .modal-footer .btn-block + .more-link,
+.modal-footer .view-display-id-home .more-link + .more-link,
+.view-display-id-home .modal-footer .more-link + .more-link,
+.modal-footer .view-acteurs .more-link
+  .view-display-id-home a + .more-link,
+.view-display-id-home .modal-footer .view-acteurs .more-link a + .more-link,
+.view-acteurs .more-link .modal-footer
+  .view-display-id-home a + .more-link,
+.view-display-id-home .view-acteurs .more-link .modal-footer a + .more-link,
 .modal-footer .slider-sidebar .btn-block + .more-link,
 .slider-sidebar .modal-footer .btn-block + .more-link,
 .modal-footer .slider-sidebar .more-link + .more-link,
@@ -8730,6 +9365,17 @@ button.close {
 .slider-sidebar .view-acteurs .more-link .modal-footer a + .more-link,
 .modal-footer .view-acteurs .more-link .btn-block + a,
 .view-acteurs .more-link .modal-footer .btn-block + a,
+.modal-footer .agora-header .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .modal-footer .agora-header .more-link + a,
+.agora-header .modal-footer .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .agora-header .modal-footer .more-link + a,
+.modal-footer
+  .view-display-id-home .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link .modal-footer
+  .view-display-id-home .more-link + a,
+.view-display-id-home .modal-footer .view-acteurs .more-link .more-link + a,
+.view-acteurs .more-link
+  .view-display-id-home .modal-footer .more-link + a,
 .modal-footer .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .modal-footer .slider-sidebar .more-link + a,
 .slider-sidebar .modal-footer .view-acteurs .more-link .more-link + a,
@@ -9274,6 +9920,11 @@ button.close {
 
 .carousel-caption .btn,
 .carousel-caption .button,
+.carousel-caption .agora-header .more-link,
+.agora-header .carousel-caption .more-link,
+.carousel-caption
+  .view-display-id-home .more-link,
+.view-display-id-home .carousel-caption .more-link,
 .carousel-caption .view-header > ul.links li a,
 .view-header > ul.links li .carousel-caption a,
 .carousel-caption .slider-sidebar .more-link,
@@ -9670,6 +10321,8 @@ button.close {
 
 .btn,
 .button,
+.agora-header .more-link,
+.view-display-id-home .more-link,
 .view-header > ul.links li a,
 .slider-sidebar .more-link,
 .view-acteurs .more-link a {
@@ -9678,6 +10331,8 @@ button.close {
 
 .btn:active,
 .button:active,
+.agora-header .more-link:active,
+.view-display-id-home .more-link:active,
 .view-header > ul.links li a:active,
 .slider-sidebar .more-link:active,
 .view-acteurs .more-link a:active {
@@ -9713,8 +10368,10 @@ button.close {
   color: rgba(0, 191, 255, 0.8);
 }
 
-table a:not(.btn):not(.button):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a),
-.table a:not(.btn):not(.button):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a) {
+table a:not(.btn):not(.button):not(.agora-header .more-link):not(
+.view-display-id-home .more-link):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a),
+.table a:not(.btn):not(.button):not(.agora-header .more-link):not(
+.view-display-id-home .more-link):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a) {
   text-decoration: underline;
 }
 
@@ -13181,6 +13838,11 @@ a .glyphicon-spin {
 
 html.js .btn .ajax-throbber,
 html.js .button .ajax-throbber,
+html.js .agora-header .more-link .ajax-throbber,
+.agora-header html.js .more-link .ajax-throbber,
+html.js
+.view-display-id-home .more-link .ajax-throbber,
+.view-display-id-home html.js .more-link .ajax-throbber,
 html.js .view-header > ul.links li a .ajax-throbber,
 .view-header > ul.links li html.js a .ajax-throbber,
 html.js .slider-sidebar .more-link .ajax-throbber,
@@ -13360,7 +14022,13 @@ a.btn.btn-primary:hover,
 a.btn-primary.button:hover,
 a.button.button--primary:hover,
 a.btn.button--primary:hover,
+.agora-header a.button--primary.more-link:hover,
+.view-display-id-home a.button--primary.more-link:hover,
 .view-acteurs .more-link a.button--primary:hover,
+.agora-header a.btn-primary.more-link:hover,
+.agora-header .view-header > ul.links li a.more-link:hover,
+.view-display-id-home a.btn-primary.more-link:hover,
+.view-display-id-home .view-header > ul.links li a.more-link:hover,
 .view-header > ul.links li a:hover,
 .slider-sidebar a.more-link:hover,
 .view-acteurs .more-link a.btn-primary:hover,
@@ -13632,6 +14300,8 @@ a.icon-after .glyphicon {
 
 .btn.icon-before .glyphicon,
 .icon-before.button .glyphicon,
+.agora-header .icon-before.more-link .glyphicon,
+.view-display-id-home .icon-before.more-link .glyphicon,
 .view-header > ul.links li a.icon-before .glyphicon,
 .slider-sidebar .icon-before.more-link .glyphicon,
 .view-acteurs .more-link a.icon-before .glyphicon {
@@ -13641,6 +14311,8 @@ a.icon-after .glyphicon {
 
 .btn.icon-after .glyphicon,
 .icon-after.button .glyphicon,
+.agora-header .icon-after.more-link .glyphicon,
+.view-display-id-home .icon-after.more-link .glyphicon,
 .view-header > ul.links li a.icon-after .glyphicon,
 .slider-sidebar .icon-after.more-link .glyphicon,
 .view-acteurs .more-link a.icon-after .glyphicon {
@@ -13802,6 +14474,11 @@ form.project-list.navbar.webform-submission-form > .view-content,
 
 .linkbar .btn,
 .linkbar .button,
+.linkbar .agora-header .more-link,
+.agora-header .linkbar .more-link,
+.linkbar
+  .view-display-id-home .more-link,
+.view-display-id-home .linkbar .more-link,
 .linkbar .view-header > ul.links li a,
 .view-header > ul.links li .linkbar a,
 .linkbar .slider-sidebar .more-link,
@@ -13817,6 +14494,11 @@ form.project-list.navbar.webform-submission-form > .view-content,
 
 .linkbar .btn:last-child,
 .linkbar .button:last-child,
+.linkbar .agora-header .more-link:last-child,
+.agora-header .linkbar .more-link:last-child,
+.linkbar
+    .view-display-id-home .more-link:last-child,
+.view-display-id-home .linkbar .more-link:last-child,
 .linkbar .view-header > ul.links li a:last-child,
 .view-header > ul.links li .linkbar a:last-child,
 .linkbar .slider-sidebar .more-link:last-child,
@@ -14458,6 +15140,15 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   .input-group-sm > .input-group-btn > input.btn,
 .agenda-search .cibulSearch
   .input-group-sm > .input-group-btn > input.button,
+.agenda-search .cibulSearch .agora-header
+  .input-group-sm > .input-group-btn > input.more-link,
+.agora-header .agenda-search .cibulSearch
+  .input-group-sm > .input-group-btn > input.more-link,
+.agenda-search .cibulSearch
+  .view-display-id-home
+  .input-group-sm > .input-group-btn > input.more-link,
+.view-display-id-home .agenda-search .cibulSearch
+  .input-group-sm > .input-group-btn > input.more-link,
 .agenda-search .cibulSearch .slider-sidebar
   .input-group-sm > .input-group-btn > input.more-link,
 .slider-sidebar .agenda-search .cibulSearch
@@ -14471,6 +15162,15 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   .input-group-lg > .input-group-btn > input.btn,
 .agenda-search .cibulSearch
   .input-group-lg > .input-group-btn > input.button,
+.agenda-search .cibulSearch .agora-header
+  .input-group-lg > .input-group-btn > input.more-link,
+.agora-header .agenda-search .cibulSearch
+  .input-group-lg > .input-group-btn > input.more-link,
+.agenda-search .cibulSearch
+  .view-display-id-home
+  .input-group-lg > .input-group-btn > input.more-link,
+.view-display-id-home .agenda-search .cibulSearch
+  .input-group-lg > .input-group-btn > input.more-link,
 .agenda-search .cibulSearch .slider-sidebar
   .input-group-lg > .input-group-btn > input.more-link,
 .slider-sidebar .agenda-search .cibulSearch
@@ -14495,6 +15195,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .agenda-links .btn-block,
+.agenda-links .agora-header .more-link,
+.agora-header .agenda-links .more-link,
+.agenda-links
+  .view-display-id-home .more-link,
+.view-display-id-home .agenda-links .more-link,
 .agenda-links .slider-sidebar .more-link,
 .slider-sidebar .agenda-links .more-link,
 .agenda-links .view-acteurs .more-link a,
@@ -14805,7 +15510,8 @@ p:last-child,
 }
 
 .btn-yellow,
-.agora-header .more-link {
+.agora-header .more-link,
+.view-display-id-home .more-link {
   color: #222222;
   background-color: rgba(255, 255, 0, 0.9);
   border-color: rgba(255, 255, 0, 0.9);
@@ -14813,15 +15519,18 @@ p:last-child,
 
 .btn-yellow:focus,
 .agora-header .more-link:focus,
+.view-display-id-home .more-link:focus,
 .btn-yellow.focus,
-.agora-header .focus.more-link {
+.agora-header .focus.more-link,
+.view-display-id-home .focus.more-link {
   color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
   border-color: rgba(128, 128, 0, 0.9);
 }
 
 .btn-yellow:hover,
-.agora-header .more-link:hover {
+.agora-header .more-link:hover,
+.view-display-id-home .more-link:hover {
   color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
   border-color: rgba(194, 194, 0, 0.9);
@@ -14829,10 +15538,14 @@ p:last-child,
 
 .btn-yellow:active,
 .agora-header .more-link:active,
+.view-display-id-home .more-link:active,
 .btn-yellow.active,
 .agora-header .active.more-link,
+.view-display-id-home .active.more-link,
 .open > .btn-yellow.dropdown-toggle,
 .agora-header
+  .open > .dropdown-toggle.more-link,
+.view-display-id-home
   .open > .dropdown-toggle.more-link {
   color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
@@ -14841,24 +15554,36 @@ p:last-child,
 
 .btn-yellow:active:hover,
 .agora-header .more-link:active:hover,
+.view-display-id-home .more-link:active:hover,
 .btn-yellow:active:focus,
 .agora-header .more-link:active:focus,
+.view-display-id-home .more-link:active:focus,
 .btn-yellow:active.focus,
 .agora-header .more-link:active.focus,
+.view-display-id-home .more-link:active.focus,
 .btn-yellow.active:hover,
 .agora-header .active.more-link:hover,
+.view-display-id-home .active.more-link:hover,
 .btn-yellow.active:focus,
 .agora-header .active.more-link:focus,
+.view-display-id-home .active.more-link:focus,
 .btn-yellow.active.focus,
 .agora-header .active.focus.more-link,
+.view-display-id-home .active.focus.more-link,
 .open > .btn-yellow.dropdown-toggle:hover,
 .agora-header
+    .open > .dropdown-toggle.more-link:hover,
+.view-display-id-home
     .open > .dropdown-toggle.more-link:hover,
 .open > .btn-yellow.dropdown-toggle:focus,
 .agora-header
     .open > .dropdown-toggle.more-link:focus,
+.view-display-id-home
+    .open > .dropdown-toggle.more-link:focus,
 .open > .btn-yellow.dropdown-toggle.focus,
 .agora-header
+    .open > .dropdown-toggle.focus.more-link,
+.view-display-id-home
     .open > .dropdown-toggle.focus.more-link {
   color: #222222;
   background-color: rgba(168, 168, 0, 0.9);
@@ -14867,50 +15592,74 @@ p:last-child,
 
 .btn-yellow:active,
 .agora-header .more-link:active,
+.view-display-id-home .more-link:active,
 .btn-yellow.active,
 .agora-header .active.more-link,
+.view-display-id-home .active.more-link,
 .open > .btn-yellow.dropdown-toggle,
 .agora-header
+  .open > .dropdown-toggle.more-link,
+.view-display-id-home
   .open > .dropdown-toggle.more-link {
   background-image: none;
 }
 
 .btn-yellow.disabled:hover,
 .agora-header .disabled.more-link:hover,
+.view-display-id-home .disabled.more-link:hover,
 .btn-yellow.disabled:focus,
 .agora-header .disabled.more-link:focus,
+.view-display-id-home .disabled.more-link:focus,
 .btn-yellow.disabled.focus,
 .agora-header .disabled.focus.more-link,
+.view-display-id-home .disabled.focus.more-link,
 .btn-yellow[disabled]:hover,
 .agora-header [disabled].more-link:hover,
+.view-display-id-home [disabled].more-link:hover,
 .btn-yellow[disabled]:focus,
 .agora-header [disabled].more-link:focus,
+.view-display-id-home [disabled].more-link:focus,
 .btn-yellow[disabled].focus,
 .agora-header [disabled].focus.more-link,
+.view-display-id-home [disabled].focus.more-link,
 fieldset[disabled] .btn-yellow:hover,
 fieldset[disabled] .agora-header .more-link:hover,
 .agora-header
+  fieldset[disabled] .more-link:hover,
+fieldset[disabled]
+  .view-display-id-home .more-link:hover,
+.view-display-id-home
   fieldset[disabled] .more-link:hover,
 fieldset[disabled] .btn-yellow:focus,
 fieldset[disabled] .agora-header .more-link:focus,
 .agora-header
   fieldset[disabled] .more-link:focus,
+fieldset[disabled]
+  .view-display-id-home .more-link:focus,
+.view-display-id-home
+  fieldset[disabled] .more-link:focus,
 fieldset[disabled] .btn-yellow.focus,
 fieldset[disabled] .agora-header .focus.more-link,
 .agora-header
+  fieldset[disabled] .focus.more-link,
+fieldset[disabled]
+  .view-display-id-home .focus.more-link,
+.view-display-id-home
   fieldset[disabled] .focus.more-link {
   background-color: rgba(255, 255, 0, 0.9);
   border-color: rgba(255, 255, 0, 0.9);
 }
 
 .btn-yellow .badge,
-.agora-header .more-link .badge {
+.agora-header .more-link .badge,
+.view-display-id-home .more-link .badge {
   color: rgba(255, 255, 0, 0.9);
   background-color: #222222;
 }
 
 .btn-yellow > a,
-.agora-header .more-link > a {
+.agora-header .more-link > a,
+.view-display-id-home .more-link > a {
   color: #222222;
 }
 
@@ -15079,6 +15828,11 @@ h4.h-message {
 .slider-sidebar {
   max-width: 350px;
   margin: 54px auto 27px;
+}
+
+.inner-col-md {
+  max-width: 45% !important;
+  margin: 0 auto !important;
 }
 
 body#tinymce {
