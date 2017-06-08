@@ -114,7 +114,7 @@
   {# Content #}
   {% block content %}
     <div {{ content_attributes.addClass('content') }}>
-      
+
       <div id="nav-project" class="{{container}}">
         <ul class="nav nav-pills nav-justified">
           <li>
@@ -124,7 +124,6 @@
               {{ 'Informations'|t }}
             </a>
           </li>
-          {% if content.field_form|field_raw('status') == 'open' %}
           <li class="nav-highlight">
             <a href="#tab-project-form" data-toggle="tab">
               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -132,7 +131,6 @@
               {{ 'Candidature'|t }}
             </a>
           </li>
-          {% endif %}
           {% if content.field_form_comment|field_raw('status') == 'open' %}
           <li class="nav-highlight">
             <a href="#tab-project-forum" data-toggle="tab">
@@ -151,13 +149,11 @@
             {% include 'node--project--info.html.twig' %}
           </div>
         </section>
-        {% if content.field_form|field_raw('status') == 'open' %}
         <section class="tab-pane fade" id="tab-project-form">
           <div class="{{container}}">
               {{ content.field_form|field_value }}
           </div>
         </section>
-        {% endif %}
         {% if content.field_form_comment|field_raw('status') == 'open' %}
         <section class="tab-pane fade" id="tab-project-forum">
           <div class="{{container}}">
