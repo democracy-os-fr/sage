@@ -115,37 +115,65 @@
   {% block content %}
     <div {{ content_attributes.addClass('content') }}>
 
-      <div id="nav-project" class="{{container}}">
-        <ul class="nav nav-pills nav-justified">
-          <li>
-            <a href="#tab-project-main" data-toggle="tab">
-              <i class="fa fa-info-circle" aria-hidden="true"></i>
-              &nbsp;
-              {{ 'Informations'|t }}
-            </a>
-          </li>
-          <li class="nav-highlight">
-            <a href="#tab-project-form" data-toggle="tab">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              &nbsp;
-              {{ 'Candidature'|t }}
-            </a>
-          </li>
-        </ul>
-      </div>
+      {% if (content.field_form|field_raw('status') == 'open') or (content.field_form_comment|field_raw('status') == 'open') %}
+        <div id="nav-project" class="{{container}}">
+          <ul class="nav nav-pills nav-justified">
+            <li>
+              <a href="#tab-project-main" data-toggle="tab">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                &nbsp;
+                {{ 'Informations'|t }}
+              </a>
+            </li>
+            {% if content.field_form|field_raw('status') == 'open' %}
+            <li class="nav-highlight">
+              <a href="#tab-project-form" data-toggle="tab">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                &nbsp;
+                {{ 'Candidature'|t }}
+              </a>
+            </li>
+            {% endif %}
+            {% if content.field_form_comment|field_raw('status') == 'open' %}
+            <li class="nav-highlight">
+              <a href="#tab-project-forum" data-toggle="tab">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                &nbsp;
+                {{ 'Avis citoyen'|t }}
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
 
-      <div id="nav-project-content" class="tab-content tab-content-node">
-        <section class="tab-pane fade" id="tab-project-main">
-          <div class="{{container}}">
-            {% include 'node--project--info.html.twig' %}
-          </div>
-        </section>
-        <section class="tab-pane fade" id="tab-project-form">
-          <div class="{{container}}">
-              {{ content.field_form|field_value }}
-          </div>
-        </section>
-      </div>
+        <div id="nav-project-content" class="tab-content tab-content-node">
+          <section class="tab-pane fade" id="tab-project-main">
+            <div class="{{container}}">
+              {% include 'node--project--info.html.twig' %}
+            </div>
+          </section>
+          {% if content.field_form|field_raw('status') == 'open' %}
+          <section class="tab-pane fade" id="tab-project-form">
+            <div class="{{container}}">
+                {{ content.field_form|field_value }}
+            </div>
+          </section>
+          {% endif %}
+          {% if content.field_form_comment|field_raw('status') == 'open' %}
+          <section class="tab-pane fade" id="tab-project-forum">
+            <div class="{{container}}">
+                {{ content.field_form_comment|field_value }}
+            </div>
+          </section>
+          {% endif %}
+        </div>
+      {% else %}
+        <div class="{{container}}">
+          {% include 'node--project--info.html.twig' %}
+        </div>
+      {% endif %}
+
+
 
     </div>
   {% endblock %}

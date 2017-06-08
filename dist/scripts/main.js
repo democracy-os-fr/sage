@@ -2649,6 +2649,10 @@ function getCodeMirror(target) {
         var cm = getCodeMirror('#edit-field-form-0-settings-default-data');
         cm.refresh();
       });
+      $('.path-node .node-form a[href="#edit-group-forum"]').on('show.bs.tab', function () {
+        var cm = getCodeMirror('#edit-field-form-comment-0-settings-default-data');
+        cm.refresh();
+      });
     }
 
   },
@@ -2717,8 +2721,22 @@ function getCodeMirror(target) {
 
     $('#nav-project a[href="#tab-project-form"]').on('show.bs.tab', function () {
       window.location.hash = '#candidature';
-      var action = $('form.webform-submission-form').attr('action').split('#')[0];
-      $('form.webform-submission-form').attr('action', action + window.location.hash);
+      var form = $('form.webform-submission-form');
+      if(form.length) {
+        var action = form.attr('action').split('#')[0];
+        form.attr('action', action + window.location.hash);
+      }
+    }).on('hide.bs.tab', function () {
+      window.location.hash = '';
+    });
+
+    $('#nav-project a[href="#tab-project-forum"]').on('show.bs.tab', function () {
+      window.location.hash = '#forum';
+      var form = $('form.webform-submission-form');
+      if(form.length) {
+        var action = form.attr('action').split('#')[0];
+        form.attr('action', action + window.location.hash);
+      }
     }).on('hide.bs.tab', function () {
       window.location.hash = '';
     });
@@ -2738,6 +2756,9 @@ function getCodeMirror(target) {
       switch (window.location.hash) {
         case '#candidature':
           $('#nav-project a[href="#tab-project-form"]').tab('show');
+          break;
+        case '#forum':
+          $('#nav-project a[href="#tab-project-forum"]').tab('show');
           break;
         default:
       }

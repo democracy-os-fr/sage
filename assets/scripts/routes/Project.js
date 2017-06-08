@@ -21,8 +21,22 @@ export default {
 
     $('#nav-project a[href="#tab-project-form"]').on('show.bs.tab', () => {
       window.location.hash = '#candidature';
-      const action = $('form.webform-submission-form').attr('action').split('#')[0];
-      $('form.webform-submission-form').attr('action', action + window.location.hash);
+      let form = $('form.webform-submission-form');
+      if(form.length) {
+        const action = form.attr('action').split('#')[0];
+        form.attr('action', action + window.location.hash);
+      }
+    }).on('hide.bs.tab', () => {
+      window.location.hash = '';
+    });
+
+    $('#nav-project a[href="#tab-project-forum"]').on('show.bs.tab', () => {
+      window.location.hash = '#forum';
+      let form = $('form.webform-submission-form');
+      if(form.length) {
+        const action = form.attr('action').split('#')[0];
+        form.attr('action', action + window.location.hash);
+      }
     }).on('hide.bs.tab', () => {
       window.location.hash = '';
     });
@@ -42,6 +56,9 @@ export default {
       switch (window.location.hash) {
         case '#candidature':
           $('#nav-project a[href="#tab-project-form"]').tab('show');
+          break;
+        case '#forum':
+          $('#nav-project a[href="#tab-project-forum"]').tab('show');
           break;
         default:
       }

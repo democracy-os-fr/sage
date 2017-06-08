@@ -36,6 +36,10 @@ export default {
         const cm = getCodeMirror('#edit-field-form-0-settings-default-data');
         cm.refresh();
       });
+      $('.path-node .node-form a[href="#edit-group-forum"]').on('show.bs.tab', () => {
+        const cm = getCodeMirror('#edit-field-form-comment-0-settings-default-data');
+        cm.refresh();
+      });
     }
 
   },
