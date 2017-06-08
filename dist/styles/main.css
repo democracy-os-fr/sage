@@ -14286,6 +14286,11 @@ table td.views-field-operations {
   margin: auto;
 }
 
+.dark-background form {
+  background-color: #222222;
+  color: #fff;
+}
+
 /**
  * Icon styles.
  */
@@ -15511,7 +15516,9 @@ p:last-child,
 
 .btn-yellow,
 .agora-header .more-link,
-.view-display-id-home .more-link {
+.view-display-id-home .more-link,
+.dark-background form input[type="submit"].btn-success,
+.dark-background form input[type="submit"].button--success {
   color: #222222;
   background-color: rgba(255, 255, 0, 0.9);
   border-color: rgba(255, 255, 0, 0.9);
@@ -15520,9 +15527,13 @@ p:last-child,
 .btn-yellow:focus,
 .agora-header .more-link:focus,
 .view-display-id-home .more-link:focus,
+.dark-background form input[type="submit"].btn-success:focus,
+.dark-background form input[type="submit"].button--success:focus,
 .btn-yellow.focus,
 .agora-header .focus.more-link,
-.view-display-id-home .focus.more-link {
+.view-display-id-home .focus.more-link,
+.dark-background form input.focus[type="submit"].btn-success,
+.dark-background form input.focus[type="submit"].button--success {
   color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
   border-color: rgba(128, 128, 0, 0.9);
@@ -15530,7 +15541,9 @@ p:last-child,
 
 .btn-yellow:hover,
 .agora-header .more-link:hover,
-.view-display-id-home .more-link:hover {
+.view-display-id-home .more-link:hover,
+.dark-background form input[type="submit"].btn-success:hover,
+.dark-background form input[type="submit"].button--success:hover {
   color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
   border-color: rgba(194, 194, 0, 0.9);
@@ -15539,14 +15552,22 @@ p:last-child,
 .btn-yellow:active,
 .agora-header .more-link:active,
 .view-display-id-home .more-link:active,
+.dark-background form input[type="submit"].btn-success:active,
+.dark-background form input[type="submit"].button--success:active,
 .btn-yellow.active,
 .agora-header .active.more-link,
 .view-display-id-home .active.more-link,
+.dark-background form input.active[type="submit"].btn-success,
+.dark-background form input.active[type="submit"].button--success,
 .open > .btn-yellow.dropdown-toggle,
 .agora-header
   .open > .dropdown-toggle.more-link,
 .view-display-id-home
-  .open > .dropdown-toggle.more-link {
+  .open > .dropdown-toggle.more-link,
+.dark-background form
+  .open > input.dropdown-toggle[type="submit"].btn-success,
+.dark-background form
+  .open > input.dropdown-toggle[type="submit"].button--success {
   color: #222222;
   background-color: rgba(204, 204, 0, 0.9);
   border-color: rgba(194, 194, 0, 0.9);
@@ -15555,36 +15576,60 @@ p:last-child,
 .btn-yellow:active:hover,
 .agora-header .more-link:active:hover,
 .view-display-id-home .more-link:active:hover,
+.dark-background form input[type="submit"].btn-success:active:hover,
+.dark-background form input[type="submit"].button--success:active:hover,
 .btn-yellow:active:focus,
 .agora-header .more-link:active:focus,
 .view-display-id-home .more-link:active:focus,
+.dark-background form input[type="submit"].btn-success:active:focus,
+.dark-background form input[type="submit"].button--success:active:focus,
 .btn-yellow:active.focus,
 .agora-header .more-link:active.focus,
 .view-display-id-home .more-link:active.focus,
+.dark-background form input[type="submit"].btn-success:active.focus,
+.dark-background form input[type="submit"].button--success:active.focus,
 .btn-yellow.active:hover,
 .agora-header .active.more-link:hover,
 .view-display-id-home .active.more-link:hover,
+.dark-background form input.active[type="submit"].btn-success:hover,
+.dark-background form input.active[type="submit"].button--success:hover,
 .btn-yellow.active:focus,
 .agora-header .active.more-link:focus,
 .view-display-id-home .active.more-link:focus,
+.dark-background form input.active[type="submit"].btn-success:focus,
+.dark-background form input.active[type="submit"].button--success:focus,
 .btn-yellow.active.focus,
 .agora-header .active.focus.more-link,
 .view-display-id-home .active.focus.more-link,
+.dark-background form input.active.focus[type="submit"].btn-success,
+.dark-background form input.active.focus[type="submit"].button--success,
 .open > .btn-yellow.dropdown-toggle:hover,
 .agora-header
     .open > .dropdown-toggle.more-link:hover,
 .view-display-id-home
     .open > .dropdown-toggle.more-link:hover,
+.dark-background form
+    .open > input.dropdown-toggle[type="submit"].btn-success:hover,
+.dark-background form
+    .open > input.dropdown-toggle[type="submit"].button--success:hover,
 .open > .btn-yellow.dropdown-toggle:focus,
 .agora-header
     .open > .dropdown-toggle.more-link:focus,
 .view-display-id-home
     .open > .dropdown-toggle.more-link:focus,
+.dark-background form
+    .open > input.dropdown-toggle[type="submit"].btn-success:focus,
+.dark-background form
+    .open > input.dropdown-toggle[type="submit"].button--success:focus,
 .open > .btn-yellow.dropdown-toggle.focus,
 .agora-header
     .open > .dropdown-toggle.focus.more-link,
 .view-display-id-home
-    .open > .dropdown-toggle.focus.more-link {
+    .open > .dropdown-toggle.focus.more-link,
+.dark-background form
+    .open > input.dropdown-toggle.focus[type="submit"].btn-success,
+.dark-background form
+    .open > input.dropdown-toggle.focus[type="submit"].button--success {
   color: #222222;
   background-color: rgba(168, 168, 0, 0.9);
   border-color: rgba(128, 128, 0, 0.9);
@@ -15593,35 +15638,55 @@ p:last-child,
 .btn-yellow:active,
 .agora-header .more-link:active,
 .view-display-id-home .more-link:active,
+.dark-background form input[type="submit"].btn-success:active,
+.dark-background form input[type="submit"].button--success:active,
 .btn-yellow.active,
 .agora-header .active.more-link,
 .view-display-id-home .active.more-link,
+.dark-background form input.active[type="submit"].btn-success,
+.dark-background form input.active[type="submit"].button--success,
 .open > .btn-yellow.dropdown-toggle,
 .agora-header
   .open > .dropdown-toggle.more-link,
 .view-display-id-home
-  .open > .dropdown-toggle.more-link {
+  .open > .dropdown-toggle.more-link,
+.dark-background form
+  .open > input.dropdown-toggle[type="submit"].btn-success,
+.dark-background form
+  .open > input.dropdown-toggle[type="submit"].button--success {
   background-image: none;
 }
 
 .btn-yellow.disabled:hover,
 .agora-header .disabled.more-link:hover,
 .view-display-id-home .disabled.more-link:hover,
+.dark-background form input.disabled[type="submit"].btn-success:hover,
+.dark-background form input.disabled[type="submit"].button--success:hover,
 .btn-yellow.disabled:focus,
 .agora-header .disabled.more-link:focus,
 .view-display-id-home .disabled.more-link:focus,
+.dark-background form input.disabled[type="submit"].btn-success:focus,
+.dark-background form input.disabled[type="submit"].button--success:focus,
 .btn-yellow.disabled.focus,
 .agora-header .disabled.focus.more-link,
 .view-display-id-home .disabled.focus.more-link,
+.dark-background form input.disabled.focus[type="submit"].btn-success,
+.dark-background form input.disabled.focus[type="submit"].button--success,
 .btn-yellow[disabled]:hover,
 .agora-header [disabled].more-link:hover,
 .view-display-id-home [disabled].more-link:hover,
+.dark-background form input[disabled][type="submit"].btn-success:hover,
+.dark-background form input[disabled][type="submit"].button--success:hover,
 .btn-yellow[disabled]:focus,
 .agora-header [disabled].more-link:focus,
 .view-display-id-home [disabled].more-link:focus,
+.dark-background form input[disabled][type="submit"].btn-success:focus,
+.dark-background form input[disabled][type="submit"].button--success:focus,
 .btn-yellow[disabled].focus,
 .agora-header [disabled].focus.more-link,
 .view-display-id-home [disabled].focus.more-link,
+.dark-background form input[disabled].focus[type="submit"].btn-success,
+.dark-background form input[disabled].focus[type="submit"].button--success,
 fieldset[disabled] .btn-yellow:hover,
 fieldset[disabled] .agora-header .more-link:hover,
 .agora-header
@@ -15630,6 +15695,12 @@ fieldset[disabled]
   .view-display-id-home .more-link:hover,
 .view-display-id-home
   fieldset[disabled] .more-link:hover,
+fieldset[disabled] .dark-background form input[type="submit"].btn-success:hover,
+.dark-background form
+  fieldset[disabled] input[type="submit"].btn-success:hover,
+fieldset[disabled] .dark-background form input[type="submit"].button--success:hover,
+.dark-background form
+  fieldset[disabled] input[type="submit"].button--success:hover,
 fieldset[disabled] .btn-yellow:focus,
 fieldset[disabled] .agora-header .more-link:focus,
 .agora-header
@@ -15638,6 +15709,12 @@ fieldset[disabled]
   .view-display-id-home .more-link:focus,
 .view-display-id-home
   fieldset[disabled] .more-link:focus,
+fieldset[disabled] .dark-background form input[type="submit"].btn-success:focus,
+.dark-background form
+  fieldset[disabled] input[type="submit"].btn-success:focus,
+fieldset[disabled] .dark-background form input[type="submit"].button--success:focus,
+.dark-background form
+  fieldset[disabled] input[type="submit"].button--success:focus,
 fieldset[disabled] .btn-yellow.focus,
 fieldset[disabled] .agora-header .focus.more-link,
 .agora-header
@@ -15645,22 +15722,36 @@ fieldset[disabled] .agora-header .focus.more-link,
 fieldset[disabled]
   .view-display-id-home .focus.more-link,
 .view-display-id-home
-  fieldset[disabled] .focus.more-link {
+  fieldset[disabled] .focus.more-link,
+fieldset[disabled] .dark-background form input.focus[type="submit"].btn-success,
+.dark-background form
+  fieldset[disabled] input.focus[type="submit"].btn-success,
+fieldset[disabled] .dark-background form input.focus[type="submit"].button--success,
+.dark-background form
+  fieldset[disabled] input.focus[type="submit"].button--success {
   background-color: rgba(255, 255, 0, 0.9);
   border-color: rgba(255, 255, 0, 0.9);
 }
 
 .btn-yellow .badge,
 .agora-header .more-link .badge,
-.view-display-id-home .more-link .badge {
+.view-display-id-home .more-link .badge,
+.dark-background form input[type="submit"].btn-success .badge,
+.dark-background form input[type="submit"].button--success .badge {
   color: rgba(255, 255, 0, 0.9);
   background-color: #222222;
 }
 
 .btn-yellow > a,
 .agora-header .more-link > a,
-.view-display-id-home .more-link > a {
+.view-display-id-home .more-link > a,
+.dark-background form input[type="submit"].btn-success > a,
+.dark-background form input[type="submit"].button--success > a {
   color: #222222;
+}
+
+.rounded-corner {
+  border-radius: 4px;
 }
 
 .dark-background {

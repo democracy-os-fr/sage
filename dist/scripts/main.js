@@ -2632,7 +2632,7 @@ function getCodeMirror(target) {
 /* harmony default export */ __webpack_exports__["a"] = {
   init: function init() {
     // JavaScript to be fired on all pages
-    console.log('JS sage :: routes/common :: init');  // eslint-disable-line no-console
+    // console.log('JS sage :: routes/common :: init');  // eslint-disable-line no-console
     $('.carousel').carousel({
         interval: 5000,
     })
@@ -2654,20 +2654,7 @@ function getCodeMirror(target) {
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
-    // console.log('JS sage :: routes/common :: finalize');
-    // console.log('HOME INIT'); // eslint-disable-line no-console
-    // function isEmpty( el ){
-    //   let ws = el.html().replace(/^\s+/, '').replace(/\s+$/, '') ;
-    //   console.dir(ws); // eslint-disable-line no-console
-    //   return !$.trim(ws);
-    // }
-    //
-    // let news = $('#newsstand');
-    // let events = news.find('.view-id-next_events.view-display-id-home') ;
-    //
-    // if( isEmpty(events) ){
-    //   console.log('empty !!'); // eslint-disable-line no-console
-    // }
+    // console.log('JS sage :: routes/common :: finalize'); // eslint-disable-line no-console
   },
 };
 
@@ -2682,14 +2669,6 @@ function getCodeMirror(target) {
   init: function init() {
     // JavaScript to be fired on the home page
 
-    // #newsstand
-
-    // .view-id-next_events.view-display-id-home
-
-    // .view-id-acteurs.view-display-id-home
-
-    // .view-twitter
-    console.log('HOME INIT'); // eslint-disable-line no-console
     function isEmpty( el ){
       return !$.trim( el.html());
     }
@@ -2697,8 +2676,8 @@ function getCodeMirror(target) {
     var news = $('#newsstand');
     var events = news.find('.view-id-next_events.view-display-id-home') ;
 
-    if( isEmpty(events) ){
-      console.log('empty !!'); // eslint-disable-line no-console
+    if( isEmpty(events) || events.children().first().hasClass('more-link') ){
+      // console.log('empty !!'); // eslint-disable-line no-console
       news.children().first().remove();
       news.children().addClass('col-md-6 col-lg-6');
     } else {

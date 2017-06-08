@@ -264,3 +264,13 @@ table {
     }
   }
 }
+
+.dark-background form {
+  background-color : $gray-darker ;
+  color: $navbar-inverse-link-color;
+
+  input[type="submit"].btn-success {
+    @extend .btn-yellow ;
+  }
+
+}

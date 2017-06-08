@@ -56,6 +56,10 @@ p:last-child,
   }
 }
 
+.rounded-corner {
+  border-radius: $border-radius-base ;
+}
+
 .dark-background {
   background-color : $gray-darker ;
   color: $brand-yellow;
