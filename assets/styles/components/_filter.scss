@@ -24,3 +24,37 @@
 .nav.nav-tabs.filter-formats {
   margin-bottom: 15px;
 }
+
+#edit-header {
+  padding: 10px;
+  border-bottom: 1px solid $table-border-color;
+
+  &, & > .form-wrapper {
+    margin-bottom: 0;
+  }
+
+  .form-item-action, .form-actions, .control-label, .select-wrapper {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
+    max-width: auto;
+  }
+  .control-label {
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+  .select-wrapper {
+    margin-right: 0.5em;
+    &::after {
+      margin-top: -0.1em;
+    }
+  }
+  .form-select {
+    padding-left: 5px;
+    font-size: 14px;
+    padding-bottom: 0px;
+  }
+  .form-actions > button {
+    @extend .btn-sm;
+  }
+}

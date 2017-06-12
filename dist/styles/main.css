@@ -5194,6 +5194,7 @@ fieldset[disabled] .btn-link:focus {
 .more-link .btn-group-sm > a,
 .btn-group-sm > .webform-details-toggle-state,
 .section-social .btn-group-sm > .btn-social,
+#edit-header .form-actions > button,
 .button--small,
 .view-header > ul.links li a,
 .slider-sidebar .more-link {
@@ -7149,6 +7150,7 @@ form.webform-submission-form > .navbar-collapse,
 .more-link .btn-group-sm > a.navbar-btn,
 .btn-group-sm > .navbar-btn.webform-details-toggle-state,
 .section-social .btn-group-sm > .navbar-btn.btn-social,
+#edit-header .form-actions > button.navbar-btn,
 .navbar-btn.button--small,
 .view-header > ul.links li a.navbar-btn,
 .slider-sidebar .navbar-btn.more-link {
@@ -15158,6 +15160,45 @@ html.js .ajax-new-content:empty {
   margin-bottom: 15px;
 }
 
+#edit-header {
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#edit-header,
+#edit-header > .form-wrapper {
+  margin-bottom: 0;
+}
+
+#edit-header .form-item-action,
+#edit-header .form-actions,
+#edit-header .control-label,
+#edit-header .select-wrapper {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+  max-width: auto;
+}
+
+#edit-header .control-label {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+#edit-header .select-wrapper {
+  margin-right: 0.5em;
+}
+
+#edit-header .select-wrapper::after {
+  margin-top: -0.1em;
+}
+
+#edit-header .form-select {
+  padding-left: 5px;
+  font-size: 14px;
+  padding-bottom: 0px;
+}
+
 a.btn.btn-primary:hover,
 a.btn-primary.button:hover,
 a.button.button--primary:hover,
@@ -15853,6 +15894,22 @@ ol {
 
 .progress-wrapper .progress-bar {
   min-width: 2em;
+}
+
+.table-responsive th.select-all {
+  padding-left: 14px;
+}
+
+.table-responsive th.select-all input[type="checkbox"],
+.table-responsive th.select-all .checkbox input[type="checkbox"],
+.table-responsive th.select-all .checkbox-inline input[type="checkbox"] {
+  position: static;
+}
+
+.table-responsive th.select-all input[type="checkbox"]:before,
+.table-responsive th.select-all .checkbox input[type="checkbox"]:before,
+.table-responsive th.select-all .checkbox-inline input[type="checkbox"]:before {
+  display: none;
 }
 
 /**
@@ -16610,6 +16667,26 @@ p:last-child,
   background-color: #0FEEC7;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+
+.text-success {
+  color: #4CAF50;
+}
+
+.text-warning {
+  color: #ff9800;
+}
+
+.views-align-left {
+  text-align: left;
+}
+
+.views-align-center {
+  text-align: center;
+}
+
+.views-align-right {
+  text-align: right;
 }
 
 header.navbar {
