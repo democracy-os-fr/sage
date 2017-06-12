@@ -15,5 +15,6 @@
 {% set classes = [
   theme.settings.image_shape ? theme.settings.image_shape,
   theme.settings.image_responsive and (style_name is not same as ('thumbnail_responsive_square') ) ? 'img-responsive',
+  style_name matches '/^media_/' ? 'media-object'
 ] %}
 <img{{ attributes.addClass(classes) }} />

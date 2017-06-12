@@ -15121,6 +15121,18 @@ html.js .ajax-new-content:empty {
   overflow: hidden;
 }
 
+.table-responsive .draggable .tabledrag-handle {
+  padding: 15px 10px;
+}
+
+.table-responsive .draggable .file {
+  width: auto;
+}
+
+.table-responsive .draggable > td > .button {
+  margin: 5px 0;
+}
+
 /**
  * Filter styles.
  */
@@ -16125,6 +16137,15 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   border-bottom-color: #eeeeee;
 }
 
+.media.media-panel .media-left {
+  min-width: 170px;
+  text-align: center;
+}
+
+.media.media-panel .media-left .media-object {
+  margin: 0 auto;
+}
+
 .media.media-panel .media-body {
   padding-left: 5px;
 }
@@ -16136,6 +16157,17 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .media.media-panel .media-body h3,
 .media.media-panel .media-body .h3 {
   margin-top: 0;
+}
+
+.field__items > .field--item > .media.media-panel {
+  margin-bottom: 6px;
+}
+
+.media.media-panel .line {
+  display: block;
+  padding: .25em 0 .25em .5em;
+  min-height: 21px;
+  line-height: 21px;
 }
 
 .jumbotron p {

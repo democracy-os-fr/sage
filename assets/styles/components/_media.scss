@@ -31,11 +31,30 @@
   padding: $panel-body-padding;
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
 
+  .media-left {
+    min-width: 160px + 10px; // image + padding-left
+    text-align: center;
+    .media-object {
+      margin: 0 auto;
+    }
+  }
+
   .media-body {
     padding-left: 5px;
     h1, .h1, h2, .h2, h3, .h3 {
       margin-top: 0;
     }
+  }
+
+  .field__items > .field--item > & {
+    margin-bottom: $padding-small-vertical;
+  }
+
+  .line {
+    display: block;
+    padding: .25em 0 .25em .5em ;
+    min-height: $line-height-computed;
+    line-height: $line-height-computed;
   }
 
 }
