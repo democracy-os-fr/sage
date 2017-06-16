@@ -59,3 +59,15 @@
 .image-widget.row {
   overflow: hidden;
 }
+
+.table-responsive .draggable {
+  .tabledrag-handle {
+    padding: 15px 10px;
+  }
+  .file {
+    width: auto;
+  }
+  & > td > .button {
+    margin: 5px 0;
+  }
+}

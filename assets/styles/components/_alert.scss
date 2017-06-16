@@ -29,3 +29,13 @@
     color: darken($alert-danger-text, 10%);
   }
 }
+
+.modal {
+  .modal-body {
+    padding: 0;
+    .alert {
+      border-radius: 0;
+      margin: 0;
+    }
+  }
+}

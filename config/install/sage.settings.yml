@@ -15,3 +15,4 @@
 cdn_provider: ''
 navbar_inverse: 1
 navbar_position: 'static-top'
+modal_enabled: 0

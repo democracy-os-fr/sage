@@ -4,14 +4,16 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
-    "viewsExposedForm" : "./scripts/attached/viewsExposedForm.js"
+    "viewsExposedForm" : "./scripts/attached/viewsExposedForm.js",
+    "entity_browser.tabs" : "./scripts/attached/entity_browser.tabs.js",
+    "ckeditor_templates" : "./scripts/templates/ckeditor_templates.js"
   },
   "watch": [
     "templates/**/*.php",
     "src/**/*.php"
   ],
   "publicPath": "/themes/contrib/sage",
-  "devUrl": "http://d8.clone.local.osx",
+  "devUrl": "http://d8.pro.local.dev",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "browsers": [

@@ -134,3 +134,28 @@
     padding: $padding-large-vertical 0 ;
   }
 }
+
+.eb-tabs {
+  .nav-pills {
+    li > a {
+
+      @extend .btn;
+
+      margin-right: 1.5em;
+
+      font-weight: 400;
+      color: $gray-light;
+
+      &, &.is-active, &:hover, &:focus {
+        background: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      &.is-active, &:hover, &:focus {
+        color: $gray;
+      }
+    }
+  }
+}

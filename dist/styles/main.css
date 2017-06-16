@@ -306,6 +306,8 @@ th {
   .button > .caret,
   .agora-header .more-link > .caret,
   .view-display-id-home .more-link > .caret,
+  .dropzone a.button > .caret,
+  .eb-tabs .nav-pills li > a > .caret,
   .view-header > ul.links li a > .caret,
   .slider-sidebar .more-link > .caret,
   .view-acteurs .more-link a > .caret,
@@ -315,6 +317,10 @@ th {
   .dropup > .more-link > .caret,
   .view-display-id-home
   .dropup > .more-link > .caret,
+  .dropzone
+  .dropup > a.button > .caret,
+  .eb-tabs .nav-pills
+  li.dropup > a > .caret,
   .view-header > ul.links li
   .dropup > a > .caret,
   .slider-sidebar
@@ -1500,7 +1506,8 @@ hr {
   border-top: 1px solid #ecf0f1;
 }
 
-.sr-only {
+.sr-only,
+label[for="edit-upload"].control-label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1512,7 +1519,9 @@ hr {
 }
 
 .sr-only-focusable:active,
-.sr-only-focusable:focus {
+label[for="edit-upload"].control-label:active,
+.sr-only-focusable:focus,
+label[for="edit-upload"].control-label:focus {
   position: static;
   width: auto;
   height: auto;
@@ -2045,6 +2054,7 @@ pre code {
 .container,
 .container-xs,
 .container-sm,
+.path-webform .page-header,
 form.webform-submission-form,
 .container-md,
 .project-list > .view-content {
@@ -2057,12 +2067,14 @@ form.webform-submission-form,
 .container:before,
 .container-xs:before,
 .container-sm:before,
+.path-webform .page-header:before,
 form.webform-submission-form:before,
 .container-md:before,
 .project-list > .view-content:before,
 .container:after,
 .container-xs:after,
 .container-sm:after,
+.path-webform .page-header:after,
 form.webform-submission-form:after,
 .container-md:after,
 .project-list > .view-content:after {
@@ -2073,6 +2085,7 @@ form.webform-submission-form:after,
 .container:after,
 .container-xs:after,
 .container-sm:after,
+.path-webform .page-header:after,
 form.webform-submission-form:after,
 .container-md:after,
 .project-list > .view-content:after {
@@ -2083,6 +2096,7 @@ form.webform-submission-form:after,
   .container,
   .container-xs,
   .container-sm,
+  .path-webform .page-header,
   form.webform-submission-form,
   .container-md,
   .project-list > .view-content {
@@ -2094,6 +2108,7 @@ form.webform-submission-form:after,
   .container,
   .container-xs,
   .container-sm,
+  .path-webform .page-header,
   form.webform-submission-form,
   .container-md,
   .project-list > .view-content {
@@ -2105,6 +2120,7 @@ form.webform-submission-form:after,
   .container,
   .container-xs,
   .container-sm,
+  .path-webform .page-header,
   form.webform-submission-form,
   .container-md,
   .project-list > .view-content {
@@ -3722,6 +3738,10 @@ fieldset[disabled]
   .input-group-lg > .input-group-btn > .form-control-static.more-link,
 .view-display-id-home
   .input-group-lg > .input-group-btn > .form-control-static.more-link,
+.dropzone
+  .input-group-lg > .input-group-btn > a.form-control-static.button,
+.eb-tabs .nav-pills
+  .input-group-lg > li.input-group-btn > a.form-control-static,
 .view-header > ul.links li
   .input-group-lg > .input-group-btn > a.form-control-static,
 .slider-sidebar
@@ -3738,6 +3758,10 @@ fieldset[disabled]
   .input-group-sm > .input-group-btn > .form-control-static.more-link,
 .view-display-id-home
   .input-group-sm > .input-group-btn > .form-control-static.more-link,
+.dropzone
+  .input-group-sm > .input-group-btn > a.form-control-static.button,
+.eb-tabs .nav-pills
+  .input-group-sm > li.input-group-btn > a.form-control-static,
 .view-header > ul.links li
   .input-group-sm > .input-group-btn > a.form-control-static,
 .slider-sidebar
@@ -3758,6 +3782,10 @@ fieldset[disabled]
 .input-group-sm > .input-group-btn > .more-link,
 .view-display-id-home
 .input-group-sm > .input-group-btn > .more-link,
+.dropzone
+.input-group-sm > .input-group-btn > a.button,
+.eb-tabs .nav-pills
+.input-group-sm > li.input-group-btn > a,
 .view-header > ul.links li
 .input-group-sm > .input-group-btn > a,
 .slider-sidebar
@@ -3849,6 +3877,10 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > .more-link,
 .view-display-id-home
 .input-group-lg > .input-group-btn > .more-link,
+.dropzone
+.input-group-lg > .input-group-btn > a.button,
+.eb-tabs .nav-pills
+.input-group-lg > li.input-group-btn > a,
 .view-header > ul.links li
 .input-group-lg > .input-group-btn > a,
 .slider-sidebar
@@ -3963,6 +3995,10 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .more-link + .form-control-feedback,
 .view-display-id-home
 .input-group-lg > .input-group-btn > .more-link + .form-control-feedback,
+.dropzone
+.input-group-lg > .input-group-btn > a.button + .form-control-feedback,
+.eb-tabs .nav-pills
+.input-group-lg > li.input-group-btn > a + .form-control-feedback,
 .view-header > ul.links li
 .input-group-lg > .input-group-btn > a + .form-control-feedback,
 .slider-sidebar
@@ -3989,6 +4025,10 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .more-link + .form-control-feedback,
 .view-display-id-home
 .input-group-sm > .input-group-btn > .more-link + .form-control-feedback,
+.dropzone
+.input-group-sm > .input-group-btn > a.button + .form-control-feedback,
+.eb-tabs .nav-pills
+.input-group-sm > li.input-group-btn > a + .form-control-feedback,
 .view-header > ul.links li
 .input-group-sm > .input-group-btn > a + .form-control-feedback,
 .slider-sidebar
@@ -4120,7 +4160,8 @@ select[multiple].input-lg,
   top: 26px;
 }
 
-.has-feedback label.sr-only ~ .form-control-feedback {
+.has-feedback label.sr-only ~ .form-control-feedback,
+.has-feedback label[for="edit-upload"].control-label ~ .form-control-feedback {
   top: 0;
 }
 
@@ -4258,6 +4299,8 @@ select[multiple].input-lg,
 .button,
 .agora-header .more-link,
 .view-display-id-home .more-link,
+.dropzone a.button,
+.eb-tabs .nav-pills li > a,
 .view-header > ul.links li a,
 .slider-sidebar .more-link,
 .view-acteurs .more-link a {
@@ -4286,6 +4329,8 @@ select[multiple].input-lg,
 .button:focus,
 .agora-header .more-link:focus,
 .view-display-id-home .more-link:focus,
+.dropzone a.button:focus,
+.eb-tabs .nav-pills li > a:focus,
 .view-header > ul.links li a:focus,
 .slider-sidebar .more-link:focus,
 .view-acteurs .more-link a:focus,
@@ -4293,6 +4338,8 @@ select[multiple].input-lg,
 .focus.button,
 .agora-header .focus.more-link,
 .view-display-id-home .focus.more-link,
+.dropzone a.focus.button,
+.eb-tabs .nav-pills li > a.focus,
 .view-header > ul.links li a.focus,
 .slider-sidebar .focus.more-link,
 .view-acteurs .more-link a.focus,
@@ -4300,6 +4347,7 @@ select[multiple].input-lg,
 .button:active:focus,
 .agora-header .more-link:active:focus,
 .view-display-id-home .more-link:active:focus,
+.eb-tabs .nav-pills li > a:active:focus,
 .view-header > ul.links li a:active:focus,
 .slider-sidebar .more-link:active:focus,
 .view-acteurs .more-link a:active:focus,
@@ -4307,6 +4355,7 @@ select[multiple].input-lg,
 .button:active.focus,
 .agora-header .more-link:active.focus,
 .view-display-id-home .more-link:active.focus,
+.eb-tabs .nav-pills li > a:active.focus,
 .view-header > ul.links li a:active.focus,
 .slider-sidebar .more-link:active.focus,
 .view-acteurs .more-link a:active.focus,
@@ -4314,6 +4363,7 @@ select[multiple].input-lg,
 .active.button:focus,
 .agora-header .active.more-link:focus,
 .view-display-id-home .active.more-link:focus,
+.eb-tabs .nav-pills li > a.active:focus,
 .view-header > ul.links li a.active:focus,
 .slider-sidebar .active.more-link:focus,
 .view-acteurs .more-link a.active:focus,
@@ -4321,6 +4371,7 @@ select[multiple].input-lg,
 .active.focus.button,
 .agora-header .active.focus.more-link,
 .view-display-id-home .active.focus.more-link,
+.eb-tabs .nav-pills li > a.active.focus,
 .view-header > ul.links li a.active.focus,
 .slider-sidebar .active.focus.more-link,
 .view-acteurs .more-link a.active.focus {
@@ -4332,6 +4383,8 @@ select[multiple].input-lg,
 .button:hover,
 .agora-header .more-link:hover,
 .view-display-id-home .more-link:hover,
+.dropzone a.button:hover,
+.eb-tabs .nav-pills li > a:hover,
 .view-header > ul.links li a:hover,
 .slider-sidebar .more-link:hover,
 .view-acteurs .more-link a:hover,
@@ -4339,6 +4392,8 @@ select[multiple].input-lg,
 .button:focus,
 .agora-header .more-link:focus,
 .view-display-id-home .more-link:focus,
+.dropzone a.button:focus,
+.eb-tabs .nav-pills li > a:focus,
 .view-header > ul.links li a:focus,
 .slider-sidebar .more-link:focus,
 .view-acteurs .more-link a:focus,
@@ -4346,6 +4401,8 @@ select[multiple].input-lg,
 .focus.button,
 .agora-header .focus.more-link,
 .view-display-id-home .focus.more-link,
+.dropzone a.focus.button,
+.eb-tabs .nav-pills li > a.focus,
 .view-header > ul.links li a.focus,
 .slider-sidebar .focus.more-link,
 .view-acteurs .more-link a.focus {
@@ -4357,6 +4414,8 @@ select[multiple].input-lg,
 .button:active,
 .agora-header .more-link:active,
 .view-display-id-home .more-link:active,
+.dropzone a.button:active,
+.eb-tabs .nav-pills li > a:active,
 .view-header > ul.links li a:active,
 .slider-sidebar .more-link:active,
 .view-acteurs .more-link a:active,
@@ -4364,6 +4423,8 @@ select[multiple].input-lg,
 .active.button,
 .agora-header .active.more-link,
 .view-display-id-home .active.more-link,
+.dropzone a.active.button,
+.eb-tabs .nav-pills li > a.active,
 .view-header > ul.links li a.active,
 .slider-sidebar .active.more-link,
 .view-acteurs .more-link a.active {
@@ -4376,6 +4437,8 @@ select[multiple].input-lg,
 .disabled.button,
 .agora-header .disabled.more-link,
 .view-display-id-home .disabled.more-link,
+.dropzone a.disabled.button,
+.eb-tabs .nav-pills li > a.disabled,
 .view-header > ul.links li a.disabled,
 .slider-sidebar .disabled.more-link,
 .view-acteurs .more-link a.disabled,
@@ -4383,6 +4446,8 @@ select[multiple].input-lg,
 [disabled].button,
 .agora-header [disabled].more-link,
 .view-display-id-home [disabled].more-link,
+.dropzone a[disabled].button,
+.eb-tabs .nav-pills li > a[disabled],
 .view-header > ul.links li a[disabled],
 .slider-sidebar [disabled].more-link,
 .view-acteurs .more-link a[disabled],
@@ -4395,6 +4460,9 @@ fieldset[disabled]
   .view-display-id-home .more-link,
 .view-display-id-home
   fieldset[disabled] .more-link,
+fieldset[disabled] .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills
+  fieldset[disabled] li > a,
 fieldset[disabled] .view-header > ul.links li a,
 .view-header > ul.links li
   fieldset[disabled] a,
@@ -4414,6 +4482,7 @@ a.btn.disabled,
 a.disabled.button,
 .agora-header a.disabled.more-link,
 .view-display-id-home a.disabled.more-link,
+.eb-tabs .nav-pills li > a.disabled,
 .view-header > ul.links li a.disabled,
 .slider-sidebar a.disabled.more-link,
 .view-acteurs .more-link a.disabled,
@@ -4426,6 +4495,9 @@ fieldset[disabled]
 .view-display-id-home a.more-link,
 .view-display-id-home
 fieldset[disabled] a.more-link,
+fieldset[disabled] .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills
+fieldset[disabled] li > a,
 fieldset[disabled] .view-header > ul.links li a,
 .view-header > ul.links li
 fieldset[disabled] a,
@@ -4545,6 +4617,7 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary,
 .button--primary,
+.dropzone a.button,
 .view-header > ul.links li a,
 .slider-sidebar .more-link {
   color: #fff;
@@ -4554,10 +4627,12 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary:focus,
 .button--primary:focus,
+.dropzone a.button:focus,
 .view-header > ul.links li a:focus,
 .slider-sidebar .more-link:focus,
 .btn-primary.focus,
 .focus.button--primary,
+.dropzone a.focus.button,
 .view-header > ul.links li a.focus,
 .slider-sidebar .focus.more-link {
   color: #fff;
@@ -4567,6 +4642,7 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary:hover,
 .button--primary:hover,
+.dropzone a.button:hover,
 .view-header > ul.links li a:hover,
 .slider-sidebar .more-link:hover {
   color: #fff;
@@ -4576,14 +4652,18 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary:active,
 .button--primary:active,
+.dropzone a.button:active,
 .view-header > ul.links li a:active,
 .slider-sidebar .more-link:active,
 .btn-primary.active,
 .active.button--primary,
+.dropzone a.active.button,
 .view-header > ul.links li a.active,
 .slider-sidebar .active.more-link,
 .open > .btn-primary.dropdown-toggle,
 .open > .dropdown-toggle.button--primary,
+.dropzone
+  .open > a.dropdown-toggle.button,
 .view-header > ul.links li
   .open > a.dropdown-toggle,
 .slider-sidebar
@@ -4595,42 +4675,54 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary:active:hover,
 .button--primary:active:hover,
+.dropzone a.button:active:hover,
 .view-header > ul.links li a:active:hover,
 .slider-sidebar .more-link:active:hover,
 .btn-primary:active:focus,
 .button--primary:active:focus,
+.dropzone a.button:active:focus,
 .view-header > ul.links li a:active:focus,
 .slider-sidebar .more-link:active:focus,
 .btn-primary:active.focus,
 .button--primary:active.focus,
+.dropzone a.button:active.focus,
 .view-header > ul.links li a:active.focus,
 .slider-sidebar .more-link:active.focus,
 .btn-primary.active:hover,
 .active.button--primary:hover,
+.dropzone a.active.button:hover,
 .view-header > ul.links li a.active:hover,
 .slider-sidebar .active.more-link:hover,
 .btn-primary.active:focus,
 .active.button--primary:focus,
+.dropzone a.active.button:focus,
 .view-header > ul.links li a.active:focus,
 .slider-sidebar .active.more-link:focus,
 .btn-primary.active.focus,
 .active.focus.button--primary,
+.dropzone a.active.focus.button,
 .view-header > ul.links li a.active.focus,
 .slider-sidebar .active.focus.more-link,
 .open > .btn-primary.dropdown-toggle:hover,
 .open > .dropdown-toggle.button--primary:hover,
+.dropzone
+    .open > a.dropdown-toggle.button:hover,
 .view-header > ul.links li
     .open > a.dropdown-toggle:hover,
 .slider-sidebar
     .open > .dropdown-toggle.more-link:hover,
 .open > .btn-primary.dropdown-toggle:focus,
 .open > .dropdown-toggle.button--primary:focus,
+.dropzone
+    .open > a.dropdown-toggle.button:focus,
 .view-header > ul.links li
     .open > a.dropdown-toggle:focus,
 .slider-sidebar
     .open > .dropdown-toggle.more-link:focus,
 .open > .btn-primary.dropdown-toggle.focus,
 .open > .dropdown-toggle.focus.button--primary,
+.dropzone
+    .open > a.dropdown-toggle.focus.button,
 .view-header > ul.links li
     .open > a.dropdown-toggle.focus,
 .slider-sidebar
@@ -4642,14 +4734,18 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary:active,
 .button--primary:active,
+.dropzone a.button:active,
 .view-header > ul.links li a:active,
 .slider-sidebar .more-link:active,
 .btn-primary.active,
 .active.button--primary,
+.dropzone a.active.button,
 .view-header > ul.links li a.active,
 .slider-sidebar .active.more-link,
 .open > .btn-primary.dropdown-toggle,
 .open > .dropdown-toggle.button--primary,
+.dropzone
+  .open > a.dropdown-toggle.button,
 .view-header > ul.links li
   .open > a.dropdown-toggle,
 .slider-sidebar
@@ -4659,30 +4755,39 @@ fieldset[disabled] .view-acteurs .more-link a.focus,
 
 .btn-primary.disabled:hover,
 .disabled.button--primary:hover,
+.dropzone a.disabled.button:hover,
 .view-header > ul.links li a.disabled:hover,
 .slider-sidebar .disabled.more-link:hover,
 .btn-primary.disabled:focus,
 .disabled.button--primary:focus,
+.dropzone a.disabled.button:focus,
 .view-header > ul.links li a.disabled:focus,
 .slider-sidebar .disabled.more-link:focus,
 .btn-primary.disabled.focus,
 .disabled.focus.button--primary,
+.dropzone a.disabled.focus.button,
 .view-header > ul.links li a.disabled.focus,
 .slider-sidebar .disabled.focus.more-link,
 .btn-primary[disabled]:hover,
 [disabled].button--primary:hover,
+.dropzone a[disabled].button:hover,
 .view-header > ul.links li a[disabled]:hover,
 .slider-sidebar [disabled].more-link:hover,
 .btn-primary[disabled]:focus,
 [disabled].button--primary:focus,
+.dropzone a[disabled].button:focus,
 .view-header > ul.links li a[disabled]:focus,
 .slider-sidebar [disabled].more-link:focus,
 .btn-primary[disabled].focus,
 [disabled].focus.button--primary,
+.dropzone a[disabled].focus.button,
 .view-header > ul.links li a[disabled].focus,
 .slider-sidebar [disabled].focus.more-link,
 fieldset[disabled] .btn-primary:hover,
 fieldset[disabled] .button--primary:hover,
+fieldset[disabled] .dropzone a.button:hover,
+.dropzone
+  fieldset[disabled] a.button:hover,
 fieldset[disabled] .view-header > ul.links li a:hover,
 .view-header > ul.links li
   fieldset[disabled] a:hover,
@@ -4691,6 +4796,9 @@ fieldset[disabled] .slider-sidebar .more-link:hover,
   fieldset[disabled] .more-link:hover,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .button--primary:focus,
+fieldset[disabled] .dropzone a.button:focus,
+.dropzone
+  fieldset[disabled] a.button:focus,
 fieldset[disabled] .view-header > ul.links li a:focus,
 .view-header > ul.links li
   fieldset[disabled] a:focus,
@@ -4699,6 +4807,9 @@ fieldset[disabled] .slider-sidebar .more-link:focus,
   fieldset[disabled] .more-link:focus,
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .focus.button--primary,
+fieldset[disabled] .dropzone a.focus.button,
+.dropzone
+  fieldset[disabled] a.focus.button,
 fieldset[disabled] .view-header > ul.links li a.focus,
 .view-header > ul.links li
   fieldset[disabled] a.focus,
@@ -4711,6 +4822,7 @@ fieldset[disabled] .slider-sidebar .focus.more-link,
 
 .btn-primary .badge,
 .button--primary .badge,
+.dropzone a.button .badge,
 .view-header > ul.links li a .badge,
 .slider-sidebar .more-link .badge {
   color: #222222;
@@ -5135,6 +5247,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-lg > .button,
 .agora-header .btn-group-lg > .more-link,
 .view-display-id-home .btn-group-lg > .more-link,
+.dropzone .btn-group-lg > a.button,
+.eb-tabs .nav-pills li.btn-group-lg > a,
 .view-header > ul.links li .btn-group-lg > a,
 .slider-sidebar .btn-group-lg > .more-link,
 .view-acteurs .more-link .btn-group-lg > a {
@@ -5149,6 +5263,9 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-sm > .button,
 .agora-header .btn-group-sm > .more-link,
 .view-display-id-home .btn-group-sm > .more-link,
+.dropzone .btn-group-sm > a.button,
+.eb-tabs .nav-pills li.btn-group-sm > a,
+#edit-header .form-actions > button,
 .button--small,
 .view-header > ul.links li a,
 .slider-sidebar .more-link,
@@ -5164,6 +5281,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-xs > .button,
 .agora-header .btn-group-xs > .more-link,
 .view-display-id-home .btn-group-xs > .more-link,
+.dropzone .btn-group-xs > a.button,
+.eb-tabs .nav-pills li.btn-group-xs > a,
 .view-header > ul.links li .btn-group-xs > a,
 .slider-sidebar .btn-group-xs > .more-link,
 .view-acteurs .more-link .btn-group-xs > a,
@@ -5455,6 +5574,8 @@ tbody.collapse.in {
 .btn-group > .button,
 .agora-header .btn-group > .more-link,
 .view-display-id-home .btn-group > .more-link,
+.dropzone .btn-group > a.button,
+.eb-tabs .nav-pills li.btn-group > a,
 .view-header > ul.links li .btn-group > a,
 .slider-sidebar .btn-group > .more-link,
 .view-acteurs .more-link .btn-group > a,
@@ -5464,6 +5585,10 @@ tbody.collapse.in {
   .btn-group-vertical > .more-link,
 .view-display-id-home
   .btn-group-vertical > .more-link,
+.dropzone
+  .btn-group-vertical > a.button,
+.eb-tabs .nav-pills
+  li.btn-group-vertical > a,
 .view-header > ul.links li
   .btn-group-vertical > a,
 .slider-sidebar
@@ -5478,6 +5603,8 @@ tbody.collapse.in {
 .btn-group > .button:hover,
 .agora-header .btn-group > .more-link:hover,
 .view-display-id-home .btn-group > .more-link:hover,
+.dropzone .btn-group > a.button:hover,
+.eb-tabs .nav-pills li.btn-group > a:hover,
 .view-header > ul.links li .btn-group > a:hover,
 .slider-sidebar .btn-group > .more-link:hover,
 .view-acteurs .more-link .btn-group > a:hover,
@@ -5485,6 +5612,8 @@ tbody.collapse.in {
 .btn-group > .button:focus,
 .agora-header .btn-group > .more-link:focus,
 .view-display-id-home .btn-group > .more-link:focus,
+.dropzone .btn-group > a.button:focus,
+.eb-tabs .nav-pills li.btn-group > a:focus,
 .view-header > ul.links li .btn-group > a:focus,
 .slider-sidebar .btn-group > .more-link:focus,
 .view-acteurs .more-link .btn-group > a:focus,
@@ -5492,6 +5621,8 @@ tbody.collapse.in {
 .btn-group > .button:active,
 .agora-header .btn-group > .more-link:active,
 .view-display-id-home .btn-group > .more-link:active,
+.dropzone .btn-group > a.button:active,
+.eb-tabs .nav-pills li.btn-group > a:active,
 .view-header > ul.links li .btn-group > a:active,
 .slider-sidebar .btn-group > .more-link:active,
 .view-acteurs .more-link .btn-group > a:active,
@@ -5499,6 +5630,8 @@ tbody.collapse.in {
 .btn-group > .active.button,
 .agora-header .btn-group > .active.more-link,
 .view-display-id-home .btn-group > .active.more-link,
+.dropzone .btn-group > a.active.button,
+.eb-tabs .nav-pills li.btn-group > a.active,
 .view-header > ul.links li .btn-group > a.active,
 .slider-sidebar .btn-group > .active.more-link,
 .view-acteurs .more-link .btn-group > a.active,
@@ -5508,6 +5641,10 @@ tbody.collapse.in {
     .btn-group-vertical > .more-link:hover,
 .view-display-id-home
     .btn-group-vertical > .more-link:hover,
+.dropzone
+    .btn-group-vertical > a.button:hover,
+.eb-tabs .nav-pills
+    li.btn-group-vertical > a:hover,
 .view-header > ul.links li
     .btn-group-vertical > a:hover,
 .slider-sidebar
@@ -5520,6 +5657,10 @@ tbody.collapse.in {
     .btn-group-vertical > .more-link:focus,
 .view-display-id-home
     .btn-group-vertical > .more-link:focus,
+.dropzone
+    .btn-group-vertical > a.button:focus,
+.eb-tabs .nav-pills
+    li.btn-group-vertical > a:focus,
 .view-header > ul.links li
     .btn-group-vertical > a:focus,
 .slider-sidebar
@@ -5532,6 +5673,10 @@ tbody.collapse.in {
     .btn-group-vertical > .more-link:active,
 .view-display-id-home
     .btn-group-vertical > .more-link:active,
+.dropzone
+    .btn-group-vertical > a.button:active,
+.eb-tabs .nav-pills
+    li.btn-group-vertical > a:active,
 .view-header > ul.links li
     .btn-group-vertical > a:active,
 .slider-sidebar
@@ -5544,6 +5689,10 @@ tbody.collapse.in {
     .btn-group-vertical > .active.more-link,
 .view-display-id-home
     .btn-group-vertical > .active.more-link,
+.dropzone
+    .btn-group-vertical > a.active.button,
+.eb-tabs .nav-pills
+    li.btn-group-vertical > a.active,
 .view-header > ul.links li
     .btn-group-vertical > a.active,
 .slider-sidebar
@@ -5560,6 +5709,9 @@ tbody.collapse.in {
 .btn-group
 .view-display-id-home .more-link + .btn,
 .view-display-id-home .btn-group .more-link + .btn,
+.btn-group .dropzone a.button + .btn,
+.btn-group .eb-tabs .nav-pills li > a + .btn,
+.eb-tabs .nav-pills .btn-group li > a + .btn,
 .btn-group .view-header > ul.links li a + .btn,
 .view-header > ul.links li .btn-group a + .btn,
 .btn-group .slider-sidebar .more-link + .btn,
@@ -5573,6 +5725,9 @@ tbody.collapse.in {
 .btn-group
 .view-display-id-home .more-link + .button,
 .view-display-id-home .btn-group .more-link + .button,
+.btn-group .dropzone a.button + .button,
+.btn-group .eb-tabs .nav-pills li > a + .button,
+.eb-tabs .nav-pills .btn-group li > a + .button,
 .btn-group .view-header > ul.links li a + .button,
 .view-header > ul.links li .btn-group a + .button,
 .btn-group .slider-sidebar .more-link + .button,
@@ -5585,6 +5740,11 @@ tbody.collapse.in {
 .agora-header .btn-group .button + .more-link,
 .btn-group .agora-header .more-link + .more-link,
 .agora-header .btn-group .more-link + .more-link,
+.agora-header .btn-group .dropzone a.button + .more-link,
+.btn-group .eb-tabs .nav-pills .agora-header li > a + .more-link,
+.agora-header .btn-group .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .btn-group .agora-header li > a + .more-link,
+.agora-header .eb-tabs .nav-pills .btn-group li > a + .more-link,
 .btn-group .view-header > ul.links li .agora-header a + .more-link,
 .agora-header .btn-group .view-header > ul.links li a + .more-link,
 .view-header > ul.links li .btn-group .agora-header a + .more-link,
@@ -5601,6 +5761,13 @@ tbody.collapse.in {
 .view-display-id-home .btn-group .button + .more-link,
 .btn-group .view-display-id-home .more-link + .more-link,
 .view-display-id-home .btn-group .more-link + .more-link,
+.view-display-id-home .btn-group .dropzone a.button + .more-link,
+.btn-group .eb-tabs .nav-pills
+.view-display-id-home li > a + .more-link,
+.view-display-id-home .btn-group .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .btn-group
+.view-display-id-home li > a + .more-link,
+.view-display-id-home .eb-tabs .nav-pills .btn-group li > a + .more-link,
 .btn-group .view-header > ul.links li
 .view-display-id-home a + .more-link,
 .view-display-id-home .btn-group .view-header > ul.links li a + .more-link,
@@ -5613,6 +5780,44 @@ tbody.collapse.in {
 .view-acteurs .more-link .btn-group
 .view-display-id-home a + .more-link,
 .view-display-id-home .view-acteurs .more-link .btn-group a + .more-link,
+.btn-group .dropzone .btn + a.button,
+.btn-group .dropzone .button + a.button,
+.btn-group .agora-header .dropzone .more-link + a.button,
+.agora-header .btn-group .dropzone .more-link + a.button,
+.btn-group
+.view-display-id-home .dropzone .more-link + a.button,
+.view-display-id-home .btn-group .dropzone .more-link + a.button,
+.btn-group .eb-tabs .nav-pills .dropzone li > a + a.button,
+.eb-tabs .nav-pills .btn-group .dropzone li > a + a.button,
+.btn-group .view-header > ul.links li .dropzone a + a.button,
+.view-header > ul.links li .btn-group .dropzone a + a.button,
+.dropzone .view-header > ul.links li .btn-group a + a.button,
+.btn-group .slider-sidebar .dropzone .more-link + a.button,
+.slider-sidebar .btn-group .dropzone .more-link + a.button,
+.btn-group .view-acteurs .more-link .dropzone a + a.button,
+.view-acteurs .more-link .btn-group .dropzone a + a.button,
+.btn-group .eb-tabs .nav-pills li > .btn + a,
+.eb-tabs .nav-pills .btn-group li > .btn + a,
+.btn-group .eb-tabs .nav-pills li > .button + a,
+.eb-tabs .nav-pills .btn-group li > .button + a,
+.btn-group .agora-header .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .btn-group .agora-header li > .more-link + a,
+.agora-header .btn-group .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .agora-header .btn-group li > .more-link + a,
+.btn-group
+.view-display-id-home .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .btn-group
+.view-display-id-home li > .more-link + a,
+.view-display-id-home .btn-group .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills
+.view-display-id-home .btn-group li > .more-link + a,
+.eb-tabs .nav-pills .btn-group .dropzone li > a.button + a,
+.btn-group .eb-tabs .nav-pills li > a + a,
+.eb-tabs .nav-pills .btn-group li > a + a,
+.btn-group .slider-sidebar .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .btn-group .slider-sidebar li > .more-link + a,
+.slider-sidebar .btn-group .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .slider-sidebar .btn-group li > .more-link + a,
 .btn-group .view-header > ul.links li .btn + a,
 .view-header > ul.links li .btn-group .btn + a,
 .btn-group .view-header > ul.links li .button + a,
@@ -5628,6 +5833,9 @@ tbody.collapse.in {
 .view-display-id-home .btn-group .view-header > ul.links li .more-link + a,
 .view-header > ul.links li
 .view-display-id-home .btn-group .more-link + a,
+.btn-group .dropzone .view-header > ul.links li a.button + a,
+.view-header > ul.links li .btn-group .dropzone a.button + a,
+.btn-group .eb-tabs .nav-pills .view-header > ul.links li > a + a,
 .btn-group .view-header > ul.links li a + a,
 .view-header > ul.links li .btn-group a + a,
 .btn-group .slider-sidebar .view-header > ul.links li .more-link + a,
@@ -5639,6 +5847,11 @@ tbody.collapse.in {
 .slider-sidebar .btn-group .btn + .more-link,
 .btn-group .slider-sidebar .button + .more-link,
 .slider-sidebar .btn-group .button + .more-link,
+.slider-sidebar .btn-group .dropzone a.button + .more-link,
+.btn-group .eb-tabs .nav-pills .slider-sidebar li > a + .more-link,
+.slider-sidebar .btn-group .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .btn-group .slider-sidebar li > a + .more-link,
+.slider-sidebar .eb-tabs .nav-pills .btn-group li > a + .more-link,
 .btn-group .view-header > ul.links li .slider-sidebar a + .more-link,
 .slider-sidebar .btn-group .view-header > ul.links li a + .more-link,
 .view-header > ul.links li .btn-group .slider-sidebar a + .more-link,
@@ -5664,6 +5877,9 @@ tbody.collapse.in {
 .view-display-id-home .btn-group .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link
 .view-display-id-home .btn-group .more-link + a,
+.view-acteurs .more-link .btn-group .dropzone a.button + a,
+.btn-group .eb-tabs .nav-pills .view-acteurs .more-link li > a + a,
+.eb-tabs .nav-pills .btn-group .view-acteurs .more-link li > a + a,
 .btn-group .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .btn-group .slider-sidebar .more-link + a,
 .slider-sidebar .btn-group .view-acteurs .more-link .more-link + a,
@@ -5679,6 +5895,10 @@ tbody.collapse.in {
 .view-display-id-home .more-link + .btn-group,
 .view-display-id-home
 .btn-group .more-link + .btn-group,
+.btn-group .dropzone a.button + .btn-group,
+.btn-group .eb-tabs .nav-pills li > a + .btn-group,
+.eb-tabs .nav-pills
+.btn-group li > a + .btn-group,
 .btn-group .view-header > ul.links li a + .btn-group,
 .view-header > ul.links li
 .btn-group a + .btn-group,
@@ -5697,6 +5917,10 @@ tbody.collapse.in {
 .view-display-id-home .btn-group + .more-link,
 .view-display-id-home
 .btn-group .btn-group + .more-link,
+.btn-group .dropzone .btn-group + a.button,
+.btn-group .eb-tabs .nav-pills li > .btn-group + a,
+.eb-tabs .nav-pills
+.btn-group li > .btn-group + a,
 .btn-group .view-header > ul.links li .btn-group + a,
 .view-header > ul.links li
 .btn-group .btn-group + a,
@@ -5731,6 +5955,10 @@ tbody.collapse.in {
 .btn-toolbar
   .view-display-id-home .more-link,
 .view-display-id-home .btn-toolbar .more-link,
+.btn-toolbar .dropzone a.button,
+.dropzone .btn-toolbar a.button,
+.btn-toolbar .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills .btn-toolbar li > a,
 .btn-toolbar .view-header > ul.links li a,
 .view-header > ul.links li .btn-toolbar a,
 .btn-toolbar .slider-sidebar .more-link,
@@ -5746,6 +5974,8 @@ tbody.collapse.in {
 .btn-toolbar > .button,
 .agora-header .btn-toolbar > .more-link,
 .view-display-id-home .btn-toolbar > .more-link,
+.dropzone .btn-toolbar > a.button,
+.eb-tabs .nav-pills li.btn-toolbar > a,
 .view-header > ul.links li .btn-toolbar > a,
 .slider-sidebar .btn-toolbar > .more-link,
 .view-acteurs .more-link .btn-toolbar > a,
@@ -5758,6 +5988,8 @@ tbody.collapse.in {
 .btn-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .agora-header .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .view-display-id-home .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.dropzone .btn-group > a.button:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.eb-tabs .nav-pills li.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .slider-sidebar .btn-group > .more-link:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .view-acteurs .more-link .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
@@ -5768,6 +6000,8 @@ tbody.collapse.in {
 .btn-group > .button:first-child,
 .agora-header .btn-group > .more-link:first-child,
 .view-display-id-home .btn-group > .more-link:first-child,
+.dropzone .btn-group > a.button:first-child,
+.eb-tabs .nav-pills li.btn-group > a:first-child,
 .view-header > ul.links li .btn-group > a:first-child,
 .slider-sidebar .btn-group > .more-link:first-child,
 .view-acteurs .more-link .btn-group > a:first-child {
@@ -5778,6 +6012,8 @@ tbody.collapse.in {
 .btn-group > .button:first-child:not(:last-child):not(.dropdown-toggle),
 .agora-header .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle),
 .view-display-id-home .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle),
+.dropzone .btn-group > a.button:first-child:not(:last-child):not(.dropdown-toggle),
+.eb-tabs .nav-pills li.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle),
 .slider-sidebar .btn-group > .more-link:first-child:not(:last-child):not(.dropdown-toggle),
 .view-acteurs .more-link .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -5789,6 +6025,8 @@ tbody.collapse.in {
 .btn-group > .button:last-child:not(:first-child),
 .agora-header .btn-group > .more-link:last-child:not(:first-child),
 .view-display-id-home .btn-group > .more-link:last-child:not(:first-child),
+.dropzone .btn-group > a.button:last-child:not(:first-child),
+.eb-tabs .nav-pills li.btn-group > a:last-child:not(:first-child),
 .view-header > ul.links li .btn-group > a:last-child:not(:first-child),
 .slider-sidebar .btn-group > .more-link:last-child:not(:first-child),
 .view-acteurs .more-link .btn-group > a:last-child:not(:first-child),
@@ -5805,6 +6043,8 @@ tbody.collapse.in {
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .button,
 .agora-header .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-display-id-home .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link,
+.dropzone .btn-group > .btn-group:not(:first-child):not(:last-child) > a.button,
+.eb-tabs .nav-pills .btn-group > li.btn-group:not(:first-child):not(:last-child) > a,
 .view-header > ul.links li .btn-group > .btn-group:not(:first-child):not(:last-child) > a,
 .slider-sidebar .btn-group > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-acteurs .more-link .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
@@ -5815,6 +6055,8 @@ tbody.collapse.in {
 .btn-group > .btn-group:first-child:not(:last-child) > .button:last-child,
 .agora-header .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-display-id-home .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
+.dropzone .btn-group > .btn-group:first-child:not(:last-child) > a.button:last-child,
+.eb-tabs .nav-pills .btn-group > li.btn-group:first-child:not(:last-child) > a:last-child,
 .view-header > ul.links li .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
 .slider-sidebar .btn-group > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-acteurs .more-link .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
@@ -5827,6 +6069,8 @@ tbody.collapse.in {
 .btn-group > .btn-group:last-child:not(:first-child) > .button:first-child,
 .agora-header .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-display-id-home .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child,
+.dropzone .btn-group > .btn-group:last-child:not(:first-child) > a.button:first-child,
+.eb-tabs .nav-pills .btn-group > li.btn-group:last-child:not(:first-child) > a:first-child,
 .view-header > ul.links li .btn-group > .btn-group:last-child:not(:first-child) > a:first-child,
 .slider-sidebar .btn-group > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-acteurs .more-link .btn-group > .btn-group:last-child:not(:first-child) > a:first-child {
@@ -5843,6 +6087,8 @@ tbody.collapse.in {
 .btn-group > .button + .dropdown-toggle,
 .agora-header .btn-group > .more-link + .dropdown-toggle,
 .view-display-id-home .btn-group > .more-link + .dropdown-toggle,
+.dropzone .btn-group > a.button + .dropdown-toggle,
+.eb-tabs .nav-pills li.btn-group > a + .dropdown-toggle,
 .view-header > ul.links li .btn-group > a + .dropdown-toggle,
 .slider-sidebar .btn-group > .more-link + .dropdown-toggle,
 .view-acteurs .more-link .btn-group > a + .dropdown-toggle {
@@ -5855,6 +6101,8 @@ tbody.collapse.in {
 .btn-group-lg.btn-group > .button + .dropdown-toggle,
 .agora-header .btn-group-lg.btn-group > .more-link + .dropdown-toggle,
 .view-display-id-home .btn-group-lg.btn-group > .more-link + .dropdown-toggle,
+.dropzone .btn-group-lg.btn-group > a.button + .dropdown-toggle,
+.eb-tabs .nav-pills li.btn-group-lg.btn-group > a + .dropdown-toggle,
 .view-header > ul.links li .btn-group-lg.btn-group > a + .dropdown-toggle,
 .slider-sidebar .btn-group-lg.btn-group > .more-link + .dropdown-toggle,
 .view-acteurs .more-link .btn-group-lg.btn-group > a + .dropdown-toggle {
@@ -5874,6 +6122,8 @@ tbody.collapse.in {
 .button .caret,
 .agora-header .more-link .caret,
 .view-display-id-home .more-link .caret,
+.dropzone a.button .caret,
+.eb-tabs .nav-pills li > a .caret,
 .view-header > ul.links li a .caret,
 .slider-sidebar .more-link .caret,
 .view-acteurs .more-link a .caret {
@@ -5885,6 +6135,8 @@ tbody.collapse.in {
 .btn-group-lg > .button .caret,
 .agora-header .btn-group-lg > .more-link .caret,
 .view-display-id-home .btn-group-lg > .more-link .caret,
+.dropzone .btn-group-lg > a.button .caret,
+.eb-tabs .nav-pills li.btn-group-lg > a .caret,
 .view-header > ul.links li .btn-group-lg > a .caret,
 .slider-sidebar .btn-group-lg > .more-link .caret,
 .view-acteurs .more-link .btn-group-lg > a .caret {
@@ -5900,6 +6152,9 @@ tbody.collapse.in {
 .dropup
 .view-display-id-home .btn-group-lg > .more-link .caret,
 .view-display-id-home .dropup .btn-group-lg > .more-link .caret,
+.dropup .dropzone .btn-group-lg > a.button .caret,
+.dropup .eb-tabs .nav-pills li.btn-group-lg > a .caret,
+.eb-tabs .nav-pills .dropup li.btn-group-lg > a .caret,
 .dropup .view-header > ul.links li .btn-group-lg > a .caret,
 .view-header > ul.links li .dropup .btn-group-lg > a .caret,
 .dropup .slider-sidebar .btn-group-lg > .more-link .caret,
@@ -5913,6 +6168,8 @@ tbody.collapse.in {
 .btn-group-vertical > .button,
 .agora-header .btn-group-vertical > .more-link,
 .view-display-id-home .btn-group-vertical > .more-link,
+.dropzone .btn-group-vertical > a.button,
+.eb-tabs .nav-pills li.btn-group-vertical > a,
 .view-header > ul.links li .btn-group-vertical > a,
 .slider-sidebar .btn-group-vertical > .more-link,
 .view-acteurs .more-link .btn-group-vertical > a,
@@ -5923,6 +6180,10 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group > .more-link,
 .view-display-id-home
 .btn-group-vertical > .btn-group > .more-link,
+.dropzone
+.btn-group-vertical > .btn-group > a.button,
+.eb-tabs .nav-pills
+.btn-group-vertical > li.btn-group > a,
 .view-header > ul.links li
 .btn-group-vertical > .btn-group > a,
 .slider-sidebar
@@ -5949,6 +6210,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group > .button,
 .agora-header .btn-group-vertical > .btn-group > .more-link,
 .view-display-id-home .btn-group-vertical > .btn-group > .more-link,
+.dropzone .btn-group-vertical > .btn-group > a.button,
+.eb-tabs .nav-pills .btn-group-vertical > li.btn-group > a,
 .view-header > ul.links li .btn-group-vertical > .btn-group > a,
 .slider-sidebar .btn-group-vertical > .btn-group > .more-link,
 .view-acteurs .more-link .btn-group-vertical > .btn-group > a {
@@ -5959,6 +6222,8 @@ tbody.collapse.in {
 .btn-group-vertical > .button + .btn,
 .agora-header .btn-group-vertical > .more-link + .btn,
 .view-display-id-home .btn-group-vertical > .more-link + .btn,
+.dropzone .btn-group-vertical > a.button + .btn,
+.eb-tabs .nav-pills li.btn-group-vertical > a + .btn,
 .view-header > ul.links li .btn-group-vertical > a + .btn,
 .slider-sidebar .btn-group-vertical > .more-link + .btn,
 .view-acteurs .more-link .btn-group-vertical > a + .btn,
@@ -5966,12 +6231,17 @@ tbody.collapse.in {
 .btn-group-vertical > .button + .button,
 .agora-header .btn-group-vertical > .more-link + .button,
 .view-display-id-home .btn-group-vertical > .more-link + .button,
+.dropzone .btn-group-vertical > a.button + .button,
+.eb-tabs .nav-pills li.btn-group-vertical > a + .button,
 .view-header > ul.links li .btn-group-vertical > a + .button,
 .slider-sidebar .btn-group-vertical > .more-link + .button,
 .view-acteurs .more-link .btn-group-vertical > a + .button,
 .agora-header .btn-group-vertical > .btn + .more-link,
 .agora-header .btn-group-vertical > .button + .more-link,
 .agora-header .btn-group-vertical > .more-link + .more-link,
+.agora-header .dropzone .btn-group-vertical > a.button + .more-link,
+.eb-tabs .nav-pills .agora-header li.btn-group-vertical > a + .more-link,
+.agora-header .eb-tabs .nav-pills li.btn-group-vertical > a + .more-link,
 .view-header > ul.links li .agora-header .btn-group-vertical > a + .more-link,
 .agora-header .view-header > ul.links li .btn-group-vertical > a + .more-link,
 .view-acteurs .more-link .agora-header .btn-group-vertical > a + .more-link,
@@ -5979,12 +6249,37 @@ tbody.collapse.in {
 .view-display-id-home .btn-group-vertical > .btn + .more-link,
 .view-display-id-home .btn-group-vertical > .button + .more-link,
 .view-display-id-home .btn-group-vertical > .more-link + .more-link,
+.view-display-id-home .dropzone .btn-group-vertical > a.button + .more-link,
+.eb-tabs .nav-pills
+.view-display-id-home li.btn-group-vertical > a + .more-link,
+.view-display-id-home .eb-tabs .nav-pills li.btn-group-vertical > a + .more-link,
 .view-header > ul.links li
 .view-display-id-home .btn-group-vertical > a + .more-link,
 .view-display-id-home .view-header > ul.links li .btn-group-vertical > a + .more-link,
 .view-acteurs .more-link
 .view-display-id-home .btn-group-vertical > a + .more-link,
 .view-display-id-home .view-acteurs .more-link .btn-group-vertical > a + .more-link,
+.dropzone .btn-group-vertical > .btn + a.button,
+.dropzone .btn-group-vertical > .button + a.button,
+.agora-header .dropzone .btn-group-vertical > .more-link + a.button,
+.view-display-id-home .dropzone .btn-group-vertical > .more-link + a.button,
+.eb-tabs .nav-pills .dropzone li.btn-group-vertical > a + a.button,
+.view-header > ul.links li .dropzone .btn-group-vertical > a + a.button,
+.dropzone .view-header > ul.links li .btn-group-vertical > a + a.button,
+.slider-sidebar .dropzone .btn-group-vertical > .more-link + a.button,
+.view-acteurs .more-link .dropzone .btn-group-vertical > a + a.button,
+.eb-tabs .nav-pills li.btn-group-vertical > .btn + a,
+.eb-tabs .nav-pills li.btn-group-vertical > .button + a,
+.agora-header .eb-tabs .nav-pills li.btn-group-vertical > .more-link + a,
+.eb-tabs .nav-pills .agora-header li.btn-group-vertical > .more-link + a,
+.view-display-id-home .eb-tabs .nav-pills li.btn-group-vertical > .more-link + a,
+.eb-tabs .nav-pills
+.view-display-id-home li.btn-group-vertical > .more-link + a,
+.eb-tabs .nav-pills .dropzone li.btn-group-vertical > a.button + a,
+.eb-tabs .nav-pills li.btn-group-vertical > a + a,
+.eb-tabs .nav-pills .view-header > ul.links li li.btn-group-vertical > a + a,
+.slider-sidebar .eb-tabs .nav-pills li.btn-group-vertical > .more-link + a,
+.eb-tabs .nav-pills .slider-sidebar li.btn-group-vertical > .more-link + a,
 .view-header > ul.links li .btn-group-vertical > .btn + a,
 .view-header > ul.links li .btn-group-vertical > .button + a,
 .agora-header .view-header > ul.links li .btn-group-vertical > .more-link + a,
@@ -5992,11 +6287,17 @@ tbody.collapse.in {
 .view-display-id-home .view-header > ul.links li .btn-group-vertical > .more-link + a,
 .view-header > ul.links li
 .view-display-id-home .btn-group-vertical > .more-link + a,
+.dropzone .view-header > ul.links li .btn-group-vertical > a.button + a,
+.view-header > ul.links li .dropzone .btn-group-vertical > a.button + a,
+.eb-tabs .nav-pills .view-header > ul.links li.btn-group-vertical > a + a,
 .view-header > ul.links li .btn-group-vertical > a + a,
 .slider-sidebar .view-header > ul.links li .btn-group-vertical > .more-link + a,
 .view-header > ul.links li .slider-sidebar .btn-group-vertical > .more-link + a,
 .slider-sidebar .btn-group-vertical > .btn + .more-link,
 .slider-sidebar .btn-group-vertical > .button + .more-link,
+.slider-sidebar .dropzone .btn-group-vertical > a.button + .more-link,
+.eb-tabs .nav-pills .slider-sidebar li.btn-group-vertical > a + .more-link,
+.slider-sidebar .eb-tabs .nav-pills li.btn-group-vertical > a + .more-link,
 .view-header > ul.links li .slider-sidebar .btn-group-vertical > a + .more-link,
 .slider-sidebar .view-header > ul.links li .btn-group-vertical > a + .more-link,
 .slider-sidebar .btn-group-vertical > .more-link + .more-link,
@@ -6009,6 +6310,7 @@ tbody.collapse.in {
 .view-display-id-home .view-acteurs .more-link .btn-group-vertical > .more-link + a,
 .view-acteurs .more-link
 .view-display-id-home .btn-group-vertical > .more-link + a,
+.view-acteurs .more-link .dropzone .btn-group-vertical > a.button + a,
 .view-acteurs .more-link .view-header > ul.links li .btn-group-vertical > a + a,
 .slider-sidebar .view-acteurs .more-link .btn-group-vertical > .more-link + a,
 .view-acteurs .more-link .slider-sidebar .btn-group-vertical > .more-link + a,
@@ -6019,6 +6321,10 @@ tbody.collapse.in {
 .btn-group-vertical > .more-link + .btn-group,
 .view-display-id-home
 .btn-group-vertical > .more-link + .btn-group,
+.dropzone
+.btn-group-vertical > a.button + .btn-group,
+.eb-tabs .nav-pills
+li.btn-group-vertical > a + .btn-group,
 .view-header > ul.links li
 .btn-group-vertical > a + .btn-group,
 .slider-sidebar
@@ -6031,6 +6337,10 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group + .more-link,
 .view-display-id-home
 .btn-group-vertical > .btn-group + .more-link,
+.dropzone
+.btn-group-vertical > .btn-group + a.button,
+.eb-tabs .nav-pills
+li.btn-group-vertical > .btn-group + a,
 .view-header > ul.links li
 .btn-group-vertical > .btn-group + a,
 .slider-sidebar
@@ -6046,6 +6356,8 @@ tbody.collapse.in {
 .btn-group-vertical > .button:not(:first-child):not(:last-child),
 .agora-header .btn-group-vertical > .more-link:not(:first-child):not(:last-child),
 .view-display-id-home .btn-group-vertical > .more-link:not(:first-child):not(:last-child),
+.dropzone .btn-group-vertical > a.button:not(:first-child):not(:last-child),
+.eb-tabs .nav-pills li.btn-group-vertical > a:not(:first-child):not(:last-child),
 .view-header > ul.links li .btn-group-vertical > a:not(:first-child):not(:last-child),
 .slider-sidebar .btn-group-vertical > .more-link:not(:first-child):not(:last-child),
 .view-acteurs .more-link .btn-group-vertical > a:not(:first-child):not(:last-child) {
@@ -6056,6 +6368,8 @@ tbody.collapse.in {
 .btn-group-vertical > .button:first-child:not(:last-child),
 .agora-header .btn-group-vertical > .more-link:first-child:not(:last-child),
 .view-display-id-home .btn-group-vertical > .more-link:first-child:not(:last-child),
+.dropzone .btn-group-vertical > a.button:first-child:not(:last-child),
+.eb-tabs .nav-pills li.btn-group-vertical > a:first-child:not(:last-child),
 .view-header > ul.links li .btn-group-vertical > a:first-child:not(:last-child),
 .slider-sidebar .btn-group-vertical > .more-link:first-child:not(:last-child),
 .view-acteurs .more-link .btn-group-vertical > a:first-child:not(:last-child) {
@@ -6069,6 +6383,8 @@ tbody.collapse.in {
 .btn-group-vertical > .button:last-child:not(:first-child),
 .agora-header .btn-group-vertical > .more-link:last-child:not(:first-child),
 .view-display-id-home .btn-group-vertical > .more-link:last-child:not(:first-child),
+.dropzone .btn-group-vertical > a.button:last-child:not(:first-child),
+.eb-tabs .nav-pills li.btn-group-vertical > a:last-child:not(:first-child),
 .view-header > ul.links li .btn-group-vertical > a:last-child:not(:first-child),
 .slider-sidebar .btn-group-vertical > .more-link:last-child:not(:first-child),
 .view-acteurs .more-link .btn-group-vertical > a:last-child:not(:first-child) {
@@ -6082,6 +6398,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .button,
 .agora-header .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-display-id-home .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link,
+.dropzone .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a.button,
+.eb-tabs .nav-pills .btn-group-vertical > li.btn-group:not(:first-child):not(:last-child) > a,
 .view-header > ul.links li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a,
 .slider-sidebar .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .more-link,
 .view-acteurs .more-link .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
@@ -6092,6 +6410,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .button:last-child,
 .agora-header .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-display-id-home .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
+.dropzone .btn-group-vertical > .btn-group:first-child:not(:last-child) > a.button:last-child,
+.eb-tabs .nav-pills .btn-group-vertical > li.btn-group:first-child:not(:last-child) > a:last-child,
 .view-header > ul.links li .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
 .slider-sidebar .btn-group-vertical > .btn-group:first-child:not(:last-child) > .more-link:last-child,
 .view-acteurs .more-link .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
@@ -6104,6 +6424,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .button:first-child,
 .agora-header .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-display-id-home .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child,
+.dropzone .btn-group-vertical > .btn-group:last-child:not(:first-child) > a.button:first-child,
+.eb-tabs .nav-pills .btn-group-vertical > li.btn-group:last-child:not(:first-child) > a:first-child,
 .view-header > ul.links li .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child,
 .slider-sidebar .btn-group-vertical > .btn-group:last-child:not(:first-child) > .more-link:first-child,
 .view-acteurs .more-link .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child {
@@ -6122,6 +6444,8 @@ tbody.collapse.in {
 .btn-group-justified > .button,
 .agora-header .btn-group-justified > .more-link,
 .view-display-id-home .btn-group-justified > .more-link,
+.dropzone .btn-group-justified > a.button,
+.eb-tabs .nav-pills li.btn-group-justified > a,
 .view-header > ul.links li .btn-group-justified > a,
 .slider-sidebar .btn-group-justified > .more-link,
 .view-acteurs .more-link .btn-group-justified > a,
@@ -6138,6 +6462,9 @@ tbody.collapse.in {
 .btn-group-justified > .btn-group
   .view-display-id-home .more-link,
 .view-display-id-home .btn-group-justified > .btn-group .more-link,
+.dropzone .btn-group-justified > .btn-group a.button,
+.btn-group-justified > .btn-group .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills .btn-group-justified > .btn-group li > a,
 .btn-group-justified > .btn-group .view-header > ul.links li a,
 .view-header > ul.links li .btn-group-justified > .btn-group a,
 .btn-group-justified > .btn-group .slider-sidebar .more-link,
@@ -6155,6 +6482,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .button input[type="radio"],
 .agora-header [data-toggle="buttons"] > .more-link input[type="radio"],
 .view-display-id-home [data-toggle="buttons"] > .more-link input[type="radio"],
+.dropzone [data-toggle="buttons"] > a.button input[type="radio"],
+.eb-tabs .nav-pills li[data-toggle="buttons"] > a input[type="radio"],
 .view-header > ul.links li [data-toggle="buttons"] > a input[type="radio"],
 .slider-sidebar [data-toggle="buttons"] > .more-link input[type="radio"],
 .view-acteurs .more-link [data-toggle="buttons"] > a input[type="radio"],
@@ -6164,6 +6493,10 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .more-link input[type="checkbox"],
 .view-display-id-home
 [data-toggle="buttons"] > .more-link input[type="checkbox"],
+.dropzone
+[data-toggle="buttons"] > a.button input[type="checkbox"],
+.eb-tabs .nav-pills
+li[data-toggle="buttons"] > a input[type="checkbox"],
 .view-header > ul.links li
 [data-toggle="buttons"] > a input[type="checkbox"],
 .slider-sidebar
@@ -6176,6 +6509,10 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > .more-link input[type="radio"],
 .view-display-id-home
 [data-toggle="buttons"] > .btn-group > .more-link input[type="radio"],
+.dropzone
+[data-toggle="buttons"] > .btn-group > a.button input[type="radio"],
+.eb-tabs .nav-pills
+[data-toggle="buttons"] > li.btn-group > a input[type="radio"],
 .view-header > ul.links li
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
 .slider-sidebar
@@ -6188,6 +6525,10 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > .more-link input[type="checkbox"],
 .view-display-id-home
 [data-toggle="buttons"] > .btn-group > .more-link input[type="checkbox"],
+.dropzone
+[data-toggle="buttons"] > .btn-group > a.button input[type="checkbox"],
+.eb-tabs .nav-pills
+[data-toggle="buttons"] > li.btn-group > a input[type="checkbox"],
 .view-header > ul.links li
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"],
 .slider-sidebar
@@ -6273,6 +6614,10 @@ tbody.collapse.in {
   .input-group-sm > .input-group-btn > .input-group-addon.more-link,
 .view-display-id-home
   .input-group-sm > .input-group-btn > .input-group-addon.more-link,
+.dropzone
+  .input-group-sm > .input-group-btn > a.input-group-addon.button,
+.eb-tabs .nav-pills
+  .input-group-sm > li.input-group-btn > a.input-group-addon,
 .view-header > ul.links li
   .input-group-sm > .input-group-btn > a.input-group-addon,
 .slider-sidebar
@@ -6293,6 +6638,10 @@ tbody.collapse.in {
   .input-group-lg > .input-group-btn > .input-group-addon.more-link,
 .view-display-id-home
   .input-group-lg > .input-group-btn > .input-group-addon.more-link,
+.dropzone
+  .input-group-lg > .input-group-btn > a.input-group-addon.button,
+.eb-tabs .nav-pills
+  .input-group-lg > li.input-group-btn > a.input-group-addon,
 .view-header > ul.links li
   .input-group-lg > .input-group-btn > a.input-group-addon,
 .slider-sidebar
@@ -6319,6 +6668,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > .more-link,
 .view-display-id-home
 .input-group-btn:first-child > .more-link,
+.dropzone
+.input-group-btn:first-child > a.button,
+.eb-tabs .nav-pills
+li.input-group-btn:first-child > a,
 .view-header > ul.links li
 .input-group-btn:first-child > a,
 .slider-sidebar
@@ -6331,6 +6684,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-group > .more-link,
 .view-display-id-home
 .input-group-btn:first-child > .btn-group > .more-link,
+.dropzone
+.input-group-btn:first-child > .btn-group > a.button,
+.eb-tabs .nav-pills
+.input-group-btn:first-child > li.btn-group > a,
 .view-header > ul.links li
 .input-group-btn:first-child > .btn-group > a,
 .slider-sidebar
@@ -6344,6 +6701,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > .more-link:not(:last-child):not(.dropdown-toggle),
 .view-display-id-home
 .input-group-btn:last-child > .more-link:not(:last-child):not(.dropdown-toggle),
+.dropzone
+.input-group-btn:last-child > a.button:not(:last-child):not(.dropdown-toggle),
+.eb-tabs .nav-pills
+li.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
 .view-header > ul.links li
 .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
 .slider-sidebar
@@ -6356,6 +6717,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .more-link,
 .view-display-id-home
 .input-group-btn:last-child > .btn-group:not(:last-child) > .more-link,
+.dropzone
+.input-group-btn:last-child > .btn-group:not(:last-child) > a.button,
+.eb-tabs .nav-pills
+.input-group-btn:last-child > li.btn-group:not(:last-child) > a,
 .view-header > ul.links li
 .input-group-btn:last-child > .btn-group:not(:last-child) > a,
 .slider-sidebar
@@ -6380,6 +6745,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > .more-link,
 .view-display-id-home
 .input-group-btn:last-child > .more-link,
+.dropzone
+.input-group-btn:last-child > a.button,
+.eb-tabs .nav-pills
+li.input-group-btn:last-child > a,
 .view-header > ul.links li
 .input-group-btn:last-child > a,
 .slider-sidebar
@@ -6392,6 +6761,10 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group > .more-link,
 .view-display-id-home
 .input-group-btn:last-child > .btn-group > .more-link,
+.dropzone
+.input-group-btn:last-child > .btn-group > a.button,
+.eb-tabs .nav-pills
+.input-group-btn:last-child > li.btn-group > a,
 .view-header > ul.links li
 .input-group-btn:last-child > .btn-group > a,
 .slider-sidebar
@@ -6405,6 +6778,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > .more-link:not(:first-child),
 .view-display-id-home
 .input-group-btn:first-child > .more-link:not(:first-child),
+.dropzone
+.input-group-btn:first-child > a.button:not(:first-child),
+.eb-tabs .nav-pills
+li.input-group-btn:first-child > a:not(:first-child),
 .view-header > ul.links li
 .input-group-btn:first-child > a:not(:first-child),
 .slider-sidebar
@@ -6417,6 +6794,10 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-group:not(:first-child) > .more-link,
 .view-display-id-home
 .input-group-btn:first-child > .btn-group:not(:first-child) > .more-link,
+.dropzone
+.input-group-btn:first-child > .btn-group:not(:first-child) > a.button,
+.eb-tabs .nav-pills
+.input-group-btn:first-child > li.btn-group:not(:first-child) > a,
 .view-header > ul.links li
 .input-group-btn:first-child > .btn-group:not(:first-child) > a,
 .slider-sidebar
@@ -6441,6 +6822,8 @@ tbody.collapse.in {
 .input-group-btn > .button,
 .agora-header .input-group-btn > .more-link,
 .view-display-id-home .input-group-btn > .more-link,
+.dropzone .input-group-btn > a.button,
+.eb-tabs .nav-pills li.input-group-btn > a,
 .view-header > ul.links li .input-group-btn > a,
 .slider-sidebar .input-group-btn > .more-link,
 .view-acteurs .more-link .input-group-btn > a {
@@ -6451,6 +6834,8 @@ tbody.collapse.in {
 .input-group-btn > .button + .btn,
 .agora-header .input-group-btn > .more-link + .btn,
 .view-display-id-home .input-group-btn > .more-link + .btn,
+.dropzone .input-group-btn > a.button + .btn,
+.eb-tabs .nav-pills li.input-group-btn > a + .btn,
 .view-header > ul.links li .input-group-btn > a + .btn,
 .slider-sidebar .input-group-btn > .more-link + .btn,
 .view-acteurs .more-link .input-group-btn > a + .btn,
@@ -6458,12 +6843,17 @@ tbody.collapse.in {
 .input-group-btn > .button + .button,
 .agora-header .input-group-btn > .more-link + .button,
 .view-display-id-home .input-group-btn > .more-link + .button,
+.dropzone .input-group-btn > a.button + .button,
+.eb-tabs .nav-pills li.input-group-btn > a + .button,
 .view-header > ul.links li .input-group-btn > a + .button,
 .slider-sidebar .input-group-btn > .more-link + .button,
 .view-acteurs .more-link .input-group-btn > a + .button,
 .agora-header .input-group-btn > .btn + .more-link,
 .agora-header .input-group-btn > .button + .more-link,
 .agora-header .input-group-btn > .more-link + .more-link,
+.agora-header .dropzone .input-group-btn > a.button + .more-link,
+.eb-tabs .nav-pills .agora-header li.input-group-btn > a + .more-link,
+.agora-header .eb-tabs .nav-pills li.input-group-btn > a + .more-link,
 .view-header > ul.links li .agora-header .input-group-btn > a + .more-link,
 .agora-header .view-header > ul.links li .input-group-btn > a + .more-link,
 .view-acteurs .more-link .agora-header .input-group-btn > a + .more-link,
@@ -6471,12 +6861,37 @@ tbody.collapse.in {
 .view-display-id-home .input-group-btn > .btn + .more-link,
 .view-display-id-home .input-group-btn > .button + .more-link,
 .view-display-id-home .input-group-btn > .more-link + .more-link,
+.view-display-id-home .dropzone .input-group-btn > a.button + .more-link,
+.eb-tabs .nav-pills
+    .view-display-id-home li.input-group-btn > a + .more-link,
+.view-display-id-home .eb-tabs .nav-pills li.input-group-btn > a + .more-link,
 .view-header > ul.links li
     .view-display-id-home .input-group-btn > a + .more-link,
 .view-display-id-home .view-header > ul.links li .input-group-btn > a + .more-link,
 .view-acteurs .more-link
     .view-display-id-home .input-group-btn > a + .more-link,
 .view-display-id-home .view-acteurs .more-link .input-group-btn > a + .more-link,
+.dropzone .input-group-btn > .btn + a.button,
+.dropzone .input-group-btn > .button + a.button,
+.agora-header .dropzone .input-group-btn > .more-link + a.button,
+.view-display-id-home .dropzone .input-group-btn > .more-link + a.button,
+.eb-tabs .nav-pills .dropzone li.input-group-btn > a + a.button,
+.view-header > ul.links li .dropzone .input-group-btn > a + a.button,
+.dropzone .view-header > ul.links li .input-group-btn > a + a.button,
+.slider-sidebar .dropzone .input-group-btn > .more-link + a.button,
+.view-acteurs .more-link .dropzone .input-group-btn > a + a.button,
+.eb-tabs .nav-pills li.input-group-btn > .btn + a,
+.eb-tabs .nav-pills li.input-group-btn > .button + a,
+.agora-header .eb-tabs .nav-pills li.input-group-btn > .more-link + a,
+.eb-tabs .nav-pills .agora-header li.input-group-btn > .more-link + a,
+.view-display-id-home .eb-tabs .nav-pills li.input-group-btn > .more-link + a,
+.eb-tabs .nav-pills
+    .view-display-id-home li.input-group-btn > .more-link + a,
+.eb-tabs .nav-pills .dropzone li.input-group-btn > a.button + a,
+.eb-tabs .nav-pills li.input-group-btn > a + a,
+.eb-tabs .nav-pills .view-header > ul.links li li.input-group-btn > a + a,
+.slider-sidebar .eb-tabs .nav-pills li.input-group-btn > .more-link + a,
+.eb-tabs .nav-pills .slider-sidebar li.input-group-btn > .more-link + a,
 .view-header > ul.links li .input-group-btn > .btn + a,
 .view-header > ul.links li .input-group-btn > .button + a,
 .agora-header .view-header > ul.links li .input-group-btn > .more-link + a,
@@ -6484,11 +6899,17 @@ tbody.collapse.in {
 .view-display-id-home .view-header > ul.links li .input-group-btn > .more-link + a,
 .view-header > ul.links li
     .view-display-id-home .input-group-btn > .more-link + a,
+.dropzone .view-header > ul.links li .input-group-btn > a.button + a,
+.view-header > ul.links li .dropzone .input-group-btn > a.button + a,
+.eb-tabs .nav-pills .view-header > ul.links li.input-group-btn > a + a,
 .view-header > ul.links li .input-group-btn > a + a,
 .slider-sidebar .view-header > ul.links li .input-group-btn > .more-link + a,
 .view-header > ul.links li .slider-sidebar .input-group-btn > .more-link + a,
 .slider-sidebar .input-group-btn > .btn + .more-link,
 .slider-sidebar .input-group-btn > .button + .more-link,
+.slider-sidebar .dropzone .input-group-btn > a.button + .more-link,
+.eb-tabs .nav-pills .slider-sidebar li.input-group-btn > a + .more-link,
+.slider-sidebar .eb-tabs .nav-pills li.input-group-btn > a + .more-link,
 .view-header > ul.links li .slider-sidebar .input-group-btn > a + .more-link,
 .slider-sidebar .view-header > ul.links li .input-group-btn > a + .more-link,
 .slider-sidebar .input-group-btn > .more-link + .more-link,
@@ -6501,6 +6922,7 @@ tbody.collapse.in {
 .view-display-id-home .view-acteurs .more-link .input-group-btn > .more-link + a,
 .view-acteurs .more-link
     .view-display-id-home .input-group-btn > .more-link + a,
+.view-acteurs .more-link .dropzone .input-group-btn > a.button + a,
 .view-acteurs .more-link .view-header > ul.links li .input-group-btn > a + a,
 .slider-sidebar .view-acteurs .more-link .input-group-btn > .more-link + a,
 .view-acteurs .more-link .slider-sidebar .input-group-btn > .more-link + a,
@@ -6512,6 +6934,8 @@ tbody.collapse.in {
 .input-group-btn > .button:hover,
 .agora-header .input-group-btn > .more-link:hover,
 .view-display-id-home .input-group-btn > .more-link:hover,
+.dropzone .input-group-btn > a.button:hover,
+.eb-tabs .nav-pills li.input-group-btn > a:hover,
 .view-header > ul.links li .input-group-btn > a:hover,
 .slider-sidebar .input-group-btn > .more-link:hover,
 .view-acteurs .more-link .input-group-btn > a:hover,
@@ -6519,6 +6943,8 @@ tbody.collapse.in {
 .input-group-btn > .button:focus,
 .agora-header .input-group-btn > .more-link:focus,
 .view-display-id-home .input-group-btn > .more-link:focus,
+.dropzone .input-group-btn > a.button:focus,
+.eb-tabs .nav-pills li.input-group-btn > a:focus,
 .view-header > ul.links li .input-group-btn > a:focus,
 .slider-sidebar .input-group-btn > .more-link:focus,
 .view-acteurs .more-link .input-group-btn > a:focus,
@@ -6526,6 +6952,8 @@ tbody.collapse.in {
 .input-group-btn > .button:active,
 .agora-header .input-group-btn > .more-link:active,
 .view-display-id-home .input-group-btn > .more-link:active,
+.dropzone .input-group-btn > a.button:active,
+.eb-tabs .nav-pills li.input-group-btn > a:active,
 .view-header > ul.links li .input-group-btn > a:active,
 .slider-sidebar .input-group-btn > .more-link:active,
 .view-acteurs .more-link .input-group-btn > a:active {
@@ -6536,6 +6964,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .button,
 .agora-header .input-group-btn:first-child > .more-link,
 .view-display-id-home .input-group-btn:first-child > .more-link,
+.dropzone .input-group-btn:first-child > a.button,
+.eb-tabs .nav-pills li.input-group-btn:first-child > a,
 .view-header > ul.links li .input-group-btn:first-child > a,
 .slider-sidebar .input-group-btn:first-child > .more-link,
 .view-acteurs .more-link .input-group-btn:first-child > a,
@@ -6547,6 +6977,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .button,
 .agora-header .input-group-btn:last-child > .more-link,
 .view-display-id-home .input-group-btn:last-child > .more-link,
+.dropzone .input-group-btn:last-child > a.button,
+.eb-tabs .nav-pills li.input-group-btn:last-child > a,
 .view-header > ul.links li .input-group-btn:last-child > a,
 .slider-sidebar .input-group-btn:last-child > .more-link,
 .view-acteurs .more-link .input-group-btn:last-child > a,
@@ -6785,17 +7217,25 @@ tbody.collapse.in {
 }
 
 .navbar-header:before,
-.navbar-header:after {
+.agora-toolbar .navbar.navbar-default .block-page-title:before,
+.agora-toolbar .navbar.navbar-inverse .block-page-title:before,
+.navbar-header:after,
+.agora-toolbar .navbar.navbar-default .block-page-title:after,
+.agora-toolbar .navbar.navbar-inverse .block-page-title:after {
   content: " ";
   display: table;
 }
 
-.navbar-header:after {
+.navbar-header:after,
+.agora-toolbar .navbar.navbar-default .block-page-title:after,
+.agora-toolbar .navbar.navbar-inverse .block-page-title:after {
   clear: both;
 }
 
 @media (min-width: 768px) {
-  .navbar-header {
+  .navbar-header,
+  .agora-toolbar .navbar.navbar-default .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title {
     float: left;
   }
 }
@@ -6864,16 +7304,39 @@ tbody.collapse.in {
 .container > .navbar-header,
 .container-xs > .navbar-header,
 .container-sm > .navbar-header,
+.path-webform .page-header > .navbar-header,
 form.webform-submission-form > .navbar-header,
 .container-md > .navbar-header,
 .project-list > .view-content > .navbar-header,
+.agora-toolbar .navbar.navbar-default .container > .block-page-title,
+.agora-toolbar .navbar.navbar-default .container-xs > .block-page-title,
+.agora-toolbar .navbar.navbar-default .container-sm > .block-page-title,
+.path-webform .agora-toolbar .navbar.navbar-default .page-header > .block-page-title,
+.agora-toolbar .navbar.navbar-default .path-webform .page-header > .block-page-title,
+.agora-toolbar .navbar.navbar-default form.webform-submission-form > .block-page-title,
+.agora-toolbar .navbar.navbar-default .container-md > .block-page-title,
+.agora-toolbar .navbar.navbar-default .project-list > .view-content > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse .container > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse .container-xs > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse .container-sm > .block-page-title,
+.path-webform
+.agora-toolbar .navbar.navbar-inverse .page-header > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse .path-webform .page-header > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse form.webform-submission-form > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse .container-md > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse .project-list > .view-content > .block-page-title,
 .container > .navbar-collapse,
 .container-xs > .navbar-collapse,
 .container-sm > .navbar-collapse,
+.path-webform .page-header > .navbar-collapse,
 form.webform-submission-form > .navbar-collapse,
 .container-md > .navbar-collapse,
 .project-list > .view-content > .navbar-collapse,
 .container-fluid > .navbar-header,
+.agora-toolbar .navbar.navbar-default
+.container-fluid > .block-page-title,
+.agora-toolbar .navbar.navbar-inverse
+.container-fluid > .block-page-title,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
@@ -6883,16 +7346,39 @@ form.webform-submission-form > .navbar-collapse,
   .container > .navbar-header,
   .container-xs > .navbar-header,
   .container-sm > .navbar-header,
+  .path-webform .page-header > .navbar-header,
   form.webform-submission-form > .navbar-header,
   .container-md > .navbar-header,
   .project-list > .view-content > .navbar-header,
+  .agora-toolbar .navbar.navbar-default .container > .block-page-title,
+  .agora-toolbar .navbar.navbar-default .container-xs > .block-page-title,
+  .agora-toolbar .navbar.navbar-default .container-sm > .block-page-title,
+  .path-webform .agora-toolbar .navbar.navbar-default .page-header > .block-page-title,
+  .agora-toolbar .navbar.navbar-default .path-webform .page-header > .block-page-title,
+  .agora-toolbar .navbar.navbar-default form.webform-submission-form > .block-page-title,
+  .agora-toolbar .navbar.navbar-default .container-md > .block-page-title,
+  .agora-toolbar .navbar.navbar-default .project-list > .view-content > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .container > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .container-xs > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .container-sm > .block-page-title,
+  .path-webform
+    .agora-toolbar .navbar.navbar-inverse .page-header > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .path-webform .page-header > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse form.webform-submission-form > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .container-md > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse .project-list > .view-content > .block-page-title,
   .container > .navbar-collapse,
   .container-xs > .navbar-collapse,
   .container-sm > .navbar-collapse,
+  .path-webform .page-header > .navbar-collapse,
   form.webform-submission-form > .navbar-collapse,
   .container-md > .navbar-collapse,
   .project-list > .view-content > .navbar-collapse,
   .container-fluid > .navbar-header,
+  .agora-toolbar .navbar.navbar-default
+    .container-fluid > .block-page-title,
+  .agora-toolbar .navbar.navbar-inverse
+    .container-fluid > .block-page-title,
   .container-fluid > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
@@ -6936,7 +7422,9 @@ form.webform-submission-form > .navbar-collapse,
   border-width: 1px 0 0;
 }
 
-.navbar-brand {
+.navbar-brand,
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title {
   float: left;
   padding: 19.5px 15px;
   font-size: 19px;
@@ -6945,11 +7433,17 @@ form.webform-submission-form > .navbar-collapse,
 }
 
 .navbar-brand:hover,
-.navbar-brand:focus {
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title:hover,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title:hover,
+.navbar-brand:focus,
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title:focus,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title:focus {
   text-decoration: none;
 }
 
-.navbar-brand > img {
+.navbar-brand > img,
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title > img,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title > img {
   display: block;
 }
 
@@ -6957,10 +7451,53 @@ form.webform-submission-form > .navbar-collapse,
   .navbar > .container .navbar-brand,
   .navbar > .container-xs .navbar-brand,
   .navbar > .container-sm .navbar-brand,
+  .path-webform .navbar > .page-header .navbar-brand,
   .navbar > form.webform-submission-form .navbar-brand,
   .navbar > .container-md .navbar-brand,
   .project-list.navbar > .view-content .navbar-brand,
-  .navbar > .container-fluid .navbar-brand {
+  .navbar > .container .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .navbar > .container .page-title,
+  .navbar > .container-xs .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .navbar > .container-xs .page-title,
+  .navbar > .container-sm .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .navbar > .container-sm .page-title,
+  .path-webform .navbar > .page-header .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .path-webform .navbar > .page-header .page-title,
+  .navbar > form.webform-submission-form .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .navbar > form.webform-submission-form .page-title,
+  .navbar > .container-md .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .navbar > .container-md .page-title,
+  .project-list.navbar > .view-content .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title .project-list.navbar > .view-content .page-title,
+  .navbar > .container
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .navbar > .container .page-title,
+  .navbar > .container-xs
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .navbar > .container-xs .page-title,
+  .navbar > .container-sm
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .navbar > .container-sm .page-title,
+  .path-webform .navbar > .page-header
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .path-webform .navbar > .page-header .page-title,
+  .navbar > form.webform-submission-form
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .navbar > form.webform-submission-form .page-title,
+  .navbar > .container-md
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .navbar > .container-md .page-title,
+  .project-list.navbar > .view-content
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .project-list.navbar > .view-content .page-title,
+  .navbar > .container-fluid .navbar-brand,
+  .navbar > .container-fluid .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-default .block-page-title
+    .navbar > .container-fluid .page-title,
+  .navbar > .container-fluid
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+  .agora-toolbar .navbar.navbar-inverse .block-page-title
+    .navbar > .container-fluid .page-title {
     margin-left: -15px;
   }
 }
@@ -7176,6 +7713,9 @@ form.webform-submission-form > .navbar-collapse,
 .btn-group-sm > .navbar-btn.button,
 .agora-header .btn-group-sm > .navbar-btn.more-link,
 .view-display-id-home .btn-group-sm > .navbar-btn.more-link,
+.dropzone .btn-group-sm > a.navbar-btn.button,
+.eb-tabs .nav-pills li.btn-group-sm > a.navbar-btn,
+#edit-header .form-actions > button.navbar-btn,
 .navbar-btn.button--small,
 .view-header > ul.links li a.navbar-btn,
 .slider-sidebar .navbar-btn.more-link,
@@ -7189,6 +7729,8 @@ form.webform-submission-form > .navbar-collapse,
 .btn-group-xs > .navbar-btn.button,
 .agora-header .btn-group-xs > .navbar-btn.more-link,
 .view-display-id-home .btn-group-xs > .navbar-btn.more-link,
+.dropzone .btn-group-xs > a.navbar-btn.button,
+.eb-tabs .nav-pills li.btn-group-xs > a.navbar-btn,
 .view-header > ul.links li .btn-group-xs > a.navbar-btn,
 .slider-sidebar .btn-group-xs > .navbar-btn.more-link,
 .view-acteurs .more-link .btn-group-xs > a.navbar-btn,
@@ -7231,12 +7773,24 @@ form.webform-submission-form > .navbar-collapse,
   border-color: transparent;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+.navbar-default
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .navbar-default .page-title {
   color: #fff;
 }
 
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title:hover,
+.navbar-default
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title:hover,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .navbar-default .page-title:hover,
+.navbar-default .navbar-brand:focus,
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title:focus,
+.navbar-default
+    .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title:focus,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .navbar-default .page-title:focus {
   color: #18BC9C;
   background-color: transparent;
 }
@@ -7349,12 +7903,21 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   border-color: transparent;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-inverse .navbar-brand,
+.navbar-inverse .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-default .block-page-title .navbar-inverse .page-title,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title {
   color: #fff;
 }
 
 .navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
+.navbar-inverse .agora-toolbar .navbar.navbar-default .block-page-title .page-title:hover,
+.agora-toolbar .navbar.navbar-default .block-page-title .navbar-inverse .page-title:hover,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title:hover,
+.navbar-inverse .navbar-brand:focus,
+.navbar-inverse .agora-toolbar .navbar.navbar-default .block-page-title .page-title:focus,
+.agora-toolbar .navbar.navbar-default .block-page-title .navbar-inverse .page-title:focus,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title:focus {
   color: rgba(255, 255, 0, 0.9);
   background-color: transparent;
 }
@@ -7388,12 +7951,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-toggle {
-  border-color: #128f76;
+  border-color: transparent;
 }
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #128f76;
+  background-color: transparent;
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -7695,6 +8258,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .button .label,
 .agora-header .more-link .label,
 .view-display-id-home .more-link .label,
+.dropzone a.button .label,
+.eb-tabs .nav-pills li > a .label,
 .view-header > ul.links li a .label,
 .slider-sidebar .more-link .label,
 .view-acteurs .more-link a .label {
@@ -7786,6 +8351,8 @@ a.label:focus {
 .button .badge,
 .agora-header .more-link .badge,
 .view-display-id-home .more-link .badge,
+.dropzone a.button .badge,
+.eb-tabs .nav-pills li > a .badge,
 .view-header > ul.links li a .badge,
 .slider-sidebar .more-link .badge,
 .view-acteurs .more-link a .badge {
@@ -7798,6 +8365,8 @@ a.label:focus {
 .btn-group-xs > .button .badge,
 .agora-header .btn-group-xs > .more-link .badge,
 .view-display-id-home .btn-group-xs > .more-link .badge,
+.dropzone .btn-group-xs > a.button .badge,
+.eb-tabs .nav-pills li.btn-group-xs > a .badge,
 .view-header > ul.links li .btn-group-xs > a .badge,
 .slider-sidebar .btn-group-xs > .more-link .badge,
 .view-acteurs .more-link .btn-group-xs > a .badge,
@@ -7809,6 +8378,10 @@ a.label:focus {
   .btn-group-xs > .more-link .badge,
 .view-display-id-home
   .btn-group-xs > .more-link .badge,
+.dropzone
+  .btn-group-xs > a.button .badge,
+.eb-tabs .nav-pills
+  li.btn-group-xs > a .badge,
 .view-header > ul.links li
   .btn-group-xs > a .badge,
 .slider-sidebar
@@ -7870,6 +8443,7 @@ a.badge:focus {
 .container .jumbotron,
 .container-xs .jumbotron,
 .container-sm .jumbotron,
+.path-webform .page-header .jumbotron,
 form.webform-submission-form .jumbotron,
 .container-md .jumbotron,
 .project-list > .view-content .jumbotron,
@@ -7882,6 +8456,8 @@ form.webform-submission-form .jumbotron,
 .jumbotron .container,
 .jumbotron .container-xs,
 .jumbotron .container-sm,
+.jumbotron .path-webform .page-header,
+.path-webform .jumbotron .page-header,
 .jumbotron form.webform-submission-form,
 .jumbotron .container-md,
 .jumbotron .project-list > .view-content {
@@ -7897,6 +8473,7 @@ form.webform-submission-form .jumbotron,
   .container .jumbotron,
   .container-xs .jumbotron,
   .container-sm .jumbotron,
+  .path-webform .page-header .jumbotron,
   form.webform-submission-form .jumbotron,
   .container-md .jumbotron,
   .project-list > .view-content .jumbotron,
@@ -9092,6 +9669,9 @@ button.close {
 .modal-footer
   .view-display-id-home .more-link + .btn,
 .view-display-id-home .modal-footer .more-link + .btn,
+.modal-footer .dropzone a.button + .btn,
+.modal-footer .eb-tabs .nav-pills li > a + .btn,
+.eb-tabs .nav-pills .modal-footer li > a + .btn,
 .modal-footer .view-header > ul.links li a + .btn,
 .view-header > ul.links li .modal-footer a + .btn,
 .modal-footer .slider-sidebar .more-link + .btn,
@@ -9105,6 +9685,9 @@ button.close {
 .modal-footer
   .view-display-id-home .more-link + .button,
 .view-display-id-home .modal-footer .more-link + .button,
+.modal-footer .dropzone a.button + .button,
+.modal-footer .eb-tabs .nav-pills li > a + .button,
+.eb-tabs .nav-pills .modal-footer li > a + .button,
 .modal-footer .view-header > ul.links li a + .button,
 .view-header > ul.links li .modal-footer a + .button,
 .modal-footer .slider-sidebar .more-link + .button,
@@ -9117,6 +9700,11 @@ button.close {
 .agora-header .modal-footer .button + .more-link,
 .modal-footer .agora-header .more-link + .more-link,
 .agora-header .modal-footer .more-link + .more-link,
+.agora-header .modal-footer .dropzone a.button + .more-link,
+.modal-footer .eb-tabs .nav-pills .agora-header li > a + .more-link,
+.agora-header .modal-footer .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .modal-footer .agora-header li > a + .more-link,
+.agora-header .eb-tabs .nav-pills .modal-footer li > a + .more-link,
 .modal-footer .view-header > ul.links li .agora-header a + .more-link,
 .agora-header .modal-footer .view-header > ul.links li a + .more-link,
 .view-header > ul.links li .modal-footer .agora-header a + .more-link,
@@ -9133,6 +9721,13 @@ button.close {
 .view-display-id-home .modal-footer .button + .more-link,
 .modal-footer .view-display-id-home .more-link + .more-link,
 .view-display-id-home .modal-footer .more-link + .more-link,
+.view-display-id-home .modal-footer .dropzone a.button + .more-link,
+.modal-footer .eb-tabs .nav-pills
+  .view-display-id-home li > a + .more-link,
+.view-display-id-home .modal-footer .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .modal-footer
+  .view-display-id-home li > a + .more-link,
+.view-display-id-home .eb-tabs .nav-pills .modal-footer li > a + .more-link,
 .modal-footer .view-header > ul.links li
   .view-display-id-home a + .more-link,
 .view-display-id-home .modal-footer .view-header > ul.links li a + .more-link,
@@ -9145,6 +9740,44 @@ button.close {
 .view-acteurs .more-link .modal-footer
   .view-display-id-home a + .more-link,
 .view-display-id-home .view-acteurs .more-link .modal-footer a + .more-link,
+.modal-footer .dropzone .btn + a.button,
+.modal-footer .dropzone .button + a.button,
+.modal-footer .agora-header .dropzone .more-link + a.button,
+.agora-header .modal-footer .dropzone .more-link + a.button,
+.modal-footer
+  .view-display-id-home .dropzone .more-link + a.button,
+.view-display-id-home .modal-footer .dropzone .more-link + a.button,
+.modal-footer .eb-tabs .nav-pills .dropzone li > a + a.button,
+.eb-tabs .nav-pills .modal-footer .dropzone li > a + a.button,
+.modal-footer .view-header > ul.links li .dropzone a + a.button,
+.view-header > ul.links li .modal-footer .dropzone a + a.button,
+.dropzone .view-header > ul.links li .modal-footer a + a.button,
+.modal-footer .slider-sidebar .dropzone .more-link + a.button,
+.slider-sidebar .modal-footer .dropzone .more-link + a.button,
+.modal-footer .view-acteurs .more-link .dropzone a + a.button,
+.view-acteurs .more-link .modal-footer .dropzone a + a.button,
+.modal-footer .eb-tabs .nav-pills li > .btn + a,
+.eb-tabs .nav-pills .modal-footer li > .btn + a,
+.modal-footer .eb-tabs .nav-pills li > .button + a,
+.eb-tabs .nav-pills .modal-footer li > .button + a,
+.modal-footer .agora-header .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .agora-header li > .more-link + a,
+.agora-header .modal-footer .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .agora-header .modal-footer li > .more-link + a,
+.modal-footer
+  .view-display-id-home .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer
+  .view-display-id-home li > .more-link + a,
+.view-display-id-home .modal-footer .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills
+  .view-display-id-home .modal-footer li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .dropzone li > a.button + a,
+.modal-footer .eb-tabs .nav-pills li > a + a,
+.eb-tabs .nav-pills .modal-footer li > a + a,
+.modal-footer .slider-sidebar .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .slider-sidebar li > .more-link + a,
+.slider-sidebar .modal-footer .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .slider-sidebar .modal-footer li > .more-link + a,
 .modal-footer .view-header > ul.links li .btn + a,
 .view-header > ul.links li .modal-footer .btn + a,
 .modal-footer .view-header > ul.links li .button + a,
@@ -9160,6 +9793,9 @@ button.close {
 .view-display-id-home .modal-footer .view-header > ul.links li .more-link + a,
 .view-header > ul.links li
   .view-display-id-home .modal-footer .more-link + a,
+.modal-footer .dropzone .view-header > ul.links li a.button + a,
+.view-header > ul.links li .modal-footer .dropzone a.button + a,
+.modal-footer .eb-tabs .nav-pills .view-header > ul.links li > a + a,
 .modal-footer .view-header > ul.links li a + a,
 .view-header > ul.links li .modal-footer a + a,
 .modal-footer .slider-sidebar .view-header > ul.links li .more-link + a,
@@ -9171,6 +9807,11 @@ button.close {
 .slider-sidebar .modal-footer .btn + .more-link,
 .modal-footer .slider-sidebar .button + .more-link,
 .slider-sidebar .modal-footer .button + .more-link,
+.slider-sidebar .modal-footer .dropzone a.button + .more-link,
+.modal-footer .eb-tabs .nav-pills .slider-sidebar li > a + .more-link,
+.slider-sidebar .modal-footer .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .modal-footer .slider-sidebar li > a + .more-link,
+.slider-sidebar .eb-tabs .nav-pills .modal-footer li > a + .more-link,
 .modal-footer .view-header > ul.links li .slider-sidebar a + .more-link,
 .slider-sidebar .modal-footer .view-header > ul.links li a + .more-link,
 .view-header > ul.links li .modal-footer .slider-sidebar a + .more-link,
@@ -9196,6 +9837,9 @@ button.close {
 .view-display-id-home .modal-footer .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link
   .view-display-id-home .modal-footer .more-link + a,
+.view-acteurs .more-link .modal-footer .dropzone a.button + a,
+.modal-footer .eb-tabs .nav-pills .view-acteurs .more-link li > a + a,
+.eb-tabs .nav-pills .modal-footer .view-acteurs .more-link li > a + a,
 .modal-footer .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .modal-footer .slider-sidebar .more-link + a,
 .slider-sidebar .modal-footer .view-acteurs .more-link .more-link + a,
@@ -9213,6 +9857,9 @@ button.close {
 .modal-footer .btn-group
   .view-display-id-home .more-link + .btn,
 .view-display-id-home .modal-footer .btn-group .more-link + .btn,
+.modal-footer .btn-group .dropzone a.button + .btn,
+.modal-footer .btn-group .eb-tabs .nav-pills li > a + .btn,
+.eb-tabs .nav-pills .modal-footer .btn-group li > a + .btn,
 .modal-footer .btn-group .view-header > ul.links li a + .btn,
 .view-header > ul.links li .modal-footer .btn-group a + .btn,
 .modal-footer .btn-group .slider-sidebar .more-link + .btn,
@@ -9226,6 +9873,9 @@ button.close {
 .modal-footer .btn-group
   .view-display-id-home .more-link + .button,
 .view-display-id-home .modal-footer .btn-group .more-link + .button,
+.modal-footer .btn-group .dropzone a.button + .button,
+.modal-footer .btn-group .eb-tabs .nav-pills li > a + .button,
+.eb-tabs .nav-pills .modal-footer .btn-group li > a + .button,
 .modal-footer .btn-group .view-header > ul.links li a + .button,
 .view-header > ul.links li .modal-footer .btn-group a + .button,
 .modal-footer .btn-group .slider-sidebar .more-link + .button,
@@ -9238,6 +9888,11 @@ button.close {
 .agora-header .modal-footer .btn-group .button + .more-link,
 .modal-footer .btn-group .agora-header .more-link + .more-link,
 .agora-header .modal-footer .btn-group .more-link + .more-link,
+.agora-header .modal-footer .btn-group .dropzone a.button + .more-link,
+.modal-footer .btn-group .eb-tabs .nav-pills .agora-header li > a + .more-link,
+.agora-header .modal-footer .btn-group .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .modal-footer .btn-group .agora-header li > a + .more-link,
+.agora-header .eb-tabs .nav-pills .modal-footer .btn-group li > a + .more-link,
 .modal-footer .btn-group .view-header > ul.links li .agora-header a + .more-link,
 .agora-header .modal-footer .btn-group .view-header > ul.links li a + .more-link,
 .view-header > ul.links li .modal-footer .btn-group .agora-header a + .more-link,
@@ -9254,6 +9909,13 @@ button.close {
 .view-display-id-home .modal-footer .btn-group .button + .more-link,
 .modal-footer .btn-group .view-display-id-home .more-link + .more-link,
 .view-display-id-home .modal-footer .btn-group .more-link + .more-link,
+.view-display-id-home .modal-footer .btn-group .dropzone a.button + .more-link,
+.modal-footer .btn-group .eb-tabs .nav-pills
+  .view-display-id-home li > a + .more-link,
+.view-display-id-home .modal-footer .btn-group .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .modal-footer .btn-group
+  .view-display-id-home li > a + .more-link,
+.view-display-id-home .eb-tabs .nav-pills .modal-footer .btn-group li > a + .more-link,
 .modal-footer .btn-group .view-header > ul.links li
   .view-display-id-home a + .more-link,
 .view-display-id-home .modal-footer .btn-group .view-header > ul.links li a + .more-link,
@@ -9266,6 +9928,44 @@ button.close {
 .view-acteurs .more-link .modal-footer .btn-group
   .view-display-id-home a + .more-link,
 .view-display-id-home .view-acteurs .more-link .modal-footer .btn-group a + .more-link,
+.modal-footer .btn-group .dropzone .btn + a.button,
+.modal-footer .btn-group .dropzone .button + a.button,
+.modal-footer .btn-group .agora-header .dropzone .more-link + a.button,
+.agora-header .modal-footer .btn-group .dropzone .more-link + a.button,
+.modal-footer .btn-group
+  .view-display-id-home .dropzone .more-link + a.button,
+.view-display-id-home .modal-footer .btn-group .dropzone .more-link + a.button,
+.modal-footer .btn-group .eb-tabs .nav-pills .dropzone li > a + a.button,
+.eb-tabs .nav-pills .modal-footer .btn-group .dropzone li > a + a.button,
+.modal-footer .btn-group .view-header > ul.links li .dropzone a + a.button,
+.view-header > ul.links li .modal-footer .btn-group .dropzone a + a.button,
+.dropzone .view-header > ul.links li .modal-footer .btn-group a + a.button,
+.modal-footer .btn-group .slider-sidebar .dropzone .more-link + a.button,
+.slider-sidebar .modal-footer .btn-group .dropzone .more-link + a.button,
+.modal-footer .btn-group .view-acteurs .more-link .dropzone a + a.button,
+.view-acteurs .more-link .modal-footer .btn-group .dropzone a + a.button,
+.modal-footer .btn-group .eb-tabs .nav-pills li > .btn + a,
+.eb-tabs .nav-pills .modal-footer .btn-group li > .btn + a,
+.modal-footer .btn-group .eb-tabs .nav-pills li > .button + a,
+.eb-tabs .nav-pills .modal-footer .btn-group li > .button + a,
+.modal-footer .btn-group .agora-header .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .btn-group .agora-header li > .more-link + a,
+.agora-header .modal-footer .btn-group .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .agora-header .modal-footer .btn-group li > .more-link + a,
+.modal-footer .btn-group
+  .view-display-id-home .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .btn-group
+  .view-display-id-home li > .more-link + a,
+.view-display-id-home .modal-footer .btn-group .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills
+  .view-display-id-home .modal-footer .btn-group li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .btn-group .dropzone li > a.button + a,
+.modal-footer .btn-group .eb-tabs .nav-pills li > a + a,
+.eb-tabs .nav-pills .modal-footer .btn-group li > a + a,
+.modal-footer .btn-group .slider-sidebar .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .modal-footer .btn-group .slider-sidebar li > .more-link + a,
+.slider-sidebar .modal-footer .btn-group .eb-tabs .nav-pills li > .more-link + a,
+.eb-tabs .nav-pills .slider-sidebar .modal-footer .btn-group li > .more-link + a,
 .modal-footer .btn-group .view-header > ul.links li .btn + a,
 .view-header > ul.links li .modal-footer .btn-group .btn + a,
 .modal-footer .btn-group .view-header > ul.links li .button + a,
@@ -9281,6 +9981,9 @@ button.close {
 .view-display-id-home .modal-footer .btn-group .view-header > ul.links li .more-link + a,
 .view-header > ul.links li
   .view-display-id-home .modal-footer .btn-group .more-link + a,
+.modal-footer .btn-group .dropzone .view-header > ul.links li a.button + a,
+.view-header > ul.links li .modal-footer .btn-group .dropzone a.button + a,
+.modal-footer .btn-group .eb-tabs .nav-pills .view-header > ul.links li > a + a,
 .modal-footer .btn-group .view-header > ul.links li a + a,
 .view-header > ul.links li .modal-footer .btn-group a + a,
 .modal-footer .btn-group .slider-sidebar .view-header > ul.links li .more-link + a,
@@ -9292,6 +9995,11 @@ button.close {
 .slider-sidebar .modal-footer .btn-group .btn + .more-link,
 .modal-footer .btn-group .slider-sidebar .button + .more-link,
 .slider-sidebar .modal-footer .btn-group .button + .more-link,
+.slider-sidebar .modal-footer .btn-group .dropzone a.button + .more-link,
+.modal-footer .btn-group .eb-tabs .nav-pills .slider-sidebar li > a + .more-link,
+.slider-sidebar .modal-footer .btn-group .eb-tabs .nav-pills li > a + .more-link,
+.eb-tabs .nav-pills .modal-footer .btn-group .slider-sidebar li > a + .more-link,
+.slider-sidebar .eb-tabs .nav-pills .modal-footer .btn-group li > a + .more-link,
 .modal-footer .btn-group .view-header > ul.links li .slider-sidebar a + .more-link,
 .slider-sidebar .modal-footer .btn-group .view-header > ul.links li a + .more-link,
 .view-header > ul.links li .modal-footer .btn-group .slider-sidebar a + .more-link,
@@ -9317,6 +10025,9 @@ button.close {
 .view-display-id-home .modal-footer .btn-group .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link
   .view-display-id-home .modal-footer .btn-group .more-link + a,
+.view-acteurs .more-link .modal-footer .btn-group .dropzone a.button + a,
+.modal-footer .btn-group .eb-tabs .nav-pills .view-acteurs .more-link li > a + a,
+.eb-tabs .nav-pills .modal-footer .btn-group .view-acteurs .more-link li > a + a,
 .modal-footer .btn-group .slider-sidebar .view-acteurs .more-link .more-link + a,
 .view-acteurs .more-link .modal-footer .btn-group .slider-sidebar .more-link + a,
 .slider-sidebar .modal-footer .btn-group .view-acteurs .more-link .more-link + a,
@@ -9925,6 +10636,10 @@ button.close {
 .carousel-caption
   .view-display-id-home .more-link,
 .view-display-id-home .carousel-caption .more-link,
+.carousel-caption .dropzone a.button,
+.dropzone .carousel-caption a.button,
+.carousel-caption .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills .carousel-caption li > a,
 .carousel-caption .view-header > ul.links li a,
 .view-header > ul.links li .carousel-caption a,
 .carousel-caption .slider-sidebar .more-link,
@@ -10315,7 +11030,9 @@ button.close {
   color: #222222;
 }
 
-.navbar-brand {
+.navbar-brand,
+.agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title {
   line-height: 1;
 }
 
@@ -10323,6 +11040,8 @@ button.close {
 .button,
 .agora-header .more-link,
 .view-display-id-home .more-link,
+.dropzone a.button,
+.eb-tabs .nav-pills li > a,
 .view-header > ul.links li a,
 .slider-sidebar .more-link,
 .view-acteurs .more-link a {
@@ -10333,6 +11052,8 @@ button.close {
 .button:active,
 .agora-header .more-link:active,
 .view-display-id-home .more-link:active,
+.dropzone a.button:active,
+.eb-tabs .nav-pills li > a:active,
 .view-header > ul.links li a:active,
 .slider-sidebar .more-link:active,
 .view-acteurs .more-link a:active {
@@ -10369,9 +11090,9 @@ button.close {
 }
 
 table a:not(.btn):not(.button):not(.agora-header .more-link):not(
-.view-display-id-home .more-link):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a),
+.view-display-id-home .more-link):not(.dropzone a.button):not(.eb-tabs .nav-pills li > a):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a),
 .table a:not(.btn):not(.button):not(.agora-header .more-link):not(
-.view-display-id-home .more-link):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a) {
+.view-display-id-home .more-link):not(.dropzone a.button):not(.eb-tabs .nav-pills li > a):not(.view-header > ul.links li a):not(.slider-sidebar .more-link):not(.view-acteurs .more-link a) {
   text-decoration: underline;
 }
 
@@ -10661,7 +11382,8 @@ a.list-group-item-danger.active:focus {
   font-style: normal;
 }
 
-.fa {
+.fa,
+.form-required:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -10735,11 +11457,13 @@ a.list-group-item-danger.active:focus {
   float: right;
 }
 
-.fa.fa-pull-left {
+.fa.fa-pull-left,
+.fa-pull-left.form-required:after {
   margin-right: .3em;
 }
 
-.fa.fa-pull-right {
+.fa.fa-pull-right,
+.fa-pull-right.form-required:after {
   margin-left: .3em;
 }
 
@@ -10758,14 +11482,21 @@ a.list-group-item-danger.active:focus {
   float: left;
 }
 
-.fa.pull-left {
+.fa.pull-left,
+.pull-left.form-required:after {
   margin-right: .3em;
 }
 
 .fa.pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
+#webform-submission-candidature-aap-form .js-form-managed-file .description.form-required:after,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger.form-required:after,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger.form-required:after,
+.pull-right.form-required:after,
+.page-node-type-article .form-required.taskbar:after,
+.page-node-type-evenement .form-required.taskbar:after,
 .page-node-type-article .fa.taskbar,
 .page-node-type-evenement .fa.taskbar {
   margin-left: .3em;
@@ -13709,7 +14440,8 @@ a.list-group-item-danger.active:focus {
   content: "\F2E0";
 }
 
-.sr-only {
+.sr-only,
+label[for="edit-upload"].control-label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -13721,13 +14453,960 @@ a.list-group-item-danger.active:focus {
 }
 
 .sr-only-focusable:active,
-.sr-only-focusable:focus {
+label[for="edit-upload"].control-label:active,
+.sr-only-focusable:focus,
+label[for="edit-upload"].control-label:focus {
   position: static;
   width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+.container-smooth {
+  max-width: 1170px;
+}
+
+@media (min-width: 1px) {
+  .container-smooth {
+    width: auto;
+  }
+}
+
+.btn-labeled {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btn-label {
+  position: relative;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  padding: 10px 15px;
+  left: -15px;
+  border-radius: 3px 0 0 3px;
+}
+
+.btn-label.btn-label-right {
+  left: auto;
+  right: -15px;
+  border-radius: 0 3px 3px 0;
+}
+
+.btn-lg .btn-label,
+.btn-group-lg > .btn .btn-label,
+.btn-group-lg > .button .btn-label,
+.agora-header .btn-group-lg > .more-link .btn-label,
+.view-display-id-home .btn-group-lg > .more-link .btn-label,
+.dropzone .btn-group-lg > a.button .btn-label,
+.eb-tabs .nav-pills li.btn-group-lg > a .btn-label,
+.view-header > ul.links li .btn-group-lg > a .btn-label,
+.slider-sidebar .btn-group-lg > .more-link .btn-label,
+.view-acteurs .more-link .btn-group-lg > a .btn-label {
+  padding: 18px 27px;
+  left: -27px;
+  border-radius: 5px 0 0 5px;
+}
+
+.btn-lg .btn-label.btn-label-right,
+.btn-group-lg > .btn .btn-label.btn-label-right,
+.btn-group-lg > .button .btn-label.btn-label-right,
+.agora-header .btn-group-lg > .more-link .btn-label.btn-label-right,
+.view-display-id-home .btn-group-lg > .more-link .btn-label.btn-label-right,
+.dropzone .btn-group-lg > a.button .btn-label.btn-label-right,
+.eb-tabs .nav-pills li.btn-group-lg > a .btn-label.btn-label-right,
+.view-header > ul.links li .btn-group-lg > a .btn-label.btn-label-right,
+.slider-sidebar .btn-group-lg > .more-link .btn-label.btn-label-right,
+.view-acteurs .more-link .btn-group-lg > a .btn-label.btn-label-right {
+  left: auto;
+  right: -27px;
+  border-radius: 0 5px 5px 0;
+}
+
+.btn-sm .btn-label,
+.btn-group-sm > .btn .btn-label,
+.btn-group-sm > .button .btn-label,
+.agora-header .btn-group-sm > .more-link .btn-label,
+.view-display-id-home .btn-group-sm > .more-link .btn-label,
+.dropzone .btn-group-sm > a.button .btn-label,
+.eb-tabs .nav-pills li.btn-group-sm > a .btn-label,
+#edit-header .form-actions > button .btn-label,
+.button--small .btn-label,
+.view-header > ul.links li a .btn-label,
+.slider-sidebar .more-link .btn-label,
+.view-acteurs .more-link a .btn-label {
+  padding: 6px 9px;
+  left: -9px;
+  border-radius: 2px 0 0 2px;
+}
+
+.btn-sm .btn-label.btn-label-right,
+.btn-group-sm > .btn .btn-label.btn-label-right,
+.btn-group-sm > .button .btn-label.btn-label-right,
+.agora-header .btn-group-sm > .more-link .btn-label.btn-label-right,
+.view-display-id-home .btn-group-sm > .more-link .btn-label.btn-label-right,
+.dropzone .btn-group-sm > a.button .btn-label.btn-label-right,
+.eb-tabs .nav-pills li.btn-group-sm > a .btn-label.btn-label-right,
+#edit-header .form-actions > button .btn-label.btn-label-right,
+.button--small .btn-label.btn-label-right,
+.view-header > ul.links li a .btn-label.btn-label-right,
+.slider-sidebar .more-link .btn-label.btn-label-right,
+.view-acteurs .more-link a .btn-label.btn-label-right {
+  left: auto;
+  right: -9px;
+  border-radius: 0 2px 2px 0;
+}
+
+.btn-xs .btn-label,
+.btn-group-xs > .btn .btn-label,
+.btn-group-xs > .button .btn-label,
+.agora-header .btn-group-xs > .more-link .btn-label,
+.view-display-id-home .btn-group-xs > .more-link .btn-label,
+.dropzone .btn-group-xs > a.button .btn-label,
+.eb-tabs .nav-pills li.btn-group-xs > a .btn-label,
+.view-header > ul.links li .btn-group-xs > a .btn-label,
+.slider-sidebar .btn-group-xs > .more-link .btn-label,
+.view-acteurs .more-link .btn-group-xs > a .btn-label,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger .btn-label,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger .btn-label {
+  padding: 1px 5px;
+  left: -5px;
+  border-radius: 2px 0 0 2px;
+}
+
+.btn-xs .btn-label.btn-label-right,
+.btn-group-xs > .btn .btn-label.btn-label-right,
+.btn-group-xs > .button .btn-label.btn-label-right,
+.agora-header .btn-group-xs > .more-link .btn-label.btn-label-right,
+.view-display-id-home .btn-group-xs > .more-link .btn-label.btn-label-right,
+.dropzone .btn-group-xs > a.button .btn-label.btn-label-right,
+.eb-tabs .nav-pills li.btn-group-xs > a .btn-label.btn-label-right,
+.view-header > ul.links li .btn-group-xs > a .btn-label.btn-label-right,
+.slider-sidebar .btn-group-xs > .more-link .btn-label.btn-label-right,
+.view-acteurs .more-link .btn-group-xs > a .btn-label.btn-label-right,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger .btn-label.btn-label-right,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger .btn-label.btn-label-right {
+  left: auto;
+  right: -5px;
+  border-radius: 0 2px 2px 0;
+}
+
+.btn-group > .btn:last-child:not(:first-child) .btn-label,
+.btn-group > .button:last-child:not(:first-child) .btn-label,
+.agora-header .btn-group > .more-link:last-child:not(:first-child) .btn-label,
+.view-display-id-home .btn-group > .more-link:last-child:not(:first-child) .btn-label,
+.dropzone .btn-group > a.button:last-child:not(:first-child) .btn-label,
+.eb-tabs .nav-pills li.btn-group > a:last-child:not(:first-child) .btn-label,
+.view-header > ul.links li .btn-group > a:last-child:not(:first-child) .btn-label,
+.slider-sidebar .btn-group > .more-link:last-child:not(:first-child) .btn-label,
+.view-acteurs .more-link .btn-group > a:last-child:not(:first-child) .btn-label,
+.btn-group > .dropdown-toggle:not(:first-child) .btn-label {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.nav-tabs-bottom {
+  border-bottom: 0;
+  border-top: 1px solid #ecf0f1;
+}
+
+.nav-tabs-bottom > li {
+  margin-bottom: 0;
+  margin-top: -1px;
+}
+
+.nav-tabs-bottom > li > a {
+  border-radius: 0 0 4px 4px;
+}
+
+.nav-tabs-bottom > li > a:hover,
+.nav-tabs-bottom > li > a:focus,
+.nav-tabs-bottom > li.active > a,
+.nav-tabs-bottom > li.active > a:hover,
+.nav-tabs-bottom > li.active > a:focus {
+  border: 1px solid #ecf0f1;
+  border-top-color: transparent;
+}
+
+.nav-tabs-left {
+  border-bottom: 0;
+  border-right: 1px solid #ecf0f1;
+}
+
+.nav-tabs-left > li {
+  margin-bottom: 0;
+  margin-right: -1px;
+  float: none;
+}
+
+.nav-tabs-left > li > a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  margin-bottom: 2px;
+}
+
+.nav-tabs-left > li > a:hover,
+.nav-tabs-left > li > a:focus,
+.nav-tabs-left > li.active > a,
+.nav-tabs-left > li.active > a:hover,
+.nav-tabs-left > li.active > a:focus {
+  border: 1px solid #ecf0f1;
+  border-right-color: transparent;
+}
+
+.row > .nav-tabs-left {
+  padding-right: 0;
+  padding-left: 15px;
+  margin-right: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.row > .nav-tabs-left + .tab-content {
+  border-left: 1px solid #ecf0f1;
+}
+
+.nav-tabs-right {
+  border-bottom: 0;
+  border-left: 1px solid #ecf0f1;
+}
+
+.nav-tabs-right > li {
+  margin-bottom: 0;
+  margin-left: -1px;
+  float: none;
+}
+
+.nav-tabs-right > li > a {
+  border-radius: 0 4px 4px 0;
+  margin-left: 0;
+  margin-bottom: 2px;
+}
+
+.nav-tabs-right > li > a:hover,
+.nav-tabs-right > li > a:focus,
+.nav-tabs-right > li.active > a,
+.nav-tabs-right > li.active > a:hover,
+.nav-tabs-right > li.active > a:focus {
+  border: 1px solid #ecf0f1;
+  border-left-color: transparent;
+}
+
+.row > .nav-tabs-right {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.navmenu,
+.navbar-offcanvas {
+  width: 300px;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.navmenu-fixed-left,
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  border-radius: 0;
+  overflow-y: auto;
+}
+
+.navmenu-fixed-left,
+.navbar-offcanvas.navmenu-fixed-left {
+  left: 0;
+  right: auto;
+  border-width: 0 1px 0 0;
+  bottom: 0;
+}
+
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  left: auto;
+  right: 0;
+  border-width: 0 0 0 1px;
+}
+
+.navmenu-nav {
+  margin-bottom: 10.5px;
+}
+
+.navmenu-nav.dropdown-menu {
+  position: static;
+  margin: 0;
+  padding-top: 0;
+  float: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.navbar-offcanvas .navbar-nav {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-offcanvas {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  .navbar-offcanvas.offcanvas {
+    position: static;
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+
+  .navbar-offcanvas .navbar-nav.navbar-left:first-child {
+    margin-left: -15px;
+  }
+
+  .navbar-offcanvas .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+
+  .navbar-offcanvas .navmenu-brand {
+    display: none;
+  }
+}
+
+.navmenu-brand {
+  display: block;
+  font-size: 19px;
+  line-height: 21px;
+  padding: 10px 15px;
+  margin: 10.5px 0;
+}
+
+.navmenu-brand:hover,
+.navmenu-brand:focus {
+  text-decoration: none;
+}
+
+.navmenu-default,
+.navbar-default .navbar-offcanvas {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.navmenu-default .navmenu-brand,
+.navbar-default .navbar-offcanvas .navmenu-brand {
+  color: #777;
+}
+
+.navmenu-default .navmenu-brand:hover,
+.navmenu-default .navmenu-brand:focus,
+.navbar-default .navbar-offcanvas .navmenu-brand:hover,
+.navbar-default .navbar-offcanvas .navmenu-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+
+.navmenu-default .navmenu-text,
+.navbar-default .navbar-offcanvas .navmenu-text {
+  color: #777;
+}
+
+.navmenu-default .navmenu-nav > .dropdown > a:hover .caret,
+.navmenu-default .navmenu-nav > .dropdown > a:focus .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+
+.navmenu-default .navmenu-nav > .open > a,
+.navmenu-default .navmenu-nav > .open > a:hover,
+.navmenu-default .navmenu-nav > .open > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus {
+  background-color: #e7e7e7;
+  color: #555;
+}
+
+.navmenu-default .navmenu-nav > .open > a .caret,
+.navmenu-default .navmenu-nav > .open > a:hover .caret,
+.navmenu-default .navmenu-nav > .open > a:focus .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+
+.navmenu-default .navmenu-nav > .dropdown > a .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+
+.navmenu-default .navmenu-nav.dropdown-menu,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu {
+  background-color: #e7e7e7;
+}
+
+.navmenu-default .navmenu-nav.dropdown-menu > .divider,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .divider {
+  background-color: #f8f8f8;
+}
+
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a,
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a:hover,
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:focus {
+  background-color: #d7d7d7;
+}
+
+.navmenu-default .navmenu-nav > li > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > li > a {
+  color: #777;
+}
+
+.navmenu-default .navmenu-nav > li > a:hover,
+.navmenu-default .navmenu-nav > li > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > li > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+
+.navmenu-default .navmenu-nav > .active > a,
+.navmenu-default .navmenu-nav > .active > a:hover,
+.navmenu-default .navmenu-nav > .active > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > .active > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > .active > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+.navmenu-default .navmenu-nav > .disabled > a,
+.navmenu-default .navmenu-nav > .disabled > a:hover,
+.navmenu-default .navmenu-nav > .disabled > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.navmenu-inverse,
+.navbar-inverse .navbar-offcanvas {
+  background-color: #222;
+  border-color: #090909;
+}
+
+.navmenu-inverse .navmenu-brand,
+.navbar-inverse .navbar-offcanvas .navmenu-brand {
+  color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-brand:hover,
+.navmenu-inverse .navmenu-brand:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-brand:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navmenu-inverse .navmenu-text,
+.navbar-inverse .navbar-offcanvas .navmenu-text {
+  color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-nav > .dropdown > a:hover .caret,
+.navmenu-inverse .navmenu-nav > .dropdown > a:focus .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navmenu-inverse .navmenu-nav > .open > a,
+.navmenu-inverse .navmenu-nav > .open > a:hover,
+.navmenu-inverse .navmenu-nav > .open > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:focus {
+  background-color: #090909;
+  color: #fff;
+}
+
+.navmenu-inverse .navmenu-nav > .open > a .caret,
+.navmenu-inverse .navmenu-nav > .open > a:hover .caret,
+.navmenu-inverse .navmenu-nav > .open > a:focus .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:hover .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navmenu-inverse .navmenu-nav > .dropdown > a .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a .caret {
+  border-top-color: #b4bcc2;
+  border-bottom-color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-nav.dropdown-menu,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu {
+  background-color: #090909;
+}
+
+.navmenu-inverse .navmenu-nav.dropdown-menu > .divider,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .divider {
+  background-color: #222;
+}
+
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a,
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:hover,
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:focus {
+  background-color: black;
+}
+
+.navmenu-inverse .navmenu-nav > li > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > li > a {
+  color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-nav > li > a:hover,
+.navmenu-inverse .navmenu-nav > li > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > li > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navmenu-inverse .navmenu-nav > .active > a,
+.navmenu-inverse .navmenu-nav > .active > a:hover,
+.navmenu-inverse .navmenu-nav > .active > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a:focus {
+  color: #fff;
+  background-color: #090909;
+}
+
+.navmenu-inverse .navmenu-nav > .disabled > a,
+.navmenu-inverse .navmenu-nav > .disabled > a:hover,
+.navmenu-inverse .navmenu-nav > .disabled > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+
+.alert-fixed-top,
+.alert-fixed-bottom {
+  position: fixed;
+  width: 100%;
+  z-index: 1035;
+  border-radius: 0;
+  margin: 0;
+  left: 0;
+}
+
+@media (min-width: 992px) {
+  .alert-fixed-top,
+  .alert-fixed-bottom {
+    width: 992px;
+    left: 50%;
+    margin-left: -496px;
+  }
+}
+
+.alert-fixed-top {
+  top: 0;
+  border-width: 0 0 1px 0;
+}
+
+@media (min-width: 992px) {
+  .alert-fixed-top {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-width: 0 1px 1px 1px;
+  }
+}
+
+.alert-fixed-bottom {
+  bottom: 0;
+  border-width: 1px 0 0 0;
+}
+
+@media (min-width: 992px) {
+  .alert-fixed-bottom {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-width: 1px 1px 0 1px;
+  }
+}
+
+.offcanvas {
+  display: none;
+}
+
+.offcanvas.in {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .offcanvas-xs {
+    display: none;
+  }
+
+  .offcanvas-xs.in {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .offcanvas-sm {
+    display: none;
+  }
+
+  .offcanvas-sm.in {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .offcanvas-md {
+    display: none;
+  }
+
+  .offcanvas-md.in {
+    display: block;
+  }
+}
+
+.offcanvas-lg {
+  display: none;
+}
+
+.offcanvas-lg.in {
+  display: block;
+}
+
+.canvas-sliding {
+  -webkit-transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+  -o-transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+  transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+}
+
+.offcanvas-clone {
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  opacity: 0 !important;
+}
+
+.table.rowlink td:not(.rowlink-skip),
+.table .rowlink td:not(.rowlink-skip) {
+  cursor: pointer;
+}
+
+.table.rowlink td:not(.rowlink-skip) a,
+.table .rowlink td:not(.rowlink-skip) a {
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.table-hover.rowlink tr:hover td,
+.table-hover .rowlink tr:hover td {
+  background-color: #c0cdd1;
+}
+
+.btn-file {
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+
+.btn-file > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 23px;
+  height: 100%;
+  width: 100%;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.fileinput {
+  margin-bottom: 9px;
+  display: inline-block;
+}
+
+.fileinput .form-control,
+.fileinput .agenda-search .cibulSearch input,
+.agenda-search .cibulSearch .fileinput input {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  cursor: text;
+}
+
+.fileinput .thumbnail {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.fileinput .thumbnail > img {
+  max-height: 100%;
+}
+
+.fileinput .btn,
+.fileinput .button,
+.fileinput .agora-header .more-link,
+.agora-header .fileinput .more-link,
+.fileinput
+  .view-display-id-home .more-link,
+.view-display-id-home .fileinput .more-link,
+.fileinput .dropzone a.button,
+.dropzone .fileinput a.button,
+.fileinput .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills .fileinput li > a,
+.fileinput .view-header > ul.links li a,
+.view-header > ul.links li .fileinput a,
+.fileinput .slider-sidebar .more-link,
+.slider-sidebar .fileinput .more-link,
+.fileinput .view-acteurs .more-link a,
+.view-acteurs .more-link .fileinput a {
+  vertical-align: middle;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+  display: none;
+}
+
+.fileinput-inline .fileinput-controls {
+  display: inline;
+}
+
+.fileinput-filename {
+  vertical-align: middle;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.form-control .fileinput-filename,
+.agenda-search .cibulSearch input .fileinput-filename {
+  vertical-align: bottom;
+}
+
+.fileinput.input-group {
+  display: table;
+}
+
+.fileinput-new.input-group .btn-file,
+.fileinput-new .input-group .btn-file {
+  border-radius: 0 4px 4px 0;
+}
+
+.fileinput-new.input-group .btn-file.btn-xs,
+.fileinput-new.input-group .btn-group-xs > .btn-file.btn,
+.fileinput-new.input-group .btn-group-xs > .btn-file.button,
+.fileinput-new.input-group .agora-header .btn-group-xs > .btn-file.more-link,
+.agora-header .fileinput-new.input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new.input-group
+  .view-display-id-home .btn-group-xs > .btn-file.more-link,
+.view-display-id-home .fileinput-new.input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new.input-group .dropzone .btn-group-xs > a.btn-file.button,
+.fileinput-new.input-group .eb-tabs .nav-pills li.btn-group-xs > a.btn-file,
+.eb-tabs .nav-pills .fileinput-new.input-group li.btn-group-xs > a.btn-file,
+.fileinput-new.input-group .view-header > ul.links li .btn-group-xs > a.btn-file,
+.view-header > ul.links li .fileinput-new.input-group .btn-group-xs > a.btn-file,
+.fileinput-new.input-group .slider-sidebar .btn-group-xs > .btn-file.more-link,
+.slider-sidebar .fileinput-new.input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new.input-group .view-acteurs .more-link .btn-group-xs > a.btn-file,
+.view-acteurs .more-link .fileinput-new.input-group .btn-group-xs > a.btn-file,
+.fileinput-new.input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.btn-danger,
+#webform-submission-candidature-aap-form .js-form-managed-file .fileinput-new.input-group button.btn-file.js-form-submit.btn-danger,
+.fileinput-new.input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.button--danger,
+#webform-submission-candidature-aap-form .js-form-managed-file .fileinput-new.input-group button.btn-file.js-form-submit.button--danger,
+.fileinput-new.input-group .btn-file.btn-sm,
+.fileinput-new.input-group .btn-group-sm > .btn-file.btn,
+.fileinput-new.input-group .btn-group-sm > .btn-file.button,
+.fileinput-new.input-group .agora-header .btn-group-sm > .btn-file.more-link,
+.agora-header .fileinput-new.input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new.input-group
+  .view-display-id-home .btn-group-sm > .btn-file.more-link,
+.view-display-id-home .fileinput-new.input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new.input-group .dropzone .btn-group-sm > a.btn-file.button,
+.fileinput-new.input-group .eb-tabs .nav-pills li.btn-group-sm > a.btn-file,
+.eb-tabs .nav-pills .fileinput-new.input-group li.btn-group-sm > a.btn-file,
+.fileinput-new.input-group #edit-header .form-actions > button.btn-file,
+#edit-header .fileinput-new.input-group .form-actions > button.btn-file,
+.fileinput-new.input-group .btn-file.button--small,
+.fileinput-new.input-group .view-header > ul.links li a.btn-file,
+.view-header > ul.links li .fileinput-new.input-group a.btn-file,
+.fileinput-new.input-group .slider-sidebar .btn-file.more-link,
+.slider-sidebar .fileinput-new.input-group .btn-file.more-link,
+.fileinput-new.input-group .view-acteurs .more-link a.btn-file,
+.view-acteurs .more-link .fileinput-new.input-group a.btn-file,
+.fileinput-new .input-group .btn-file.btn-xs,
+.fileinput-new .input-group .btn-group-xs > .btn-file.btn,
+.fileinput-new .input-group .btn-group-xs > .btn-file.button,
+.fileinput-new .input-group .agora-header .btn-group-xs > .btn-file.more-link,
+.agora-header
+  .fileinput-new .input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new .input-group
+  .view-display-id-home .btn-group-xs > .btn-file.more-link,
+.view-display-id-home
+  .fileinput-new .input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new .input-group .dropzone .btn-group-xs > a.btn-file.button,
+.fileinput-new .input-group .eb-tabs .nav-pills li.btn-group-xs > a.btn-file,
+.eb-tabs .nav-pills
+  .fileinput-new .input-group li.btn-group-xs > a.btn-file,
+.fileinput-new .input-group .view-header > ul.links li .btn-group-xs > a.btn-file,
+.view-header > ul.links li
+  .fileinput-new .input-group .btn-group-xs > a.btn-file,
+.fileinput-new .input-group .slider-sidebar .btn-group-xs > .btn-file.more-link,
+.slider-sidebar
+  .fileinput-new .input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new .input-group .view-acteurs .more-link .btn-group-xs > a.btn-file,
+.view-acteurs .more-link
+  .fileinput-new .input-group .btn-group-xs > a.btn-file,
+.fileinput-new .input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.btn-danger,
+#webform-submission-candidature-aap-form .js-form-managed-file
+  .fileinput-new .input-group button.btn-file.js-form-submit.btn-danger,
+.fileinput-new .input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.button--danger,
+#webform-submission-candidature-aap-form .js-form-managed-file
+  .fileinput-new .input-group button.btn-file.js-form-submit.button--danger,
+.fileinput-new .input-group .btn-file.btn-sm,
+.fileinput-new .input-group .btn-group-sm > .btn-file.btn,
+.fileinput-new .input-group .btn-group-sm > .btn-file.button,
+.fileinput-new .input-group .agora-header .btn-group-sm > .btn-file.more-link,
+.agora-header
+  .fileinput-new .input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new .input-group
+  .view-display-id-home .btn-group-sm > .btn-file.more-link,
+.view-display-id-home
+  .fileinput-new .input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new .input-group .dropzone .btn-group-sm > a.btn-file.button,
+.fileinput-new .input-group .eb-tabs .nav-pills li.btn-group-sm > a.btn-file,
+.eb-tabs .nav-pills
+  .fileinput-new .input-group li.btn-group-sm > a.btn-file,
+.fileinput-new .input-group #edit-header .form-actions > button.btn-file,
+#edit-header
+  .fileinput-new .input-group .form-actions > button.btn-file,
+.fileinput-new .input-group .btn-file.button--small,
+.fileinput-new .input-group .view-header > ul.links li a.btn-file,
+.view-header > ul.links li
+  .fileinput-new .input-group a.btn-file,
+.fileinput-new .input-group .slider-sidebar .btn-file.more-link,
+.slider-sidebar
+  .fileinput-new .input-group .btn-file.more-link,
+.fileinput-new .input-group .view-acteurs .more-link a.btn-file,
+.view-acteurs .more-link
+  .fileinput-new .input-group a.btn-file {
+  border-radius: 0 3px 3px 0;
+}
+
+.fileinput-new.input-group .btn-file.btn-lg,
+.fileinput-new.input-group .btn-group-lg > .btn-file.btn,
+.fileinput-new.input-group .btn-group-lg > .btn-file.button,
+.fileinput-new.input-group .agora-header .btn-group-lg > .btn-file.more-link,
+.agora-header .fileinput-new.input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new.input-group
+  .view-display-id-home .btn-group-lg > .btn-file.more-link,
+.view-display-id-home .fileinput-new.input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new.input-group .dropzone .btn-group-lg > a.btn-file.button,
+.fileinput-new.input-group .eb-tabs .nav-pills li.btn-group-lg > a.btn-file,
+.eb-tabs .nav-pills .fileinput-new.input-group li.btn-group-lg > a.btn-file,
+.fileinput-new.input-group .view-header > ul.links li .btn-group-lg > a.btn-file,
+.view-header > ul.links li .fileinput-new.input-group .btn-group-lg > a.btn-file,
+.fileinput-new.input-group .slider-sidebar .btn-group-lg > .btn-file.more-link,
+.slider-sidebar .fileinput-new.input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new.input-group .view-acteurs .more-link .btn-group-lg > a.btn-file,
+.view-acteurs .more-link .fileinput-new.input-group .btn-group-lg > a.btn-file,
+.fileinput-new .input-group .btn-file.btn-lg,
+.fileinput-new .input-group .btn-group-lg > .btn-file.btn,
+.fileinput-new .input-group .btn-group-lg > .btn-file.button,
+.fileinput-new .input-group .agora-header .btn-group-lg > .btn-file.more-link,
+.agora-header
+  .fileinput-new .input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new .input-group
+  .view-display-id-home .btn-group-lg > .btn-file.more-link,
+.view-display-id-home
+  .fileinput-new .input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new .input-group .dropzone .btn-group-lg > a.btn-file.button,
+.fileinput-new .input-group .eb-tabs .nav-pills li.btn-group-lg > a.btn-file,
+.eb-tabs .nav-pills
+  .fileinput-new .input-group li.btn-group-lg > a.btn-file,
+.fileinput-new .input-group .view-header > ul.links li .btn-group-lg > a.btn-file,
+.view-header > ul.links li
+  .fileinput-new .input-group .btn-group-lg > a.btn-file,
+.fileinput-new .input-group .slider-sidebar .btn-group-lg > .btn-file.more-link,
+.slider-sidebar
+  .fileinput-new .input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new .input-group .view-acteurs .more-link .btn-group-lg > a.btn-file,
+.view-acteurs .more-link
+  .fileinput-new .input-group .btn-group-lg > a.btn-file {
+  border-radius: 0 6px 6px 0;
+}
+
+.form-group.has-warning .fileinput .fileinput-preview {
+  color: #fff;
+}
+
+.form-group.has-warning .fileinput .thumbnail {
+  border-color: #F39C12;
+}
+
+.form-group.has-error .fileinput .fileinput-preview {
+  color: #fff;
+}
+
+.form-group.has-error .fileinput .thumbnail {
+  border-color: #E74C3C;
+}
+
+.form-group.has-success .fileinput .fileinput-preview {
+  color: #fff;
+}
+
+.form-group.has-success .fileinput .thumbnail {
+  border-color: #18BC9C;
+}
+
+.input-group-addon:not(:first-child) {
+  border-left: 0;
 }
 
 @font-face {
@@ -13780,6 +15459,15 @@ a.list-group-item-danger.active:focus {
 .alert-danger a:hover,
 .alert-danger a:focus {
   color: #e6e6e6;
+}
+
+.modal .modal-body {
+  padding: 0;
+}
+
+.modal .modal-body .alert {
+  border-radius: 0;
+  margin: 0;
 }
 
 /**
@@ -13843,6 +15531,8 @@ html.js .agora-header .more-link .ajax-throbber,
 html.js
 .view-display-id-home .more-link .ajax-throbber,
 .view-display-id-home html.js .more-link .ajax-throbber,
+html.js .eb-tabs .nav-pills li > a .ajax-throbber,
+.eb-tabs .nav-pills html.js li > a .ajax-throbber,
 html.js .view-header > ul.links li a .ajax-throbber,
 .view-header > ul.links li html.js a .ajax-throbber,
 html.js .slider-sidebar .more-link .ajax-throbber,
@@ -13993,6 +15683,18 @@ html.js .ajax-new-content:empty {
   overflow: hidden;
 }
 
+.table-responsive .draggable .tabledrag-handle {
+  padding: 15px 10px;
+}
+
+.table-responsive .draggable .file {
+  width: auto;
+}
+
+.table-responsive .draggable > td > .button {
+  margin: 5px 0;
+}
+
 /**
  * Filter styles.
  */
@@ -14018,22 +15720,93 @@ html.js .ajax-new-content:empty {
   margin-bottom: 15px;
 }
 
+#edit-header {
+  padding: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+#edit-header,
+#edit-header > .form-wrapper {
+  margin-bottom: 0;
+}
+
+#edit-header .form-item-action,
+#edit-header .form-actions,
+#edit-header .control-label,
+#edit-header .select-wrapper {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+  max-width: auto;
+}
+
+#edit-header .control-label {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+#edit-header .select-wrapper {
+  margin-right: 0.5em;
+}
+
+#edit-header .select-wrapper::after {
+  margin-top: -0.1em;
+}
+
+#edit-header .form-select {
+  padding-left: 5px;
+  font-size: 14px;
+  padding-bottom: 0px;
+}
+
 a.btn.btn-primary:hover,
 a.btn-primary.button:hover,
 a.button.button--primary:hover,
+.dropzone a.button:hover,
 a.btn.button--primary:hover,
 .agora-header a.button--primary.more-link:hover,
 .view-display-id-home a.button--primary.more-link:hover,
+.eb-tabs .nav-pills li > a.button--primary:hover,
 .view-acteurs .more-link a.button--primary:hover,
 .agora-header a.btn-primary.more-link:hover,
 .agora-header .view-header > ul.links li a.more-link:hover,
 .view-display-id-home a.btn-primary.more-link:hover,
 .view-display-id-home .view-header > ul.links li a.more-link:hover,
+.eb-tabs .nav-pills li > a.btn-primary:hover,
+.eb-tabs .nav-pills .view-header > ul.links li > a:hover,
 .view-header > ul.links li a:hover,
 .slider-sidebar a.more-link:hover,
 .view-acteurs .more-link a.btn-primary:hover,
 .view-acteurs .more-link .view-header > ul.links li a:hover {
   color: rgba(255, 255, 0, 0.9);
+}
+
+.btn-label {
+  background: none;
+}
+
+.fa-pager .pager li > a,
+.fa-pager .agenda-filter ul.categories li > a,
+.agenda-filter .fa-pager ul.categories li > a {
+  background-color: transparent;
+  color: #18BC9C;
+}
+
+.fa-pager .pager li > a:hover,
+.fa-pager .agenda-filter ul.categories li > a:hover,
+.agenda-filter .fa-pager ul.categories li > a:hover,
+.fa-pager .pager li > a:focus,
+.fa-pager .agenda-filter ul.categories li > a:focus,
+.agenda-filter .fa-pager ul.categories li > a:focus {
+  background-color: transparent;
+  color: #0f7864;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background: none;
+  border: none;
 }
 
 /**
@@ -14128,6 +15901,211 @@ a.btn.button--primary:hover,
   line-height: 1;
   height: 7px;
   width: 10px;
+}
+
+.radio label,
+.radio-inline label,
+.checkbox label,
+.checkbox-inline label {
+  padding-left: 25px;
+}
+
+.radio input[type="radio"],
+.radio input[type="checkbox"],
+.radio-inline input[type="radio"],
+.radio-inline input[type="checkbox"],
+.checkbox input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="radio"],
+.checkbox-inline input[type="checkbox"] {
+  margin-left: -25px;
+}
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  position: relative;
+  margin-top: 6px;
+  margin-right: 4px;
+  vertical-align: top;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  cursor: pointer;
+}
+
+input[type="radio"]:focus,
+.radio input[type="radio"]:focus,
+.radio-inline input[type="radio"]:focus {
+  outline: none;
+}
+
+input[type="radio"]:before,
+input[type="radio"]:after,
+.radio input[type="radio"]:before,
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:before,
+.radio-inline input[type="radio"]:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-transition: 240ms;
+  -o-transition: 240ms;
+  transition: 240ms;
+}
+
+input[type="radio"]:before,
+.radio input[type="radio"]:before,
+.radio-inline input[type="radio"]:before {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  background-color: #303030;
+  -webkit-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+input[type="radio"]:after,
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:after {
+  position: relative;
+  top: -3px;
+  border: 2px solid #464545;
+}
+
+input[type="radio"]:checked:before,
+.radio input[type="radio"]:checked:before,
+.radio-inline input[type="radio"]:checked:before {
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+input[type="radio"]:disabled:checked:before,
+.radio input[type="radio"]:disabled:checked:before,
+.radio-inline input[type="radio"]:disabled:checked:before {
+  background-color: #999;
+}
+
+input[type="radio"]:checked:after,
+.radio input[type="radio"]:checked:after,
+.radio-inline input[type="radio"]:checked:after {
+  border-color: #303030;
+}
+
+input[type="radio"]:disabled:after,
+input[type="radio"]:disabled:checked:after,
+.radio input[type="radio"]:disabled:after,
+.radio input[type="radio"]:disabled:checked:after,
+.radio-inline input[type="radio"]:disabled:after,
+.radio-inline input[type="radio"]:disabled:checked:after {
+  border-color: #999;
+}
+
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: relative;
+  border: none;
+  margin-bottom: -4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:focus,
+.checkbox input[type="checkbox"]:focus,
+.checkbox-inline input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input[type="checkbox"]:focus:after,
+.checkbox input[type="checkbox"]:focus:after,
+.checkbox-inline input[type="checkbox"]:focus:after {
+  border-color: #303030;
+}
+
+input[type="checkbox"]:after,
+.checkbox input[type="checkbox"]:after,
+.checkbox-inline input[type="checkbox"]:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -2px;
+  margin-right: 5px;
+  border: 2px solid #464545;
+  border-radius: 2px;
+  -webkit-transition: 240ms;
+  -o-transition: 240ms;
+  transition: 240ms;
+}
+
+input[type="checkbox"]:checked:before,
+.checkbox input[type="checkbox"]:checked:before,
+.checkbox-inline input[type="checkbox"]:checked:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6px;
+  display: table;
+  width: 6px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-top-width: 0;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked:after,
+.checkbox input[type="checkbox"]:checked:after,
+.checkbox-inline input[type="checkbox"]:checked:after {
+  background-color: #303030;
+  border-color: #303030;
+}
+
+input[type="checkbox"]:disabled:after,
+.checkbox input[type="checkbox"]:disabled:after,
+.checkbox-inline input[type="checkbox"]:disabled:after {
+  border-color: #999;
+}
+
+input[type="checkbox"]:disabled:checked:after,
+.checkbox input[type="checkbox"]:disabled:checked:after,
+.checkbox-inline input[type="checkbox"]:disabled:checked:after {
+  background-color: #999;
+  border-color: transparent;
+}
+
+.has-warning input:not([type=checkbox]),
+.has-warning .form-control,
+.has-warning .agenda-search .cibulSearch input,
+.agenda-search .cibulSearch
+.has-warning input,
+.has-warning input.form-control[readonly],
+.has-warning .agenda-search .cibulSearch input[readonly],
+.agenda-search .cibulSearch
+.has-warning input[readonly],
+.has-warning input[type=text][readonly],
+.has-warning [type=text].form-control[readonly],
+.has-warning .agenda-search .cibulSearch input[type=text][readonly],
+.agenda-search .cibulSearch
+.has-warning input[type=text][readonly],
+.has-warning input:not([type=checkbox]):focus,
+.has-warning .form-control:focus,
+.has-warning .agenda-search .cibulSearch input:focus,
+.agenda-search .cibulSearch
+.has-warning input:focus {
+  border-bottom: none;
+  box-shadow: inset 0 -2px 0 #F39C12;
 }
 
 form.webform-submission-form {
@@ -14291,6 +16269,49 @@ table td.views-field-operations {
   color: #fff;
 }
 
+.form-actions input[type=submit]:active,
+.form-actions input[type=submit]:focus,
+.form-actions button[type=submit]:active,
+.form-actions button[type=submit]:focus,
+.form-actions a.button:active,
+.form-actions a.button:focus {
+  outline: none;
+}
+
+.form-required:after {
+  background-image: none;
+  content: "\F069";
+  font-size: 50%;
+  vertical-align: super;
+  color: rgba(255, 69, 0, 0.7);
+}
+
+.modal .modal-body form fieldset:first-of-type {
+  margin-top: 10px;
+}
+
+.dropzone {
+  margin: 1.5em 2.5em;
+  background-color: #EBEBEB;
+  font-size: 20px;
+}
+
+.dropzone .dz-message > p:first-child {
+  font-weight: 400;
+}
+
+.dropzone .dz-preview .dropzonejs-remove-icon {
+  color: rgba(255, 69, 0, 0.7);
+}
+
+.dropzone .dz-preview .dz-success-mark svg #Page-1 path {
+  fill: rgba(255, 255, 0, 0.9);
+}
+
+.entity-embed-dialog.entity-embed-dialog-step--embed {
+  max-width: 450px;
+}
+
 /**
  * Icon styles.
  */
@@ -14307,6 +16328,7 @@ a.icon-after .glyphicon {
 .icon-before.button .glyphicon,
 .agora-header .icon-before.more-link .glyphicon,
 .view-display-id-home .icon-before.more-link .glyphicon,
+.eb-tabs .nav-pills li > a.icon-before .glyphicon,
 .view-header > ul.links li a.icon-before .glyphicon,
 .slider-sidebar .icon-before.more-link .glyphicon,
 .view-acteurs .more-link a.icon-before .glyphicon {
@@ -14318,6 +16340,7 @@ a.icon-after .glyphicon {
 .icon-after.button .glyphicon,
 .agora-header .icon-after.more-link .glyphicon,
 .view-display-id-home .icon-after.more-link .glyphicon,
+.eb-tabs .nav-pills li > a.icon-after .glyphicon,
 .view-header > ul.links li a.icon-after .glyphicon,
 .slider-sidebar .icon-after.more-link .glyphicon,
 .view-acteurs .more-link a.icon-after .glyphicon {
@@ -14345,12 +16368,6 @@ body.navbar-is-fixed-bottom {
   padding-bottom: 75px;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    margin-top: 15px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   body.toolbar-vertical.navbar-is-fixed-bottom .toolbar-bar,
   body.toolbar-vertical.navbar-is-fixed-top .toolbar-bar {
@@ -14367,10 +16384,38 @@ body.navbar-is-fixed-bottom {
   }
 }
 
+.navbar-inverse .navbar-toggle {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-toggle.active,
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  color: rgba(255, 255, 0, 0.9);
+}
+
+.offcanvas-fixed-right,
+body,
+.backdrop {
+  left: auto !important;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1040;
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .navbar.container,
   .navbar.container-xs,
   .navbar.container-sm,
+  .path-webform .navbar.page-header,
   form.navbar.webform-submission-form,
   .navbar.container-md,
   .project-list > .navbar.view-content {
@@ -14382,6 +16427,7 @@ body.navbar-is-fixed-bottom {
   .navbar.container,
   .navbar.container-xs,
   .navbar.container-sm,
+  .path-webform .navbar.page-header,
   form.navbar.webform-submission-form,
   .navbar.container-md,
   .project-list > .navbar.view-content {
@@ -14393,6 +16439,7 @@ body.navbar-is-fixed-bottom {
   .navbar.container,
   .navbar.container-xs,
   .navbar.container-sm,
+  .path-webform .navbar.page-header,
   form.navbar.webform-submission-form,
   .navbar.container-md,
   .project-list > .navbar.view-content {
@@ -14403,36 +16450,49 @@ body.navbar-is-fixed-bottom {
 .navbar.container > .container,
 .navbar.container-xs > .container,
 .navbar.container-sm > .container,
+.path-webform .navbar.page-header > .container,
 form.navbar.webform-submission-form > .container,
 .navbar.container-md > .container,
 .project-list > .navbar.view-content > .container,
 .navbar.container > .container-xs,
 .navbar.container-xs > .container-xs,
 .navbar.container-sm > .container-xs,
+.path-webform .navbar.page-header > .container-xs,
 form.navbar.webform-submission-form > .container-xs,
 .navbar.container-md > .container-xs,
 .project-list > .navbar.view-content > .container-xs,
 .navbar.container > .container-sm,
 .navbar.container-xs > .container-sm,
 .navbar.container-sm > .container-sm,
+.path-webform .navbar.page-header > .container-sm,
 form.navbar.webform-submission-form > .container-sm,
 .navbar.container-md > .container-sm,
 .project-list > .navbar.view-content > .container-sm,
+.path-webform .navbar.container > .page-header,
+.path-webform .navbar.container-xs > .page-header,
+.path-webform .navbar.container-sm > .page-header,
+.path-webform .navbar.page-header > .page-header,
+.path-webform form.navbar.webform-submission-form > .page-header,
+.path-webform .navbar.container-md > .page-header,
+.path-webform .project-list > .navbar.view-content > .page-header,
 .navbar.container > form.webform-submission-form,
 .navbar.container-xs > form.webform-submission-form,
 .navbar.container-sm > form.webform-submission-form,
+.path-webform .navbar.page-header > form.webform-submission-form,
 form.navbar.webform-submission-form > form.webform-submission-form,
 .navbar.container-md > form.webform-submission-form,
 .project-list > .navbar.view-content > form.webform-submission-form,
 .navbar.container > .container-md,
 .navbar.container-xs > .container-md,
 .navbar.container-sm > .container-md,
+.path-webform .navbar.page-header > .container-md,
 form.navbar.webform-submission-form > .container-md,
 .navbar.container-md > .container-md,
 .project-list > .navbar.view-content > .container-md,
 .project-list.navbar.container > .view-content,
 .project-list.navbar.container-xs > .view-content,
 .project-list.navbar.container-sm > .view-content,
+.path-webform .project-list.navbar.page-header > .view-content,
 form.project-list.navbar.webform-submission-form > .view-content,
 .project-list.navbar.container-md > .view-content,
 .project-list > .project-list.navbar.view-content > .view-content,
@@ -14454,12 +16514,87 @@ form.project-list.navbar.webform-submission-form > .view-content,
   border-radius: 23px;
   background-color: rgba(255, 255, 0, 0.9);
   font-weight: 300;
+  font-size: 14px !important;
+  line-height: 21px !important;
   color: #222222;
   text-transform: uppercase;
 }
 
 .icon-avatar:hover {
   background-color: yellow;
+}
+
+@media (max-width: 767px) {
+  .region-navigation-collapsible > nav[role='navigation'] {
+    padding: 12px 0;
+  }
+
+  .menu.nav.navbar-nav > li > a {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31.5px;
+  }
+
+  #block-user-menu .dropdown-menu > li > a,
+  #block-user-menu .menu.nav > li > a {
+    line-height: 21px;
+  }
+
+  #block-user-menu .dropdown-menu > li > a .fa-lg,
+  #block-user-menu .menu.nav > li > a .fa-lg {
+    font-size: 24px;
+    line-height: 1em;
+  }
+
+  .navbar-inverse #block-user-menu .dropdown-menu > li > a,
+  .navbar-inverse
+    #block-user-menu .menu.nav > li > a {
+    color: #fff;
+  }
+
+  #block-user-menu .dropdown-menu > li > a:focus,
+  #block-user-menu .dropdown-menu > li > a:hover,
+  #block-user-menu .menu.nav > li > a:focus,
+  #block-user-menu .menu.nav > li > a:hover {
+    color: rgba(255, 255, 0, 0.9);
+    background: none;
+  }
+
+  #block-user-menu .dropdown-toggle {
+    display: inline-block;
+  }
+
+  #block-user-menu .dropdown-menu {
+    display: inline-block;
+    position: static;
+    float: right;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  #block-user-menu .dropdown-menu > li,
+  #block-user-menu .dropdown-menu > li > a {
+    display: inline-block;
+    text-align: center;
+  }
+
+  #block-user-menu .dropdown-menu > li > a,
+  #block-user-menu .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+
+  #block-user-menu .menu.nav > li.dropdown.expanded {
+    float: right;
+  }
+}
+
+.agora-toolbar .navbar.navbar-default,
+.agora-toolbar .navbar.navbar-inverse {
+  margin-bottom: 0;
 }
 
 .taskbar {
@@ -14484,6 +16619,10 @@ form.project-list.navbar.webform-submission-form > .view-content,
 .linkbar
   .view-display-id-home .more-link,
 .view-display-id-home .linkbar .more-link,
+.linkbar .dropzone a.button,
+.dropzone .linkbar a.button,
+.linkbar .eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills .linkbar li > a,
 .linkbar .view-header > ul.links li a,
 .view-header > ul.links li .linkbar a,
 .linkbar .slider-sidebar .more-link,
@@ -14504,6 +16643,8 @@ form.project-list.navbar.webform-submission-form > .view-content,
 .linkbar
     .view-display-id-home .more-link:last-child,
 .view-display-id-home .linkbar .more-link:last-child,
+.linkbar .eb-tabs .nav-pills li > a:last-child,
+.eb-tabs .nav-pills .linkbar li > a:last-child,
 .linkbar .view-header > ul.links li a:last-child,
 .view-header > ul.links li .linkbar a:last-child,
 .linkbar .slider-sidebar .more-link:last-child,
@@ -14538,8 +16679,8 @@ form.project-list.navbar.webform-submission-form > .view-content,
   }
 }
 
-.project .nav-pills li a:hover,
-.project .nav-pills li a:focus {
+.project .nav-pills li a:focus,
+.project .nav-pills li a:hover {
   border-color: #999;
   color: #464545;
 }
@@ -14555,8 +16696,8 @@ form.project-list.navbar.webform-submission-form > .view-content,
   color: rgba(24, 188, 156, 0.8);
 }
 
-.project .nav-pills li.nav-highlight a:hover,
-.project .nav-pills li.nav-highlight a:focus {
+.project .nav-pills li.nav-highlight a:focus,
+.project .nav-pills li.nav-highlight a:hover {
   border-color: #18BC9C;
   color: #18BC9C;
 }
@@ -14604,7 +16745,8 @@ mark,
   border-radius: 6px;
 }
 
-.field--item .fa {
+.field--item .fa,
+.field--item .form-required:after {
   margin-right: 5px;
 }
 
@@ -14735,7 +16877,8 @@ blockquote.info .field--type-address {
   padding: 15px 30px 45px;
 }
 
-.panel .media-left .fa {
+.panel .media-left .fa,
+.panel .media-left .form-required:after {
   font-size: 21px;
   width: 21px;
   text-align: center;
@@ -14778,6 +16921,53 @@ blockquote.info .field--type-address {
 
 .progress-wrapper .progress-bar {
   min-width: 2em;
+}
+
+table.treetable tr span.indenter {
+  margin-left: 0;
+}
+
+.table-responsive th.select-all {
+  padding-left: 14px;
+}
+
+.table-responsive th.select-all input[type="checkbox"],
+.table-responsive th.select-all .checkbox input[type="checkbox"],
+.table-responsive th.select-all .checkbox-inline input[type="checkbox"] {
+  position: static;
+}
+
+.table-responsive th.select-all input[type="checkbox"]:before,
+.table-responsive th.select-all .checkbox input[type="checkbox"]:before,
+.table-responsive th.select-all .checkbox-inline input[type="checkbox"]:before {
+  display: none;
+}
+
+.views-infinite-scroll-content-wrapper > table {
+  margin-bottom: 0;
+}
+
+.views-infinite-scroll-content-wrapper > table:last-child {
+  margin-bottom: 21px;
+}
+
+table.table-condensed .file-entity {
+  display: table-cell;
+  vertical-align: middle;
+  height: 41px;
+  width: 100px;
+}
+
+table.table-condensed .file-entity > img,
+table.table-condensed .file-entity > i.fa,
+table.table-condensed .file-entity > i.form-required:after {
+  vertical-align: middle;
+  line-height: 41px;
+  max-height: 100%;
+}
+
+table.table-condensed > tbody > tr > td.views-field {
+  vertical-align: middle;
 }
 
 /**
@@ -14959,6 +17149,28 @@ blockquote.info .field--type-address {
   padding: 18px 0;
 }
 
+.eb-tabs .nav-pills li > a {
+  margin-right: 1.5em;
+  font-weight: 400;
+  color: #999;
+}
+
+.eb-tabs .nav-pills li > a,
+.eb-tabs .nav-pills li > a.is-active,
+.eb-tabs .nav-pills li > a:hover,
+.eb-tabs .nav-pills li > a:focus {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.eb-tabs .nav-pills li > a.is-active,
+.eb-tabs .nav-pills li > a:hover,
+.eb-tabs .nav-pills li > a:focus {
+  color: #464545;
+}
+
 /**
  * Toolbar module styling.
  */
@@ -15062,6 +17274,16 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   border-bottom-color: #ecf0f1;
 }
 
+.media.media-panel .media-left {
+  min-width: 170px;
+  height: 100px;
+  text-align: center;
+}
+
+.media.media-panel .media-left .media-object {
+  margin: 0 auto;
+}
+
 .media.media-panel .media-body {
   padding-left: 5px;
 }
@@ -15073,6 +17295,17 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .media.media-panel .media-body h3,
 .media.media-panel .media-body .h3 {
   margin-top: 0;
+}
+
+.field__items > .field--item > .media.media-panel {
+  margin-bottom: 6px;
+}
+
+.media.media-panel .line {
+  display: block;
+  padding: .25em 0 .25em .5em;
+  min-height: 21px;
+  line-height: 21px;
 }
 
 .carousel .carousel-indicators {
@@ -15355,7 +17588,9 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .agenda-preview .item .time .fa,
-.agenda-preview .item .location .fa {
+.agenda-preview .item .time .form-required:after,
+.agenda-preview .item .location .fa,
+.agenda-preview .item .location .form-required:after {
   color: #303030;
 }
 
@@ -15364,7 +17599,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   top: -7px;
 }
 
-.agenda-preview .item .time .fa {
+.agenda-preview .item .time .fa,
+.agenda-preview .item .time .form-required:after {
   margin-left: 3px;
   margin-right: 7px;
 }
@@ -15399,7 +17635,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   margin: 0 0 10.5px;
 }
 
-.map-tooltip .btn-link i.fa {
+.map-tooltip .btn-link i.fa,
+.map-tooltip .btn-link i.form-required:after {
   vertical-align: middle;
 }
 
@@ -15456,6 +17693,45 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .ui-autocomplete .ui-menu-item.ui-state-focus {
   background: #2C3E50;
   color: #fff;
+}
+
+.ui-widget {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.ui-widget .ui-widget {
+  font-size: 14px;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.ui-widget-content {
+  border: none;
+  color: #2C3E50;
+}
+
+.ui-widget-content a {
+  color: #2C3E50;
+}
+
+.ui-widget-header {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #2C3E50;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.ui-widget-header a {
+  color: #2C3E50;
 }
 
 html,
@@ -15773,6 +18049,26 @@ fieldset[disabled] .dark-background form input.focus[type="submit"].button--succ
   padding-bottom: 18px;
 }
 
+.text-success {
+  color: #18BC9C;
+}
+
+.text-warning {
+  color: #F39C12;
+}
+
+.views-align-left {
+  text-align: left;
+}
+
+.views-align-center {
+  text-align: center;
+}
+
+.views-align-right {
+  text-align: right;
+}
+
 header.navbar {
   margin-bottom: 0;
 }
@@ -15788,14 +18084,24 @@ header.navbar {
 
 h1,
 h2,
-header .navbar-brand {
+header .navbar-brand,
+header .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-default .block-page-title header .page-title,
+header
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-inverse .block-page-title header .page-title {
   font-family: 'arc-light';
   text-transform: uppercase;
 }
 
 h1 small,
 h2 small,
-header .navbar-brand small {
+header .navbar-brand small,
+header .agora-toolbar .navbar.navbar-default .block-page-title .page-title small,
+.agora-toolbar .navbar.navbar-default .block-page-title header .page-title small,
+header
+  .agora-toolbar .navbar.navbar-inverse .block-page-title .page-title small,
+.agora-toolbar .navbar.navbar-inverse .block-page-title header .page-title small {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
 }
@@ -15818,15 +18124,42 @@ label.alt-light {
   text-transform: uppercase;
 }
 
-header .navbar-brand {
+header .navbar-brand,
+header .agora-toolbar .navbar.navbar-default .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-default .block-page-title header .page-title,
+header
+.agora-toolbar .navbar.navbar-inverse .block-page-title .page-title,
+.agora-toolbar .navbar.navbar-inverse .block-page-title header .page-title {
   line-height: 1.5;
 }
 
-@media screen and (min-width: 768px) {
-  header.navbar ul.nav.navbar-nav.navbar-right {
-    position: absolute;
-    right: 15px;
-  }
+.agora-message .alert {
+  margin-bottom: 0;
+  border-radius: 0;
+  font-size: 110%;
+}
+
+.agora-message .alert .media {
+  margin-top: 0;
+  padding: 0 15px;
+}
+
+.agora-message .alert .media .media-icon {
+  opacity: 0.8;
+}
+
+.agora-message .alert .media .media-body {
+  padding: 5px 5px 5px 15px;
+}
+
+.agora-message .alert .close {
+  font-size: 32px;
+  top: -2px;
+  right: 0;
+}
+
+.agora-message .block--help-block {
+  margin-top: 18px;
 }
 
 .view-header > ul.links {
@@ -15852,8 +18185,48 @@ header .navbar-brand {
 .footer a:focus,
 .footer .nav > li > a:hover,
 .footer .nav > li > a:focus {
-  color: #999;
+  color: rgba(255, 255, 0, 0.9);
   background-color: transparent;
+}
+
+.region-footer {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.region-footer:before,
+.region-footer:after {
+  content: " ";
+  display: table;
+}
+
+.region-footer:after {
+  clear: both;
+}
+
+.region-footer > * {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .region-footer > * {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .region-footer > * {
+    float: left;
+    width: 33.33333%;
+  }
 }
 
 .container-xs {
@@ -15861,6 +18234,7 @@ header .navbar-brand {
 }
 
 .container-sm,
+.path-webform .page-header,
 form.webform-submission-form {
   max-width: 750px;
 }
@@ -15924,6 +18298,10 @@ h4.h-message {
 .inner-col-md {
   max-width: 45% !important;
   margin: 0 auto !important;
+}
+
+body.sage.entity-browser .container-fluid {
+  max-width: 1170px;
 }
 
 body#tinymce {

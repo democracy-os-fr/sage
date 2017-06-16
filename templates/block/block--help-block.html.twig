@@ -1,0 +1,9 @@
+{% extends "block--bare.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{% block content %}
+  {% if content %}
+    <div class="block--help-block {{ container }} well well-lg">
+      {{ content }}
+    </div>
+  {% endif %}
+{% endblock %}

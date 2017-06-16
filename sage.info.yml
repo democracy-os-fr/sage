@@ -9,17 +9,18 @@ package: 'Bootstrap'
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
-  header: 'Top Bar'
-  highlighted: 'Highlighted'
-  help: 'Help'
+  toolbar: 'Top Bar'
+  header: 'Header'
+  message: 'Highlighted'
+  content_top: 'Content top'
   content: 'Content'
-  sidebar_first: 'Primary'
-  sidebar_second: 'Secondary'
+  content_bottom: 'Content bottom'
   footer: 'Footer'
   signature: 'Signature'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
 
 libraries:
   - 'sage/global-styling'
   - 'sage/bootstrap-scripts'
+
+dependencies:
+  - agora

@@ -8,7 +8,10 @@ bootstrap-scripts:
     dist/scripts/main.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
     - core/jquery.once
+    - core/drupalSettings
+    - core/drupal.displace
 
 views-exposed-form:
   js:
@@ -18,3 +21,19 @@ views-exposed-form:
     - core/drupal
     - core/jquery.once
     - core/drupalSettings
+
+entity_browser.tabs:
+  version: VERSION
+  js:
+    dist/scripts/entity_browser.tabs.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery.once
+
+drupal.entity_embed.dialog:
+  version: VERSION
+  js:
+    /modules/contrib/entity_embed/js/entity_embed.dialog.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

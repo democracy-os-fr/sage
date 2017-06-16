@@ -39,11 +39,32 @@ header .navbar-brand {
   line-height: 1.5;
 }
 
-header.navbar ul.nav.navbar-nav.navbar-right {
-  @media #{$tablet} {
-    position: absolute;
-    right: 15px;
+.agora-message {
+  .alert {
+    margin-bottom: 0;
+    border-radius: 0;
+    font-size: 110%;
+    .media {
+      margin-top: 0;
+      padding: 0 $padding-base-horizontal;
+      .media-icon {
+        opacity: 0.8;
+      }
+      .media-body {
+        padding: 5px 5px 5px 15px;
+      }
+    }
+    .close {
+      font-size: 32px;
+      top: -2px;
+      right: 0;
+    }
   }
+
+  .block--help-block {
+    margin-top: $padding-large-vertical;
+  }
+
 }
 
 .view-header {

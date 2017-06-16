@@ -34,6 +34,9 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
     switch ($hook) {
       case 'image_style':
         if( isset($variables['style_name']) ) {
+          if(preg_match('#^media_#', $variables['style_name'])) {
+            array_push($suggestions,'image_style__media');
+          }
           array_push($suggestions,'image_style__'.$variables['style_name']);
         }
         break;
@@ -90,17 +93,24 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         break;
 
 
-      // case 'page':
-      //   //dcp('page ThemeSuggestions');
-      //   //dcp($suggestions);
-      //   //dcp($variables);
-      //   break;
-      //
+      case 'page':
+        dcp('page ThemeSuggestions');
+        dcp($suggestions);
+        dcp($variables);
+
+        foreach ($suggestions as $key => $value) {
+          if( preg_match('#^page__agora__page__[list|add|edit]#', $value) ){
+            array_push($suggestions,'page__wrapper');
+            break;
+          }
+        }
+
+        break;
+
       // case 'node':
       //   //dcp($suggestions);
       //   //dcp($variables);
       //   break;
-
     }
   }
 

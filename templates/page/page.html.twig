@@ -40,21 +40,21 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.header: Items for the header region.
  * - page.navigation: Items for the navigation region.
  * - page.navigation_collapsible: Items for the navigation (collapsible) region.
- * - page.highlighted: Items for the highlighted content region.
- * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.toolbar: Items for the top bar region.
+ * - page.header: Items for the header region.
+ * - page.message: Items for the highlighted content region.
+ * - page.content_top: Before the main content.
  * - page.content: The main content of the current page.
- * - page.sidebar_first: Items for the first sidebar.
- * - page.sidebar_second: Items for the second sidebar.
+ * - page.content_bottom: After the main content.
  * - page.footer: Items for the footer region.
  * - page.signature: bottom footer.
  *
  * @ingroup templates
  *
- * @see template_preprocess_page()
- * @see html.html.twig
+   * @see template_preprocess_page()
+ * @see page.html.twig
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
@@ -74,18 +74,16 @@
           {{ page.navigation }}
           {# .btn-navbar is used as the toggle for collapsed navbar content #}
           {% if page.navigation_collapsible %}
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
               <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <i class="fa fa-lg fa-ellipsis-h"></i>
             </button>
           {% endif %}
         </div>
 
         {# Navigation (collapsible) #}
         {% if page.navigation_collapsible %}
-          <div class="navbar-collapse collapse">
+          <div class="navbar-offcanvas offcanvas-fixed-right offcanvas">
             {{ page.navigation_collapsible }}
           </div>
         {% endif %}
@@ -94,66 +92,61 @@
   {% endblock %}
 {% endif %}
 
-{# Main #}
-{% block main %}
-  <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-    <div class="row">
+{# Toolbar #}
+{% if page.toolbar %}
+  {% block toolbar %}
+    {{ page.toolbar }}
+  {% endblock %}
+{% endif %}
 
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <section class="agora-header col-sm-12" role="heading">
-            {{ page.header }}
-          </section>
-        {% endblock %}
-      {% endif %}
-
-      {# Content #}
-      {%
-        set content_classes = ['col-sm-12']
-      %}
-      <section{{ content_attributes.addClass(content_classes) }}>
-
-        {# Highlighted #}
-        {% if page.highlighted %}
-          {% block highlighted %}
-            <div class="highlighted">{{ page.highlighted }}</div>
-          {% endblock %}
-        {% endif %}
-
-        {# Breadcrumbs #}
-        {% if breadcrumb %}
-          {% block breadcrumb %}
-            {{ breadcrumb }}
-          {% endblock %}
-        {% endif %}
-
-        {# Action Links #}
-        {% if action_links %}
-          {% block action_links %}
-            <ul class="action-links">{{ action_links }}</ul>
-          {% endblock %}
-        {% endif %}
-
-        {# Help #}
-        {% if page.help %}
-          {% block help %}
-            {{ page.help }}
-          {% endblock %}
-        {% endif %}
-
-        {# Content #}
-        {% block content %}
-          <a id="main-content"></a>
-          {{ page.content }}
-        {% endblock %}
-      </section>
-
-    </div>
-  </div>
+{# Header #}
+{% block header %}
+  {% if page.header %}
+    <section class="agora-header" role="heading">
+      {{ page.header }}
+    </section>
+  {% endif %}
 {% endblock %}
 
-{% if page.footer %}
+{# message #}
+{% if page.message %}
+  {% block message %}
+    <section class="agora-message">
+      {{ page.message }}
+    </section>
+  {% endblock %}
+{% endif %}
+
+{# Main #}
+{% block main %}
+  <section role="main" class="main-container js-quickedit-main-content">
+
+    {# Content #}
+    <div{{ content_attributes }}>
+      {% block content_top %}
+        {{ page.content_top }}
+      {% endblock %}
+      {% block content %}
+        <a id="main-content"></a>
+        {{ page.content }}
+      {% endblock %}
+      {% block content_bottom %}
+        {{ page.content_bottom }}
+      {% endblock %}
+    </div>
+
+  </section>
+{% endblock %}
+
+{# Action Links #}
+{% if action_links %}
+  {% block action_links %}
+    <span>-- action_links--</span>
+    <ul class="action-links">{{ action_links }}</ul>
+  {% endblock %}
+{% endif %}
+
+{% if page.footer or page.signature %}
   {% block footer %}
     <footer class="footer" role="contentinfo">
       <div class="{{ container }}">
@@ -163,6 +156,8 @@
     </footer>
   {% endblock %}
 {% endif %}
+
+<div class="backdrop"></div>
 
 <!-- Piwik -->
 <script type="text/javascript">

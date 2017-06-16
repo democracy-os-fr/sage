@@ -1,0 +1,20 @@
+{% extends "page.html.twig" %}
+
+{% block content_top %}
+  <div class="{{container}}">
+    {{ page.content_top }}
+  </div>
+{% endblock %}
+
+{% block content %}
+  <a id="main-content"></a>
+  <div class="{{container}}">
+    {{ page.content }}
+  </div>
+{% endblock %}
+
+{% block content_bottom %}
+  <div class="{{container}}">
+    {{ page.content_bottom }}
+  </div>
+{% endblock %}

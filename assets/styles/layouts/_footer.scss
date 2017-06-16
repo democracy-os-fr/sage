@@ -11,9 +11,19 @@
   a, .nav > li > a {
     color: $gray-lighter;
     &:hover, &:focus {
-      color: $gray-light;
+      color: $navbar-inverse-link-hover-color;
       background-color: transparent;
     }
+  }
+
+}
+
+.region-footer {
+  @include make-row;
+
+  & > * {
+    @include make-sm-column(6);
+    @include make-md-column(4);
   }
 
 }

@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Default theme implementation for an image using a specific image style.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the image, including the following:
+ *   - src: Full URL or relative path to the image file.
+ *   - class: One or more classes to be applied to the image.
+ *   - width: The width of the image (if known).
+ *   - height: The height of the image (if known).
+ *   - title: The title of the image.
+ *   - alt: The alternative text for the image.
+ *
+ * @see template_preprocess_image_style()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="media media-panel">
+  <div class="media-left media-middle">
+    {% if url %}
+      <a href="{{ url }}">{{ image }}</a>
+    {% else %}
+      {{ image }}
+    {% endif %}
+  </div>
+  <div class="media-body">
+    <a href="{{file_url(uri)}}" class="line icon-before">
+      <span class="file-link">
+        {{uri|replace({'public://':''})}}
+      </span>
+      <!-- <span class="file-size">8.64 Ko</span> -->
+    </a>
+    <div class="line">
+      <!-- <span class="label label-default">GIF</span>
+      &nbsp; -->
+      <span class="label label-default">{{width}} <i class="fa fa-times"></i> {{height}} px</span>
+    </div>
+    <!-- <div class="line">
+      <button type="button" class="btn btn-xs btn-primary" name="button"><i class="fa fa-link"></i>&nbsp;Copier le lien</button>
+    </div> -->
+  </div>
+</div>

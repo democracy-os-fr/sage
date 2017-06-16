@@ -42,6 +42,23 @@ export default {
       });
     }
 
+    // $('header .navbar-collapse').on('shown.bs.collapse', function () {
+    //   $('header .navbar-toggle').addClass('active');
+    // });
+    // $('header .navbar-collapse').on('hidden.bs.collapse', function () {
+    //   $('header .navbar-toggle').removeClass('active');
+    // });
+
+    $('header .navbar-offcanvas').on('show.bs.offcanvas', function () {
+      $('header .navbar-toggle').addClass('active');
+      $('.backdrop').fadeIn();
+    });
+    $('header .navbar-offcanvas').on('hide.bs.offcanvas', function () {
+      $('header .navbar-toggle').removeClass('active');
+      $('.backdrop').fadeOut();
+    });
+
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

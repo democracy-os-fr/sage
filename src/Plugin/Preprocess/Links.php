@@ -30,5 +30,4 @@ class Links extends \Drupal\bootstrap\Plugin\Preprocess\Links {
     parent::preprocess($variables, $hook, $info);
   }
 
-
 }

@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav') }}>
+    {% else %}
+      <ul{{ attributes.addClass('dropdown-menu') }}>
+    {% endif %}
+    {% for item in items %}
+      {%
+        set item_classes = [
+          item.is_expanded? 'expanded',
+          item.is_expanded and menu_level == 0 ? 'dropdown',
+          item.in_active_trail ? 'active',
+        ]
+      %}
+      {% set title %}
+        {% if item.url.options.icon is defined %}
+          {% set icon = item.url.options.icon %}
+          {% if icon.bundle == 'fa' %}
+            <i class="fa fa-lg fa-fw fa-{{ icon.name }}"></i>
+          {% else %}
+            <span class="{{ '%bundle% %bundle%-%name%'|replace({'%bundle%':icon.bundle,'%name%':icon.name}) }}"></span>
+          {% endif %}
+          <span class="visually-hidden sr-only">{{ item.title }}</span>
+        {% else %}
+          {% set icon = faicon(item.title) %}
+          {% if icon %}
+            <i class="fa fa-lg fa-fw fa-{{ icon['#icon'] }}"></i>
+            <span class="visually-hidden sr-only">{{ item.title }}</span>
+          {% else %}
+            {{ item.title }}
+          {% endif %}
+        {% endif %}
+      {% endset %}
+      {% if menu_level == 0 and item.is_expanded %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+        <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ title }} <i class="fa fa-ellipsis-v"></i></a>
+      {% else %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+        {{ link(title, item.url) }}
+      {% endif %}
+      {% if item.below %}
+        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1) }}
+      {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

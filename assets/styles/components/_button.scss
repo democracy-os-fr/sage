@@ -36,3 +36,20 @@ a.btn.btn-primary {
     @extend .btn-yellow;
   }
 }
+.btn-label {
+  background: none;
+}
+
+.fa-pager .pager li > a {
+  background-color: transparent;
+  color: $pager-bg;
+  &:hover , &:focus {
+    background-color: transparent;
+    color: $pager-hover-bg;
+  }
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: none;
+  border: none;
+}

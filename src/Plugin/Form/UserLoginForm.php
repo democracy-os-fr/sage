@@ -33,7 +33,7 @@ class UserLoginForm extends \Drupal\bootstrap\Plugin\Form\FormBase {
    */
   public static function submitForm(array &$form, FormStateInterface $form_state) {
     // This method is automatically called when the form is submitted.
-    $form_state->setRedirect('<front>');
+    // $form_state->setRedirect('<front>');
   }
 
   /**

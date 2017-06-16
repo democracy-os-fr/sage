@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override for a local task link.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper element.
+ * - is_active: Whether the task item is an active tab.
+ * - link: A rendered link element.
+ *
+ * Note: This template renders the content for each task item in
+ * menu-local-tasks.html.twig.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_menu_local_task()
+ */
+#}
+{% set classes = [
+  is_active ? 'active',
+  icon and icon_position and not icon_only ? 'icon-' ~ icon_position,
+] %}
+<li{{ attributes.addClass(classes) }}>
+  {% set title %}
+    {% if link['#options']['icon'] is defined %}
+      {% set icon = link['#options']['icon'] %}
+      {% if icon.bundle == 'fa' %}
+        <i class="fa fa-lg fa-fw fa-{{ icon.name }}"></i>
+      {% else %}
+        <span class="{{ '%bundle% %bundle%-%name%'|replace({'%bundle%':icon.bundle,'%name%':icon.name}) }}"></span>
+      {% endif %}
+      <span class="visually-hidden sr-only">{{ link['#title'] }}</span>
+    {% else %}
+      {{ link['#title'] }}
+    {% endif %}
+  {% endset %}
+  {{ link(title, link['#url']) }}
+</li>

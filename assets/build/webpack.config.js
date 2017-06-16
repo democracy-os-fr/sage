@@ -40,9 +40,9 @@ let webpackConfig = {
         test: /\.css$/,
         include: config.paths.assets,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style',
+          fallback: 'style',
           publicPath: '../',
-          loader: [
+          use: [
             `css?${sourceMapQueryStr}`,
             'postcss',
           ],
@@ -52,9 +52,9 @@ let webpackConfig = {
         test: /\.scss$/,
         include: config.paths.assets,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style',
+          fallback: 'style',
           publicPath: '../',
-          loader: [
+          use: [
             `css?${sourceMapQueryStr}`,
             'postcss',
             `resolve-url?${sourceMapQueryStr}`,

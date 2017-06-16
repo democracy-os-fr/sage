@@ -89,3 +89,9 @@ h4.h-message {
   max-width: 45% !important;
   margin: 0 auto !important;
 }
+
+body.sage.entity-browser {
+  .container-fluid {
+    max-width: $screen-lg - $grid-gutter-width;
+  }
+}

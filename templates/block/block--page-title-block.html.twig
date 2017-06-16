@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for page title block.
+ *
+ * @ingroup templates
+ */
+#}
+{% extends "block--bare.html.twig" %}
+{% block content %}
+  {% if content %}
+    <div class="block-page-title">
+      {{ content }}
+    </div>
+  {% endif %}
+{% endblock %}

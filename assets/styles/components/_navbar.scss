@@ -22,9 +22,9 @@ body {
   &.navbar-is-fixed-bottom {
     padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
   }
-  @media #{$tablet} {
-    margin-top: ($grid-gutter-width / 2);
-  }
+  // @media #{$tablet} {
+  //   margin-top: ($grid-gutter-width / 2);
+  // }
   @media #{$mobile} {
     &.toolbar-vertical {
       &.navbar-is-fixed-bottom,
@@ -44,6 +44,34 @@ body {
       }
     }
   }
+}
+
+.navbar-inverse {
+  .navbar-toggle {
+    color: $navbar-inverse-link-color;
+
+    &.active,
+    &:focus,
+    &:hover {
+      color: $navbar-inverse-link-hover-color;
+    }
+  }
+}
+
+.offcanvas-fixed-right,
+body,
+.backdrop {
+  left: auto !important;
+}
+.backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1040;
+  display: none;
 }
 
 .navbar.container {
@@ -69,19 +97,105 @@ body {
   font-weight: 300;
   text-transform: uppercase;
 }
-
-$icon-avatar-size: 46px ;
+$icon-avatar-size: 46px;
 
 .icon-avatar {
   @include square($icon-avatar-size);
   padding: 12px 14px; // TODO : calculate this sh*t
-  border-radius: $icon-avatar-size / 2 ;
+  border-radius: $icon-avatar-size / 2;
   background-color: $brand-yellow;
   font-weight: 300;
+  font-size: $font-size-base !important;
+  line-height: $line-height-computed !important;
   color: $gray-darker;
   text-transform: uppercase;
+
   &:hover {
     background-color: opacify($brand-yellow,1);
+  }
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+  // Dropdowns get custom display when collapsed
+  .region-navigation-collapsible > nav[role='navigation'] {
+    padding: ($padding-base-vertical + 2px) 0;
+  }
+
+  .menu.nav.navbar-nav {
+    & > li > a {
+      text-align: center;
+      font-weight: 400;
+      font-size: $font-size-h3;
+      line-height: $line-height-computed * 1.5;
+    }
+  }
+
+  #block-user-menu {
+    .dropdown-menu,
+    .menu.nav {
+      & > li > a {
+        line-height: $line-height-computed;
+
+        .fa-lg {
+          font-size: 24px;
+          line-height: 1em;
+        }
+
+        .navbar-inverse & {
+          color: $navbar-inverse-link-color;
+        }
+
+        &:focus,
+        &:hover {
+          color: $brand-yellow;
+          background: none;
+        }
+      }
+    }
+
+    .dropdown-toggle {
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: inline-block;
+      position: static;
+      float: right;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+
+      & > li,
+      & > li > a {
+        display: inline-block;
+        text-align: center;
+      }
+
+      & > li > a,
+      .dropdown-header {
+        padding: 5px 15px 5px 25px;
+      }
+    }
+
+    .menu.nav > li.dropdown.expanded {
+      float: right;
+    }
+  }
+}
+
+.agora-toolbar {
+  .navbar.navbar-default,
+  .navbar.navbar-inverse {
+    .block-page-title {
+      @extend .navbar-header;
+
+      .page-title {
+        @extend .navbar-brand;
+      }
+    }
+    margin-bottom: 0;
   }
 }
 
@@ -93,48 +207,48 @@ $icon-avatar-size: 46px ;
   padding: $padding-base-vertical $padding-base-horizontal;
   z-index: 999;
 
-  .nav-pills {
-
-  }
-
+  .nav-pills {}
 }
 
 .linkbar {
-  margin: ($padding-large-vertical * 2) auto $padding-base-vertical ;
+  margin: ($padding-large-vertical * 2) auto $padding-base-vertical;
+
   &:last-child {
     margin-bottom: 0;
   }
 
   .btn {
     @include button-size($padding-base-vertical, $padding-base-horizontal * 2, $font-size-base, $line-height-base, $btn-border-radius-base);
-    margin-right: $padding-base-horizontal ;
+    margin-right: $padding-base-horizontal;
+
     &:last-child {
       margin-right: 0;
     }
   }
-
 }
 
 .project .nav-pills {
-  margin-bottom: $padding-base-vertical ;
+  margin-bottom: $padding-base-vertical;
+
   li {
     text-align: center;
+
     a {
       display: inline;
       font-family: 'arc-light';
       font-size: $font-size-h4;
-      padding: 15px 20px 10px ;
+      padding: 15px 20px 10px;
       text-transform: uppercase;
       background-color: transparent;
       border: 1px solid $gray-lighter;
       color: $gray;
-
       @media #{$mobile} {
         display: block;
       }
-
     }
-    a:hover, a:focus {
+
+    a:focus,
+    a:hover {
       border-color: $gray-light;
       color: $gray;
     }
@@ -146,11 +260,13 @@ $icon-avatar-size: 46px ;
     }
 
     &.nav-highlight a {
-      border-color: transparentize($brand-success, 0.4) ;
-      color: transparentize($brand-success, 0.2) ;
-      &:hover, &:focus {
-      border-color: $brand-success;
-      color: $brand-success;
+      border-color: transparentize($brand-success, 0.4);
+      color: transparentize($brand-success, 0.2);
+
+      &:focus,
+      &:hover {
+        border-color: $brand-success;
+        color: $brand-success;
       }
     }
 

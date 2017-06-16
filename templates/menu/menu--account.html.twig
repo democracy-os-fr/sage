@@ -56,12 +56,25 @@
           item.in_active_trail ? 'active',
         ]
       %}
+      {% set title %}
+      {% if item.url.routeName == 'user.page' %}
+          <i class="fa fa-lg fa-fw fa-info-circle"></i>
+        {% elseif item.url.routeName == 'user.login' %}
+          <b class="hidden-sm">{{ item.title }}&nbsp;</b>
+          <i class="fa fa-lg fa-fw fa-sign-in"></i>
+        {% elseif item.url.routeName == 'user.logout' %}
+          <i class="fa fa-lg fa-fw fa-sign-out"></i>
+        {% else %}
+          {{ item.title }}
+        {% endif %}
+        <span class="hidden-xs">&nbsp;{{ item.title }}</span>
+      {% endset %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
         <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        {{ link(item.title, item.url) }}
+        {{ link(title, item.url) }}
       {% endif %}
       {% if item.below %}
         {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav', 'navbar-right'), menu_level + 1) }}

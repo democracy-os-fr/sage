@@ -2,7 +2,8 @@
   "root": true,
   "extends": "eslint:recommended",
   "globals": {
-    "wp": true
+    "wp": true,
+    "CKEDITOR": true
   },
   "env": {
     "node": true,

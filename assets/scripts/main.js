@@ -1,6 +1,7 @@
 /** import external dependencies */
 import 'jquery';
 import 'bootstrap-sass/assets/javascripts/bootstrap';
+import 'jasny-bootstrap/js/offcanvas.js';
 import 'slick-carousel/slick/slick.min.js';
 
 // import local dependencies
