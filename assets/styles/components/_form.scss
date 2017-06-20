@@ -218,3 +218,30 @@ form.webform-submission-form {
 .search-help-link {
   display: none;
 }
+
+.fieldgroup {
+  margin-bottom: $padding-base-vertical;
+  legend {
+    margin-bottom: 0;
+  }
+  &.js-webform-radios-fieldset > .fieldset-wrapper {
+    padding-left: $padding-base-horizontal;
+  }
+
+  & + .js-form-wrapper {
+    margin-bottom: $padding-large-vertical;
+  }
+
+}
+
+.webform-multiple-table {
+  .tabledrag-toggle-weight {
+   display: none;
+ }
+
+   + .container-inline {
+     .form-number {
+       text-align: right;
+     }
+   }
+}

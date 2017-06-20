@@ -15432,6 +15432,30 @@ form.webform-submission-form {
   display: none;
 }
 
+.fieldgroup {
+  margin-bottom: 10px;
+}
+
+.fieldgroup legend {
+  margin-bottom: 0;
+}
+
+.fieldgroup.js-webform-radios-fieldset > .fieldset-wrapper {
+  padding-left: 15px;
+}
+
+.fieldgroup + .js-form-wrapper {
+  margin-bottom: 18px;
+}
+
+.webform-multiple-table .tabledrag-toggle-weight {
+  display: none;
+}
+
+.webform-multiple-table + .container-inline .form-number {
+  text-align: right;
+}
+
 /**
  * Icon styles.
  */
