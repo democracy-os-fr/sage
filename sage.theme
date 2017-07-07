@@ -43,8 +43,6 @@ function sage_preprocess_vertical_tabs(&$variables) {
 }
 
 function sage_preprocess_swiftmailer(&$variables) {
-  drupal_set_message(var_dump($variables), 'warning');
-  dump($variables);
   if(isset($variables['body'])){
     $variables['body'] = Markup::create(html_entity_decode($variables['body']));
   }
