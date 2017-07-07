@@ -10,8 +10,8 @@
      require_once $composer;
  }
 
- use Drupal\bootstrap\Bootstrap;
-
+use Drupal\bootstrap\Bootstrap;
+use Drupal\Core\Render\Markup;
 /**
  * {@inheritdoc}
  *
@@ -39,7 +39,15 @@ function sage_preprocess_node__event(&$variables){
 }
 
 function sage_preprocess_vertical_tabs(&$variables) {
-  dcp('sage_preprocess_vertical_tabs');
+  // dcp('sage_preprocess_vertical_tabs');
+}
+
+function sage_preprocess_swiftmailer(&$variables) {
+  drupal_set_message(var_dump($variables), 'warning');
+  dump($variables);
+  if(isset($variables['body'])){
+    $variables['body'] = Markup::create(html_entity_decode($variables['body']));
+  }
 }
 
 // function sage_theme_suggestions_page_alter(array &$suggestions, array $variables) {
