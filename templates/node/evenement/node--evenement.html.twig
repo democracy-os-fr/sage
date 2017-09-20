@@ -1,0 +1,30 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="{{ container }}">
+  <div class="row">
+    <div class="col-xs-12 col-lg-8">
+      <div class="page-header">
+        <h1>{{ label }}</h1>
+        <blockquote class="info">
+          {{ content.field_date }}
+          {{ content.field_info_schedule }}
+          {{ content.field_address }}
+        </blockquote>
+      </div>
+      <div class="content">
+        {{ content.body }}
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <div class="dark-background rounded-corner">
+        {{ drupal_block('newsletter_form') }}
+      </div>
+      {{ drupal_view('news','sidebar',node.id) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

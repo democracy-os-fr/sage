@@ -1,0 +1,23 @@
+{% extends "node.html.twig" %}
+{# Content #}
+{% block content %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {{ content.field_date }}
+  </div>
+  <div class="panel-body">
+    <div class="btn-title">{{ label }}</div>
+    <blockquote class="info">
+      {{ content.field_info_schedule }}
+      {{ content.field_address }}
+    </blockquote>
+    <a class="btn btn-link btn-sm pull-right" href="{{url}}" rel="bookmark">
+      {{ 'En savoir plus'|t }}
+      &nbsp;
+      <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

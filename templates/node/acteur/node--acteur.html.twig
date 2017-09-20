@@ -1,0 +1,57 @@
+{% extends "node.html.twig" %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Content #}
+{% block content %}
+
+<div class="container-xs text-center">
+
+  {% if content.field_image_acteur|field_value %}
+    {{ content.field_image_acteur|field_value }}
+  {% else %}
+    <div class="font-avatar">
+      {{ label|field_value[0]['#context']['value'][:1]|upper }}
+    </div>
+  {% endif %}
+
+  <h3 class="alt">
+  {% if content.field_site_internet|field_value %}
+    <a href="{{content.field_site_internet|field_value[0]['#title']}}">{{ label }}</a>
+  {% else %}
+    {{ label }}
+  {% endif %}
+  </h3>
+
+  <div class="social pad-bottom">
+    {% if content.field_site_internet|field_value %}
+      <a href="{{content.field_site_internet|field_value[0]['#title']}}"
+        title="{{content.field_site_internet|field_label}}">
+        <i class="fa fa-lg fa-fw fa-link"></i>
+      </a>
+    {% endif %}
+    {% if content.field_reseau_social_twitter_link|field_value %}
+      <a href="{{content.field_reseau_social_twitter_link|field_value[0]['#url']}}"
+        title="{{content.field_reseau_social_twitter_link|field_label}} : {{content.field_reseau_social_twitter_link|field_value[0]['#title']}}">
+        <i class="fa fa-lg fa-fw fa-twitter"></i>
+      </a>
+    {% endif %}
+    {% if content.field_reseau_social_facebook|field_value %}
+      <a href="{{content.field_reseau_social_facebook|field_value[0]['#url']}}"
+        title="{{content.field_reseau_social_facebook|field_label}} : {{content.field_reseau_social_facebook|field_value[0]['#title']}}">
+        <i class="fa fa-lg fa-fw fa-facebook"></i>
+      </a>
+    {% endif %}
+    {% if content.field_reseau_social_youtube|field_value %}
+      <a href="{{content.field_reseau_social_youtube|field_value[0]['#url']}}"
+        title="{{content.field_reseau_social_youtube|field_label}} : {{content.field_reseau_social_youtube|field_value[0]['#title']}}">
+        <i class="fa fa-lg fa-fw fa-youtube-play"></i>
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="content pad-bottom">
+    {{ content.body }}
+  </div>
+
+</div>
+
+{% endblock %}
