@@ -19,6 +19,11 @@
   {% else %}
     {{ label }}
   {% endif %}
+  {% if user.hasPermission('administer nodes') %}
+    <a class="btn btn-sm btn-link btn-link-info" href="{{ url }}/edit">
+      <i class="fa fa-2x fa-fw fa-pencil-square-o"></i>
+    </a>
+  {% endif %}
   </h3>
 
   <div class="social pad-bottom">

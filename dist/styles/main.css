@@ -14051,6 +14051,10 @@ a.btn.button--primary:hover,
   color: rgba(255, 255, 0, 0.9);
 }
 
+.btn-link-info {
+  color: #F39C12;
+}
+
 /**
  * Form styles.
  */

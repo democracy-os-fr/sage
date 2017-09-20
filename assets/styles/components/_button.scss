@@ -28,6 +28,10 @@ a.btn.btn-primary {
   @extend .btn-sm;
 }
 
+.btn-link-info {
+  color: $brand-warning ;
+}
+
 .agora-header,
 .view-display-id-home {
   .more-link {
