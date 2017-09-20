@@ -16356,19 +16356,34 @@ body {
   position: relative;
 }
 
+body .canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+
 body.navbar-is-static-top {
   margin-top: 0;
 }
 
-body.navbar-is-fixed-top {
+body.navbar-is-fixed-top,
+body.navbar-is-fixed-top .canvas {
   margin-top: 75px;
 }
 
-body.navbar-is-fixed-bottom {
+body.navbar-is-fixed-bottom,
+body.navbar-is-fixed-bottom .canvas {
   padding-bottom: 75px;
 }
 
 @media screen and (max-width: 767px) {
+  body .canvas {
+    padding: 0;
+  }
+
   body.toolbar-vertical.navbar-is-fixed-bottom .toolbar-bar,
   body.toolbar-vertical.navbar-is-fixed-top .toolbar-bar {
     position: fixed;
@@ -16384,17 +16399,29 @@ body.navbar-is-fixed-bottom {
   }
 }
 
-.navbar-inverse .navbar-toggle {
+@media (min-width: 0) {
+  .navbar-toggle-visible {
+    display: inline-block;
+    /* force showing the toggle */
+  }
+}
+
+.navbar-inverse .navbar-toggle,
+.navmenu-inverse .navbar-toggle {
   color: #fff;
 }
 
 .navbar-inverse .navbar-toggle.active,
 .navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover {
+.navbar-inverse .navbar-toggle:hover,
+.navmenu-inverse .navbar-toggle.active,
+.navmenu-inverse .navbar-toggle:focus,
+.navmenu-inverse .navbar-toggle:hover {
   color: rgba(255, 255, 0, 0.9);
 }
 
 .offcanvas-fixed-right,
+.navmenu-fixed-right,
 body,
 .backdrop {
   left: auto !important;

@@ -11,21 +11,37 @@ body {
   // http://drupal.org/node/1870076
   position: relative;
 
+  .canvas {
+    position: relative;
+    left: 0;
+    z-index: 2;
+    min-height: 100%;
+    padding: 50px 0 0 0;
+    background: #fff;
+  }
+
   &.navbar-is-static-top {
     margin-top: 0;
   }
 
   &.navbar-is-fixed-top {
-    margin-top: ($navbar-height + ($grid-gutter-width / 2));
+    &, & .canvas {
+      margin-top: ($navbar-height + ($grid-gutter-width / 2));
+    }
   }
 
   &.navbar-is-fixed-bottom {
-    padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
+    &, & .canvas {
+      padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
+    }
   }
   // @media #{$tablet} {
   //   margin-top: ($grid-gutter-width / 2);
   // }
   @media #{$mobile} {
+    .canvas {
+      padding: 0;
+    }
     &.toolbar-vertical {
       &.navbar-is-fixed-bottom,
       &.navbar-is-fixed-top {
@@ -46,7 +62,13 @@ body {
   }
 }
 
-.navbar-inverse {
+@media (min-width: 0) {
+  .navbar-toggle-visible {
+    display: inline-block; /* force showing the toggle */
+  }
+}
+
+.navbar-inverse, .navmenu-inverse {
   .navbar-toggle {
     color: $navbar-inverse-link-color;
 
@@ -59,6 +81,7 @@ body {
 }
 
 .offcanvas-fixed-right,
+.navmenu-fixed-right,
 body,
 .backdrop {
   left: auto !important;

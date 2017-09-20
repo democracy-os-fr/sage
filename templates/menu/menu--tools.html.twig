@@ -47,12 +47,14 @@
           {% else %}
             <span class="{{ '%bundle% %bundle%-%name%'|replace({'%bundle%':icon.bundle,'%name%':icon.name}) }}"></span>
           {% endif %}
-          <span class="visually-hidden sr-only">{{ item.title }}</span>
+          {% set title_classes = menu_level == 0 ? 'visually-hidden sr-only':'' %}
+          <span class="{{title_classes}}">{{ item.title }}</span>
         {% else %}
           {% set icon = faicon(item.title) %}
           {% if icon %}
             <i class="fa fa-lg fa-fw fa-{{ icon['#icon'] }}"></i>
-            <span class="visually-hidden sr-only">{{ item.title }}</span>
+            {% set title_classes = menu_level == 0 ? 'visually-hidden sr-only':'' %}
+            <span class="{{title_classes}}">{{ item.title }}</span>
           {% else %}
             {{ item.title }}
           {% endif %}

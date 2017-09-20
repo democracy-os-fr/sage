@@ -8,7 +8,8 @@ package: 'Bootstrap'
 
 regions:
   navigation: 'Navigation'
-  navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_collapsible: 'Navigation (collapsible)'
+  offcanvas: 'Off canvas (hidden)'
   toolbar: 'Top Bar'
   header: 'Header'
   message: 'Highlighted'

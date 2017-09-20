@@ -49,11 +49,11 @@ export default {
     //   $('header .navbar-toggle').removeClass('active');
     // });
 
-    $('header .navbar-offcanvas').on('show.bs.offcanvas', function () {
+    $('body > .navmenu.offcanvas').on('show.bs.offcanvas', function () {
       $('header .navbar-toggle').addClass('active');
       $('.backdrop').fadeIn();
     });
-    $('header .navbar-offcanvas').on('hide.bs.offcanvas', function () {
+    $('body > .navmenu.offcanvas').on('hide.bs.offcanvas', function () {
       $('header .navbar-toggle').removeClass('active');
       $('.backdrop').fadeOut();
     });

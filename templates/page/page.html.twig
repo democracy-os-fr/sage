@@ -58,6 +58,18 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{% if page.offcanvas or page.navigation_collapsible %}
+<div class="navmenu navmenu-inverse navmenu-fixed-right offcanvas">
+  {# Off canvas (hidden) #}
+  {% if page.offcanvas %}
+    {{ page.offcanvas }}
+  {% endif %}
+  {# Navigation (collapsible) #}
+  {% if page.navigation_collapsible %}
+    {{ page.navigation_collapsible }}
+  {% endif %}
+</div>
+{% endif %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
@@ -70,23 +82,25 @@
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       <div class="{{container}}">
-        <div class="navbar-header">
           {{ page.navigation }}
           {# .btn-navbar is used as the toggle for collapsed navbar content #}
-          {% if page.navigation_collapsible %}
-            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
+          {% if page.offcanvas or page.navigation_collapsible %}
+            <button type="button" class="navbar-toggle navbar-toggle-visible navbar-toggle-right" data-toggle="offcanvas" data-target=".navmenu.offcanvas" data-canvas="body">
               <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-              <i class="fa fa-lg fa-ellipsis-h"></i>
+              {% if user.account.name is empty %}
+                <i class="fa fa-lg fa-ellipsis-h"></i>
+              {% else %}
+                <span class="icon-avatar">{{user.account.name[:1]|upper}}</span>
+              {% endif %}
             </button>
           {% endif %}
-        </div>
-
         {# Navigation (collapsible) #}
         {% if page.navigation_collapsible %}
           <div class="navbar-offcanvas offcanvas-fixed-right offcanvas">
             {{ page.navigation_collapsible }}
           </div>
         {% endif %}
+
       </div>
     </header>
   {% endblock %}
@@ -156,9 +170,7 @@
     </footer>
   {% endblock %}
 {% endif %}
-
 <div class="backdrop"></div>
-
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
