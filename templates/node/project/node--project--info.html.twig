@@ -4,57 +4,79 @@
 
     {{ content.field_images|field_value }}
 
-    <h4>Téléchargez la fiche du site :</h4>
+    <h4 class="green-text">
+      <i class="fa fa-lg fa-fw fa-download"></i>
+      &nbsp;
+      Documents informatifs à télécharger :
+    </h4>
     {{ content.field_files|field_value }}
 
   </div>
   <div class="col-xs-12 col-md-6">
     <div class="panel panel-default">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <h4 class="list-group-item-heading">{{ content.field_info_author|field_label }}</h4>
-          <p class="list-group-item-text">
+      <div class="panel-heading text-center">
+        <h3 class="alt-light no-padding">fiche d'identité</h3>
+      </div>
+      <div class="panel-body row">
+        <div class="col-xs-12 col-lg-6 col-border-right">
+          <h4 class="">
+            <i class="fa fa-2x fa-fw fa-home"></i>
+            &nbsp;
+            {{ content.field_info_author|field_label }}
+          </h4>
+          <p class="">
             {{ content.field_info_author|field_value }}
           </p>
-        </li>
-        <li class="list-group-item">
-          <h4 class="list-group-item-heading">{{ content.field_info_area|field_label }}</h4>
+          <br/>
+          <h4 class="">
+            <i class="fa fa-lg fa-fw fa-expand"></i>
+            &nbsp;
+            {{ content.field_info_area|field_label }}
+          </h4>
           <p class="list-group-item-text">
             {{ content.field_info_area|field_value }}
           </p>
-        </li>
-        <li class="list-group-item">
-          <h4 class="list-group-item-heading">{{ content.field_address|field_label }}</h4>
+          <br/>
+          <h4 class="">
+            <i class="fa fa-lg fa-fw fa-map-marker"></i>
+            &nbsp;
+            {{ content.field_address|field_label }}
+          </h4>
           <p class="list-group-item-text">
             {{ content.field_address|field_value }}
           </p>
-        </li>
-        <li class="list-group-item">
-          <h4 class="list-group-item-heading">{{ content.field_info_availability|field_label }}</h4>
+          <br/>
+          <h4 class="">
+            <i class="fa fa-lg fa-fw fa-money"></i>
+            &nbsp;
+            {{ content.field_info_block_rent|field_label }}
+          </h4>
+          <p class="list-group-item-text">
+            {{ content.field_info_block_rent|field_value }}
+          </p>
+          <br/>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+          <h4 class="">
+            <i class="fa fa-lg fa-fw fa-clock-o"></i>
+            &nbsp;
+            {{ content.field_info_availability|field_label }}
+          </h4>
           <p class="list-group-item-text">
             {{ content.field_info_availability|field_value }}
           </p>
-        </li>
-        <li class="list-group-item">
-          <h4 class="list-group-item-heading">{{ content.field_info_calendar|field_label }}</h4>
+          <br/>
+          <h4 class="">
+            <i class="fa fa-lg fa-fw fa-calendar"></i>
+            &nbsp;
+            {{ content.field_info_calendar|field_label }}
+          </h4>
           <p class="list-group-item-text">
             {{ content.field_info_calendar|field_value }}
           </p>
-        </li>
-        <!-- <li class="list-group-item">
-          <h5 class="list-group-item-heading">
-            Recevoir les nouvelles de ce projet
-          </h5>
-          <div class="list-group-item-text">
-            <div class="input-group">
-              <input type="text" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-success" type="button">{{ 'Candidature'|t }}</button>
-              </span>
-            </div>
-          </div>
-        </li> -->
-      </ul>
+          <br/>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -65,35 +87,18 @@
     </div>
   </div>
 
-  <div class="col-xs-12 pad-bottom">
+  <div class="col-xs-12 col-lg-6 pad-bottom">
     <h2>{{ content.field_info_block_context|field_label }}</h2>
     <div>
       {{ content.field_info_block_context|field_value }}
     </div>
   </div>
 
-  <div class="col-xs-12 pad-bottom">
+  <div class="col-xs-12 col-lg-6 pad-bottom">
     <h2>{{ content.field_info_block_selection|field_label }}</h2>
     <div>
       {{ content.field_info_block_selection|field_value }}
     </div>
-  </div>
-
-  <div class="col-xs-12">
-    <div class="panel panel-default pad-bottom">
-      <div class="panel-heading">
-        <b>{{ content.field_info_block_rent|field_label }}</b>
-      </div>
-      <div class="panel-body">
-        <div>
-          {{ content.field_info_block_rent|field_value }}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xs-12 pad-bottom">
-    <h2>{{ content.field_info_block_location|field_label }}</h2>
   </div>
 
   <div class="col-xs-12 col-md-6 pad-bottom">
@@ -101,6 +106,7 @@
     {{ content.field_geofield|field_value }}
   </div>
   <div class="col-xs-12 col-md-6">
+    <h2 class="green-text pad-bottom">Situation et contexte urbain</h2>
     <h3>{{ content.field_address|field_label }}</h3>
     <div>
       {{ content.field_address|field_value }}
@@ -108,12 +114,6 @@
     <h3>{{ content.field_info_block_transport|field_label }}</h3>
     <div>
       {{ content.field_info_block_transport|field_value }}
-    </div>
-  </div>
-
-  <div class="col-xs-12">
-    <div>
-      {{ content.field_info_block_location|field_value }}
     </div>
   </div>
 

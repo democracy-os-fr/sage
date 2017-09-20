@@ -96,6 +96,10 @@ blockquote.info {
   }
 }
 
+.info-inline {
+  margin-right: $padding-base-vertical;
+}
+
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;
 // }

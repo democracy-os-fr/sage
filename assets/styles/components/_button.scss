@@ -36,3 +36,7 @@ a.btn.btn-primary {
     @extend .btn-yellow;
   }
 }
+
+.leaflet-container a.btn-link {
+  @extend .btn-link;
+}

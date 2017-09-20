@@ -5093,30 +5093,41 @@ fieldset[disabled] .focus.button--danger {
   background-color: #fff;
 }
 
-.btn-link {
+.btn-link,
+.leaflet-container a.btn-link {
   color: #18BC9C;
   font-weight: normal;
   border-radius: 0;
 }
 
 .btn-link,
+.leaflet-container a.btn-link,
 .btn-link:active,
+.leaflet-container a.btn-link:active,
 .btn-link.active,
+.leaflet-container a.active.btn-link,
 .btn-link[disabled],
+.leaflet-container a[disabled].btn-link,
 fieldset[disabled] .btn-link {
   background-color: transparent;
   box-shadow: none;
 }
 
 .btn-link,
+.leaflet-container a.btn-link,
 .btn-link:hover,
+.leaflet-container a.btn-link:hover,
 .btn-link:focus,
-.btn-link:active {
+.leaflet-container a.btn-link:focus,
+.btn-link:active,
+.leaflet-container a.btn-link:active {
   border-color: transparent;
 }
 
 .btn-link:hover,
-.btn-link:focus {
+.leaflet-container a.btn-link:hover,
+.btn-link:focus,
+.leaflet-container a.btn-link:focus {
   color: #18BC9C;
   text-decoration: none;
   background-color: transparent;
@@ -7328,7 +7339,9 @@ form.webform-submission-form > .navbar-collapse,
   color: #18BC9C;
 }
 
-.navbar-default .btn-link {
+.navbar-default .btn-link,
+.navbar-default .leaflet-container a.btn-link,
+.leaflet-container .navbar-default a.btn-link {
   color: #fff;
 }
 
@@ -7454,7 +7467,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: rgba(255, 255, 0, 0.9);
 }
 
-.navbar-inverse .btn-link {
+.navbar-inverse .btn-link,
+.navbar-inverse .leaflet-container a.btn-link,
+.leaflet-container .navbar-inverse a.btn-link {
   color: #fff;
 }
 
@@ -14705,6 +14720,10 @@ blockquote.info .field--type-address {
   font-size: 14px;
 }
 
+.info-inline {
+  margin-right: 10px;
+}
+
 /**
  * Panel styling.
  */
@@ -14748,10 +14767,21 @@ blockquote.info .field--type-address {
   vertical-align: text-bottom;
 }
 
+.panel .panel-heading h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
 .panel-event .panel-heading {
   background-color: #A91833;
   color: #fff;
   font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+  .col-border-right {
+    border-right: 1px solid #999;
+  }
 }
 
 /**
@@ -15773,6 +15803,10 @@ fieldset[disabled] .dark-background form input.focus[type="submit"].button--succ
   padding-bottom: 18px;
 }
 
+.green-text {
+  color: #18BC9C;
+}
+
 header.navbar {
   margin-bottom: 0;
 }
@@ -15975,6 +16009,8 @@ body#tinymce {
   left: 0;
   top: 0;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slick-track:before,
