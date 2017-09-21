@@ -4,7 +4,9 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
-    "viewsExposedForm" : "./scripts/attached/viewsExposedForm.js"
+    "viewsExposedForm" : "./scripts/attached/viewsExposedForm.js",
+    "entity_browser.tabs" : "./scripts/attached/entity_browser.tabs.js",
+    "ckeditor_templates" : "./scripts/templates/ckeditor_templates.js"
   },
   "watch": [
     "templates/**/*.php",

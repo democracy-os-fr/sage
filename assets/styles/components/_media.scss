@@ -24,22 +24,24 @@
 
 }
 
-.media.media-panel {
+.panel-list {
   margin-bottom: $line-height-computed;
-  background-color: $panel-bg;
-  border: 1px solid transparent;
-  border-radius: $panel-border-radius;
   @include box-shadow(0 1px 1px rgba(0,0,0,.05));
-  padding: $panel-body-padding;
-  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
 
-  .media-body {
-    padding-left: 5px;
-    h1, .h1, h2, .h2, h3, .h3 {
-      margin-top: 0;
+  .media {
+    .media-body {
+      padding-left: 5px;
+      h1, .h1, h2, .h2, h3, .h3 {
+        margin-top: 0;
+      }
+    }
+
+    .social {
+      position: absolute;
+      bottom: $line-height-computed - $padding-base-vertical;
+      right: $padding-base-horizontal;
     }
   }
-
 }
 
 .carousel {

@@ -13745,6 +13745,905 @@ a.list-group-item-danger.active:focus {
   clip: auto;
 }
 
+.container-smooth {
+  max-width: 1170px;
+}
+
+@media (min-width: 1px) {
+  .container-smooth {
+    width: auto;
+  }
+}
+
+.btn-labeled {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btn-label {
+  position: relative;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  padding: 10px 15px;
+  left: -15px;
+  border-radius: 3px 0 0 3px;
+}
+
+.btn-label.btn-label-right {
+  left: auto;
+  right: -15px;
+  border-radius: 0 3px 3px 0;
+}
+
+.btn-lg .btn-label,
+.btn-group-lg > .btn .btn-label,
+.btn-group-lg > .button .btn-label,
+.agora-header .btn-group-lg > .more-link .btn-label,
+.view-display-id-home .btn-group-lg > .more-link .btn-label,
+.view-header > ul.links li .btn-group-lg > a .btn-label,
+.slider-sidebar .btn-group-lg > .more-link .btn-label,
+.view-acteurs .more-link .btn-group-lg > a .btn-label {
+  padding: 18px 27px;
+  left: -27px;
+  border-radius: 5px 0 0 5px;
+}
+
+.btn-lg .btn-label.btn-label-right,
+.btn-group-lg > .btn .btn-label.btn-label-right,
+.btn-group-lg > .button .btn-label.btn-label-right,
+.agora-header .btn-group-lg > .more-link .btn-label.btn-label-right,
+.view-display-id-home .btn-group-lg > .more-link .btn-label.btn-label-right,
+.view-header > ul.links li .btn-group-lg > a .btn-label.btn-label-right,
+.slider-sidebar .btn-group-lg > .more-link .btn-label.btn-label-right,
+.view-acteurs .more-link .btn-group-lg > a .btn-label.btn-label-right {
+  left: auto;
+  right: -27px;
+  border-radius: 0 5px 5px 0;
+}
+
+.btn-sm .btn-label,
+.btn-group-sm > .btn .btn-label,
+.btn-group-sm > .button .btn-label,
+.agora-header .btn-group-sm > .more-link .btn-label,
+.view-display-id-home .btn-group-sm > .more-link .btn-label,
+.button--small .btn-label,
+.view-header > ul.links li a .btn-label,
+.slider-sidebar .more-link .btn-label,
+.view-acteurs .more-link a .btn-label {
+  padding: 6px 9px;
+  left: -9px;
+  border-radius: 2px 0 0 2px;
+}
+
+.btn-sm .btn-label.btn-label-right,
+.btn-group-sm > .btn .btn-label.btn-label-right,
+.btn-group-sm > .button .btn-label.btn-label-right,
+.agora-header .btn-group-sm > .more-link .btn-label.btn-label-right,
+.view-display-id-home .btn-group-sm > .more-link .btn-label.btn-label-right,
+.button--small .btn-label.btn-label-right,
+.view-header > ul.links li a .btn-label.btn-label-right,
+.slider-sidebar .more-link .btn-label.btn-label-right,
+.view-acteurs .more-link a .btn-label.btn-label-right {
+  left: auto;
+  right: -9px;
+  border-radius: 0 2px 2px 0;
+}
+
+.btn-xs .btn-label,
+.btn-group-xs > .btn .btn-label,
+.btn-group-xs > .button .btn-label,
+.agora-header .btn-group-xs > .more-link .btn-label,
+.view-display-id-home .btn-group-xs > .more-link .btn-label,
+.view-header > ul.links li .btn-group-xs > a .btn-label,
+.slider-sidebar .btn-group-xs > .more-link .btn-label,
+.view-acteurs .more-link .btn-group-xs > a .btn-label,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger .btn-label,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger .btn-label {
+  padding: 1px 5px;
+  left: -5px;
+  border-radius: 2px 0 0 2px;
+}
+
+.btn-xs .btn-label.btn-label-right,
+.btn-group-xs > .btn .btn-label.btn-label-right,
+.btn-group-xs > .button .btn-label.btn-label-right,
+.agora-header .btn-group-xs > .more-link .btn-label.btn-label-right,
+.view-display-id-home .btn-group-xs > .more-link .btn-label.btn-label-right,
+.view-header > ul.links li .btn-group-xs > a .btn-label.btn-label-right,
+.slider-sidebar .btn-group-xs > .more-link .btn-label.btn-label-right,
+.view-acteurs .more-link .btn-group-xs > a .btn-label.btn-label-right,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger .btn-label.btn-label-right,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger .btn-label.btn-label-right {
+  left: auto;
+  right: -5px;
+  border-radius: 0 2px 2px 0;
+}
+
+.btn-group > .btn:last-child:not(:first-child) .btn-label,
+.btn-group > .button:last-child:not(:first-child) .btn-label,
+.agora-header .btn-group > .more-link:last-child:not(:first-child) .btn-label,
+.view-display-id-home .btn-group > .more-link:last-child:not(:first-child) .btn-label,
+.view-header > ul.links li .btn-group > a:last-child:not(:first-child) .btn-label,
+.slider-sidebar .btn-group > .more-link:last-child:not(:first-child) .btn-label,
+.view-acteurs .more-link .btn-group > a:last-child:not(:first-child) .btn-label,
+.btn-group > .dropdown-toggle:not(:first-child) .btn-label {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.nav-tabs-bottom {
+  border-bottom: 0;
+  border-top: 1px solid #ecf0f1;
+}
+
+.nav-tabs-bottom > li {
+  margin-bottom: 0;
+  margin-top: -1px;
+}
+
+.nav-tabs-bottom > li > a {
+  border-radius: 0 0 4px 4px;
+}
+
+.nav-tabs-bottom > li > a:hover,
+.nav-tabs-bottom > li > a:focus,
+.nav-tabs-bottom > li.active > a,
+.nav-tabs-bottom > li.active > a:hover,
+.nav-tabs-bottom > li.active > a:focus {
+  border: 1px solid #ecf0f1;
+  border-top-color: transparent;
+}
+
+.nav-tabs-left {
+  border-bottom: 0;
+  border-right: 1px solid #ecf0f1;
+}
+
+.nav-tabs-left > li {
+  margin-bottom: 0;
+  margin-right: -1px;
+  float: none;
+}
+
+.nav-tabs-left > li > a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  margin-bottom: 2px;
+}
+
+.nav-tabs-left > li > a:hover,
+.nav-tabs-left > li > a:focus,
+.nav-tabs-left > li.active > a,
+.nav-tabs-left > li.active > a:hover,
+.nav-tabs-left > li.active > a:focus {
+  border: 1px solid #ecf0f1;
+  border-right-color: transparent;
+}
+
+.row > .nav-tabs-left {
+  padding-right: 0;
+  padding-left: 15px;
+  margin-right: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.row > .nav-tabs-left + .tab-content {
+  border-left: 1px solid #ecf0f1;
+}
+
+.nav-tabs-right {
+  border-bottom: 0;
+  border-left: 1px solid #ecf0f1;
+}
+
+.nav-tabs-right > li {
+  margin-bottom: 0;
+  margin-left: -1px;
+  float: none;
+}
+
+.nav-tabs-right > li > a {
+  border-radius: 0 4px 4px 0;
+  margin-left: 0;
+  margin-bottom: 2px;
+}
+
+.nav-tabs-right > li > a:hover,
+.nav-tabs-right > li > a:focus,
+.nav-tabs-right > li.active > a,
+.nav-tabs-right > li.active > a:hover,
+.nav-tabs-right > li.active > a:focus {
+  border: 1px solid #ecf0f1;
+  border-left-color: transparent;
+}
+
+.row > .nav-tabs-right {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.navmenu,
+.navbar-offcanvas {
+  width: 300px;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.navmenu-fixed-left,
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  border-radius: 0;
+  overflow-y: auto;
+}
+
+.navmenu-fixed-left,
+.navbar-offcanvas.navmenu-fixed-left {
+  left: 0;
+  right: auto;
+  border-width: 0 1px 0 0;
+  bottom: 0;
+}
+
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  left: auto;
+  right: 0;
+  border-width: 0 0 0 1px;
+}
+
+.navmenu-nav {
+  margin-bottom: 10.5px;
+}
+
+.navmenu-nav.dropdown-menu {
+  position: static;
+  margin: 0;
+  padding-top: 0;
+  float: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.navbar-offcanvas .navbar-nav {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-offcanvas {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  .navbar-offcanvas.offcanvas {
+    position: static;
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+
+  .navbar-offcanvas .navbar-nav.navbar-left:first-child {
+    margin-left: -15px;
+  }
+
+  .navbar-offcanvas .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+
+  .navbar-offcanvas .navmenu-brand {
+    display: none;
+  }
+}
+
+.navmenu-brand {
+  display: block;
+  font-size: 19px;
+  line-height: 21px;
+  padding: 10px 15px;
+  margin: 10.5px 0;
+}
+
+.navmenu-brand:hover,
+.navmenu-brand:focus {
+  text-decoration: none;
+}
+
+.navmenu-default,
+.navbar-default .navbar-offcanvas {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.navmenu-default .navmenu-brand,
+.navbar-default .navbar-offcanvas .navmenu-brand {
+  color: #777;
+}
+
+.navmenu-default .navmenu-brand:hover,
+.navmenu-default .navmenu-brand:focus,
+.navbar-default .navbar-offcanvas .navmenu-brand:hover,
+.navbar-default .navbar-offcanvas .navmenu-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+
+.navmenu-default .navmenu-text,
+.navbar-default .navbar-offcanvas .navmenu-text {
+  color: #777;
+}
+
+.navmenu-default .navmenu-nav > .dropdown > a:hover .caret,
+.navmenu-default .navmenu-nav > .dropdown > a:focus .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+
+.navmenu-default .navmenu-nav > .open > a,
+.navmenu-default .navmenu-nav > .open > a:hover,
+.navmenu-default .navmenu-nav > .open > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus {
+  background-color: #e7e7e7;
+  color: #555;
+}
+
+.navmenu-default .navmenu-nav > .open > a .caret,
+.navmenu-default .navmenu-nav > .open > a:hover .caret,
+.navmenu-default .navmenu-nav > .open > a:focus .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+
+.navmenu-default .navmenu-nav > .dropdown > a .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+
+.navmenu-default .navmenu-nav.dropdown-menu,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu {
+  background-color: #e7e7e7;
+}
+
+.navmenu-default .navmenu-nav.dropdown-menu > .divider,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .divider {
+  background-color: #f8f8f8;
+}
+
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a,
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a:hover,
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:focus {
+  background-color: #d7d7d7;
+}
+
+.navmenu-default .navmenu-nav > li > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > li > a {
+  color: #777;
+}
+
+.navmenu-default .navmenu-nav > li > a:hover,
+.navmenu-default .navmenu-nav > li > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > li > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+
+.navmenu-default .navmenu-nav > .active > a,
+.navmenu-default .navmenu-nav > .active > a:hover,
+.navmenu-default .navmenu-nav > .active > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > .active > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > .active > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+.navmenu-default .navmenu-nav > .disabled > a,
+.navmenu-default .navmenu-nav > .disabled > a:hover,
+.navmenu-default .navmenu-nav > .disabled > a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a,
+.navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.navmenu-inverse,
+.navbar-inverse .navbar-offcanvas {
+  background-color: #222;
+  border-color: #090909;
+}
+
+.navmenu-inverse .navmenu-brand,
+.navbar-inverse .navbar-offcanvas .navmenu-brand {
+  color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-brand:hover,
+.navmenu-inverse .navmenu-brand:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-brand:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navmenu-inverse .navmenu-text,
+.navbar-inverse .navbar-offcanvas .navmenu-text {
+  color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-nav > .dropdown > a:hover .caret,
+.navmenu-inverse .navmenu-nav > .dropdown > a:focus .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navmenu-inverse .navmenu-nav > .open > a,
+.navmenu-inverse .navmenu-nav > .open > a:hover,
+.navmenu-inverse .navmenu-nav > .open > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:focus {
+  background-color: #090909;
+  color: #fff;
+}
+
+.navmenu-inverse .navmenu-nav > .open > a .caret,
+.navmenu-inverse .navmenu-nav > .open > a:hover .caret,
+.navmenu-inverse .navmenu-nav > .open > a:focus .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:hover .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navmenu-inverse .navmenu-nav > .dropdown > a .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a .caret {
+  border-top-color: #b4bcc2;
+  border-bottom-color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-nav.dropdown-menu,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu {
+  background-color: #090909;
+}
+
+.navmenu-inverse .navmenu-nav.dropdown-menu > .divider,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .divider {
+  background-color: #222;
+}
+
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a,
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:hover,
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:focus {
+  background-color: black;
+}
+
+.navmenu-inverse .navmenu-nav > li > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > li > a {
+  color: #b4bcc2;
+}
+
+.navmenu-inverse .navmenu-nav > li > a:hover,
+.navmenu-inverse .navmenu-nav > li > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > li > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navmenu-inverse .navmenu-nav > .active > a,
+.navmenu-inverse .navmenu-nav > .active > a:hover,
+.navmenu-inverse .navmenu-nav > .active > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a:focus {
+  color: #fff;
+  background-color: #090909;
+}
+
+.navmenu-inverse .navmenu-nav > .disabled > a,
+.navmenu-inverse .navmenu-nav > .disabled > a:hover,
+.navmenu-inverse .navmenu-nav > .disabled > a:focus,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a:hover,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+
+.alert-fixed-top,
+.alert-fixed-bottom {
+  position: fixed;
+  width: 100%;
+  z-index: 1035;
+  border-radius: 0;
+  margin: 0;
+  left: 0;
+}
+
+@media (min-width: 992px) {
+  .alert-fixed-top,
+  .alert-fixed-bottom {
+    width: 992px;
+    left: 50%;
+    margin-left: -496px;
+  }
+}
+
+.alert-fixed-top {
+  top: 0;
+  border-width: 0 0 1px 0;
+}
+
+@media (min-width: 992px) {
+  .alert-fixed-top {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-width: 0 1px 1px 1px;
+  }
+}
+
+.alert-fixed-bottom {
+  bottom: 0;
+  border-width: 1px 0 0 0;
+}
+
+@media (min-width: 992px) {
+  .alert-fixed-bottom {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-width: 1px 1px 0 1px;
+  }
+}
+
+.offcanvas {
+  display: none;
+}
+
+.offcanvas.in {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .offcanvas-xs {
+    display: none;
+  }
+
+  .offcanvas-xs.in {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .offcanvas-sm {
+    display: none;
+  }
+
+  .offcanvas-sm.in {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .offcanvas-md {
+    display: none;
+  }
+
+  .offcanvas-md.in {
+    display: block;
+  }
+}
+
+.offcanvas-lg {
+  display: none;
+}
+
+.offcanvas-lg.in {
+  display: block;
+}
+
+.canvas-sliding {
+  -webkit-transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+  -o-transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+  transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+}
+
+.offcanvas-clone {
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  opacity: 0 !important;
+}
+
+.table.rowlink td:not(.rowlink-skip),
+.table .rowlink td:not(.rowlink-skip) {
+  cursor: pointer;
+}
+
+.table.rowlink td:not(.rowlink-skip) a,
+.table .rowlink td:not(.rowlink-skip) a {
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.table-hover.rowlink tr:hover td,
+.table-hover .rowlink tr:hover td {
+  background-color: #c0cdd1;
+}
+
+.btn-file {
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+
+.btn-file > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 23px;
+  height: 100%;
+  width: 100%;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.fileinput {
+  margin-bottom: 9px;
+  display: inline-block;
+}
+
+.fileinput .form-control,
+.fileinput .agenda-search .cibulSearch input,
+.agenda-search .cibulSearch .fileinput input {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  cursor: text;
+}
+
+.fileinput .thumbnail {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.fileinput .thumbnail > img {
+  max-height: 100%;
+}
+
+.fileinput .btn,
+.fileinput .button,
+.fileinput .agora-header .more-link,
+.agora-header .fileinput .more-link,
+.fileinput
+  .view-display-id-home .more-link,
+.view-display-id-home .fileinput .more-link,
+.fileinput .view-header > ul.links li a,
+.view-header > ul.links li .fileinput a,
+.fileinput .slider-sidebar .more-link,
+.slider-sidebar .fileinput .more-link,
+.fileinput .view-acteurs .more-link a,
+.view-acteurs .more-link .fileinput a {
+  vertical-align: middle;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+  display: none;
+}
+
+.fileinput-inline .fileinput-controls {
+  display: inline;
+}
+
+.fileinput-filename {
+  vertical-align: middle;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.form-control .fileinput-filename,
+.agenda-search .cibulSearch input .fileinput-filename {
+  vertical-align: bottom;
+}
+
+.fileinput.input-group {
+  display: table;
+}
+
+.fileinput-new.input-group .btn-file,
+.fileinput-new .input-group .btn-file {
+  border-radius: 0 4px 4px 0;
+}
+
+.fileinput-new.input-group .btn-file.btn-xs,
+.fileinput-new.input-group .btn-group-xs > .btn-file.btn,
+.fileinput-new.input-group .btn-group-xs > .btn-file.button,
+.fileinput-new.input-group .agora-header .btn-group-xs > .btn-file.more-link,
+.agora-header .fileinput-new.input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new.input-group
+  .view-display-id-home .btn-group-xs > .btn-file.more-link,
+.view-display-id-home .fileinput-new.input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new.input-group .view-header > ul.links li .btn-group-xs > a.btn-file,
+.view-header > ul.links li .fileinput-new.input-group .btn-group-xs > a.btn-file,
+.fileinput-new.input-group .slider-sidebar .btn-group-xs > .btn-file.more-link,
+.slider-sidebar .fileinput-new.input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new.input-group .view-acteurs .more-link .btn-group-xs > a.btn-file,
+.view-acteurs .more-link .fileinput-new.input-group .btn-group-xs > a.btn-file,
+.fileinput-new.input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.btn-danger,
+#webform-submission-candidature-aap-form .js-form-managed-file .fileinput-new.input-group button.btn-file.js-form-submit.btn-danger,
+.fileinput-new.input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.button--danger,
+#webform-submission-candidature-aap-form .js-form-managed-file .fileinput-new.input-group button.btn-file.js-form-submit.button--danger,
+.fileinput-new.input-group .btn-file.btn-sm,
+.fileinput-new.input-group .btn-group-sm > .btn-file.btn,
+.fileinput-new.input-group .btn-group-sm > .btn-file.button,
+.fileinput-new.input-group .agora-header .btn-group-sm > .btn-file.more-link,
+.agora-header .fileinput-new.input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new.input-group
+  .view-display-id-home .btn-group-sm > .btn-file.more-link,
+.view-display-id-home .fileinput-new.input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new.input-group .btn-file.button--small,
+.fileinput-new.input-group .view-header > ul.links li a.btn-file,
+.view-header > ul.links li .fileinput-new.input-group a.btn-file,
+.fileinput-new.input-group .slider-sidebar .btn-file.more-link,
+.slider-sidebar .fileinput-new.input-group .btn-file.more-link,
+.fileinput-new.input-group .view-acteurs .more-link a.btn-file,
+.view-acteurs .more-link .fileinput-new.input-group a.btn-file,
+.fileinput-new .input-group .btn-file.btn-xs,
+.fileinput-new .input-group .btn-group-xs > .btn-file.btn,
+.fileinput-new .input-group .btn-group-xs > .btn-file.button,
+.fileinput-new .input-group .agora-header .btn-group-xs > .btn-file.more-link,
+.agora-header
+  .fileinput-new .input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new .input-group
+  .view-display-id-home .btn-group-xs > .btn-file.more-link,
+.view-display-id-home
+  .fileinput-new .input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new .input-group .view-header > ul.links li .btn-group-xs > a.btn-file,
+.view-header > ul.links li
+  .fileinput-new .input-group .btn-group-xs > a.btn-file,
+.fileinput-new .input-group .slider-sidebar .btn-group-xs > .btn-file.more-link,
+.slider-sidebar
+  .fileinput-new .input-group .btn-group-xs > .btn-file.more-link,
+.fileinput-new .input-group .view-acteurs .more-link .btn-group-xs > a.btn-file,
+.view-acteurs .more-link
+  .fileinput-new .input-group .btn-group-xs > a.btn-file,
+.fileinput-new .input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.btn-danger,
+#webform-submission-candidature-aap-form .js-form-managed-file
+  .fileinput-new .input-group button.btn-file.js-form-submit.btn-danger,
+.fileinput-new .input-group #webform-submission-candidature-aap-form .js-form-managed-file button.btn-file.js-form-submit.button--danger,
+#webform-submission-candidature-aap-form .js-form-managed-file
+  .fileinput-new .input-group button.btn-file.js-form-submit.button--danger,
+.fileinput-new .input-group .btn-file.btn-sm,
+.fileinput-new .input-group .btn-group-sm > .btn-file.btn,
+.fileinput-new .input-group .btn-group-sm > .btn-file.button,
+.fileinput-new .input-group .agora-header .btn-group-sm > .btn-file.more-link,
+.agora-header
+  .fileinput-new .input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new .input-group
+  .view-display-id-home .btn-group-sm > .btn-file.more-link,
+.view-display-id-home
+  .fileinput-new .input-group .btn-group-sm > .btn-file.more-link,
+.fileinput-new .input-group .btn-file.button--small,
+.fileinput-new .input-group .view-header > ul.links li a.btn-file,
+.view-header > ul.links li
+  .fileinput-new .input-group a.btn-file,
+.fileinput-new .input-group .slider-sidebar .btn-file.more-link,
+.slider-sidebar
+  .fileinput-new .input-group .btn-file.more-link,
+.fileinput-new .input-group .view-acteurs .more-link a.btn-file,
+.view-acteurs .more-link
+  .fileinput-new .input-group a.btn-file {
+  border-radius: 0 3px 3px 0;
+}
+
+.fileinput-new.input-group .btn-file.btn-lg,
+.fileinput-new.input-group .btn-group-lg > .btn-file.btn,
+.fileinput-new.input-group .btn-group-lg > .btn-file.button,
+.fileinput-new.input-group .agora-header .btn-group-lg > .btn-file.more-link,
+.agora-header .fileinput-new.input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new.input-group
+  .view-display-id-home .btn-group-lg > .btn-file.more-link,
+.view-display-id-home .fileinput-new.input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new.input-group .view-header > ul.links li .btn-group-lg > a.btn-file,
+.view-header > ul.links li .fileinput-new.input-group .btn-group-lg > a.btn-file,
+.fileinput-new.input-group .slider-sidebar .btn-group-lg > .btn-file.more-link,
+.slider-sidebar .fileinput-new.input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new.input-group .view-acteurs .more-link .btn-group-lg > a.btn-file,
+.view-acteurs .more-link .fileinput-new.input-group .btn-group-lg > a.btn-file,
+.fileinput-new .input-group .btn-file.btn-lg,
+.fileinput-new .input-group .btn-group-lg > .btn-file.btn,
+.fileinput-new .input-group .btn-group-lg > .btn-file.button,
+.fileinput-new .input-group .agora-header .btn-group-lg > .btn-file.more-link,
+.agora-header
+  .fileinput-new .input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new .input-group
+  .view-display-id-home .btn-group-lg > .btn-file.more-link,
+.view-display-id-home
+  .fileinput-new .input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new .input-group .view-header > ul.links li .btn-group-lg > a.btn-file,
+.view-header > ul.links li
+  .fileinput-new .input-group .btn-group-lg > a.btn-file,
+.fileinput-new .input-group .slider-sidebar .btn-group-lg > .btn-file.more-link,
+.slider-sidebar
+  .fileinput-new .input-group .btn-group-lg > .btn-file.more-link,
+.fileinput-new .input-group .view-acteurs .more-link .btn-group-lg > a.btn-file,
+.view-acteurs .more-link
+  .fileinput-new .input-group .btn-group-lg > a.btn-file {
+  border-radius: 0 6px 6px 0;
+}
+
+.form-group.has-warning .fileinput .fileinput-preview {
+  color: #fff;
+}
+
+.form-group.has-warning .fileinput .thumbnail {
+  border-color: #F39C12;
+}
+
+.form-group.has-error .fileinput .fileinput-preview {
+  color: #fff;
+}
+
+.form-group.has-error .fileinput .thumbnail {
+  border-color: #E74C3C;
+}
+
+.form-group.has-success .fileinput .fileinput-preview {
+  color: #fff;
+}
+
+.form-group.has-success .fileinput .thumbnail {
+  border-color: #18BC9C;
+}
+
+.input-group-addon:not(:first-child) {
+  border-left: 0;
+}
+
 @font-face {
   font-family: 'arc';
   src: url(../fonts/arcweb-bold.eot);
@@ -14253,6 +15152,10 @@ table td.views-field-operations {
   text-align: center;
 }
 
+.views-exposed-form .form-actions {
+  text-align: left;
+}
+
 .views-exposed-form .filter-sort .filter-sort-order {
   display: none;
 }
@@ -14277,6 +15180,14 @@ table td.views-field-operations {
   line-height: 45px;
 }
 
+.form-horizontal .form-body {
+  padding: 0 15px;
+}
+
+.form-horizontal .form-body .form-group {
+  margin-bottom: 5px;
+}
+
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -14290,6 +15201,10 @@ table td.views-field-operations {
 
 .form-horizontal .form-exposed-group .form-exposed-group-inner {
   padding: 0 24px 0 6px;
+}
+
+.form-horizontal .form-exposed-group .btn-group-justified {
+  margin: 0 6px;
 }
 
 .form-horizontal .form-exposed-actions {
@@ -14308,6 +15223,45 @@ table td.views-field-operations {
 .dark-background form {
   background-color: #222222;
   color: #fff;
+}
+
+.form-dropdown-block {
+  display: block;
+  text-align: left;
+}
+
+.form-dropdown-block h4,
+.form-dropdown-block h5 {
+  margin-top: 0;
+}
+
+.form-dropdown-block .panel {
+  box-shadow: none;
+}
+
+#edit-field-actor-type-value .form-type-checkbox {
+  display: block;
+}
+
+#edit-field-actor-type-value .form-checkbox {
+  margin-right: 15px;
+  margin-left: -30px;
+}
+
+#edit-field-actor-type-value label.control-label.option {
+  display: block;
+  width: auto;
+  text-align: left;
+  margin: 5px 15px;
+}
+
+#edit-field-actor-type-value label.control-label.option::before {
+  display: block;
+  float: right;
+  content: '';
+  height: 21px;
+  width: 35px;
+  border-radius: 4px;
 }
 
 /**
@@ -14728,6 +15682,10 @@ blockquote.info .field--type-address {
   margin-right: 10px;
 }
 
+article.acteur.list {
+  margin-bottom: 21px;
+}
+
 /**
  * Panel styling.
  */
@@ -14782,6 +15740,13 @@ blockquote.info .field--type-address {
   font-weight: bold;
 }
 
+.panel.panel-list .panel-heading {
+  font-size: 80%;
+  text-transform: lowercase;
+  padding: 5px 15px;
+  min-height: 10px;
+}
+
 @media screen and (min-width: 1200px) {
   .col-border-right {
     border-right: 1px solid #999;
@@ -14812,6 +15777,52 @@ blockquote.info .field--type-address {
 
 .progress-wrapper .progress-bar {
   min-width: 2em;
+}
+
+table.treetable tr span.indenter {
+  margin-left: 0;
+}
+
+.table-responsive th.select-all {
+  padding-left: 14px;
+}
+
+.table-responsive th.select-all input[type="checkbox"],
+.table-responsive th.select-all .checkbox input[type="checkbox"],
+.table-responsive th.select-all .checkbox-inline input[type="checkbox"] {
+  position: static;
+}
+
+.table-responsive th.select-all input[type="checkbox"]:before,
+.table-responsive th.select-all .checkbox input[type="checkbox"]:before,
+.table-responsive th.select-all .checkbox-inline input[type="checkbox"]:before {
+  display: none;
+}
+
+.views-infinite-scroll-content-wrapper > table {
+  margin-bottom: 0;
+}
+
+.views-infinite-scroll-content-wrapper > table:last-child {
+  margin-bottom: 21px;
+}
+
+table.table-condensed .file-entity {
+  display: table-cell;
+  vertical-align: middle;
+  height: 41px;
+  width: 100px;
+}
+
+table.table-condensed .file-entity > img,
+table.table-condensed .file-entity > i.fa {
+  vertical-align: middle;
+  line-height: 41px;
+  max-height: 100%;
+}
+
+table.table-condensed > tbody > tr > td.views-field {
+  vertical-align: middle;
 }
 
 /**
@@ -15067,46 +16078,28 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   background-color: #303030;
 }
 
-.media.media-panel {
+.panel-list {
   margin-bottom: 21px;
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 15px;
-  border-color: #ecf0f1;
 }
 
-.media.media-panel > .panel-heading {
-  color: #2C3E50;
-  background-color: #ecf0f1;
-  border-color: #ecf0f1;
-}
-
-.media.media-panel > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #ecf0f1;
-}
-
-.media.media-panel > .panel-heading .badge {
-  color: #ecf0f1;
-  background-color: #2C3E50;
-}
-
-.media.media-panel > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #ecf0f1;
-}
-
-.media.media-panel .media-body {
+.panel-list .media .media-body {
   padding-left: 5px;
 }
 
-.media.media-panel .media-body h1,
-.media.media-panel .media-body .h1,
-.media.media-panel .media-body h2,
-.media.media-panel .media-body .h2,
-.media.media-panel .media-body h3,
-.media.media-panel .media-body .h3 {
+.panel-list .media .media-body h1,
+.panel-list .media .media-body .h1,
+.panel-list .media .media-body h2,
+.panel-list .media .media-body .h2,
+.panel-list .media .media-body h3,
+.panel-list .media .media-body .h3 {
   margin-top: 0;
+}
+
+.panel-list .media .social {
+  position: absolute;
+  bottom: 11px;
+  right: 15px;
 }
 
 .carousel .carousel-indicators {
@@ -15492,6 +16485,45 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   color: #fff;
 }
 
+.ui-widget {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.ui-widget .ui-widget {
+  font-size: 14px;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.ui-widget-content {
+  border: none;
+  color: #2C3E50;
+}
+
+.ui-widget-content a {
+  color: #2C3E50;
+}
+
+.ui-widget-header {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #2C3E50;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.ui-widget-header a {
+  color: #2C3E50;
+}
+
 html,
 body {
   height: 100%;
@@ -15811,6 +16843,40 @@ fieldset[disabled] .dark-background form input.focus[type="submit"].button--succ
   color: #18BC9C;
 }
 
+.type-helper-0 {
+  background-color: #EBEBEB !important;
+}
+
+.type-helper-1,
+#edit-field-actor-type-value label[for="edit-field-actor-type-value-1"]::before {
+  background-color: #D81E41 !important;
+  color: #fff !important;
+}
+
+.type-helper-2,
+#edit-field-actor-type-value label[for="edit-field-actor-type-value-2"]::before {
+  background-color: rgba(0, 191, 255, 0.8) !important;
+  color: #fff !important;
+}
+
+.type-helper-3,
+#edit-field-actor-type-value label[for="edit-field-actor-type-value-3"]::before {
+  background-color: rgba(255, 255, 0, 0.9) !important;
+  color: #fff !important;
+}
+
+.type-helper-4,
+#edit-field-actor-type-value label[for="edit-field-actor-type-value-4"]::before {
+  background-color: #18BC9C !important;
+  color: #fff !important;
+}
+
+.type-helper-5,
+#edit-field-actor-type-value label[for="edit-field-actor-type-value-5"]::before {
+  background-color: #F39C12 !important;
+  color: #fff !important;
+}
+
 header.navbar {
   margin-bottom: 0;
 }
@@ -16013,8 +17079,6 @@ body#tinymce {
   left: 0;
   top: 0;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .slick-track:before,

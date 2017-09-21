@@ -66,7 +66,7 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
       case 'form_element':
         // //dcp('form_element ThemeSuggestions');
         // //dcp($suggestions);
-        // //dcp($variables);
+        // dcp($variables);
 
         if( isset($variables['element']['#sage']) ) {
           $keys = ['filter_search'];
@@ -74,6 +74,24 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
             array_push($suggestions,'form_element__filter_search');
           }
         }
+
+
+
+        break;
+
+      case 'form_element_label':
+        // //dcp('form_element ThemeSuggestions');
+        // //dcp($suggestions);
+        //dcp($variables);
+
+        if( isset($variables['element']['#id']) ) {
+
+          if ( preg_match('#^edit-field-actor-type-value#', $variables['element']['#id']) ) {
+            //dcp('form_element ThemeSuggestions');
+            array_push($suggestions,'fieldset__filter_checkbox_block');
+          }
+        }
+
         break;
 
       case 'fieldset':
@@ -87,8 +105,27 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
             array_push($suggestions,'fieldset__filter_dropdown');
           }
         }
+
+        if( isset($variables['element']['#name']) ) {
+          $keys = ['field_actor_type_value','field_filter_availability_value','field_filter_rent_type_value'];
+          if ( in_array($variables['element']['#name'], $keys) ) {
+            //dcp($variables['element']);
+            array_push($suggestions,'fieldset__filter_dropdown_block');
+          }
+        }
         break;
 
+
+      // case 'input':
+      //   if( $variables['theme_hook_original'] == 'input__checkbox') {
+      //     // dcp('input__checkbox ThemeSuggestions');
+      //     if( isset($variables['element']['#parents']) ) {
+      //       if( in_array('field_actor_type_value',$variables['element']['#parents']) ) {
+      //         array_push($suggestions,'fieldset__filter_checkbox_block');
+      //       }
+      //     }
+      //   }
+      //   break;
 
       // case 'page':
       //   //dcp('page ThemeSuggestions');

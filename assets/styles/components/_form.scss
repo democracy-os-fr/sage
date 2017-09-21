@@ -212,6 +212,9 @@ table {
 }
 
 .views-exposed-form {
+  .form-actions {
+    text-align: left;
+  }
   .filter-sort .filter-sort-order {
     display: none;
     &.toggle-active {
@@ -240,6 +243,13 @@ table {
 
 .form-horizontal {
 
+  .form-body {
+    padding: 0 $padding-base-horizontal;
+    .form-group {
+      margin-bottom: 5px;
+    }
+  }
+
   .radio, .checkbox,
   .radio-inline, .checkbox-inline {
     padding-top: 0;
@@ -249,6 +259,9 @@ table {
     padding-left: 45px;
     .form-exposed-group-inner {
       padding: 0 24px 0 6px;
+    }
+    .btn-group-justified {
+      margin: 0 $padding-small-vertical;
     }
   }
 
@@ -273,4 +286,54 @@ table {
     @extend .btn-yellow ;
   }
 
+}
+
+.form-dropdown-block {
+  display: block;
+  text-align: left;
+  h4, h5 {
+    margin-top: 0;
+  }
+  .panel {
+    box-shadow: none;
+  }
+}
+
+#edit-field-actor-type-value {
+  .form-type-checkbox {
+    display: block;
+  }
+  .form-checkbox {
+    margin-right: 15px;
+    margin-left: -30px;
+  }
+  label.control-label.option {
+    display: block;
+    width: auto;
+    text-align: left;
+    margin: 5px 15px;
+    &::before {
+      display: block;
+      float: right;
+      content: '';
+      height: $line-height-computed;
+      width: 35px;
+      border-radius: $panel-border-radius;
+    }
+  }
+  label[for="edit-field-actor-type-value-1"]::before {
+    @extend .type-helper-1;
+  }
+  label[for="edit-field-actor-type-value-2"]::before {
+    @extend .type-helper-2;
+  }
+  label[for="edit-field-actor-type-value-3"]::before {
+    @extend .type-helper-3;
+  }
+  label[for="edit-field-actor-type-value-4"]::before {
+    @extend .type-helper-4;
+  }
+  label[for="edit-field-actor-type-value-5"]::before {
+    @extend .type-helper-5;
+  }
 }

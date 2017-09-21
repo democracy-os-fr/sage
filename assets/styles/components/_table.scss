@@ -1,0 +1,43 @@
+table.treetable tr span.indenter {
+  margin-left: 0;
+}
+.table-responsive {
+  th.select-all {
+    padding-left: 14px;
+    input[type="checkbox"],
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"] {
+      position: static;
+      &:before {
+        display: none;
+      }
+      &:after {
+        // border-radius: 9px;
+      }
+    }
+  }
+}
+
+.views-infinite-scroll-content-wrapper > table {
+  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: $line-height-computed;
+  }
+}
+
+table.table-condensed {
+  .file-entity {
+    display: table-cell;
+    vertical-align: middle;
+    height: $line-height-computed + ($padding-base-vertical * 2);
+    width: 100px;
+    & > img, & > i.fa {
+      vertical-align: middle;
+      line-height: $line-height-computed + ($padding-base-vertical * 2);
+      max-height: 100%;
+    }
+  }
+  & > tbody > tr > td.views-field {
+    vertical-align: middle;
+  }
+}

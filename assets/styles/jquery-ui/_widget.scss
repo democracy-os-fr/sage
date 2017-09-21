@@ -1,0 +1,32 @@
+.ui-widget {
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base/*{fsDefault}*/;
+}
+.ui-widget .ui-widget {
+	font-size: $font-size-base;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base;
+}
+.ui-widget-content {
+	border: none;
+	color: $text-color;
+}
+.ui-widget-content a {
+	color: $text-color;
+}
+.ui-widget-header {
+	border: none;
+  border-radius: 0;
+  background: transparent;
+  color: $text-color;
+	font-weight: bold;
+  margin-bottom: $padding-large-vertical;
+}
+.ui-widget-header a {
+	color: $text-color;
+}

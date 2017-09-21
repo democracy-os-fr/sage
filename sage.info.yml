@@ -15,6 +15,7 @@ regions:
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
+  offcanvas: 'Off canvas (hidden)'
   footer: 'Footer'
   signature: 'Signature'
   page_top: 'Page top'

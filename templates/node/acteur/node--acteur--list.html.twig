@@ -73,56 +73,69 @@
     node.isSticky() ? 'is-sticky',
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
-    'clearfix pad-bottom',
+    'clearfix',
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
   <div class="panel panel-default panel-list">
-    <div class="panel-heading type-helper-0"></div>
+    {% set selectedValue = content.field_actor_type['#items'].getString() %}
+    <div class="panel-heading type-helper-{{ selectedValue ?:0 }}">
+      {{ content.field_actor_type|field_value }}
+    </div>
     <div class="panel-body">
       <div class="media">
         <div class="media-left">
-          {% if content.field_images|field_target_entity%}
-            {{ content.field_images|field_value }}
+          {% if content.field_image_acteur|field_target_entity%}
+            {{ content.field_image_acteur|field_value }}
           {% else %}
             <a href="{{url}}">
-              <img class="img-responsive" src="http://placehold.it/450x350" alt="{{'image appel à projet par défaut'|t}}"/>
+              <img class="img-responsive" src="http://placehold.it/450x450" alt="{{'image appel à projet par défaut'|t}}"/>
             </a>
           {% endif %}
         </div>
         <div class="media-body">
-          {% if content.field_display_title[0]['#markup'] %}
-            <h3 class="alt">{{ label }}</h3>
-          {% endif %}
-          <p>
-            {{ content.field_hero_text|field_value }}
-          </p>
-          <p>
-            <span class="info-inline">
-              <i class="fa fa-fw fa-money"></i>
-              &nbsp;
-              {{ content.field_filter_rent|field_value }}
-              &nbsp;
-              {{ content.field_filter_rent_rate|field_value }}
-            </span>
-            <span class="info-inline">
-              <i class="fa fa-fw fa-expand"></i>
-              &nbsp;
-              {{ content.field_filter_area|field_value }}
-            </span>
-            <span class="info-inline">
-              <i class="fa fa-fw fa-clock-o"></i>
-              &nbsp;
-              {{ content.field_filter_availability|field_value }}
-            </span>
-          </p>
+          <h3 class="alt">
+            {{ label }}
+          </h3>
+          <div class="pad-bottom">
+            {{ content.body|field_value }}
+          </div>
           <div class="social text-right">
-            <a class="btn btn-xs btn-success" href="{{url}}">
-              <i class="fa fa-fw fa-info" aria-hidden="true"></i>
-              &nbsp;
-              <span>{{ 'en savoir plus'|t }}</span>
-              &nbsp;&nbsp;
+            <span>{{ 'en savoir plus'|t }} : </span>
+            <a href="{{url}}"
+              title="{{ label }}">
+              <i class="fa fa-lg fa-fw fa-info-circle"></i>
             </a>
+            {% if content.field_site_internet|field_value %}
+              <a href="{{content.field_site_internet|field_value[0]['#title']}}" target="_blank"
+                title="{{content.field_site_internet|field_label}}">
+                <i class="fa fa-lg fa-fw fa-link"></i>
+              </a>
+            {% endif %}
+            {% if content.field_reseau_social_twitter_link|field_value %}
+              <a href="{{content.field_reseau_social_twitter_link|field_value[0]['#url']}}" target="_blank"
+                title="{{content.field_reseau_social_twitter_link|field_label}} : {{content.field_reseau_social_twitter_link|field_value[0]['#title']}}">
+                <i class="fa fa-lg fa-fw fa-twitter"></i>
+              </a>
+            {% endif %}
+            {% if content.field_reseau_social_facebook|field_value %}
+              <a href="{{content.field_reseau_social_facebook|field_value[0]['#url']}}" target="_blank"
+                title="{{content.field_reseau_social_facebook|field_label}} : {{content.field_reseau_social_facebook|field_value[0]['#title']}}">
+                <i class="fa fa-lg fa-fw fa-facebook"></i>
+              </a>
+            {% endif %}
+            {% if content.field_reseau_social_youtube|field_value %}
+              <a href="{{content.field_reseau_social_youtube|field_value[0]['#url']}}" target="_blank"
+                title="{{content.field_reseau_social_youtube|field_label}} : {{content.field_reseau_social_youtube|field_value[0]['#title']}}">
+                <i class="fa fa-lg fa-fw fa-youtube-play"></i>
+              </a>
+            {% endif %}
+              {% if user.hasPermission('administer nodes') %}
+                &nbsp;•&nbsp;
+                <a class="btn-link-info" href="{{ url }}/edit">
+                  <i class="fa fa-lg fa-fw fa-pencil-square"></i>
+                </a>
+              {% endif %}
           </div>
         </div>
       </div>

@@ -63,60 +63,100 @@
 /******/ 	__webpack_require__.p = "/themes/contrib/sage/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 0:
+/***/ 16:
 /***/ (function(module, exports) {
 
-module.exports = jQuery;
 
-/***/ }),
+// Override the default template set
+CKEDITOR.addTemplates( 'default', {
+	// The name of sub folder which hold the shortcut preview images of the
+	// templates.
+	imagesPath: '/themes/contrib/sage/assets/images/templates/',
 
-/***/ 15:
-/***/ (function(module, exports, __webpack_require__) {
+	// The templates definitions.
+	templates: [ {
+		title: 'Image and Title module',
+		image: 'template1.gif',
+		description: 'One main image with a title and text that surround the image.',
+		html: '<h3>' +
+			// Use src=" " so image is not filtered out by the editor as incorrect (src is required).
+			'<img src=" " alt="" style="margin-right: 10px" height="100" width="100" align="left" />' +
+			'Type the title here' +
+			'</h3>' +
+			'<p>' +
+			'Type the text here' +
+			'</p>',
+	},
+	{
+		title: 'Strange Template',
+		image: 'template2.gif',
+		description: 'A template that defines two colums, each one with a title, and some text.',
+		html: '<table cellspacing="0" cellpadding="0" style="width:100%" border="0">' +
+			'<tr>' +
+				'<td style="width:50%">' +
+					'<h3>Title 1</h3>' +
+				'</td>' +
+				'<td></td>' +
+				'<td style="width:50%">' +
+					'<h3>Title 2</h3>' +
+				'</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td>' +
+					'Text 1' +
+				'</td>' +
+				'<td></td>' +
+				'<td>' +
+					'Text 2' +
+				'</td>' +
+			'</tr>' +
+			'</table>' +
+			'<p>' +
+			'More text goes here.' +
+			'</p>',
+	},
+	{
+		title: 'Text and Table',
+		image: 'template3.gif',
+		description: 'A title with some text and a table.',
+		html: '<div style="width: 80%">' +
+			'<h3>' +
+				'Title goes here' +
+			'</h3>' +
+			'<table style="width:150px;float: right" cellspacing="0" cellpadding="0" border="1">' +
+				'<caption style="border:solid 1px black">' +
+					'<strong>Table title</strong>' +
+				'</caption>' +
+				'<tr>' +
+					'<td>&nbsp;</td>' +
+					'<td>&nbsp;</td>' +
+					'<td>&nbsp;</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td>&nbsp;</td>' +
+					'<td>&nbsp;</td>' +
+					'<td>&nbsp;</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td>&nbsp;</td>' +
+					'<td>&nbsp;</td>' +
+					'<td>&nbsp;</td>' +
+				'</tr>' +
+			'</table>' +
+			'<p>' +
+				'Type the text here' +
+			'</p>' +
+			'</div>',
+	} ],
+} );
 
-/* WEBPACK VAR INJECTION */(function(jQuery) {/*eslint no-unused-vars: "off"*/
-/* global Drupal drupalSettings */
-(function ($) {
-  'use strict';
-  console.log('JAVASCRIPT views exposed form'); // eslint-disable-line no-console
-
-  Drupal.behaviors.exposedfilter_buttons = {
-    attach: function(context, settings) {
-      console.log('JAVASCRIPT exposedfilter_buttons'); // eslint-disable-line no-console
-      $('.views-exposed-form label.filter-sort').on('click', function (e) {
-        // console.dir(e); // eslint-disable-line no-console
-        var state = $(e.currentTarget).attr('data-filter-toggle');
-        if( state == 'on' ) {
-          $(e.currentTarget).find('.filter-sort-order').toggleClass('toggle-active');
-        } else {
-          $('.views-exposed-form label.filter-sort').attr('data-filter-toggle', 'off');
-          $(e.currentTarget).attr('data-filter-toggle', 'on');
-        }
-
-        // Update hidden field
-        // console.dir(context); // eslint-disable-line no-console
-        console.dir(e.currentTarget.form); // eslint-disable-line no-console
-        var sortBy = $(e.currentTarget).attr('data-filter-sort') ;
-        var sortOrder = $(e.currentTarget).find('span.filter-sort-order.toggle-active').attr('data-filter-sort') ;
-        console.dir(sortBy); // eslint-disable-line no-console
-        console.dir(sortOrder); // eslint-disable-line no-console
-
-        $(e.currentTarget.form).find('input[name="sort_by"]').val(sortBy);
-        $(e.currentTarget.form).find('input[name="sort_order"]').val(sortOrder);
-
-      });
-    },
-  };
-
-})(jQuery);
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=viewsExposedForm.js.map
+//# sourceMappingURL=ckeditor_templates.js.map

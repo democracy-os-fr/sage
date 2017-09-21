@@ -22,95 +22,99 @@
   {{ q }}
 {% endif %}
   <div class="form-horizontal">
-    {#
-      field_filter_rent_type_value
-      field_filter_availability_value
-      combine
-    #}
+    <div class="form-body">
 
+      {#
+        field_filter_rent_type_value
+        field_filter_availability_value
+        combine
+      #}
 
-
-    <div class="form-group">
-      <label class="col-sm-2 control-label alt-light">filtres</label>
-      <div class="col-sm-10 form-group form-exposed-group">
-        <div class="col-xs-6">
-          {{ form.field_filter_rent_type_value }}
-        </div>
-        <div class="col-xs-6">
-          {{ form.field_filter_availability_value }}
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10 form-exposed-group">
-        <div class="form-exposed-group-inner">
-          {{ form.combine }}
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label alt-light">tri</label>
-      <div class="col-sm-10 form-group form-actions form-exposed-group">
-        {% set val_sort_by = form.sort_by['#value'] is not empty ? form.sort_by['#value'] : '' %}
-        {% set val_sort_order = form.sort_order['#value'] is not empty ? form.sort_order['#value'] : form.sort_order['#default_value'] %}
-
-        <div class="btn-group btn-group-justified" data-toggle="buttons">
-
-          {% for key, value in form.sort_by['#options'] %}
-
-            {% if val_sort_by is not empty %}
-              {% set active_sort_by = val_sort_by == key %}
-            {% else %}
-              {% if loop.first %}
-                {% set val_sort_by = key %}
-                {% set active_sort_by = true %}
-              {% else %}
-                {% set active_sort_by = false %}
-              {% endif %}
-            {% endif %}
-
-            <label class="btn btn-default filter-sort {{ active_sort_by ? 'active' }}"
-              data-filter-toggle="{{ active_sort_by ? 'on':'off' }}"
-              data-filter-sort="{{key}}"
-            >
-              <input type="radio" name="filter-sort" id="filter-sort-{{key}}"
-                autocomplete="off"
-                {{ active_sort_by ? 'checked="checked"' }} />
-              <span class="filter-sort-by">{{ value }}</span>
-              <span>&nbsp;</span>
-
-              {% for _key, _value in form.sort_order['#options'] %}
-                {% if active_sort_by %}
-                  {% set active_sort_order = _key == val_sort_order %}
-                {% else %}
-                  {% set active_sort_order = _key == form.sort_order['#default_value'] %}
-                {% endif %}
-                <span class="filter-sort-order {{ active_sort_order ? 'toggle-active' }}" data-filter-sort="{{_key}}">
-                  {% if _value starts with 'fa ' %}
-                    <i class="{{ _value }}"></i>
-                  {% else %}
-                    {{ _value }}
-                  {% endif %}
-                </span>
-              {% endfor %}
-
-            </label>
-
-          {% endfor %}
-
-
+      <div class="form-group">
+        <!-- <div class="col-sm-offset-2 col-sm-10 form-exposed-group"> -->
+        <div class="col-sm-12 form-exposed-group">
+          <div class="form-exposed-group-inner">
+            {{ form.combine }}
           </div>
-      </div>
-
-      <input type="hidden" name="sort_by" id="{{ form.sort_by['#id'] }}" value="{{val_sort_by}}" />
-      <input type="hidden" name="sort_order" id="{{ form.sort_order['#id'] }}" value="{{val_sort_order}}" />
-
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10 form-exposed-group">
-        <div class="form-exposed-group-inner text-left">
-          {{ form.actions }}
         </div>
       </div>
+      <div class="form-group">
+        <!-- <label class="col-sm-2 control-label alt-light">filtres</label> -->
+        <div class="col-sm-12 form-group form-exposed-group">
+          <div class="col-xs-6">
+            {{ form.field_filter_rent_type_value }}
+          </div>
+          <div class="col-xs-6">
+            {{ form.field_filter_availability_value }}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- <label class="col-sm-2 control-label alt-light">tri</label> -->
+        <div class="col-sm-12 form-group form-actions form-exposed-group">
+          {% set val_sort_by = form.sort_by['#value'] is not empty ? form.sort_by['#value'] : '' %}
+          {% set val_sort_order = form.sort_order['#value'] is not empty ? form.sort_order['#value'] : form.sort_order['#default_value'] %}
+
+          <div class="btn-group btn-group-justified" data-toggle="buttons">
+
+            {% for key, value in form.sort_by['#options'] %}
+
+              {% if val_sort_by is not empty %}
+                {% set active_sort_by = val_sort_by == key %}
+              {% else %}
+                {% if loop.first %}
+                  {% set val_sort_by = key %}
+                  {% set active_sort_by = true %}
+                {% else %}
+                  {% set active_sort_by = false %}
+                {% endif %}
+              {% endif %}
+
+              <label class="btn btn-default filter-sort {{ active_sort_by ? 'active' }}"
+                data-filter-toggle="{{ active_sort_by ? 'on':'off' }}"
+                data-filter-sort="{{key}}"
+              >
+                <input type="radio" name="filter-sort" id="filter-sort-{{key}}"
+                  autocomplete="off"
+                  {{ active_sort_by ? 'checked="checked"' }} />
+                <span class="filter-sort-by">{{ value }}</span>
+                <span>&nbsp;</span>
+
+                {% for _key, _value in form.sort_order['#options'] %}
+                  {% if active_sort_by %}
+                    {% set active_sort_order = _key == val_sort_order %}
+                  {% else %}
+                    {% set active_sort_order = _key == form.sort_order['#default_value'] %}
+                  {% endif %}
+                  <span class="filter-sort-order {{ active_sort_order ? 'toggle-active' }}" data-filter-sort="{{_key}}">
+                    {% if _value starts with 'fa ' %}
+                      <i class="{{ _value }}"></i>
+                    {% else %}
+                      {{ _value }}
+                    {% endif %}
+                  </span>
+                {% endfor %}
+
+              </label>
+
+            {% endfor %}
+
+
+            </div>
+        </div>
+
+        <input type="hidden" name="sort_by" id="{{ form.sort_by['#id'] }}" value="{{val_sort_by}}" />
+        <input type="hidden" name="sort_order" id="{{ form.sort_order['#id'] }}" value="{{val_sort_order}}" />
+
+      </div>
+      <div class="form-group">
+        <!-- <div class="col-sm-offset-2 col-sm-10 form-exposed-group"> -->
+        <div class="col-sm-12 form-exposed-group">
+          <div class="form-exposed-group-inner text-left">
+            {{ form.actions }}
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>

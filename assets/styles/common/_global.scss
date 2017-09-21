@@ -82,3 +82,28 @@ p:last-child,
 .green-text {
   color : $brand-success ;
 }
+
+
+.type-helper-0 {
+  background-color: $gray-lighter !important;
+}
+.type-helper-1 {
+  background-color: $red!important;
+  color: $navbar-inverse-link-color!important;
+}
+.type-helper-2 {
+  background-color: $brand-blue!important;
+  color: $navbar-inverse-link-color!important;
+}
+.type-helper-3 {
+  background-color: $brand-yellow!important;
+  color: $navbar-inverse-link-color!important;
+}
+.type-helper-4 {
+  background-color: $brand-success!important;
+  color: $navbar-inverse-link-color!important;
+}
+.type-helper-5 {
+  background-color: $brand-warning!important;
+  color: $navbar-inverse-link-color!important;
+}
