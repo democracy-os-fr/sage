@@ -16096,6 +16096,10 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   margin-top: 0;
 }
 
+.panel-list .media .media-body .media-row {
+  margin: 6px auto;
+}
+
 .panel-list .media .social {
   position: absolute;
   bottom: 11px;
@@ -16841,6 +16845,16 @@ fieldset[disabled] .dark-background form input.focus[type="submit"].button--succ
 
 .green-text {
   color: #18BC9C;
+}
+
+.type-helper-badge {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0 12px;
+  font-size: 50%;
 }
 
 .type-helper-0 {

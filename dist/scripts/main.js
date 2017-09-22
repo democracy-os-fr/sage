@@ -2655,6 +2655,10 @@ function getCodeMirror(target) {
       });
     }
 
+    $(function () {
+      $('[data-toggle="popover"]').popover({})
+    })
+
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

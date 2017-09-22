@@ -78,12 +78,10 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div class="panel panel-default panel-list">
-    {% set selectedValue = content.field_actor_type['#items'].getString() %}
-    <div class="panel-heading type-helper-{{ selectedValue ?:0 }}">
-      {{ content.field_actor_type|field_value }}
-    </div>
+    <div class="panel-heading type-helper-0"></div>
     <div class="panel-body">
       <div class="media">
+
         <div class="media-left">
           {% if content.field_image_acteur|field_target_entity%}
             {{ content.field_image_acteur|field_value }}
@@ -93,13 +91,29 @@
             </a>
           {% endif %}
         </div>
+
         <div class="media-body">
           <h3 class="alt">
             {{ label }}
+            {% if content.field_actor_type|field_value %}
+              <div class="clearfix">
+                {% for aType in content.field_actor_type|field_value %}
+                  {% set selectedValue = content.field_actor_type['#items'].getValue()[loop.index0].value %}
+                  <span class="label type-helper-badge type-helper-{{ selectedValue ?:0 }}"
+                    data-toggle="popover" data-trigger="click hover" data-placement="bottom"
+                    data-content="{{content.field_actor_type|field_value[loop.index0]}}">
+                    &emsp;
+                  </span>
+                  &nbsp;
+                {% endfor %}
+              </div>
+            {% endif %}
           </h3>
+
           <div class="pad-bottom">
             {{ content.body|field_value }}
           </div>
+
           <div class="social text-right">
             <span>{{ 'en savoir plus'|t }} : </span>
             <a href="{{url}}"

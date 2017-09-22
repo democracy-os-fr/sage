@@ -83,6 +83,12 @@ p:last-child,
   color : $brand-success ;
 }
 
+.type-helper-badge {
+  cursor: default;
+  user-select: none;
+  padding: 0 12px;
+  font-size: 50%;
+}
 
 .type-helper-0 {
   background-color: $gray-lighter !important;

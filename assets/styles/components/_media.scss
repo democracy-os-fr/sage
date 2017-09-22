@@ -34,8 +34,10 @@
       h1, .h1, h2, .h2, h3, .h3 {
         margin-top: 0;
       }
+      .media-row {
+        margin: $padding-small-vertical auto;
+      }
     }
-
     .social {
       position: absolute;
       bottom: $line-height-computed - $padding-base-vertical;
