@@ -15239,23 +15239,23 @@ table td.views-field-operations {
   box-shadow: none;
 }
 
-#edit-field-actor-type-value .form-type-checkbox {
+div[id^="edit-field-actor-type-value"] .form-type-checkbox {
   display: block;
 }
 
-#edit-field-actor-type-value .form-checkbox {
+div[id^="edit-field-actor-type-value"] .form-checkbox {
   margin-right: 15px;
   margin-left: -30px;
 }
 
-#edit-field-actor-type-value label.control-label.option {
+div[id^="edit-field-actor-type-value"] label.control-label.option {
   display: block;
   width: auto;
   text-align: left;
   margin: 5px 15px;
 }
 
-#edit-field-actor-type-value label.control-label.option::before {
+div[id^="edit-field-actor-type-value"] label.control-label.option::before {
   display: block;
   float: right;
   content: '';
@@ -16862,31 +16862,31 @@ fieldset[disabled] .dark-background form input.focus[type="submit"].button--succ
 }
 
 .type-helper-1,
-#edit-field-actor-type-value label[for="edit-field-actor-type-value-1"]::before {
+div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-1"]::before {
   background-color: #D81E41 !important;
   color: #fff !important;
 }
 
 .type-helper-2,
-#edit-field-actor-type-value label[for="edit-field-actor-type-value-2"]::before {
+div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-2"]::before {
   background-color: rgba(0, 191, 255, 0.8) !important;
   color: #fff !important;
 }
 
 .type-helper-3,
-#edit-field-actor-type-value label[for="edit-field-actor-type-value-3"]::before {
+div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-3"]::before {
   background-color: rgba(255, 255, 0, 0.9) !important;
   color: #fff !important;
 }
 
 .type-helper-4,
-#edit-field-actor-type-value label[for="edit-field-actor-type-value-4"]::before {
+div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-4"]::before {
   background-color: #18BC9C !important;
   color: #fff !important;
 }
 
 .type-helper-5,
-#edit-field-actor-type-value label[for="edit-field-actor-type-value-5"]::before {
+div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-5"]::before {
   background-color: #F39C12 !important;
   color: #fff !important;
 }

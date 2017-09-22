@@ -299,7 +299,7 @@ table {
   }
 }
 
-#edit-field-actor-type-value {
+div[id^="edit-field-actor-type-value"] {
   .form-type-checkbox {
     display: block;
   }
@@ -321,19 +321,19 @@ table {
       border-radius: $panel-border-radius;
     }
   }
-  label[for="edit-field-actor-type-value-1"]::before {
+  label[for^="edit-field-actor-type-value-1"]::before {
     @extend .type-helper-1;
   }
-  label[for="edit-field-actor-type-value-2"]::before {
+  label[for^="edit-field-actor-type-value-2"]::before {
     @extend .type-helper-2;
   }
-  label[for="edit-field-actor-type-value-3"]::before {
+  label[for^="edit-field-actor-type-value-3"]::before {
     @extend .type-helper-3;
   }
-  label[for="edit-field-actor-type-value-4"]::before {
+  label[for^="edit-field-actor-type-value-4"]::before {
     @extend .type-helper-4;
   }
-  label[for="edit-field-actor-type-value-5"]::before {
+  label[for^="edit-field-actor-type-value-5"]::before {
     @extend .type-helper-5;
   }
 }
