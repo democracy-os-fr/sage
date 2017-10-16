@@ -89,3 +89,20 @@ h4.h-message {
   max-width: 45% !important;
   margin: 0 auto !important;
 }
+
+.full-height-section {
+  position: absolute;
+  top: 0;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  padding-top: ($navbar-height);
+
+  .region-content,
+  .views-element-container,
+  .view-map,
+  .view-content {
+    height: 100%;
+  }
+
+}

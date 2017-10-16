@@ -16437,6 +16437,41 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 .leaflet-container a.leaflet-popup-close-button {
   top: 4px;
   right: 6px;
+  z-index: 99;
+  color: #464545;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: rgba(255, 69, 0, 0.7);
+}
+
+.leaflet-container a.btn-success,
+.leaflet-container a.button--success,
+.leaflet-container a.btn-primary,
+.leaflet-container a.button--primary,
+.leaflet-container .view-header > ul.links li a,
+.view-header > ul.links li .leaflet-container a,
+.leaflet-container .slider-sidebar a.more-link,
+.slider-sidebar .leaflet-container a.more-link,
+.leaflet-container a.btn-info,
+.leaflet-container a.button--info,
+.leaflet-container a.btn-warning,
+.leaflet-container a.button--warning,
+.leaflet-container a.btn-danger,
+.leaflet-container a.button--danger {
+  color: #fff;
+}
+
+.view-map .leaflet-container a.leaflet-popup-close-button {
+  top: -1px;
+  right: 2px;
+}
+
+.view-map .leaflet-container .leaflet-popup-content .project,
+.view-map .leaflet-container .leaflet-popup-content .acteur {
+  margin: -15px -20px;
+  max-width: 500px;
+  width: 80vw;
 }
 
 /**
@@ -16974,6 +17009,11 @@ header .navbar-brand {
   background-color: transparent;
 }
 
+.full-height-section + .footer {
+  margin-top: 0;
+  display: none;
+}
+
 .container-xs {
   max-width: 480px;
 }
@@ -17042,6 +17082,22 @@ h4.h-message {
 .inner-col-md {
   max-width: 45% !important;
   margin: 0 auto !important;
+}
+
+.full-height-section {
+  position: absolute;
+  top: 0;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.full-height-section .region-content,
+.full-height-section .views-element-container,
+.full-height-section .view-map,
+.full-height-section .view-content {
+  height: 100%;
 }
 
 body#tinymce {

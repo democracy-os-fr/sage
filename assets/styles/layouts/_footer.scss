@@ -16,4 +16,9 @@
     }
   }
 
+  .full-height-section + & {
+    margin-top: 0;
+    display: none;
+  }
+
 }

@@ -11,7 +11,32 @@
   }
 }
 
-.leaflet-container a.leaflet-popup-close-button {
-  top: 4px;
-  right: 6px;
+.leaflet-container a {
+  &.leaflet-popup-close-button {
+    top: 4px;
+    right: 6px;
+    z-index: 99;
+    color: $gray;
+    &:hover {
+      color: $brand-red;
+    }
+  }
+  &.btn-success, &.btn-primary, &.btn-info, &.btn-warning, &.btn-danger {
+    color: $navbar-inverse-link-color;
+  }
+}
+
+.view-map .leaflet-container {
+  a.leaflet-popup-close-button {
+    top: -1px;
+    right: 2px;
+  }
+  .leaflet-popup-content {
+
+    .project, .acteur {
+      margin: -15px -20px;
+      max-width: 500px;
+      width: 80vw;
+    }
+  }
 }
