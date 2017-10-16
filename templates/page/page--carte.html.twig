@@ -1,0 +1,14 @@
+{% extends "page.html.twig" %}
+{# Main #}
+{% block main %}
+
+  <section role="main" class="main-container js-quickedit-main-content full-height-section {{ section_classes }}">
+
+    {# Content #}
+    {% block content %}
+      <a id="main-content"></a>
+      {{ page.content }}
+    {% endblock %}
+
+  </section>
+{% endblock %}
