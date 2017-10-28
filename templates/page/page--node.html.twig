@@ -2,15 +2,6 @@
 {# Main #}
 {% block main %}
 
-  {# Taskbar #}
-  <div class="taskbar">
-    <div class="{{ container }}">
-      <div class="pull-right" role="heading">
-        {{ drupal_block('sage_local_tasks') }}
-      </div>
-    </div>
-  </div>
-
   {%
     set is_full_width =
       'page__node__edit' not in theme_hook_suggestions

@@ -33,6 +33,7 @@ export default class Router {
       .split(/\s+/)
       .map(camelCase)
       .forEach((className) => {
+        // console.log(className); // eslint-disable-line no-console
         this.fire(className);
         this.fire(className, 'finalize');
       });

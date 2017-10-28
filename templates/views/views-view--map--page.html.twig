@@ -1,0 +1,158 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+<div{{ attributes.addClass(classes) }}>
+
+  <div id="leaflet-sidebar-left" class="sidebar collapsed">
+    <!-- Nav tabs -->
+    <div class="sidebar-tabs">
+      <ul role="tablist">
+        <li>
+          <a href="#home" role="tab">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        </li> -->
+      </ul>
+
+      <ul role="tablist">
+        <li>
+          <a href="#settings" role="tab">
+            <i class="fa fa-gear"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="sidebar-content with-header">
+      <div class="sidebar-pane" id="home">
+        <h1 class="sidebar-header">
+          <span class="sidebar-close">
+            <i class="fa fa-caret-left"></i>
+          </span>
+        </h1>
+        {% if exposed and false %}
+          <div class="view-filters form-group">
+            {{ exposed }}
+          </div>
+        {% endif %}
+        {% if rows %}
+          <div class="view-list">
+            {{ rows }}
+          </div>
+        {% elseif empty %}
+          <div class="view-list-empty">
+            {{ empty }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="sidebar-pane" id="settings">
+        <h1 class="sidebar-header">Settings<span class="sidebar-close">
+            <i class="fa fa-caret-left"></i>
+          </span>
+        </h1>
+
+        {% block viewHeader %}
+          {% if header %}
+            <div class="view-header">
+              {{ header }}
+            </div>
+          {% endif %}
+        {% endblock %}
+        {% if attachment_before %}
+          <div class="attachment attachment-before">
+            {{ attachment_before }}
+          </div>
+        {% endif %}
+
+        {% block viewAddons %}
+        {% endblock %}
+
+        {% if pager %}
+          {{ pager }}
+        {% endif %}
+        {% if attachment_after %}
+          <div class="attachment attachment-after">
+            {{ attachment_after }}
+          </div>
+        {% endif %}
+        {% if more %}
+          {{ more }}
+        {% endif %}
+        {% if feed_icons %}
+          <div class="feed-icons">
+            {{ feed_icons }}
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="toggle toggle-left">
+    <button type="button" name="btn-toggle" class="btn btn-default btn-toggle left active">
+      <i class="fa fa-fw fa-arrow-right"></i>
+    </button>
+    <button type="button" name="btn-toggle" class="btn btn-default btn-toggle right">
+      <i class="fa fa-fw fa-arrow-left state"></i>
+    </button>
+  </div> -->
+
+  <div id="leaflet-sidebar-map" class="content sidebar-map">
+    {% block viewFooter %}
+      {% if footer %}
+        <div class="view-content">
+          {{ footer }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
+
+</div>

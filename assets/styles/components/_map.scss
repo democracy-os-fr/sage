@@ -12,6 +12,9 @@
 }
 
 .leaflet-container a {
+
+  color: $brand-success;
+
   &.leaflet-popup-close-button {
     top: 4px;
     right: 6px;
@@ -24,6 +27,36 @@
   &.btn-success, &.btn-primary, &.btn-info, &.btn-warning, &.btn-danger {
     color: $navbar-inverse-link-color;
   }
+
+  &.btn-link {
+    @extend .btn-link;
+  }
+  &.btn-primary {
+    @extend .btn-primary;
+  }
+  &.btn-success {
+    @extend .btn-success;
+  }
+  &.btn-info {
+    @extend .btn-info;
+  }
+  &.btn-danger {
+    @extend .btn-danger;
+  }
+  &.btn-warning {
+    @extend .btn-warning;
+  }
+  &.btn-link-info {
+    color: $brand-warning ;
+  }
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+.leaflet-bar a, .leaflet-bar a:hover {
+  color: $gray-base;
 }
 
 .view-map .leaflet-container {
@@ -32,11 +65,24 @@
     right: 2px;
   }
   .leaflet-popup-content {
-
-    .project, .acteur {
+    .list {
       margin: -15px -20px;
       max-width: 500px;
       width: 80vw;
     }
+    .map-tooltip {
+      min-width: 180px;
+    }
+  }
+}
+
+.marker-active {
+  border: 2px solid red;
+}
+
+.leaflet-control-attribution a {
+  color: $gray-darker;
+  &:hover {
+    text-decoration: none;
   }
 }

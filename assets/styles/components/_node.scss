@@ -104,6 +104,22 @@ article.acteur.list {
   margin-bottom: $line-height-computed;
 }
 
+article.acteur.full {
+  .panel > .list-group-item {
+    border-width: 0;
+    border-top-width: 1px;
+    .type-helper-badge {
+      display: inline-block;
+      vertical-align: middle;
+      height: 20px;
+      width: 35px;
+    }
+    .text-left, .text-right {
+      padding: 2px 7px;
+    }
+  }
+}
+
 // .page-node-type-project .leaflet-container {
 //   pointer-events: none;
 // }

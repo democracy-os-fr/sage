@@ -75,12 +75,31 @@
     'clearfix',
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes) }} data-id="{{ node.id }}">
   <h3 class="alt-light">{{ label }}</h3>
   {{ content.field_address|field_value }}
   <p class="text-center">
-    <a class="btn btn-xs btn-link" href="{{url}}" target="_parent">
-      {{ 'En savoir plus'|t }}
+    <a href="{{url}}"
+      title="{{ 'En savoir plus'|t }}">
+      <i class="fa fa-lg fa-fw fa-info-circle"></i>
     </a>
+    {% if content.field_form|field_raw('status') == 'open' %}
+      <a href="{{url}}#tab-project-form"
+        title="{{ 'Candidature'|t }}">
+        <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
+      </a>
+    {% endif %}
+    {% if content.field_form_comment|field_raw('status') == 'open' %}
+      <a href="{{url}}#tab-project-forum"
+        title="{{ 'Avis citoyen'|t }}">
+        <i class="fa fa-lg fa-fw fa-comment"></i>
+      </a>
+    {% endif %}
+    {% if user.hasPermission('administer nodes') %}
+      &nbsp;•&nbsp;
+      <a class="btn-link-info" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
+        <i class="fa fa-lg fa-fw fa-pencil-square"></i>
+      </a>
+    {% endif %}
   </p>
 </article>

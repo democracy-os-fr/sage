@@ -29,15 +29,16 @@ class ViewsExposedForm extends \Drupal\bootstrap\Plugin\Form\FormBase {
     // array_push($form['#attributes']['class'],'form-horizontal');
 
     foreach ($form['#info'] as $key => $info) {
+      dcp($key);
       if( preg_match('#^filter-#', $key) ) {
-        // //dcp('found filter');
-        // //dcp($form[$info['value']]);
+        dcp('found filter');
+        dcp($form[$info['value']]);
         if ( $form[$info['value']]['#type'] == 'select' ) {
 
           foreach ($form[$info['value']]['#options'] as $opt_key => $opt_value) {
             $form[$info['value']]['#options'][$opt_key] = SafeMarkup::checkPlain($opt_value);
           }
-          if( $form[$info['value']]['#multiple'] ) {
+          if( array_key_exists('#multiple',$form[$info['value']]) && $form[$info['value']]['#multiple'] ) {
             $form[$info['value']]['#type'] = 'checkboxes';
           } else {
             $form[$info['value']]['#type'] = 'radios';
@@ -51,7 +52,7 @@ class ViewsExposedForm extends \Drupal\bootstrap\Plugin\Form\FormBase {
 
       }
     }
-
+    
     if( isset($form['sort_by']) && $form['sort_by']['#type'] == 'select' ) {
       // $form['sort_by']['#sage'] = 'filter_sort';
       if( isset($form['sort_order']) && $form['sort_order']['#type'] == 'select' ) {

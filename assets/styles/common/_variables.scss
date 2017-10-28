@@ -80,11 +80,55 @@ $dl-horizontal-offset:        36px;
 $dl-horizontal-breakpoint:    $grid-float-breakpoint;
 
 $carousel-control-color:                     $brand-yellow;
-$carousel-control-width:                      15% !default;
-$carousel-control-opacity:                    .5 !default;
-$carousel-control-font-size:                  20px !default;
+$carousel-control-width:                      15% ;
+$carousel-control-opacity:                    .5 ;
+$carousel-control-font-size:                  20px ;
 
 $carousel-indicator-active-bg:                $brand-yellow;
 $carousel-indicator-border-color:             $brand-yellow;
 
 $carousel-caption-color:                      $brand-yellow;
+
+// Leaflet JS sidebar v2 CSS
+
+// -- leaflet-sidebar.scss
+
+$sidebar-margins: 0 ;
+$sidebar-border-radius: 0 ;
+$sidebar-touch-border: none ;
+$sidebar-shadow: none ;
+
+$tab-fg: $gray-darker ;
+// $tabs-bg: #fff ;
+$tab-hover-fg: $gray-dark ;
+$tab-hover-bg: $brand-yellow;
+// $tab-active-fg: #fff ;
+$tab-active-bg: $brand-primary ;
+
+// -- _base.scss
+
+// $threshold-lg: 1200px ;
+// $threshold-md: 992px ;
+// $threshold-sm: 768px ;
+
+$width-lg: 580px ;
+$width-md: 440px ;
+$width-sm: 300px ;
+$width-xs: 100% ;
+
+// $sidebar-z-index: 2000 ;
+// $sidebar-transition: 500ms ;
+
+// $tab-size: 40px ;
+// $tab-font-size: 12pt ;
+// $tab-bg: null ;
+// $tab-transition: 80ms ;
+
+// $header-fg: $tab-active-fg ;
+// $header-bg: $tab-active-bg ;
+
+$content-bg: $gray-lighter;
+// $content-padding-vertical: 10px ;
+// $content-padding-horizontal: 20px ;
+
+// $move-map-in-xs: true ;

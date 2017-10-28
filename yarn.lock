@@ -4653,6 +4653,10 @@ shelljs@^0.7.0, shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
+sidebar-v2@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/sidebar-v2/-/sidebar-v2-0.3.1.tgz#74e1941124be2aa48a024305a99e36ab3293c23f"
+
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"

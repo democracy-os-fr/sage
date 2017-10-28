@@ -194,12 +194,6 @@ form.webform-submission-form {
   padding-left: 0;
 }
 
-.form-line {
-  .control-label:first-child {
-
-  }
-}
-
 table {
   th.views-field-operations, td.views-field-operations {
     min-width: 130px;
@@ -336,4 +330,81 @@ div[id^="edit-field-actor-type-value"] {
   label[for^="edit-field-actor-type-value-5"]::before {
     @extend .type-helper-5;
   }
+}
+
+.checkbox label {
+  .icheckbox_flat,
+  .icheckbox_flat-grey,
+  .icheckbox_flat-yellow,
+  .icheckbox_flat-orange,
+  .icheckbox_flat-red,
+  .icheckbox_flat-pink,
+  .icheckbox_flat-purple,
+  .icheckbox_flat-blue,
+  .icheckbox_flat-green,
+  .icheckbox_flat-aero {
+    margin-left: -15px;
+    margin-right: $padding-small-horizontal;
+    height: 22px;
+  }
+}
+
+.form-managed-file .checkbox label {
+  .icheckbox_flat-red {
+    height: 20px;
+  }
+}
+
+.webform-element--title-inline label:after {
+  display: none;
+}
+
+.form-required:after {
+  display: none;
+}
+
+.form-required:before {
+  @extend .fa;
+  @extend .fa-asterisk;
+  color: $brand-danger;
+  margin-right: 5px;
+  font-size: 80%;
+  vertical-align: super;
+}
+
+.form-required {
+  margin-left: -10px;
+}
+
+.form-inline.form-type-tel .control-label {
+  display: block;
+  max-width: 100%;
+  margin-bottom: $padding-small-vertical;
+}
+
+.webform-file-button + .webform-file-button-input + .button.js-hide + .description {
+  display: inline-block;
+  .btn {
+    margin-top: 1px;
+  }
+}
+
+.webform-preview {
+  margin-bottom: $padding-large-vertical * 1.5;
+
+  .webform-element {
+    padding-left: $padding-base-horizontal;
+  }
+
+  label.control-label {
+    display: block;
+    margin-left: -10px;
+    margin-bottom: $padding-small-vertical;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
 }

@@ -77,11 +77,23 @@ h4.h-message {
 }
 
 .view-acteurs {
-  .more-link a {
+  .more-link {
     @extend .btn;
     @extend .btn-block;
     @extend .btn-sm;
-    @extend .btn-default;
+    @extend .btn-primary;
+    a {
+      color: $navbar-inverse-link-color;
+    }
+  }
+}
+
+.view-next-events {
+  .more-link {
+    @extend .btn;
+    @extend .btn-block;
+    @extend .btn-sm;
+    @extend .btn-yellow;
   }
 }
 
@@ -101,6 +113,7 @@ h4.h-message {
   .region-content,
   .views-element-container,
   .view-map,
+  .sidebar-map,
   .view-content {
     height: 100%;
   }

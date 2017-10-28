@@ -10,6 +10,7 @@ import pathFrontpage from './routes/Home';
 import aboutUs from './routes/About';
 import pageNodeTypeCampaign from './routes/Campaign';
 import pageNodeTypeProject from './routes/Project';
+import pathCarte from './routes/LeafletSidebar';
 
 /**
  * Populate Router instance with DOM routes
@@ -24,6 +25,7 @@ const routes = new Router({
   aboutUs,
   pageNodeTypeCampaign,
   pageNodeTypeProject,
+  pathCarte,
 });
 
 /** Load Events */

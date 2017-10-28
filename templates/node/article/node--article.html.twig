@@ -7,7 +7,14 @@
   <div class="row">
     <div class="col-xs-12 col-lg-8">
       <div class="page-header">
-        <h1>{{ label }}</h1>
+        <h1>
+          {{ label }}
+          {% if user.hasPermission('administer nodes') %}
+            <a class="btn btn-sm btn-link btn-link-info" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
+              <i class="fa fa-2x fa-fw fa-pencil-square-o"></i>
+            </a>
+          {% endif %}
+        </h1>
         <div class="well well-sm">
           {{ content.field_date }}
         </div>

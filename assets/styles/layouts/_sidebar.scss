@@ -1,0 +1,57 @@
+.sidebar-tabs > li > a, .sidebar-tabs > ul > li > a {
+  .fa {
+    margin-left: -2px;
+  }
+}
+
+.sidebar-content {
+  .sidebar-header {
+    margin-bottom: $padding-small-vertical;
+  }
+}
+
+.sidebar {
+
+  .media-left, .media-right {
+    .img-responsive {
+      max-width: 150px;
+    }
+  }
+
+  .media {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95) ;
+    padding: 10px ($padding-base-horizontal - $padding-small-vertical) ;
+    margin: 0 -20px $padding-small-vertical;
+
+
+    border-left: $padding-small-vertical solid transparent;
+    border-right: $padding-small-vertical solid transparent;
+    &:hover {
+      border-color: $brand-yellow;
+    }
+
+    .media-body {
+      position: relative;
+      padding-left: 5px;
+      padding-bottom: $line-height-computed + $padding-small-vertical;
+
+      h1, .h1, h2, .h2, h3, .h3, h3.alt {
+        margin-top: 0;
+      }
+      .media-row {
+        margin: $padding-small-vertical auto;
+      }
+    }
+    .social {
+      position: absolute;
+      bottom: 0;
+      right: $padding-base-horizontal;
+      a:hover {
+        color: $brand-primary;
+      }
+    }
+
+  }
+
+}

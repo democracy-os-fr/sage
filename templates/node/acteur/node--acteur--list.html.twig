@@ -76,7 +76,7 @@
     'clearfix',
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes) }} data-id="{{ node.id }}">
   <div class="panel panel-default panel-list">
     <div class="panel-heading type-helper-0"></div>
     <div class="panel-body">
@@ -110,7 +110,7 @@
             {% endif %}
           </h3>
 
-          <div class="pad-bottom">
+          <div class="">
             {{ content.body|field_value }}
           </div>
 
@@ -146,7 +146,7 @@
             {% endif %}
               {% if user.hasPermission('administer nodes') %}
                 &nbsp;•&nbsp;
-                <a class="btn-link-info" href="{{ url }}/edit">
+                <a class="btn-link-info" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
                   <i class="fa fa-lg fa-fw fa-pencil-square"></i>
                 </a>
               {% endif %}

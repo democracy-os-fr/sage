@@ -23,9 +23,13 @@
       {{ content.body|field_value }}
     </div>
     <div class="social">
+      <a href="{{url}}"
+        title="Fiche complète : {{ title|striptags|trim }}">
+        <i class="fa fa-lg fa-fw fa-info-circle"></i>
+      </a>
       {% if content.field_site_internet|field_value %}
         <a href="{{content.field_site_internet|field_value[0]['#title']}}" target="_blank"
-          title="{{content.field_site_internet|field_label}}">
+          title="{{content.field_site_internet|field_label}} : {{content.field_site_internet|field_value[0]['#title']}}">
           <i class="fa fa-lg fa-fw fa-link"></i>
         </a>
       {% endif %}
@@ -45,6 +49,12 @@
         <a href="{{content.field_reseau_social_youtube|field_value[0]['#url']}}" target="_blank"
           title="{{content.field_reseau_social_youtube|field_label}} : {{content.field_reseau_social_youtube|field_value[0]['#title']}}">
           <i class="fa fa-lg fa-fw fa-youtube-play"></i>
+        </a>
+      {% endif %}
+      {% if user.hasPermission('administer nodes') %}
+        &nbsp;•&nbsp;
+        <a class="btn-link-info" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
+          <i class="fa fa-lg fa-fw fa-pencil-square"></i>
         </a>
       {% endif %}
     </div>

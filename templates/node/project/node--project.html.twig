@@ -94,7 +94,14 @@
     <div class="bg-image {{ bg_class }} bg-no-image">
       <div class="jumbotron {{ container }}">
         {% if content.field_display_title[0]['#markup'] %}
-          <h1>{{ label }}</h1>
+          <h1>
+            {{ label }}
+            {% if user.hasPermission('administer nodes') %}
+              <a class="btn btn-sm btn-link btn-link-info" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
+                <i class="fa fa-2x fa-fw fa-pencil-square-o"></i>
+              </a>
+            {% endif %}
+          </h1>
         {% endif %}
         {{ content.field_hero_text|field_value }}
         <p>

@@ -50,5 +50,16 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
     // console.log('JS sage :: routes/common :: finalize'); // eslint-disable-line no-console
+    if ($.isFunction($.fn.iCheck)) {
+      $('.form-managed-file .form-type-checkbox input[type="checkbox"]').iCheck({
+        checkboxClass: 'icheckbox_flat-red',
+      });
+      $(document).ajaxComplete(function(){
+        $('.form-managed-file .form-type-checkbox input[type="checkbox"]').iCheck({
+          checkboxClass: 'icheckbox_flat-red',
+        });
+      });
+    }
+
   },
 };

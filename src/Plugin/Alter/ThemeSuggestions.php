@@ -55,6 +55,8 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         // //dcp($suggestions);
         // //dcp($variables);
 
+        array_push($suggestions,$variables['form']['#id']);
+
         if( isset($variables['form']['#sage']) ) {
           $keys = ['filter_sort'];
           if ( in_array($variables['form']['#sage'], $keys) ) {
@@ -107,10 +109,15 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         }
 
         if( isset($variables['element']['#name']) ) {
-          $keys = ['field_actor_type_value','field_filter_availability_value','field_filter_rent_type_value'];
+          $keys = ['type','field_actor_type_value','field_filter_availability_value','field_filter_rent_type_value'];
           if ( in_array($variables['element']['#name'], $keys) ) {
             //dcp($variables['element']);
             array_push($suggestions,'fieldset__filter_dropdown_block');
+          }
+          $keys = ['type'];
+          if ( in_array($variables['element']['#name'], $keys) ) {
+            //dcp($variables['element']);
+            array_push($suggestions,'fieldset__filter_button_group');
           }
         }
         break;
