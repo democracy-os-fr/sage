@@ -2043,9 +2043,15 @@ pre code {
 }
 
 .container,
+.region-header .page-header,
 .container-xs,
 .container-sm,
-form.webform-submission-form,
+form.webform-submission-form .form-group,
+form.webform-submission-form > details,
+form.webform-submission-form > .form-type-checkbox,
+form.webform-submission-form > .form-type-textarea,
+form.webform-submission-form .alert-stretch > .container,
+.webform-confirmation,
 .container-md,
 .project-list > .view-content {
   margin-right: auto;
@@ -2055,15 +2061,27 @@ form.webform-submission-form,
 }
 
 .container:before,
+.region-header .page-header:before,
 .container-xs:before,
 .container-sm:before,
-form.webform-submission-form:before,
+form.webform-submission-form .form-group:before,
+form.webform-submission-form > details:before,
+form.webform-submission-form > .form-type-checkbox:before,
+form.webform-submission-form > .form-type-textarea:before,
+form.webform-submission-form .alert-stretch > .container:before,
+.webform-confirmation:before,
 .container-md:before,
 .project-list > .view-content:before,
 .container:after,
+.region-header .page-header:after,
 .container-xs:after,
 .container-sm:after,
-form.webform-submission-form:after,
+form.webform-submission-form .form-group:after,
+form.webform-submission-form > details:after,
+form.webform-submission-form > .form-type-checkbox:after,
+form.webform-submission-form > .form-type-textarea:after,
+form.webform-submission-form .alert-stretch > .container:after,
+.webform-confirmation:after,
 .container-md:after,
 .project-list > .view-content:after {
   content: " ";
@@ -2071,9 +2089,15 @@ form.webform-submission-form:after,
 }
 
 .container:after,
+.region-header .page-header:after,
 .container-xs:after,
 .container-sm:after,
-form.webform-submission-form:after,
+form.webform-submission-form .form-group:after,
+form.webform-submission-form > details:after,
+form.webform-submission-form > .form-type-checkbox:after,
+form.webform-submission-form > .form-type-textarea:after,
+form.webform-submission-form .alert-stretch > .container:after,
+.webform-confirmation:after,
 .container-md:after,
 .project-list > .view-content:after {
   clear: both;
@@ -2081,9 +2105,15 @@ form.webform-submission-form:after,
 
 @media (min-width: 768px) {
   .container,
+  .region-header .page-header,
   .container-xs,
   .container-sm,
-  form.webform-submission-form,
+  form.webform-submission-form .form-group,
+  form.webform-submission-form > details,
+  form.webform-submission-form > .form-type-checkbox,
+  form.webform-submission-form > .form-type-textarea,
+  form.webform-submission-form .alert-stretch > .container,
+  .webform-confirmation,
   .container-md,
   .project-list > .view-content {
     width: 750px;
@@ -2092,9 +2122,15 @@ form.webform-submission-form:after,
 
 @media (min-width: 992px) {
   .container,
+  .region-header .page-header,
   .container-xs,
   .container-sm,
-  form.webform-submission-form,
+  form.webform-submission-form .form-group,
+  form.webform-submission-form > details,
+  form.webform-submission-form > .form-type-checkbox,
+  form.webform-submission-form > .form-type-textarea,
+  form.webform-submission-form .alert-stretch > .container,
+  .webform-confirmation,
   .container-md,
   .project-list > .view-content {
     width: 970px;
@@ -2103,9 +2139,15 @@ form.webform-submission-form:after,
 
 @media (min-width: 1200px) {
   .container,
+  .region-header .page-header,
   .container-xs,
   .container-sm,
-  form.webform-submission-form,
+  form.webform-submission-form .form-group,
+  form.webform-submission-form > details,
+  form.webform-submission-form > .form-type-checkbox,
+  form.webform-submission-form > .form-type-textarea,
+  form.webform-submission-form .alert-stretch > .container,
+  .webform-confirmation,
   .container-md,
   .project-list > .view-content {
     width: 1170px;
@@ -6921,15 +6963,27 @@ tbody.collapse.in {
 }
 
 .container > .navbar-header,
+.region-header .page-header > .navbar-header,
 .container-xs > .navbar-header,
 .container-sm > .navbar-header,
-form.webform-submission-form > .navbar-header,
+form.webform-submission-form .form-group > .navbar-header,
+form.webform-submission-form > details > .navbar-header,
+form.webform-submission-form > .form-type-checkbox > .navbar-header,
+form.webform-submission-form > .form-type-textarea > .navbar-header,
+form.webform-submission-form .alert-stretch > .container > .navbar-header,
+.webform-confirmation > .navbar-header,
 .container-md > .navbar-header,
 .project-list > .view-content > .navbar-header,
 .container > .navbar-collapse,
+.region-header .page-header > .navbar-collapse,
 .container-xs > .navbar-collapse,
 .container-sm > .navbar-collapse,
-form.webform-submission-form > .navbar-collapse,
+form.webform-submission-form .form-group > .navbar-collapse,
+form.webform-submission-form > details > .navbar-collapse,
+form.webform-submission-form > .form-type-checkbox > .navbar-collapse,
+form.webform-submission-form > .form-type-textarea > .navbar-collapse,
+form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
+.webform-confirmation > .navbar-collapse,
 .container-md > .navbar-collapse,
 .project-list > .view-content > .navbar-collapse,
 .container-fluid > .navbar-header,
@@ -6940,15 +6994,27 @@ form.webform-submission-form > .navbar-collapse,
 
 @media (min-width: 768px) {
   .container > .navbar-header,
+  .region-header .page-header > .navbar-header,
   .container-xs > .navbar-header,
   .container-sm > .navbar-header,
-  form.webform-submission-form > .navbar-header,
+  form.webform-submission-form .form-group > .navbar-header,
+  form.webform-submission-form > details > .navbar-header,
+  form.webform-submission-form > .form-type-checkbox > .navbar-header,
+  form.webform-submission-form > .form-type-textarea > .navbar-header,
+  form.webform-submission-form .alert-stretch > .container > .navbar-header,
+  .webform-confirmation > .navbar-header,
   .container-md > .navbar-header,
   .project-list > .view-content > .navbar-header,
   .container > .navbar-collapse,
+  .region-header .page-header > .navbar-collapse,
   .container-xs > .navbar-collapse,
   .container-sm > .navbar-collapse,
-  form.webform-submission-form > .navbar-collapse,
+  form.webform-submission-form .form-group > .navbar-collapse,
+  form.webform-submission-form > details > .navbar-collapse,
+  form.webform-submission-form > .form-type-checkbox > .navbar-collapse,
+  form.webform-submission-form > .form-type-textarea > .navbar-collapse,
+  form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
+  .webform-confirmation > .navbar-collapse,
   .container-md > .navbar-collapse,
   .project-list > .view-content > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -7014,9 +7080,15 @@ form.webform-submission-form > .navbar-collapse,
 
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
+  .region-header .navbar > .page-header .navbar-brand,
   .navbar > .container-xs .navbar-brand,
   .navbar > .container-sm .navbar-brand,
-  .navbar > form.webform-submission-form .navbar-brand,
+  form.webform-submission-form .navbar > .form-group .navbar-brand,
+  form.webform-submission-form.navbar > details .navbar-brand,
+  form.webform-submission-form.navbar > .form-type-checkbox .navbar-brand,
+  form.webform-submission-form.navbar > .form-type-textarea .navbar-brand,
+  form.webform-submission-form .alert-stretch.navbar > .container .navbar-brand,
+  .navbar > .webform-confirmation .navbar-brand,
   .navbar > .container-md .navbar-brand,
   .project-list.navbar > .view-content .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
@@ -7931,9 +8003,15 @@ a.badge:focus {
 }
 
 .container .jumbotron,
+.region-header .page-header .jumbotron,
 .container-xs .jumbotron,
 .container-sm .jumbotron,
-form.webform-submission-form .jumbotron,
+form.webform-submission-form .form-group .jumbotron,
+form.webform-submission-form > details .jumbotron,
+form.webform-submission-form > .form-type-checkbox .jumbotron,
+form.webform-submission-form > .form-type-textarea .jumbotron,
+form.webform-submission-form .alert-stretch > .container .jumbotron,
+.webform-confirmation .jumbotron,
 .container-md .jumbotron,
 .project-list > .view-content .jumbotron,
 .container-fluid .jumbotron {
@@ -7943,9 +8021,22 @@ form.webform-submission-form .jumbotron,
 }
 
 .jumbotron .container,
+.jumbotron .region-header .page-header,
+.region-header .jumbotron .page-header,
 .jumbotron .container-xs,
 .jumbotron .container-sm,
-.jumbotron form.webform-submission-form,
+.jumbotron form.webform-submission-form .form-group,
+form.webform-submission-form .jumbotron .form-group,
+.jumbotron
+  form.webform-submission-form > details,
+.jumbotron
+  form.webform-submission-form > .form-type-checkbox,
+.jumbotron
+  form.webform-submission-form > .form-type-textarea,
+.jumbotron
+  form.webform-submission-form .alert-stretch > .container,
+form.webform-submission-form .jumbotron .alert-stretch > .container,
+.jumbotron .webform-confirmation,
 .jumbotron .container-md,
 .jumbotron .project-list > .view-content {
   max-width: 100%;
@@ -7958,9 +8049,15 @@ form.webform-submission-form .jumbotron,
   }
 
   .container .jumbotron,
+  .region-header .page-header .jumbotron,
   .container-xs .jumbotron,
   .container-sm .jumbotron,
-  form.webform-submission-form .jumbotron,
+  form.webform-submission-form .form-group .jumbotron,
+  form.webform-submission-form > details .jumbotron,
+  form.webform-submission-form > .form-type-checkbox .jumbotron,
+  form.webform-submission-form > .form-type-textarea .jumbotron,
+  form.webform-submission-form .alert-stretch > .container .jumbotron,
+  .webform-confirmation .jumbotron,
   .container-md .jumbotron,
   .project-list > .view-content .jumbotron,
   .container-fluid .jumbotron {
@@ -8974,7 +9071,8 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 
-.well {
+.well,
+form.webform-submission-form > details {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -8984,7 +9082,8 @@ button.list-group-item-danger.active:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.well blockquote {
+.well blockquote,
+form.webform-submission-form > details blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
@@ -10563,7 +10662,8 @@ input:focus {
   line-height: 10px;
 }
 
-.well {
+.well,
+form.webform-submission-form > details {
   box-shadow: none;
 }
 
@@ -10629,7 +10729,8 @@ a.list-group-item-danger.active:focus {
 }
 
 .fa,
-.form-required:before {
+.form-required:before,
+.form-item--error-message:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -10704,12 +10805,14 @@ a.list-group-item-danger.active:focus {
 }
 
 .fa.fa-pull-left,
-.fa-pull-left.form-required:before {
+.fa-pull-left.form-required:before,
+.fa-pull-left.form-item--error-message:before {
   margin-right: .3em;
 }
 
 .fa.fa-pull-right,
-.fa-pull-right.form-required:before {
+.fa-pull-right.form-required:before,
+.fa-pull-right.form-item--error-message:before {
   margin-left: .3em;
 }
 
@@ -10729,20 +10832,27 @@ a.list-group-item-danger.active:focus {
 }
 
 .fa.pull-left,
-.pull-left.form-required:before {
+.pull-left.form-required:before,
+.pull-left.form-item--error-message:before {
   margin-right: .3em;
 }
 
 .fa.pull-right,
 #webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
 #webform-submission-candidature-aap-form .js-form-managed-file .description.form-required:before,
+#webform-submission-candidature-aap-form .js-form-managed-file .description.form-item--error-message:before,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger.form-required:before,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger.form-item--error-message:before,
 #webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger.form-required:before,
+#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger.form-item--error-message:before,
 .pull-right.form-required:before,
 .page-node-type-article .form-required.taskbar:before,
 .page-node-type-evenement .form-required.taskbar:before,
+.pull-right.form-item--error-message:before,
+.page-node-type-article .form-item--error-message.taskbar:before,
+.page-node-type-evenement .form-item--error-message.taskbar:before,
 .page-node-type-article .fa.taskbar,
 .page-node-type-evenement .fa.taskbar {
   margin-left: .3em;
@@ -11285,7 +11395,8 @@ a.list-group-item-danger.active:focus {
   content: "\F069";
 }
 
-.fa-exclamation-circle:before {
+.fa-exclamation-circle:before,
+.form-item--error-message:before {
   content: "\F06A";
 }
 
@@ -14977,6 +15088,20 @@ a.list-group-item-danger.active:focus {
   color: #e6e6e6;
 }
 
+.alert-stretch {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.alert-stretch .alert-dismissable .close,
+.alert-stretch .alert-dismissible .close {
+  top: 2px;
+}
+
+.alert .media {
+  margin-top: 0;
+}
+
 /**
  * AJAX (throbber) styling.
  */
@@ -15310,18 +15435,18 @@ a.btn.button--primary:hover,
   color: #fff;
 }
 
-.form-required:after {
-  background-image: url(../images/required.svg);
-  background-size: 10px 7px;
-  content: "";
-  display: inline-block;
-  line-height: 1;
-  height: 7px;
-  width: 10px;
+form.webform-submission-form {
+  margin-bottom: 25px;
 }
 
-form.webform-submission-form {
-  margin: 15px auto 25px;
+form.webform-submission-form .form-group:first-child,
+form.webform-submission-form .alert-stretch + details,
+form.webform-submission-form .alert-stretch + .form-group {
+  margin-top: 18px;
+}
+
+form.webform-submission-form .js-form-managed-file .alert-stretch {
+  display: none;
 }
 
 .webform-progress {
@@ -15559,19 +15684,24 @@ div[id^="edit-field-actor-type-value"] label.control-label.option::before {
   display: none;
 }
 
-.form-required:after {
-  display: none;
-}
-
 .form-required:before {
-  color: rgba(255, 69, 0, 0.7);
+  color: #F39C12;
   margin-right: 5px;
   font-size: 80%;
   vertical-align: super;
 }
 
+.form-managed-file .form-required:before {
+  position: absolute;
+  margin-left: -32px;
+}
+
 .form-required {
-  margin-left: -10px;
+  margin-left: -15px;
+}
+
+.form-managed-file .form-required {
+  margin-left: 0;
 }
 
 .form-inline.form-type-tel .control-label {
@@ -15599,6 +15729,15 @@ div[id^="edit-field-actor-type-value"] label.control-label.option::before {
   margin-top: 1px;
 }
 
+.form-item--error-message {
+  margin: 5px;
+  color: rgba(255, 69, 0, 0.7);
+}
+
+.form-item--error-message:before {
+  margin-right: 5px;
+}
+
 .webform-preview {
   margin-bottom: 27px;
 }
@@ -15616,6 +15755,14 @@ div[id^="edit-field-actor-type-value"] label.control-label.option::before {
 .webform-preview ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.webform-confirmation {
+  padding-top: 15px;
+}
+
+.sage .webform-submission-navigation {
+  display: none;
 }
 
 /**
@@ -15696,9 +15843,15 @@ body.navbar-is-fixed-bottom {
 
 @media screen and (min-width: 768px) {
   .navbar.container,
+  .region-header .navbar.page-header,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.navbar.webform-submission-form,
+  form.webform-submission-form .navbar.form-group,
+  form.webform-submission-form > details.navbar,
+  form.webform-submission-form > .navbar.form-type-checkbox,
+  form.webform-submission-form > .navbar.form-type-textarea,
+  form.webform-submission-form .alert-stretch > .navbar.container,
+  .navbar.webform-confirmation,
   .navbar.container-md,
   .project-list > .navbar.view-content {
     max-width: 720px;
@@ -15707,9 +15860,15 @@ body.navbar-is-fixed-bottom {
 
 @media screen and (min-width: 992px) {
   .navbar.container,
+  .region-header .navbar.page-header,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.navbar.webform-submission-form,
+  form.webform-submission-form .navbar.form-group,
+  form.webform-submission-form > details.navbar,
+  form.webform-submission-form > .navbar.form-type-checkbox,
+  form.webform-submission-form > .navbar.form-type-textarea,
+  form.webform-submission-form .alert-stretch > .navbar.container,
+  .navbar.webform-confirmation,
   .navbar.container-md,
   .project-list > .navbar.view-content {
     max-width: 940px;
@@ -15718,9 +15877,15 @@ body.navbar-is-fixed-bottom {
 
 @media screen and (min-width: 1200px) {
   .navbar.container,
+  .region-header .navbar.page-header,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.navbar.webform-submission-form,
+  form.webform-submission-form .navbar.form-group,
+  form.webform-submission-form > details.navbar,
+  form.webform-submission-form > .navbar.form-type-checkbox,
+  form.webform-submission-form > .navbar.form-type-textarea,
+  form.webform-submission-form .alert-stretch > .navbar.container,
+  .navbar.webform-confirmation,
   .navbar.container-md,
   .project-list > .navbar.view-content {
     max-width: 1140px;
@@ -15728,39 +15893,153 @@ body.navbar-is-fixed-bottom {
 }
 
 .navbar.container > .container,
+.region-header .navbar.page-header > .container,
 .navbar.container-xs > .container,
 .navbar.container-sm > .container,
-form.navbar.webform-submission-form > .container,
+form.webform-submission-form .navbar.form-group > .container,
+form.webform-submission-form > details.navbar > .container,
+form.webform-submission-form > .navbar.form-type-checkbox > .container,
+form.webform-submission-form > .navbar.form-type-textarea > .container,
+form.webform-submission-form .alert-stretch > .navbar.container > .container,
+.navbar.webform-confirmation > .container,
 .navbar.container-md > .container,
 .project-list > .navbar.view-content > .container,
+.region-header .navbar.container > .page-header,
+.region-header .navbar.page-header > .page-header,
+.region-header .navbar.container-xs > .page-header,
+.region-header .navbar.container-sm > .page-header,
+form.webform-submission-form .region-header .navbar.form-group > .page-header,
+.region-header form.webform-submission-form .navbar.form-group > .page-header,
+.region-header
+form.webform-submission-form > details.navbar > .page-header,
+.region-header
+form.webform-submission-form > .navbar.form-type-checkbox > .page-header,
+.region-header
+form.webform-submission-form > .navbar.form-type-textarea > .page-header,
+form.webform-submission-form .region-header .alert-stretch > .navbar.container > .page-header,
+.region-header
+form.webform-submission-form .alert-stretch > .navbar.container > .page-header,
+.region-header .navbar.webform-confirmation > .page-header,
+.region-header .navbar.container-md > .page-header,
+.region-header .project-list > .navbar.view-content > .page-header,
 .navbar.container > .container-xs,
+.region-header .navbar.page-header > .container-xs,
 .navbar.container-xs > .container-xs,
 .navbar.container-sm > .container-xs,
-form.navbar.webform-submission-form > .container-xs,
+form.webform-submission-form .navbar.form-group > .container-xs,
+form.webform-submission-form > details.navbar > .container-xs,
+form.webform-submission-form > .navbar.form-type-checkbox > .container-xs,
+form.webform-submission-form > .navbar.form-type-textarea > .container-xs,
+form.webform-submission-form .alert-stretch > .navbar.container > .container-xs,
+.navbar.webform-confirmation > .container-xs,
 .navbar.container-md > .container-xs,
 .project-list > .navbar.view-content > .container-xs,
 .navbar.container > .container-sm,
+.region-header .navbar.page-header > .container-sm,
 .navbar.container-xs > .container-sm,
 .navbar.container-sm > .container-sm,
-form.navbar.webform-submission-form > .container-sm,
+form.webform-submission-form .navbar.form-group > .container-sm,
+form.webform-submission-form > details.navbar > .container-sm,
+form.webform-submission-form > .navbar.form-type-checkbox > .container-sm,
+form.webform-submission-form > .navbar.form-type-textarea > .container-sm,
+form.webform-submission-form .alert-stretch > .navbar.container > .container-sm,
+.navbar.webform-confirmation > .container-sm,
 .navbar.container-md > .container-sm,
 .project-list > .navbar.view-content > .container-sm,
-.navbar.container > form.webform-submission-form,
-.navbar.container-xs > form.webform-submission-form,
-.navbar.container-sm > form.webform-submission-form,
-form.navbar.webform-submission-form > form.webform-submission-form,
-.navbar.container-md > form.webform-submission-form,
-.project-list > .navbar.view-content > form.webform-submission-form,
+form.webform-submission-form .navbar.container > .form-group,
+.region-header form.webform-submission-form .navbar.page-header > .form-group,
+form.webform-submission-form .region-header .navbar.page-header > .form-group,
+form.webform-submission-form .navbar.container-xs > .form-group,
+form.webform-submission-form .navbar.container-sm > .form-group,
+form.webform-submission-form .navbar.form-group > .form-group,
+form.webform-submission-form > details.navbar > .form-group,
+form.webform-submission-form > .navbar.form-type-checkbox > .form-group,
+form.webform-submission-form > .navbar.form-type-textarea > .form-group,
+form.webform-submission-form .alert-stretch > .navbar.container > .form-group,
+form.webform-submission-form .navbar.webform-confirmation > .form-group,
+form.webform-submission-form .navbar.container-md > .form-group,
+form.webform-submission-form .project-list > .navbar.view-content > .form-group,
+form.webform-submission-form.navbar.container > details,
+.region-header form.webform-submission-form.navbar.page-header > details,
+form.webform-submission-form.navbar.container-xs > details,
+form.webform-submission-form.navbar.container-sm > details,
+form.webform-submission-form form.webform-submission-form.navbar.form-group > details,
+form.webform-submission-form > form.webform-submission-form.navbar.form-type-checkbox > details,
+form.webform-submission-form > form.webform-submission-form.navbar.form-type-textarea > details,
+form.webform-submission-form .alert-stretch > form.webform-submission-form.navbar.container > details,
+form.webform-submission-form.navbar.webform-confirmation > details,
+form.webform-submission-form.navbar.container-md > details,
+.project-list > form.webform-submission-form.navbar.view-content > details,
+form.webform-submission-form.navbar.container > .form-type-checkbox,
+.region-header form.webform-submission-form.navbar.page-header > .form-type-checkbox,
+form.webform-submission-form.navbar.container-xs > .form-type-checkbox,
+form.webform-submission-form.navbar.container-sm > .form-type-checkbox,
+form.webform-submission-form form.webform-submission-form.navbar.form-group > .form-type-checkbox,
+form.webform-submission-form > form.webform-submission-form.navbar.form-type-checkbox > .form-type-checkbox,
+form.webform-submission-form > form.webform-submission-form.navbar.form-type-textarea > .form-type-checkbox,
+form.webform-submission-form .alert-stretch > form.webform-submission-form.navbar.container > .form-type-checkbox,
+form.webform-submission-form.navbar.webform-confirmation > .form-type-checkbox,
+form.webform-submission-form.navbar.container-md > .form-type-checkbox,
+.project-list > form.webform-submission-form.navbar.view-content > .form-type-checkbox,
+form.webform-submission-form.navbar.container > .form-type-textarea,
+.region-header form.webform-submission-form.navbar.page-header > .form-type-textarea,
+form.webform-submission-form.navbar.container-xs > .form-type-textarea,
+form.webform-submission-form.navbar.container-sm > .form-type-textarea,
+form.webform-submission-form form.webform-submission-form.navbar.form-group > .form-type-textarea,
+form.webform-submission-form > form.webform-submission-form.navbar.form-type-checkbox > .form-type-textarea,
+form.webform-submission-form > form.webform-submission-form.navbar.form-type-textarea > .form-type-textarea,
+form.webform-submission-form .alert-stretch > form.webform-submission-form.navbar.container > .form-type-textarea,
+form.webform-submission-form.navbar.webform-confirmation > .form-type-textarea,
+form.webform-submission-form.navbar.container-md > .form-type-textarea,
+.project-list > form.webform-submission-form.navbar.view-content > .form-type-textarea,
+form.webform-submission-form .alert-stretch.navbar.container > .container,
+.region-header
+form.webform-submission-form .alert-stretch.navbar.page-header > .container,
+form.webform-submission-form .region-header .alert-stretch.navbar.page-header > .container,
+form.webform-submission-form .alert-stretch.navbar.container-xs > .container,
+form.webform-submission-form .alert-stretch.navbar.container-sm > .container,
+form.webform-submission-form .alert-stretch.navbar.form-group > .container,
+form.webform-submission-form > details.alert-stretch.navbar > .container,
+form.webform-submission-form > .alert-stretch.navbar.form-type-checkbox > .container,
+form.webform-submission-form > .alert-stretch.navbar.form-type-textarea > .container,
+form.webform-submission-form .alert-stretch > .alert-stretch.navbar.container > .container,
+form.webform-submission-form .alert-stretch.navbar.webform-confirmation > .container,
+form.webform-submission-form .alert-stretch.navbar.container-md > .container,
+form.webform-submission-form .project-list > .alert-stretch.navbar.view-content > .container,
+.navbar.container > .webform-confirmation,
+.region-header .navbar.page-header > .webform-confirmation,
+.navbar.container-xs > .webform-confirmation,
+.navbar.container-sm > .webform-confirmation,
+form.webform-submission-form .navbar.form-group > .webform-confirmation,
+form.webform-submission-form > details.navbar > .webform-confirmation,
+form.webform-submission-form > .navbar.form-type-checkbox > .webform-confirmation,
+form.webform-submission-form > .navbar.form-type-textarea > .webform-confirmation,
+form.webform-submission-form .alert-stretch > .navbar.container > .webform-confirmation,
+.navbar.webform-confirmation > .webform-confirmation,
+.navbar.container-md > .webform-confirmation,
+.project-list > .navbar.view-content > .webform-confirmation,
 .navbar.container > .container-md,
+.region-header .navbar.page-header > .container-md,
 .navbar.container-xs > .container-md,
 .navbar.container-sm > .container-md,
-form.navbar.webform-submission-form > .container-md,
+form.webform-submission-form .navbar.form-group > .container-md,
+form.webform-submission-form > details.navbar > .container-md,
+form.webform-submission-form > .navbar.form-type-checkbox > .container-md,
+form.webform-submission-form > .navbar.form-type-textarea > .container-md,
+form.webform-submission-form .alert-stretch > .navbar.container > .container-md,
+.navbar.webform-confirmation > .container-md,
 .navbar.container-md > .container-md,
 .project-list > .navbar.view-content > .container-md,
 .project-list.navbar.container > .view-content,
+.region-header .project-list.navbar.page-header > .view-content,
 .project-list.navbar.container-xs > .view-content,
 .project-list.navbar.container-sm > .view-content,
-form.project-list.navbar.webform-submission-form > .view-content,
+form.webform-submission-form .project-list.navbar.form-group > .view-content,
+form.webform-submission-form > details.project-list.navbar > .view-content,
+form.webform-submission-form > .project-list.navbar.form-type-checkbox > .view-content,
+form.webform-submission-form > .project-list.navbar.form-type-textarea > .view-content,
+form.webform-submission-form .alert-stretch > .project-list.navbar.container > .view-content,
+.project-list.navbar.webform-confirmation > .view-content,
 .project-list.navbar.container-md > .view-content,
 .project-list > .project-list.navbar.view-content > .view-content,
 .navbar.container-fluid > .container-fluid {
@@ -15930,7 +16209,8 @@ mark,
 }
 
 .field--item .fa,
-.field--item .form-required:before {
+.field--item .form-required:before,
+.field--item .form-item--error-message:before {
   margin-right: 5px;
 }
 
@@ -16087,7 +16367,8 @@ article.acteur.full .panel > .list-group-item .text-right {
 }
 
 .panel .media-left .fa,
-.panel .media-left .form-required:before {
+.panel .media-left .form-required:before,
+.panel .media-left .form-item--error-message:before {
   font-size: 21px;
   width: 21px;
   text-align: center;
@@ -16111,11 +16392,8 @@ article.acteur.full .panel > .list-group-item .text-right {
   font-weight: bold;
 }
 
-.panel.panel-list .panel-heading {
-  font-size: 80%;
-  text-transform: lowercase;
-  padding: 5px 15px;
-  min-height: 10px;
+.panel.panel-list .panel-heading.bg-image {
+  padding-top: 54px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -16187,7 +16465,8 @@ table.table-condensed .file-entity {
 
 table.table-condensed .file-entity > img,
 table.table-condensed .file-entity > i.fa,
-table.table-condensed .file-entity > i.form-required:before {
+table.table-condensed .file-entity > i.form-required:before,
+table.table-condensed .file-entity > i.form-item--error-message:before {
   vertical-align: middle;
   line-height: 41px;
   max-height: 100%;
@@ -16774,8 +17053,10 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 
 .agenda-preview .item .time .fa,
 .agenda-preview .item .time .form-required:before,
+.agenda-preview .item .time .form-item--error-message:before,
 .agenda-preview .item .location .fa,
-.agenda-preview .item .location .form-required:before {
+.agenda-preview .item .location .form-required:before,
+.agenda-preview .item .location .form-item--error-message:before {
   color: #303030;
 }
 
@@ -16785,7 +17066,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .agenda-preview .item .time .fa,
-.agenda-preview .item .time .form-required:before {
+.agenda-preview .item .time .form-required:before,
+.agenda-preview .item .time .form-item--error-message:before {
   margin-left: 3px;
   margin-right: 7px;
 }
@@ -16821,7 +17103,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .map-tooltip .btn-link i.fa,
-.map-tooltip .btn-link i.form-required:before {
+.map-tooltip .btn-link i.form-required:before,
+.map-tooltip .btn-link i.form-item--error-message:before {
   vertical-align: middle;
 }
 
@@ -17404,6 +17687,15 @@ header .navbar-brand {
   }
 }
 
+.region-header {
+  background-color: #EBEBEB;
+}
+
+.region-header .page-header {
+  margin: 0 auto;
+  padding: 18px 15px 10px;
+}
+
 .view-header > ul.links {
   padding: 0;
   list-style: none;
@@ -17411,8 +17703,10 @@ header .navbar-brand {
 
 .sidebar-tabs > li > a .fa,
 .sidebar-tabs > li > a .form-required:before,
+.sidebar-tabs > li > a .form-item--error-message:before,
 .sidebar-tabs > ul > li > a .fa,
-.sidebar-tabs > ul > li > a .form-required:before {
+.sidebar-tabs > ul > li > a .form-required:before,
+.sidebar-tabs > ul > li > a .form-item--error-message:before {
   margin-left: -2px;
 }
 
@@ -17500,7 +17794,19 @@ header .navbar-brand {
 }
 
 .container-sm,
-form.webform-submission-form {
+form.webform-submission-form .form-group,
+form.webform-submission-form > details,
+form.webform-submission-form > .form-type-checkbox,
+form.webform-submission-form > .form-type-textarea,
+form.webform-submission-form .alert-stretch > .container,
+form.webform-submission-form .region-header .alert-stretch > .page-header,
+.region-header
+form.webform-submission-form .alert-stretch > .page-header,
+form.webform-submission-form .alert-stretch > .container-xs,
+form.webform-submission-form .alert-stretch > .container-sm,
+form.webform-submission-form .alert-stretch > .container-md,
+form.webform-submission-form .project-list.alert-stretch > .view-content,
+.webform-confirmation {
   max-width: 750px;
 }
 

@@ -71,23 +71,30 @@
   }
 }
 
-// Use CSS/SVG image for required mark.
-// @see https://www.drupal.org/node/2152217
-// @see https://www.drupal.org/node/2274631
-.form-required:after {
-  background-image: url(../images/required.svg);
-  background-size: 10px 7px;
-  content:"";
-  display: inline-block;
-  line-height:1;
-  height: 7px;
-  width: 10px;
-}
-
 form.webform-submission-form {
-  @extend .container-sm;
+  margin-bottom: 25px ;
 
-  margin: 15px auto 25px ;
+  .form-group,
+  & > details,
+  & > .form-type-checkbox,
+  & > .form-type-textarea,
+  .alert-stretch > .container {
+    @extend .container-sm;
+  }
+
+  .form-group:first-child,
+  .alert-stretch + details, 
+  .alert-stretch + .form-group {
+    margin-top: $padding-large-vertical;
+  }
+
+  .js-form-managed-file .alert-stretch {
+    display: none;
+  }
+
+  & > details {
+    @extend .well;
+  }
 
 }
 
@@ -359,21 +366,24 @@ div[id^="edit-field-actor-type-value"] {
   display: none;
 }
 
-.form-required:after {
-  display: none;
-}
-
 .form-required:before {
   @extend .fa;
   @extend .fa-asterisk;
-  color: $brand-danger;
+  color: $brand-warning;
   margin-right: 5px;
   font-size: 80%;
   vertical-align: super;
+  .form-managed-file & {
+    position: absolute;
+    margin-left: -32px;
+  }
 }
 
 .form-required {
-  margin-left: -10px;
+  margin-left: -15px;
+  .form-managed-file & {
+    margin-left: 0;
+  }
 }
 
 .form-inline.form-type-tel .control-label {
@@ -386,6 +396,16 @@ div[id^="edit-field-actor-type-value"] {
   display: inline-block;
   .btn {
     margin-top: 1px;
+  }
+}
+
+.form-item--error-message {
+  margin: 5px;
+  color: $brand-danger;
+  &:before {
+    @extend .fa;
+    @extend .fa-exclamation-circle;
+    margin-right: 5px;
   }
 }
 
@@ -407,4 +427,13 @@ div[id^="edit-field-actor-type-value"] {
     padding-left: 0;
   }
 
+}
+
+.webform-confirmation {
+  @extend .container-sm;
+  padding-top: $padding-base-vertical * 1.5;
+}
+
+.sage .webform-submission-navigation {
+  display: none;
 }

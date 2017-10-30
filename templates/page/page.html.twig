@@ -94,32 +94,30 @@
   {% endblock %}
 {% endif %}
 
+
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    {{ page.header }}
+  {% endblock %}
+{% endif %}
+{# Highlighted #}
+{% if page.highlighted %}
+  {% block highlighted %}
+    <div class="highlighted">{{ page.highlighted }}</div>
+  {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
-
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <section class="agora-header col-sm-12" role="heading">
-            {{ page.header }}
-          </section>
-        {% endblock %}
-      {% endif %}
 
       {# Content #}
       {%
         set content_classes = ['col-sm-12']
       %}
       <section{{ content_attributes.addClass(content_classes) }}>
-
-        {# Highlighted #}
-        {% if page.highlighted %}
-          {% block highlighted %}
-            <div class="highlighted">{{ page.highlighted }}</div>
-          {% endblock %}
-        {% endif %}
 
         {# Breadcrumbs #}
         {% if breadcrumb %}

@@ -46,6 +46,15 @@ header.navbar ul.nav.navbar-nav.navbar-right {
   }
 }
 
+.region-header {
+  background-color: $gray-lighter;
+  .page-header {
+    @extend .container;
+    margin: 0 auto;
+    padding: $padding-large-vertical $padding-base-horizontal $padding-base-vertical;
+  }
+}
+
 .view-header {
   & > ul.links {
     padding: 0;

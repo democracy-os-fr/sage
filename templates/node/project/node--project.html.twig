@@ -157,15 +157,11 @@
           </div>
         </section>
         <section class="tab-pane fade" id="tab-project-form">
-          <div class="{{container}}">
-              {{ content.field_form|field_value }}
-          </div>
+          {{ content.field_form|field_value }}
         </section>
         {% if content.field_form_comment|field_raw('status') == 'open' %}
         <section class="tab-pane fade" id="tab-project-forum">
-          <div class="{{container}}">
-              {{ content.field_form_comment|field_value }}
-          </div>
+          {{ content.field_form_comment|field_value }}
         </section>
         {% endif %}
       </div>

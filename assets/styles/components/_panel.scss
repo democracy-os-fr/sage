@@ -55,12 +55,8 @@
 }
 
 .panel.panel-list {
-  .panel-heading {
-    font-size: 80%;
-    text-transform: lowercase;
-    padding: 5px 15px;
-    // min-height: ($line-height-computed * 0.8) + 10px ;
-    min-height: 10px ;
+  .panel-heading.bg-image {
+    padding-top: $padding-large-vertical * 3;
   }
 }
 

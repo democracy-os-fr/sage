@@ -1,5 +1,6 @@
 {% extends "page.html.twig" %}
 {# Main #}
+{% block header %}{% endblock %}
 {% block main %}
 
   {%
@@ -15,11 +16,9 @@
 
     {# Header #}
     {% if ( not is_full_width ) and page.header %}
-      {% block header %}
-        <section class="agora-header col-sm-12" role="heading">
-          {{ page.header|without('sage_local_tasks') }}
-        </section>
-      {% endblock %}
+      <section class="agora-header col-sm-12" role="heading">
+        {{ page.header|without('sage_local_tasks') }}
+      </section>
     {% endif %}
 
     {# Content #}

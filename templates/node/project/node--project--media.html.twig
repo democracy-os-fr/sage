@@ -78,63 +78,70 @@
 %}
 <article{{ attributes.addClass(classes) }} data-id="{{ node.id }}">
   <div class="panel panel-default panel-list">
-    {# Header #}
-    {% if content.field_images|field_target_entity %}
-      <div class="panel-heading bg-image bg-dark"style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.95)), url('{{ file_url(content.field_images|field_target_entity.uri.value) }}')">
-    {% else %}
-      <div class="panel-heading bg-image bg-dark bg-no-image">
-    {% endif %}
-      {% if content.field_display_title[0]['#markup'] %}
-        <h3 class="alt">
-          {{ label }}
-        </h3>
-      {% endif %}
-      <p>
-        {{ content.field_hero_text|field_value }}
-      </p>
-      <p>
-        <span class="info-inline">
-          <i class="fa fa-fw fa-money"></i>
-          &nbsp;
-          {{ content.field_filter_rent|field_value }}
-          &nbsp;
-          {{ content.field_filter_rent_rate|field_value }}
-        </span>
-        <span class="info-inline">
-          <i class="fa fa-fw fa-expand"></i>
-          &nbsp;
-          {{ content.field_filter_area|field_value }}
-        </span>
-        <span class="info-inline">
-          <i class="fa fa-fw fa-clock-o"></i>
-          &nbsp;
-          {{ content.field_filter_availability|field_value }}
-        </span>
-      </p>
-    </div>
-    <div class="list-group">
-      {% if user.hasPermission('administer nodes') %}
-        <a class="list-group-item" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
-          <i class="fa fa-fw fa-pencil text-warning"></i>
-          &emsp;<b>{{ 'Modifier l\'appel à projet'|t }}</b>
-        </a>
-      {% endif %}
-      <a class="list-group-item" href="{{url}}">
-        <i class="fa fa-lg fa-fw fa-info-circle"></i>
-        &emsp;{{ 'Voir la fiche complète'|t }}
-      </a>
-      {% if content.field_form_comment|field_raw('status') == 'open' %}
-        <a class="list-group-item" href="{{url}}#tab-project-forum">
-          <i class="fa fa-lg fa-fw fa-comment text-success"></i>
-          &emsp;{{ 'Donner son avis'|t }}
-        </a>
-      {% endif %}
-      {% if content.field_form|field_raw('status') == 'open' %}
-        <a class="list-group-item list-group-item-success" href="{{url}}#tab-project-form">
-          <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
-          &emsp;{{ 'Déposer une candidature'|t }}
-        </a>
-      {% endif %}
+    <div class="panel-heading type-helper-0"></div>
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-left">
+          {% if content.field_images|field_target_entity%}
+            {{ content.field_images|field_value }}
+          {% else %}
+            <a href="{{url}}">
+              <img class="img-responsive" src="http://placehold.it/450x350" alt="{{'image appel à projet par défaut'|t}}"/>
+            </a>
+          {% endif %}
+        </div>
+        <div class="media-body">
+          {% if content.field_display_title[0]['#markup'] %}
+            <h3 class="alt">{{ label }}</h3>
+          {% endif %}
+          <p>
+            {{ content.field_hero_text|field_value }}
+          </p>
+          <p>
+            <span class="info-inline">
+              <i class="fa fa-fw fa-money"></i>
+              &nbsp;
+              {{ content.field_filter_rent|field_value }}
+              &nbsp;
+              {{ content.field_filter_rent_rate|field_value }}
+            </span>
+            <span class="info-inline">
+              <i class="fa fa-fw fa-expand"></i>
+              &nbsp;
+              {{ content.field_filter_area|field_value }}
+            </span>
+            <span class="info-inline">
+              <i class="fa fa-fw fa-clock-o"></i>
+              &nbsp;
+              {{ content.field_filter_availability|field_value }}
+            </span>
+          </p>
+          <div class="social text-right">
+            <a href="{{url}}"
+              title="{{ 'En savoir plus'|t }}">
+              <i class="fa fa-lg fa-fw fa-info-circle"></i>
+            </a>
+            {% if content.field_form|field_raw('status') == 'open' %}
+              <a href="{{url}}#tab-project-form"
+                title="{{ 'Candidature'|t }}">
+                <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
+              </a>
+            {% endif %}
+            {% if content.field_form_comment|field_raw('status') == 'open' %}
+              <a href="{{url}}#tab-project-forum"
+                title="{{ 'Avis citoyen'|t }}">
+                <i class="fa fa-lg fa-fw fa-comment"></i>
+              </a>
+            {% endif %}
+            {% if user.hasPermission('administer nodes') %}
+              &nbsp;•&nbsp;
+              <a class="btn-link-info" href="{{ url('entity.node.edit_form',{'node': node.id}) }}">
+                <i class="fa fa-lg fa-fw fa-pencil-square"></i>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </article>

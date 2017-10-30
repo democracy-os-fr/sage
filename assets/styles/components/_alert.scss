@@ -1,6 +1,7 @@
 /**
  * Alert styling.
  */
+
 .alert-sm {
   padding: 5px 10px;
 }
@@ -28,4 +29,19 @@
   a, a:hover, a:focus {
     color: darken($alert-danger-text, 10%);
   }
+}
+
+.alert-stretch {
+  border-radius: 0;
+  margin-bottom: 0;
+  .alert-dismissable .close, .alert-dismissible .close {
+    top: 2px;
+  }
+}
+.alert .media {
+  margin-top: 0;
+}
+
+.form-item .alert-stretch {
+
 }
