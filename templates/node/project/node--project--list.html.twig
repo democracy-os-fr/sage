@@ -124,13 +124,13 @@
         &emsp;{{ 'Voir la fiche complète'|t }}
       </a>
       {% if content.field_form_comment|field_raw('status') == 'open' %}
-        <a class="list-group-item" href="{{url}}#tab-project-forum">
+        <a class="list-group-item" href="{{url}}#candidature">
           <i class="fa fa-lg fa-fw fa-comment text-success"></i>
           &emsp;{{ 'Donner son avis'|t }}
         </a>
       {% endif %}
       {% if content.field_form|field_raw('status') == 'open' %}
-        <a class="list-group-item list-group-item-success" href="{{url}}#tab-project-form">
+        <a class="list-group-item list-group-item-success" href="{{url}}#forum">
           <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
           &emsp;{{ 'Déposer une candidature'|t }}
         </a>

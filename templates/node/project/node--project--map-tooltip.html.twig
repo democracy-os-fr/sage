@@ -84,13 +84,13 @@
       <i class="fa fa-lg fa-fw fa-info-circle"></i>
     </a>
     {% if content.field_form|field_raw('status') == 'open' %}
-      <a href="{{url}}#tab-project-form"
+      <a href="{{url}}#candidature"
         title="{{ 'Candidature'|t }}">
         <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
       </a>
     {% endif %}
     {% if content.field_form_comment|field_raw('status') == 'open' %}
-      <a href="{{url}}#tab-project-forum"
+      <a href="{{url}}#forum"
         title="{{ 'Avis citoyen'|t }}">
         <i class="fa fa-lg fa-fw fa-comment"></i>
       </a>
