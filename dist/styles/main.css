@@ -15305,6 +15305,11 @@ html.js .ajax-new-content:empty {
   overflow: hidden;
 }
 
+.file-list .file {
+  display: block;
+  min-height: auto;
+}
+
 /**
  * Filter styles.
  */

@@ -1,6 +1,7 @@
 /**
  * File (and Image Widget) styles.
  */
+
 .file {
   // display: table;
   font-weight: 400;
@@ -63,4 +64,9 @@
 
 .image-widget.row {
   overflow: hidden;
+}
+
+.file-list .file {
+  display: block;
+  min-height: auto;
 }
