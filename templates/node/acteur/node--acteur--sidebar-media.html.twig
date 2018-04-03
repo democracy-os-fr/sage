@@ -85,9 +85,9 @@
     {% if content.field_image_acteur|field_target_entity%}
       {{ content.field_image_acteur|field_value }}
     {% else %}
-      <a href="{{url}}">
-        <img class="img-responsive" src="http://placehold.it/450x450" alt="{{'image appel à projet par défaut'|t}}"/>
-      </a>
+      <div class="font-avatar text-center">
+        <a href="{{url}}">{{ label|field_value[0]['#context']['value'][:1]|upper }}</a>
+      </div>
     {% endif %}
   </div>
 
