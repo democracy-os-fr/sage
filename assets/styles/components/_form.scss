@@ -83,7 +83,7 @@ form.webform-submission-form {
   }
 
   .form-group:first-child,
-  .alert-stretch + details, 
+  .alert-stretch + details,
   .alert-stretch + .form-group {
     margin-top: $padding-large-vertical;
   }
@@ -153,7 +153,6 @@ form.webform-submission-form {
   }
 }
 
-
 .form-actions {
   margin-top: $padding-base-vertical;
 }
@@ -173,6 +172,11 @@ form.webform-submission-form {
   margin-left: 6px;
   font-weight: bold;
   font-size: $font-size-base;
+}
+
+
+.webform-element--title-inline label:after {
+  display: none;
 }
 
 #webform-submission-candidature-aap-form {
@@ -362,9 +366,6 @@ div[id^="edit-field-actor-type-value"] {
   }
 }
 
-.webform-element--title-inline label:after {
-  display: none;
-}
 
 .form-required:before {
   @extend .fa;
@@ -392,13 +393,6 @@ div[id^="edit-field-actor-type-value"] {
   margin-bottom: $padding-small-vertical;
 }
 
-.webform-file-button + .webform-file-button-input + .button.js-hide + .description {
-  display: inline-block;
-  .btn {
-    margin-top: 1px;
-  }
-}
-
 .form-item--error-message {
   margin: 5px;
   color: $brand-danger;
@@ -408,6 +402,15 @@ div[id^="edit-field-actor-type-value"] {
     margin-right: 5px;
   }
 }
+
+.webform-file-button + .webform-file-button-input + .button.js-hide + .description {
+  display: inline-block;
+  .btn {
+    margin-top: 1px;
+  }
+}
+
+
 
 .webform-preview {
   margin-bottom: $padding-large-vertical * 1.5;

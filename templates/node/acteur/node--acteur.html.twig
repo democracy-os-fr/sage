@@ -86,7 +86,14 @@
       {% endif %}
     </div>
 
-  </div>
+  </div> <!-- panel -->
+
+  {% if user.hasPermission('administer nodes') %}
+    <div class="well text-left">
+      {{ content.field_import_id }}
+      {{ content.field_geofield }}
+    </div>
+  {% endif %}
 
 </div>
 
