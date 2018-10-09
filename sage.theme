@@ -65,7 +65,7 @@ function sage_preprocess_views_view(&$variables) {
   }
   $variables['list'] = $list;
   $variables['title'] = $view->getTitle();
-  $variables['serial'] = $view->serialize();
+  // $variables['serial'] = $view->serialize();
 }
 
 function sage_preprocess_views_view_field(&$variables) {
