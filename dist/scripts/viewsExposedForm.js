@@ -80,13 +80,17 @@ module.exports = jQuery;
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*eslint no-unused-vars: "off"*/
 /* global Drupal drupalSettings */
-(function ($) {
+
+(function ($, Drupal) {
+
   'use strict';
-  console.log('JAVASCRIPT views exposed form'); // eslint-disable-line no-console
+
+  /**
+   * @type {Drupal~behavior}
+   */
 
   Drupal.behaviors.exposedfilter_buttons = {
     attach: function(context, settings) {
-      console.log('JAVASCRIPT exposedfilter_buttons'); // eslint-disable-line no-console
       $('.views-exposed-form label.filter-sort').on('click', function (e) {
         // console.dir(e); // eslint-disable-line no-console
         var state = $(e.currentTarget).attr('data-filter-toggle');
@@ -99,11 +103,11 @@ module.exports = jQuery;
 
         // Update hidden field
         // console.dir(context); // eslint-disable-line no-console
-        console.dir(e.currentTarget.form); // eslint-disable-line no-console
+        // console.dir(e.currentTarget.form); // eslint-disable-line no-console
         var sortBy = $(e.currentTarget).attr('data-filter-sort') ;
         var sortOrder = $(e.currentTarget).find('span.filter-sort-order.toggle-active').attr('data-filter-sort') ;
-        console.dir(sortBy); // eslint-disable-line no-console
-        console.dir(sortOrder); // eslint-disable-line no-console
+        // console.dir(sortBy); // eslint-disable-line no-console
+        // console.dir(sortOrder); // eslint-disable-line no-console
 
         $(e.currentTarget.form).find('input[name="sort_by"]').val(sortBy);
         $(e.currentTarget.form).find('input[name="sort_order"]').val(sortOrder);
@@ -112,7 +116,56 @@ module.exports = jQuery;
     },
   };
 
-})(jQuery);
+  /**
+   * @type {Drupal~behavior}
+   */
+  Drupal.behaviors.ViewsExposedForm = {
+    attach: function (context) {
+
+      // Flat mode
+      // $('.views-exposed-form .js-form-type-checkbox input',context).once('ViewsExposedForm').iCheck({
+      //   checkboxClass: 'icheckbox_flat-red',
+      //   radioClass: 'iradio_flat-red',
+      // });
+
+      // Line mode
+
+      var mapping = {
+        '1': 'red',
+        '2': 'blue',
+        '3': 'yellow',
+        '4': 'green',
+        '5': 'grey',
+        'shared': 'aero',
+        'standalone': 'aero',
+        'now': 'aero',
+        'soon': 'aero',
+        'tdb': 'aero',
+        'acteur': 'grey',
+        'arc_actor': 'grey',
+        'arc_proposal': 'grey',
+        'project': 'grey',
+      };
+
+      $('.views-exposed-form .js-form-type-checkbox input',context).once('ViewsExposedForm').each(function(){
+        var self = $(this);
+        var label = self.parent();
+        var label_text = label.text();
+
+        label.replaceWith(self);
+        self.iCheck({
+          checkboxClass: 'icheckbox_line-' + mapping[self.val()],
+          radioClass: 'iradio_line-' + mapping[self.val()],
+          uncheckedClass: 'pseudo-disabled',
+          indeterminateClass: 'pseudo-disabled',
+          insert: '<div class="icheck_line-icon"></div>' + label_text,
+        })
+      });
+
+    },
+  };
+
+})(jQuery, Drupal);
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

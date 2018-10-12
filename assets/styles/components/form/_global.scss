@@ -1,0 +1,264 @@
+/**
+ * Form styles.
+ */
+// Checkboxes / radio buttons.
+.checkbox,
+.radio {
+  // Remove top/bottom margins when in table context, because this is most
+  // likely a tableselect checkbox element.
+  table &.form-no-label {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+// Browsers do not recognize pseudo :after selectors, we must create a wrapper
+// around the select element to style it properly.
+// $see http://stackoverflow.com/q/21103542
+
+.select-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  .form-inline & {
+    width: auto;
+  }
+
+  .input-group & {
+    display: table-cell;
+    // Reset rounded corners
+    &:first-child .form-control:first-child {
+      @include border-left-radius($border-radius-base);
+    }
+
+    &:last-child .form-control:first-child {
+      @include border-right-radius($border-radius-base);
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 1;
+    padding-right: 2em;
+
+    &,
+    &:focus {
+      background-image: none;
+    }
+
+    &::-ms-expand {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    color: $brand-primary;
+    content: '▼';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: -.5em;
+    padding-right: 0.5em;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    // Use a more stylish icon if the theme uses glyphicons.
+    .has-glyphicons & {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\e114'; // .glyphicon-chevron-down
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+    }
+
+    .has-error & {
+      color: $state-danger-text;
+    }
+
+    .has-success & {
+      color: $state-success-text;
+    }
+
+    .has-warning & {
+      color: $state-warning-text;
+    }
+  }
+}
+
+// Form action buttons.
+.form-actions {
+  margin-top: $padding-base-vertical;
+
+  .btn,
+  .btn-group {
+    margin-right: 10px;
+  }
+
+  .btn-group {
+    .btn {
+      margin-right: 0;
+    }
+  }
+}
+
+.form-options {
+  width: auto;
+  display: inline-block;
+  margin-top: $padding-large-vertical;
+
+  &.list-group {
+    .list-group-item {
+      padding: $padding-large-vertical $padding-base-horizontal;
+    }
+  }
+
+  .form-inline label {
+    margin-right: $padding-base-horizontal;
+  }
+}
+
+.edit-name input[type=text] {
+  font-size: $font-size-h2;
+}
+
+.form-item[class*="form-item-field-address-"][class*="-country-code"],
+.filter-wrapper {
+  // display: none;
+}
+
+.control-label {
+  margin-left: $padding-small-vertical;
+}
+
+.form-inline.form-type-tel .control-label {
+  display: block;
+  max-width: 100%;
+  margin-bottom: $padding-small-vertical;
+}
+
+.form-textarea-wrapper {
+  margin-top: $padding-small-horizontal;
+
+  .cke_chrome {
+    border: 2px solid $input-border;
+    border-radius: $input-border-radius;
+  }
+
+  .cke_top {
+    border-bottom: 1px solid $input-border;
+  }
+
+  .cke_contents {
+    padding: $padding-small-vertical $padding-small-horizontal;
+  }
+}
+
+.node-form .form-item.form-wrapper legend {
+  margin-bottom: 5px;
+  margin-left: 6px;
+  font-weight: bold;
+  font-size: $font-size-base;
+}
+
+.form-group-inline-repsonsive {
+  line-height: 45px;
+}
+
+.dark-background form {
+  background-color: $gray-darker;
+  color: $navbar-inverse-link-color;
+
+  input[type="submit"].btn-success {
+    @extend .btn-yellow;
+  }
+}
+
+.form-dropdown-block {
+  display: block;
+  text-align: left;
+
+  h4,
+  h5 {
+    margin-top: 0;
+  }
+
+  .panel {
+    box-shadow: none;
+  }
+}
+
+.form-managed-file .checkbox label {
+  .icheckbox_flat-red {
+    height: 20px;
+  }
+}
+
+// Use CSS/SVG image for required mark.
+// @see https://www.drupal.org/node/2152217
+// @see https://www.drupal.org/node/2274631
+
+.form-required:after {
+  background-image: url("../images/required.svg");
+  background-size: 10px 7px;
+  content: "";
+  display: inline-block;
+  line-height: 1;
+  height: 7px;
+  width: 10px;
+}
+
+// .form-required:before {
+//   @extend .fa;
+//   @extend .fa-asterisk;
+//   color: $brand-warning;
+//   margin-right: 5px;
+//   font-size: 80%;
+//   vertical-align: super;
+//   .form-managed-file & {
+//     position: absolute;
+//     margin-left: -32px;
+//   }
+// }
+
+.form-required {
+  margin-left: -15px;
+
+  .form-managed-file & {
+    margin-left: 0;
+  }
+}
+
+.form-item--error-message {
+  margin: 5px;
+  color: $brand-danger;
+
+  &:before {
+    @extend .fa;
+    @extend .fa-exclamation-circle;
+    margin-right: 5px;
+  }
+}
+
+.fieldgroup.dropdown, .fieldgroup .dropdown {
+  .dropdown-menu {
+    padding: $padding-small-vertical $padding-small-horizontal;
+  }
+}
+
+// Paragraphs
+.js .field--widget-entity-reference-paragraphs td {
+  padding: $table-cell-padding;
+}
+
+.paragraphs-dropbutton-wrapper button:not(:last-child) {
+  margin-right: $padding-large-vertical;
+}
+
+@import './horizontal';
+@import './views-exposed-form';
+@import './webform';
+@import './icheck';

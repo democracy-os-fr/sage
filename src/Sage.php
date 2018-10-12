@@ -7,6 +7,7 @@
 namespace Drupal\sage;
 
 use Drupal\bootstrap\Bootstrap;
+use Drupal\bootstrap\Utility\Element;
 use Drupal\bootstrap\Utility\Unicode;
 
 /**
@@ -42,15 +43,15 @@ class Sage extends Bootstrap {
     }
     else {
       $icon = [
+        // '#prefix' => '<span class="btn-label">',
         '#type' => 'html_tag',
-        '#tag' => 'span',
-        '#prefix' => '<span class="btn-label">',
-        '#suffix' => '</span>',
+        '#tag' => 'i',
         '#value' => '',
         '#attributes' => [
-          'class' => ['icon', 'fa', 'fa-fw', 'fa-' . $name],
+          'class' => ['faicon', $name, 'fa-fw'],
           'aria-hidden' => 'true',
         ],
+        // '#suffix' => '</span>',
       ];
     }
 
@@ -90,34 +91,38 @@ class Sage extends Bootstrap {
 
         // Text containing these words anywhere in the string are checked last.
         'contains' => [
-          t('Manage')->render()     => 'cog',
-          t('Configure')->render()  => 'cog',
-          t('Settings')->render()   => 'cog',
-          t('Download')->render()   => 'download',
-          t('Export')->render()     => 'export',
-          t('Filter')->render()     => 'filter',
-          t('Import')->render()     => 'import',
-          t('Save')->render()       => 'ok',
-          t('Update')->render()     => 'ok',
-          t('Add')->render()        => 'plus',
-          t('Edit')->render()       => 'pencil',
-          t('Uninstall')->render()  => 'trash',
-          t('Install')->render()    => 'plus',
-          t('Write')->render()      => 'plus',
-          t('Cancel')->render()     => 'remove',
-          t('Delete')->render()     => 'trash',
-          t('Remove')->render()     => 'trash',
-          t('Search')->render()     => 'search',
-          t('Upload')->render()     => 'upload',
-          t('Preview')->render()    => 'desktop',
-          t('Devel')->render()    => 'console',
-          t('Log in')->render()     => 'sign-in',
-          t('Log out')->render()     => 'sign-out',
-          t('My account')->render()     => 'info-circle',
-          t('Administration')->render()     => 'cogs',
+          t('Manage')->render()     => 'fa fa-cog',
+          t('Configure')->render()  => 'fa fa-cog',
+          t('Settings')->render()   => 'fa fa-cog',
+          t('Download')->render()   => 'fa fa-download',
+          t('Export')->render()     => 'fa fa-export',
+          t('Filter')->render()     => 'fa fa-filter',
+          t('Import')->render()     => 'fa fa-import',
+          t('Save')->render()       => 'fa fa-ok',
+          t('Update')->render()     => 'fa fa-ok',
+          t('Add')->render()        => 'fa fa-plus',
+          t('Edit')->render()       => 'fa fa-pencil',
+          t('Uninstall')->render()  => 'fa fa-trash',
+          t('Install')->render()    => 'fa fa-plus',
+          t('Write')->render()      => 'fa fa-plus',
+          t('Cancel')->render()     => 'fa fa-remove',
+          t('Delete')->render()     => 'fa fa-trash',
+          t('Remove')->render()     => 'fa fa-trash',
+          t('Search')->render()     => 'fa fa-search',
+          t('Upload')->render()     => 'fa fa-upload',
+          t('Preview')->render()    => 'fa fa-desktop',
+          t('Devel')->render()    => 'fa fa-console',
+          t('Log in')->render()     => 'fa fa-sign-in',
+          t('Log out')->render()     => 'fa fa-sign-out',
+          t('My account')->render()     => 'fa fa-info-circle',
+          t('Administration')->render()     => 'fa fa-cogs',
+          t('Actors')->render()     => 'far fa-user',
+          t('Acteurs')->render()     => 'far fa-user',
+          t('Type(s) d\'innovation')->render()     => 'fas fa-tags',
+          t('type d\'innovation')->render()     => 'fas fa-tag',
+          // t('Apply')->render()     => 'fas fa-sync-alt',
         ],
       ];
-
       $texts->setMultiple($data);
     }
 
@@ -142,6 +147,66 @@ class Sage extends Bootstrap {
 
     // Return a default icon if nothing was matched.
     return $default;
+  }
+
+  /**
+   * Adds an icon to button element based on its text value.
+   *
+   * @param array $icon
+   *   An icon render array.
+   *
+   * @return $this
+   *
+   * @see \Drupal\bootstrap\Bootstrap::glyphicon()
+   */
+  public static function setIcon(Element &$element, array $icon = NULL) {
+    if ($element->isButton() && !Bootstrap::getTheme()->getSetting('button_iconize')) {
+      return  ;
+    }
+    if ($value = $element->getProperty('value', $element->getProperty('title'))) {
+      $icon = isset($icon) ? $icon : self::faiconFromString($value);
+      $element->setProperty('icon', $icon);
+    }
+    return $element;
+  }
+
+  public static function faicon_from_settings(array $values) {
+    $icons = array();
+    foreach ($values as $value) {
+      $iconSettings = unserialize($value['settings']);
+      // Format mask.
+      $iconMask = '';
+      if (!empty($iconSettings['masking']['mask'])) {
+        $iconMask = $iconSettings['masking']['style'] . ' fa-' . $iconSettings['masking']['mask'];
+      }
+      unset($iconSettings['masking']);
+
+      // Format power transforms.
+      $iconTransforms = [];
+      $powerTransforms = $iconSettings['power_transforms'];
+      foreach ($powerTransforms as $transform) {
+        if (!empty($transform['type'])) {
+          $iconTransforms[] = $transform['type'] . '-' . $transform['value'];
+        }
+      }
+      unset($iconSettings['power_transforms']);
+
+      $icons[] = [
+        '#theme' => 'fontawesomeicon',
+        '#name' => 'fa-' . $value['icon_name'],
+        '#style' => $value['style'],
+        '#settings' => implode(' ', $iconSettings),
+        '#transforms' => implode(' ', $iconTransforms),
+        '#mask' => $iconMask,
+      ];
+    }
+
+    return [
+      '#theme' => 'fontawesomeicons',
+      '#icons' => $icons,
+      '#layers' => TRUE,
+    ];
+
   }
 
 }

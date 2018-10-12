@@ -1,0 +1,88 @@
+table {
+  td.views-field-operations,
+  th.views-field-operations {
+    min-width: 130px;
+  }
+}
+
+.view-filters {
+  margin: $padding-large-vertical auto;
+  text-align: center;
+}
+
+.views-exposed-form {
+  margin-bottom: $padding-large-vertical;
+
+  .form-actions {
+    text-align: left;
+  }
+
+  // .filter-sort .filter-sort-order {
+  //   display: none;
+  //
+  //   &.toggle-active {
+  //     display: inline-block;
+  //   }
+  // }
+
+  .dropdown-menu {
+    .form-item.checkbox,
+    .form-item.radio {
+      display: block;
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 7px;
+      }
+    }
+  }
+}
+
+// div[id^="edit-field-actor-type-value"],
+// div[id^="edit-field-filter-rent-type-value"],
+// div[id^="edit-field-filter-availability-value"] {
+//   .form-type-checkbox {
+//     display: block;
+//   }
+//
+//   .form-checkbox {
+//     margin-right: 15px;
+//     margin-left: -30px;
+//   }
+//
+//   label.control-label.option {
+//     display: block;
+//     width: auto;
+//     text-align: left;
+//     margin: 5px 15px;
+//
+//     &::before {
+//       display: block;
+//       float: right;
+//       content: '';
+//       height: $line-height-computed;
+//       width: 35px;
+//       border-radius: $panel-border-radius;
+//     }
+//   }
+//
+//   label[for^="edit-field-actor-type-value-1"]::before {
+//     @extend .type-helper-1;
+//   }
+//
+//   label[for^="edit-field-actor-type-value-2"]::before {
+//     @extend .type-helper-2;
+//   }
+//
+//   label[for^="edit-field-actor-type-value-3"]::before {
+//     @extend .type-helper-3;
+//   }
+//
+//   label[for^="edit-field-actor-type-value-4"]::before {
+//     @extend .type-helper-4;
+//   }
+//
+//   label[for^="edit-field-actor-type-value-5"]::before {
+//     @extend .type-helper-5;
+//   }
+// }

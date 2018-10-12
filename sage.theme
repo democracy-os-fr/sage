@@ -10,45 +10,63 @@
      require_once $composer;
  }
 
- use Drupal\bootstrap\Bootstrap;
- use Drupal\Core\Render\Element;
- use Drupal\Core\Render\Element\RenderElement;
- use Drupal\Core\Template\Attribute;
+use Drupal\sage\Sage;
+use Drupal\bootstrap\Bootstrap;
+use Drupal\bootstrap\Utility\Element;
+use Drupal\Core\Template\Attribute;
 
 /**
  * {@inheritdoc}
  *
  * @see \Drupal\bootstrap\Bootstrap::getInfo()
  */
-function sage_theme() {
+function sage_theme()
+{
 
   ////dcp('sage_theme');
-  $hooks = Bootstrap::getThemeHooks();
-  $hooks['user_login_form'] = array(
+    $hooks = Bootstrap::getThemeHooks();
+    $hooks['user_login_form'] = array(
       'render element' => 'form',
   );
-  ////dcp($hooks);
-  return $hooks;
+    ////dcp($hooks);
+    return $hooks;
 }
 
-function sage_bootstrap_iconize_text_alter(&$texts) {
-  // dcp('sage_bootstrap_iconize_text_alter');
-  // dcp($texts);
-  $texts['contains'][t('Add')->render()] = 'plus';
-  $texts['contains'][t('My account')->render()] = 'info';
-  $texts['contains'][t('Administration')->render()] = 'tasks';
+function sage_bootstrap_iconize_text_alter(&$texts)
+{
+    // dcp('sage_bootstrap_iconize_text_alter');
+    // dcp($texts);
+    $texts['contains'][t('Add')->render()] = 'plus';
+    $texts['contains'][t('View')->render()] = 'eye-open';
+    $texts['contains'][t('My account')->render()] = 'info';
+    $texts['contains'][t('Administration')->render()] = 'tasks';
 }
 
-function sage_preprocess_menu_local_tasks(&$variables) {
-  dcp('sage_preprocess_menu_local_tasks');
-  if(array_key_exists('primary',$variables)){
-    foreach ($variables['primary'] as $key => $value) {
-      if(preg_match('#^devel.*devel_tab$#', $key)){
-        $variables['secondary'][$key] = $value;
-        unset($variables['primary'][$key]);
-      }
+/**
+ * Allows sub-themes to alter the array used for colorizing text.
+ *
+ * @param array $texts
+ *   An associative array containing the text and classes to be matched, passed
+ *   by reference.
+ *
+ * @see \Drupal\bootstrap\Bootstrap::cssClassFromString()
+ */
+function sage_bootstrap_colorize_text_alter(&$texts)
+{
+    $texts['contains'][t('Apply')->render()] = 'success';
+}
+
+function sage_preprocess_menu_local_tasks(&$variables)
+{
+    dcp('sage_preprocess_menu_local_tasks');
+    if (array_key_exists('primary', $variables)) {
+        foreach ($variables['primary'] as $key => $value) {
+            if (preg_match('#^devel.*devel_tab$#', $key)) {
+                $variables['secondary'][$key] = $value;
+                unset($variables['primary'][$key]);
+            }
+        }
     }
-  }
 }
 
 // function sage_preprocess_page_title(&$variables) {
@@ -56,21 +74,41 @@ function sage_preprocess_menu_local_tasks(&$variables) {
 //   dcp($variables);
 // }
 
-function sage_preprocess_views_view(&$variables) {
-  $view = $variables['view'];
-  $result = $view->result;
-  $list = array();
-  foreach ($view->result as $key => $value) {
-    $list[] = $value->nid;
-  }
-  $variables['list'] = $list;
-  $variables['title'] = $view->getTitle();
-  $variables['serial'] = $view->serialize();
+function sage_preprocess_views_view(&$variables)
+{
+    $view = $variables['view'];
+    $result = $view->result;
+    $list = array();
+    foreach ($view->result as $key => $value) {
+        $list[] = $value->nid;
+    }
+    $variables['list'] = $list;
+    $variables['title'] = $view->getTitle();
+    // $variables['serial'] = $view->serialize();
 }
 
-function sage_preprocess_views_view_field(&$variables) {
-  if(($variables['field']->table === 'file_managed')&&($variables['field']->field === 'rendered_entity')) {
-    // dump($variables['row']->_entity->toArray());
-    $variables['entity'] = $variables['row']->_entity->toArray();
-  }
+function sage_preprocess_views_view_field(&$variables)
+{
+    if (($variables['field']->table === 'file_managed')&&($variables['field']->field === 'rendered_entity')) {
+        // dump($variables['row']->_entity->toArray());
+        $variables['entity'] = $variables['row']->_entity->toArray();
+    }
 }
+
+/**
+ * Implements template_preprocess_fieldset().
+ */
+function sage_preprocess_fieldset__dropdown(&$variables)
+{
+    if (array_key_exists('element', $variables)) {
+        $element = Element::create($variables['element']);
+        $legend = Element::create($variables['legend']);
+        if (isset($element['#title']) && $element['#title'] !== '') {
+          $variables['legend']['icon'] = Sage::faiconFromString($element['#title']) ;
+        }
+
+        $legend->setIcon();
+    }
+}
+
+function sage_preprocess_fieldset__filter_dropdown(&$variables){ sage_preprocess_fieldset__dropdown($variables); }

@@ -14,10 +14,58 @@ views-exposed-form:
   js:
     dist/scripts/viewsExposedForm.js: {}
   dependencies:
-    - core/jquery
     - core/drupal
+    - core/jquery
     - core/jquery.once
-    - core/drupalSettings
+    - sage/libraries.jquery.icheck
+
+libraries.jquery.icheck:
+  remote: http://icheck.fronteed.com/
+  version: &sage_icheck_version '1.0.2'
+  license: &sage_icheck_license
+    name: MIT
+    url: https://en.wikipedia.org/wiki/MIT_License
+    gpl-compatible: true
+  js:
+    /libraries/jquery.icheck/icheck.js: {}
+  dependencies:
+    - core/jquery
+
+libraries.jquery.icheck.flat:
+  version: *sage_icheck_version
+  license: *sage_icheck_license
+  css:
+    component:
+      /libraries/jquery.icheck/skins/flat/_all.css: {}
+  dependencies:
+    - sage/libraries.jquery.icheck
+
+libraries.jquery.icheck.line:
+  version: *sage_icheck_version
+  license: *sage_icheck_license
+  css:
+    component:
+      /libraries/jquery.icheck/skins/line/_all.css: {}
+  dependencies:
+    - sage/libraries.jquery.icheck
+
+libraries.jquery.icheck.minimal:
+  version: *sage_icheck_version
+  license: *sage_icheck_license
+  css:
+    component:
+      /libraries/jquery.icheck/skins/minimal/_all.css: {}
+  dependencies:
+    - sage/libraries.jquery.icheck
+
+libraries.jquery.icheck.square:
+  version: *sage_icheck_version
+  license: *sage_icheck_license
+  css:
+    component:
+      /libraries/jquery.icheck/skins/square/_all.css: {}
+  dependencies:
+    - sage/libraries.jquery.icheck
 
 entity_browser.tabs:
   version: VERSION

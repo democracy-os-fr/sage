@@ -7,6 +7,7 @@
 
 namespace Drupal\sage\Plugin\Form;
 
+use Drupal\sage\Sage;
 use Drupal\bootstrap\Annotation\BootstrapForm;
 use Drupal\bootstrap\Utility\Element;
 use Drupal\Core\Form\FormStateInterface;
@@ -44,23 +45,48 @@ class ViewsExposedForm extends \Drupal\bootstrap\Plugin\Form\FormBase {
             $form[$info['value']]['#type'] = 'radios';
           }
           $form[$info['value']]['#sage'] = 'filter_dropdown';
+          $form[$info['value']]['#context'] = ['views_exposed_form'] ;
 
         } elseif ( $form[$info['value']]['#type'] == 'textfield' ) {
           $form[$info['value']]['#sage'] = 'filter_search';
-          $form[$info['value']]['#placeholder'] = 'Rechercher';
+          $form[$info['value']]['#placeholder'] = $info['label'] ;
+          $form[$info['value']]['#title_display'] = 'hidden';
         }
 
       }
     }
-    
+
     if( isset($form['sort_by']) && $form['sort_by']['#type'] == 'select' ) {
       // $form['sort_by']['#sage'] = 'filter_sort';
       if( isset($form['sort_order']) && $form['sort_order']['#type'] == 'select' ) {
         // $form['sort_order']['#sage'] = 'filter_sort';
-        $form ['#sage'] = 'filter_sort';
+        $form['#sage'] = 'filter_sort';
       }
     }
 
+    $this->alterFormElement(Element::create($form), $form_state, $form_id);
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function alterFormElement(Element $form, FormStateInterface $form_state, $form_id = NULL) {
+    // This method is the same as above, except the the $form argument passed is
+    // an instance of \Drupal\bootstrap\Utility\Element for easier manipulation.
+    // Using this method is preferable and considered "Best Practice".
+
+    $actions = $form->__get('actions')->children();
+
+    foreach ($actions as $key => $action) {
+      Sage::setIcon($action);
+      if ($key == 'submit') {
+        $action->setButtonSize('btn-xs btn-block');
+      }
+    }
+
+    // Disable #input_group_button using the $form Element object:
+    // $form->keys->setProperty('input_group_button', FALSE);
   }
 
   /**

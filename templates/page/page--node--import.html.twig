@@ -1,0 +1,15 @@
+{% extends "page.html.twig" %}
+{% block header %}{% endblock %}
+{# Main #}
+{% block main %}
+  <section role="main" class="main-container js-quickedit-main-content container-md">
+
+    {# Content #}
+    {% block content %}
+      <p class=lead>&emsp;</p>
+      <a id="main-content"></a>
+      {{ page.content }}
+    {% endblock %}
+
+  </section>
+{% endblock %}

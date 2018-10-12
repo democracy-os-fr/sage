@@ -55,6 +55,8 @@ $brand-success:         #18BC9C ;
 $brand-info:            $brand-blue;
 $brand-warning:         #F39C12 ;
 $brand-danger:          $brand-red ;
+$brand-active:          $brand-yellow ;
+$brand-active-inverse:  $gray-dark ;
 
 // Reset inverted navbar basics
 $navbar-inverse-bg:                         $gray-darker;
@@ -97,6 +99,10 @@ $sidebar-margins: 0 ;
 $sidebar-border-radius: 0 ;
 $sidebar-touch-border: none ;
 $sidebar-shadow: none ;
+$sidebar-transition: 400ms ;
+$sidebar-width-lg: 600px; // $modal-md
+$sidebar-width-md: 420px;
+$sidebar-width-sm: 300px; // $modal-sm
 
 $tab-fg: $gray-darker ;
 // $tabs-bg: #fff ;
