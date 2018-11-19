@@ -16392,6 +16392,12 @@ article.arc-actor.full .panel > .list-group-item .text-right {
   padding: 2px 7px;
 }
 
+.field--name-field-type-tags {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-transform: none;
+}
+
 /**
  * Panel styling.
  */
@@ -17485,6 +17491,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   max-width: 150px;
 }
 
+.sidebar-content .media-left .font-avatar,
+.sidebar-content .media-right .font-avatar {
+  margin: 0 auto;
+}
+
 .sidebar-content .media {
   position: relative;
   background-color: rgba(255, 255, 255, 0.95);
@@ -18341,6 +18352,8 @@ body#tinymce {
   left: 0;
   top: 0;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slick-track:before,

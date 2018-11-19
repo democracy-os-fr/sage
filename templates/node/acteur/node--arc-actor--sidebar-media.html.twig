@@ -93,23 +93,12 @@
   <div class="media-body">
     <h3 class="alt">
       {{ label }}
-      {% if content.field_list_actor_type|field_value %}
-        <div class="clearfix">
-          {% for aType in content.field_list_actor_type|field_value %}
-            {% set selectedValue = content.field_list_actor_type['#items'].getValue()[loop.index0].value %}
-            <span class="label type-helper-badge type-helper-{{ selectedValue ?:0 }}"
-              data-toggle="popover" data-trigger="click hover" data-placement="bottom"
-              data-content="{{content.field_list_actor_type|field_value[loop.index0]}}">
-              &emsp;
-            </span>
-            &nbsp;
-          {% endfor %}
-        </div>
-      {% endif %}
+      <div class="clearfix">
+        {{ content.field_type_tags }}
+      </div>
     </h3>
 
     {{ content.field_address }}
-    {{ content.body }}
     {{ content.field_email }}
     {{ content.field_phone }}
 
