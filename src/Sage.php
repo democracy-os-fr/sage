@@ -119,7 +119,7 @@ class Sage extends Bootstrap {
           t('Actors')->render()     => 'far fa-user',
           t('Acteurs')->render()     => 'far fa-user',
           t('Type(s) d\'innovation')->render()     => 'fas fa-tags',
-          t('type d\'innovation')->render()     => 'fas fa-tag  ',
+          t('type d\'innovation')->render()     => 'fas fa-tag',
           // t('Apply')->render()     => 'fas fa-sync-alt',
         ],
       ];
