@@ -29,25 +29,46 @@
     'form-item',
     'js-form-wrapper',
     'form-wrapper',
-    'form-group',
-    'form-actions',
+    'dropdown',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="{{element['#id']}}-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      {%
-        set legend_span_classes = [
-          'fieldset-legend',
-          required ? 'js-form-required',
-          required ? 'form-required',
-        ]
-      %}
-      <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
-      <span class="caret"></span>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="{{element['#id']}}-dropdown">
-      {{ children }}
-    </div>
+  {%
+    set legend_span_classes = [
+      'fieldset-legend',
+      required ? 'js-form-required',
+      required ? 'form-required',
+      'pull-left'
+    ]
+  %}
+  <button class="btn btn-sm btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span{{ legend_span.attributes.addClass(legend_span_classes) }}>
+      {{ legend.icon }}
+      &nbsp;
+      {{ legend.title }}
+    </span>
+    <span class="pull-right">
+      <i class="fas fa-caret-down"></i>
+    </span>
+  </button>
+  <div class="dropdown-menu">
+    {% if errors %}
+      <div>
+        {{ errors }}
+      </div>
+    {% endif %}
+    {% if prefix %}
+      <div class="field-prefix">{{ prefix }}</div>
+      <div role="separator" class="divider"></div>
+    {% endif %}
+    {{ children }}
+    {% if suffix %}
+      <div role="separator" class="divider"></div>
+      <div class="field-suffix">{{ suffix }}</div>
+    {% endif %}
+    {% if description.content %}
+    <div role="separator" class="divider"></div>
+      <div{{ description.attributes.addClass('description') }}>{{ description.content }}</div>
+    {% endif %}
   </div>
 </div>

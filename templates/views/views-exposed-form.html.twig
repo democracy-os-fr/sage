@@ -11,6 +11,8 @@
  * @see template_preprocess_views_exposed_form()
  */
 #}
+{{ attach_library('sage/views-exposed-form') }}
+{{ attach_library('sage/libraries.jquery.icheck.line') }}
 {% if q is not empty %}
   {#
     This ensures that, if clean URLs are off, the 'q' is added first,
@@ -18,8 +20,6 @@
   #}
   {{ q }}
 {% endif %}
-<div class="form-horizontal">
-  <div class="form-body">
-    {{ form }}
-  </div>
+<div class="clearfix">
+  {{ form }}
 </div>

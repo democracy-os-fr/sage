@@ -1,0 +1,32 @@
+@mixin icheck_line_basecolor($key, $color) {
+  .icheckbox_line-#{$key}, .iradio_line-#{$key} {
+    background-color: $color ;
+  }
+}
+
+.checkbox label {
+  .icheckbox_flat,
+  .icheckbox_flat-aero,
+  .icheckbox_flat-blue,
+  .icheckbox_flat-green,
+  .icheckbox_flat-grey,
+  .icheckbox_flat-orange,
+  .icheckbox_flat-pink,
+  .icheckbox_flat-purple,
+  .icheckbox_flat-red,
+  .icheckbox_flat-yellow {
+    margin-left: -15px;
+    margin-right: $padding-small-horizontal;
+    height: 22px;
+  }
+}
+
+@include icheck_line_basecolor( 'red', #F7D3D2 ); // #e56c69
+@include icheck_line_basecolor( 'green', #89E6C4 ); // #1b7e5a
+@include icheck_line_basecolor( 'blue', #ADD7F0 ); // #2489c5
+@include icheck_line_basecolor( 'aero', #D2E4E8 ); // #9cc2cb
+@include icheck_line_basecolor( 'grey', #D5D4D3 ); // #73716e
+@include icheck_line_basecolor( 'orange', #FFD6B3 ); // #f70
+@include icheck_line_basecolor( 'yellow', #FFE495 ); // #FFC414
+@include icheck_line_basecolor( 'pink', #E0D0DA ); // #a77a94
+@include icheck_line_basecolor( 'purple', #D2CCDE ); // #6a5a8c

@@ -18,23 +18,25 @@ use Drupal\bootstrap\Utility\Unicode;
  *
  * @BootstrapAlter("theme_suggestions")
  */
-class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
+class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions
+{
 
   /**
    * {@inheritdoc}
    */
-  public function alter(&$suggestions, &$variables = NULL, &$hook = NULL) {
+    public function alter(&$suggestions, &$variables = null, &$hook = null)
+    {
 
     // DO NOT DUMP $variables for all hook (outside the switch block) => ERR_HEADER_TOO_BIG
 
-    ////dcp($hook);
+        ////dcp($hook);
 
-    parent::alter($suggestions, $variables, $hook);
+        parent::alter($suggestions, $variables, $hook);
 
-    switch ($hook) {
+        switch ($hook) {
       case 'image_style':
-        if( isset($variables['style_name']) ) {
-          array_push($suggestions,'image_style__'.$variables['style_name']);
+        if (isset($variables['style_name'])) {
+            array_push($suggestions, 'image_style__'.$variables['style_name']);
         }
         break;
 
@@ -45,8 +47,8 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         //dcp($variables['view']->id());
         //dcp($variables['view']->current_display);
 
-        array_push($suggestions,implode('__',['views_view',$variables['view']->id()]));
-        array_push($suggestions,implode('__',['views_view',$variables['view']->id(),$variables['view']->current_display]));
+        array_push($suggestions, implode('__', ['views_view',$variables['view']->id()]));
+        array_push($suggestions, implode('__', ['views_view',$variables['view']->id(),$variables['view']->current_display]));
 
         break;
 
@@ -55,14 +57,15 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         // //dcp($suggestions);
         // //dcp($variables);
 
-        array_push($suggestions,$variables['form']['#id']);
+        array_push($suggestions, $variables['form']['#id']);
 
-        if( isset($variables['form']['#sage']) ) {
-          $keys = ['filter_sort'];
-          if ( in_array($variables['form']['#sage'], $keys) ) {
-            array_push($suggestions,'views_exposed_form__filter_sort');
-          }
+        if (isset($variables['form']['#sage'])) {
+            $keys = ['filter_sort'];
+            if (in_array($variables['form']['#sage'], $keys)) {
+                array_push($suggestions, 'views_exposed_form__filter_sort');
+            }
         }
+
         break;
 
       case 'form_element':
@@ -70,14 +73,12 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         // //dcp($suggestions);
         // dcp($variables);
 
-        if( isset($variables['element']['#sage']) ) {
-          $keys = ['filter_search'];
-          if ( in_array($variables['element']['#sage'], $keys) ) {
-            array_push($suggestions,'form_element__filter_search');
-          }
+        if (isset($variables['element']['#sage'])) {
+            $keys = ['filter_search'];
+            if (in_array($variables['element']['#sage'], $keys)) {
+                array_push($suggestions, 'form_element__filter_search');
+            }
         }
-
-
 
         break;
 
@@ -86,12 +87,11 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         // //dcp($suggestions);
         //dcp($variables);
 
-        if( isset($variables['element']['#id']) ) {
-
-          if ( preg_match('#^edit-field-actor-type-value#', $variables['element']['#id']) ) {
-            //dcp('form_element ThemeSuggestions');
-            array_push($suggestions,'fieldset__filter_checkbox_block');
-          }
+        if (isset($variables['element']['#id'])) {
+            if (preg_match('#^edit-field-actor-type-value#', $variables['element']['#id'])) {
+                //dcp('form_element ThemeSuggestions');
+                array_push($suggestions, 'fieldset__filter_checkbox_block');
+            }
         }
 
         break;
@@ -101,24 +101,30 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
         // //dcp($suggestions);
         // //dcp($variables);
 
-        if( isset($variables['element']['#sage']) ) {
-          $keys = ['filter_dropdown','filter_search'];
-          if ( in_array($variables['element']['#sage'], $keys) ) {
-            array_push($suggestions,'fieldset__filter_dropdown');
+        if (isset($variables['element']['#sage'])) {
+            $keys = ['filter_dropdown','filter_search'];
+            if (in_array($variables['element']['#sage'], $keys)) {
+                array_push($suggestions, 'fieldset__filter_dropdown');
+            }
+        }
+
+        if( isset($variables['element']) && array_key_exists('#context',$variables['element'])  ){
+          if( in_array('views_exposed_form', $variables['element']['#context']) ) {
+            array_push($suggestions,'fieldset__dropdown');
           }
         }
 
-        if( isset($variables['element']['#name']) ) {
-          $keys = ['type','field_actor_type_value','field_filter_availability_value','field_filter_rent_type_value'];
-          if ( in_array($variables['element']['#name'], $keys) ) {
-            //dcp($variables['element']);
-            array_push($suggestions,'fieldset__filter_dropdown_block');
-          }
-          $keys = ['type'];
-          if ( in_array($variables['element']['#name'], $keys) ) {
-            //dcp($variables['element']);
-            array_push($suggestions,'fieldset__filter_button_group');
-          }
+        if (isset($variables['element']['#name'])) {
+            $keys = ['type','field_actor_type_value','field_filter_availability_value','field_filter_rent_type_value'];
+            if (in_array($variables['element']['#name'], $keys)) {
+                //dcp($variables['element']);
+                array_push($suggestions, 'fieldset__filter_dropdown_block');
+            }
+            $keys = ['type'];
+            if (in_array($variables['element']['#name'], $keys)) {
+                //dcp($variables['element']);
+                array_push($suggestions, 'fieldset__filter_button_group');
+            }
         }
         break;
 
@@ -146,6 +152,5 @@ class ThemeSuggestions extends \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions{
       //   break;
 
     }
-  }
-
+    }
 }

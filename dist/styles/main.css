@@ -2046,11 +2046,11 @@ pre code {
 .region-header .page-header,
 .container-xs,
 .container-sm,
-form.webform-submission-form .form-group,
 form.webform-submission-form > details,
 form.webform-submission-form > .form-type-checkbox,
 form.webform-submission-form > .form-type-textarea,
 form.webform-submission-form .alert-stretch > .container,
+form.webform-submission-form .form-group,
 .webform-confirmation,
 .container-md,
 .project-list > .view-content {
@@ -2064,11 +2064,11 @@ form.webform-submission-form .alert-stretch > .container,
 .region-header .page-header:before,
 .container-xs:before,
 .container-sm:before,
-form.webform-submission-form .form-group:before,
 form.webform-submission-form > details:before,
 form.webform-submission-form > .form-type-checkbox:before,
 form.webform-submission-form > .form-type-textarea:before,
 form.webform-submission-form .alert-stretch > .container:before,
+form.webform-submission-form .form-group:before,
 .webform-confirmation:before,
 .container-md:before,
 .project-list > .view-content:before,
@@ -2076,11 +2076,11 @@ form.webform-submission-form .alert-stretch > .container:before,
 .region-header .page-header:after,
 .container-xs:after,
 .container-sm:after,
-form.webform-submission-form .form-group:after,
 form.webform-submission-form > details:after,
 form.webform-submission-form > .form-type-checkbox:after,
 form.webform-submission-form > .form-type-textarea:after,
 form.webform-submission-form .alert-stretch > .container:after,
+form.webform-submission-form .form-group:after,
 .webform-confirmation:after,
 .container-md:after,
 .project-list > .view-content:after {
@@ -2092,11 +2092,11 @@ form.webform-submission-form .alert-stretch > .container:after,
 .region-header .page-header:after,
 .container-xs:after,
 .container-sm:after,
-form.webform-submission-form .form-group:after,
 form.webform-submission-form > details:after,
 form.webform-submission-form > .form-type-checkbox:after,
 form.webform-submission-form > .form-type-textarea:after,
 form.webform-submission-form .alert-stretch > .container:after,
+form.webform-submission-form .form-group:after,
 .webform-confirmation:after,
 .container-md:after,
 .project-list > .view-content:after {
@@ -2108,11 +2108,11 @@ form.webform-submission-form .alert-stretch > .container:after,
   .region-header .page-header,
   .container-xs,
   .container-sm,
-  form.webform-submission-form .form-group,
   form.webform-submission-form > details,
   form.webform-submission-form > .form-type-checkbox,
   form.webform-submission-form > .form-type-textarea,
   form.webform-submission-form .alert-stretch > .container,
+  form.webform-submission-form .form-group,
   .webform-confirmation,
   .container-md,
   .project-list > .view-content {
@@ -2125,11 +2125,11 @@ form.webform-submission-form .alert-stretch > .container:after,
   .region-header .page-header,
   .container-xs,
   .container-sm,
-  form.webform-submission-form .form-group,
   form.webform-submission-form > details,
   form.webform-submission-form > .form-type-checkbox,
   form.webform-submission-form > .form-type-textarea,
   form.webform-submission-form .alert-stretch > .container,
+  form.webform-submission-form .form-group,
   .webform-confirmation,
   .container-md,
   .project-list > .view-content {
@@ -2142,11 +2142,11 @@ form.webform-submission-form .alert-stretch > .container:after,
   .region-header .page-header,
   .container-xs,
   .container-sm,
-  form.webform-submission-form .form-group,
   form.webform-submission-form > details,
   form.webform-submission-form > .form-type-checkbox,
   form.webform-submission-form > .form-type-textarea,
   form.webform-submission-form .alert-stretch > .container,
+  form.webform-submission-form .form-group,
   .webform-confirmation,
   .container-md,
   .project-list > .view-content {
@@ -6966,11 +6966,11 @@ tbody.collapse.in {
 .region-header .page-header > .navbar-header,
 .container-xs > .navbar-header,
 .container-sm > .navbar-header,
-form.webform-submission-form .form-group > .navbar-header,
 form.webform-submission-form > details > .navbar-header,
 form.webform-submission-form > .form-type-checkbox > .navbar-header,
 form.webform-submission-form > .form-type-textarea > .navbar-header,
 form.webform-submission-form .alert-stretch > .container > .navbar-header,
+form.webform-submission-form .form-group > .navbar-header,
 .webform-confirmation > .navbar-header,
 .container-md > .navbar-header,
 .project-list > .view-content > .navbar-header,
@@ -6978,11 +6978,11 @@ form.webform-submission-form .alert-stretch > .container > .navbar-header,
 .region-header .page-header > .navbar-collapse,
 .container-xs > .navbar-collapse,
 .container-sm > .navbar-collapse,
-form.webform-submission-form .form-group > .navbar-collapse,
 form.webform-submission-form > details > .navbar-collapse,
 form.webform-submission-form > .form-type-checkbox > .navbar-collapse,
 form.webform-submission-form > .form-type-textarea > .navbar-collapse,
 form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
+form.webform-submission-form .form-group > .navbar-collapse,
 .webform-confirmation > .navbar-collapse,
 .container-md > .navbar-collapse,
 .project-list > .view-content > .navbar-collapse,
@@ -6997,11 +6997,11 @@ form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
   .region-header .page-header > .navbar-header,
   .container-xs > .navbar-header,
   .container-sm > .navbar-header,
-  form.webform-submission-form .form-group > .navbar-header,
   form.webform-submission-form > details > .navbar-header,
   form.webform-submission-form > .form-type-checkbox > .navbar-header,
   form.webform-submission-form > .form-type-textarea > .navbar-header,
   form.webform-submission-form .alert-stretch > .container > .navbar-header,
+  form.webform-submission-form .form-group > .navbar-header,
   .webform-confirmation > .navbar-header,
   .container-md > .navbar-header,
   .project-list > .view-content > .navbar-header,
@@ -7009,11 +7009,11 @@ form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
   .region-header .page-header > .navbar-collapse,
   .container-xs > .navbar-collapse,
   .container-sm > .navbar-collapse,
-  form.webform-submission-form .form-group > .navbar-collapse,
   form.webform-submission-form > details > .navbar-collapse,
   form.webform-submission-form > .form-type-checkbox > .navbar-collapse,
   form.webform-submission-form > .form-type-textarea > .navbar-collapse,
   form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
+  form.webform-submission-form .form-group > .navbar-collapse,
   .webform-confirmation > .navbar-collapse,
   .container-md > .navbar-collapse,
   .project-list > .view-content > .navbar-collapse,
@@ -7083,11 +7083,11 @@ form.webform-submission-form .alert-stretch > .container > .navbar-collapse,
   .region-header .navbar > .page-header .navbar-brand,
   .navbar > .container-xs .navbar-brand,
   .navbar > .container-sm .navbar-brand,
-  form.webform-submission-form .navbar > .form-group .navbar-brand,
   form.webform-submission-form.navbar > details .navbar-brand,
   form.webform-submission-form.navbar > .form-type-checkbox .navbar-brand,
   form.webform-submission-form.navbar > .form-type-textarea .navbar-brand,
   form.webform-submission-form .alert-stretch.navbar > .container .navbar-brand,
+  form.webform-submission-form .navbar > .form-group .navbar-brand,
   .navbar > .webform-confirmation .navbar-brand,
   .navbar > .container-md .navbar-brand,
   .project-list.navbar > .view-content .navbar-brand,
@@ -8006,11 +8006,11 @@ a.badge:focus {
 .region-header .page-header .jumbotron,
 .container-xs .jumbotron,
 .container-sm .jumbotron,
-form.webform-submission-form .form-group .jumbotron,
 form.webform-submission-form > details .jumbotron,
 form.webform-submission-form > .form-type-checkbox .jumbotron,
 form.webform-submission-form > .form-type-textarea .jumbotron,
 form.webform-submission-form .alert-stretch > .container .jumbotron,
+form.webform-submission-form .form-group .jumbotron,
 .webform-confirmation .jumbotron,
 .container-md .jumbotron,
 .project-list > .view-content .jumbotron,
@@ -8025,10 +8025,7 @@ form.webform-submission-form .alert-stretch > .container .jumbotron,
 .region-header .jumbotron .page-header,
 .jumbotron .container-xs,
 .jumbotron .container-sm,
-.jumbotron form.webform-submission-form .form-group,
-form.webform-submission-form .jumbotron .form-group,
-.jumbotron
-  form.webform-submission-form > details,
+.jumbotron form.webform-submission-form > details,
 .jumbotron
   form.webform-submission-form > .form-type-checkbox,
 .jumbotron
@@ -8036,6 +8033,9 @@ form.webform-submission-form .jumbotron .form-group,
 .jumbotron
   form.webform-submission-form .alert-stretch > .container,
 form.webform-submission-form .jumbotron .alert-stretch > .container,
+.jumbotron
+  form.webform-submission-form .form-group,
+form.webform-submission-form .jumbotron .form-group,
 .jumbotron .webform-confirmation,
 .jumbotron .container-md,
 .jumbotron .project-list > .view-content {
@@ -8052,11 +8052,11 @@ form.webform-submission-form .jumbotron .alert-stretch > .container,
   .region-header .page-header .jumbotron,
   .container-xs .jumbotron,
   .container-sm .jumbotron,
-  form.webform-submission-form .form-group .jumbotron,
   form.webform-submission-form > details .jumbotron,
   form.webform-submission-form > .form-type-checkbox .jumbotron,
   form.webform-submission-form > .form-type-textarea .jumbotron,
   form.webform-submission-form .alert-stretch > .container .jumbotron,
+  form.webform-submission-form .form-group .jumbotron,
   .webform-confirmation .jumbotron,
   .container-md .jumbotron,
   .project-list > .view-content .jumbotron,
@@ -10729,7 +10729,6 @@ a.list-group-item-danger.active:focus {
 }
 
 .fa,
-.form-required:before,
 .form-item--error-message:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -10805,13 +10804,11 @@ a.list-group-item-danger.active:focus {
 }
 
 .fa.fa-pull-left,
-.fa-pull-left.form-required:before,
 .fa-pull-left.form-item--error-message:before {
   margin-right: .3em;
 }
 
 .fa.fa-pull-right,
-.fa-pull-right.form-required:before,
 .fa-pull-right.form-item--error-message:before {
   margin-left: .3em;
 }
@@ -10832,27 +10829,20 @@ a.list-group-item-danger.active:focus {
 }
 
 .fa.pull-left,
-.pull-left.form-required:before,
 .pull-left.form-item--error-message:before {
   margin-right: .3em;
 }
 
 .fa.pull-right,
-#webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
-#webform-submission-candidature-aap-form .js-form-managed-file .description.form-required:before,
-#webform-submission-candidature-aap-form .js-form-managed-file .description.form-item--error-message:before,
-#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger,
-#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger.form-required:before,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.button--danger.form-item--error-message:before,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger.form-required:before,
-#webform-submission-candidature-aap-form .js-form-managed-file button.js-form-submit.btn-danger.form-item--error-message:before,
-.pull-right.form-required:before,
-.page-node-type-article .form-required.taskbar:before,
-.page-node-type-evenement .form-required.taskbar:before,
 .pull-right.form-item--error-message:before,
+#webform-submission-candidature-aap-form .js-form-managed-file .form-item--error-message.description:before,
+#webform-submission-candidature-aap-form .js-form-managed-file button.form-item--error-message.js-form-submit.btn-danger:before,
+#webform-submission-candidature-aap-form .js-form-managed-file button.form-item--error-message.js-form-submit.button--danger:before,
 .page-node-type-article .form-item--error-message.taskbar:before,
 .page-node-type-evenement .form-item--error-message.taskbar:before,
+#webform-submission-candidature-aap-form .js-form-managed-file .fa.description,
+#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.btn-danger,
+#webform-submission-candidature-aap-form .js-form-managed-file button.fa.js-form-submit.button--danger,
 .page-node-type-article .fa.taskbar,
 .page-node-type-evenement .fa.taskbar {
   margin-left: .3em;
@@ -11390,8 +11380,7 @@ a.list-group-item-danger.active:focus {
   content: "\F068";
 }
 
-.fa-asterisk:before,
-.form-required:before {
+.fa-asterisk:before {
   content: "\F069";
 }
 
@@ -14728,9 +14717,9 @@ a.list-group-item-danger.active:focus {
   .sidebar {
     top: 0;
     bottom: 0;
-    -webkit-transition: width 500ms;
-    -o-transition: width 500ms;
-    transition: width 500ms;
+    -webkit-transition: width 400ms;
+    -o-transition: width 400ms;
+    transition: width 400ms;
   }
 }
 
@@ -14974,9 +14963,9 @@ a.list-group-item-danger.active:focus {
 
 @media (min-width: 768px) {
   .sidebar-left ~ .sidebar-map .leaflet-left {
-    -webkit-transition: left 500ms;
-    -o-transition: left 500ms;
-    transition: left 500ms;
+    -webkit-transition: left 400ms;
+    -o-transition: left 400ms;
+    transition: left 400ms;
   }
 }
 
@@ -15006,9 +14995,9 @@ a.list-group-item-danger.active:focus {
 
 @media (min-width: 768px) {
   .sidebar-right ~ .sidebar-map .leaflet-right {
-    -webkit-transition: right 500ms;
-    -o-transition: right 500ms;
-    transition: right 500ms;
+    -webkit-transition: right 400ms;
+    -o-transition: right 400ms;
+    transition: right 400ms;
   }
 }
 
@@ -15360,6 +15349,13 @@ a.btn.button--primary:hover,
  * Form styles.
  */
 
+table .checkbox.form-no-label,
+table
+.radio.form-no-label {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .select-wrapper {
   display: inline-block;
   position: relative;
@@ -15406,13 +15402,13 @@ a.btn.button--primary:hover,
 }
 
 .select-wrapper:after {
-  color: #464545;
+  color: #303030;
   content: '\25BC';
   font-style: normal;
   font-weight: 400;
   line-height: 1;
   margin-top: -.5em;
-  padding-right: .5em;
+  padding-right: 0.5em;
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -15440,31 +15436,39 @@ a.btn.button--primary:hover,
   color: #fff;
 }
 
-form.webform-submission-form {
-  margin-bottom: 25px;
+.form-actions {
+  margin-top: 10px;
 }
 
-form.webform-submission-form .form-group:first-child,
-form.webform-submission-form .alert-stretch + details,
-form.webform-submission-form .alert-stretch + .form-group {
-  margin-top: 18px;
+.form-actions .btn,
+.form-actions .button,
+.form-actions .agora-header .more-link,
+.agora-header .form-actions .more-link,
+.form-actions .view-header > ul.links li a,
+.view-header > ul.links li .form-actions a,
+.form-actions .slider-sidebar .more-link,
+.slider-sidebar .form-actions .more-link,
+.form-actions .view-acteurs .more-link,
+.view-acteurs .form-actions .more-link,
+.form-actions .view-next-events .more-link,
+.view-next-events .form-actions .more-link,
+.form-actions .btn-group {
+  margin-right: 10px;
 }
 
-form.webform-submission-form .js-form-managed-file .alert-stretch {
-  display: none;
-}
-
-.webform-progress {
-  margin-bottom: 18px;
-}
-
-.agora-page-form {
-  padding-top: 30px;
-  padding-bottom: 45px;
-}
-
-.agora-page-form .form-actions button:not(:last-child) {
-  margin-right: 18px;
+.form-actions .btn-group .btn,
+.form-actions .btn-group .button,
+.form-actions .btn-group .agora-header .more-link,
+.agora-header .form-actions .btn-group .more-link,
+.form-actions .btn-group .view-header > ul.links li a,
+.view-header > ul.links li .form-actions .btn-group a,
+.form-actions .btn-group .slider-sidebar .more-link,
+.slider-sidebar .form-actions .btn-group .more-link,
+.form-actions .btn-group .view-acteurs .more-link,
+.view-acteurs .form-actions .btn-group .more-link,
+.form-actions .btn-group .view-next-events .more-link,
+.view-next-events .form-actions .btn-group .more-link {
+  margin-right: 0;
 }
 
 .form-options {
@@ -15489,6 +15493,12 @@ form.webform-submission-form .js-form-managed-file .alert-stretch {
   margin-left: 6px;
 }
 
+.form-inline.form-type-tel .control-label {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 6px;
+}
+
 .form-textarea-wrapper {
   margin-top: 9px;
 }
@@ -15506,8 +15516,70 @@ form.webform-submission-form .js-form-managed-file .alert-stretch {
   padding: 6px 9px;
 }
 
-.form-actions {
-  margin-top: 10px;
+.node-form .form-item.form-wrapper legend {
+  margin-bottom: 5px;
+  margin-left: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group-inline-repsonsive {
+  line-height: 45px;
+}
+
+.dark-background form {
+  background-color: #222222;
+  color: #fff;
+}
+
+.form-dropdown-block {
+  display: block;
+  text-align: left;
+}
+
+.form-dropdown-block h4,
+.form-dropdown-block h5 {
+  margin-top: 0;
+}
+
+.form-dropdown-block .panel {
+  box-shadow: none;
+}
+
+.form-managed-file .checkbox label .icheckbox_flat-red {
+  height: 20px;
+}
+
+.form-required:after {
+  background-image: url(../images/required.svg);
+  background-size: 10px 7px;
+  content: "";
+  display: inline-block;
+  line-height: 1;
+  height: 7px;
+  width: 10px;
+}
+
+.form-required {
+  margin-left: -15px;
+}
+
+.form-managed-file .form-required {
+  margin-left: 0;
+}
+
+.form-item--error-message {
+  margin: 5px;
+  color: rgba(255, 69, 0, 0.7);
+}
+
+.form-item--error-message:before {
+  margin-right: 5px;
+}
+
+.fieldgroup.dropdown .dropdown-menu,
+.fieldgroup .dropdown .dropdown-menu {
+  padding: 6px 9px;
 }
 
 .js .field--widget-entity-reference-paragraphs td {
@@ -15516,70 +15588,6 @@ form.webform-submission-form .js-form-managed-file .alert-stretch {
 
 .paragraphs-dropbutton-wrapper button:not(:last-child) {
   margin-right: 18px;
-}
-
-.node-form .form-item.form-wrapper legend {
-  margin-bottom: 5px;
-  margin-left: 6px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-#webform-submission-candidature-aap-form .webform-submission-navigation,
-#webform-submission-candidature-aap-form details[data-webform-element-id="candidature_aap--submission_information"] {
-  display: none;
-}
-
-#webform-submission-candidature-aap-form .description.help-block {
-  margin-left: 18px;
-}
-
-#webform-submission-candidature-aap-form .js-form-managed-file .description {
-  margin-top: 4.5px;
-  margin-bottom: 4.5px;
-}
-
-#webform-submission-candidature-aap-form > ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-table th.views-field-operations,
-table td.views-field-operations {
-  min-width: 130px;
-}
-
-.view-filters {
-  margin: 18px auto;
-  text-align: center;
-}
-
-.views-exposed-form .form-actions {
-  text-align: left;
-}
-
-.views-exposed-form .filter-sort .filter-sort-order {
-  display: none;
-}
-
-.views-exposed-form .filter-sort .filter-sort-order.toggle-active {
-  display: inline-block;
-}
-
-.views-exposed-form .dropdown-menu .form-item.radio,
-.views-exposed-form .dropdown-menu .form-item.checkbox {
-  display: block;
-}
-
-.views-exposed-form .dropdown-menu .form-item.radio input[type="radio"],
-.views-exposed-form .dropdown-menu .form-item.radio input[type="checkbox"],
-.views-exposed-form .dropdown-menu .form-item.checkbox input[type="radio"],
-.views-exposed-form .dropdown-menu .form-item.checkbox input[type="checkbox"] {
-  margin-right: 7px;
-}
-
-.form-group-inline-repsonsive {
-  line-height: 45px;
 }
 
 .form-horizontal .form-body {
@@ -15622,97 +15630,84 @@ table td.views-field-operations {
   margin: auto;
 }
 
-.dark-background form {
-  background-color: #222222;
-  color: #fff;
+table td.views-field-operations,
+table th.views-field-operations {
+  min-width: 130px;
 }
 
-.form-dropdown-block {
-  display: block;
+.view-filters {
+  margin: 18px auto;
+  text-align: center;
+}
+
+.views-exposed-form {
+  margin-bottom: 18px;
+}
+
+.views-exposed-form .form-actions {
   text-align: left;
 }
 
-.form-dropdown-block h4,
-.form-dropdown-block h5 {
-  margin-top: 0;
-}
-
-.form-dropdown-block .panel {
-  box-shadow: none;
-}
-
-div[id^="edit-field-actor-type-value"] .form-type-checkbox {
+.views-exposed-form .dropdown-menu .form-item.checkbox,
+.views-exposed-form .dropdown-menu .form-item.radio {
   display: block;
 }
 
-div[id^="edit-field-actor-type-value"] .form-checkbox {
-  margin-right: 15px;
-  margin-left: -30px;
+.views-exposed-form .dropdown-menu .form-item.checkbox input[type="radio"],
+.views-exposed-form .dropdown-menu .form-item.checkbox input[type="checkbox"],
+.views-exposed-form .dropdown-menu .form-item.radio input[type="radio"],
+.views-exposed-form .dropdown-menu .form-item.radio input[type="checkbox"] {
+  margin-right: 7px;
 }
 
-div[id^="edit-field-actor-type-value"] label.control-label.option {
-  display: block;
-  width: auto;
-  text-align: left;
-  margin: 5px 15px;
+form.webform-submission-form {
+  margin-bottom: 25px;
 }
 
-div[id^="edit-field-actor-type-value"] label.control-label.option::before {
-  display: block;
-  float: right;
-  content: '';
-  height: 21px;
-  width: 35px;
-  border-radius: 4px;
+form.webform-submission-form .alert-stretch + .form-group,
+form.webform-submission-form .alert-stretch + details,
+form.webform-submission-form .form-group:first-child {
+  margin-top: 18px;
 }
 
-.checkbox label .icheckbox_flat,
-.checkbox label .icheckbox_flat-grey,
-.checkbox label .icheckbox_flat-yellow,
-.checkbox label .icheckbox_flat-orange,
-.checkbox label .icheckbox_flat-red,
-.checkbox label .icheckbox_flat-pink,
-.checkbox label .icheckbox_flat-purple,
-.checkbox label .icheckbox_flat-blue,
-.checkbox label .icheckbox_flat-green,
-.checkbox label .icheckbox_flat-aero {
-  margin-left: -15px;
-  margin-right: 9px;
-  height: 22px;
-}
-
-.form-managed-file .checkbox label .icheckbox_flat-red {
-  height: 20px;
+form.webform-submission-form .js-form-managed-file .alert-stretch {
+  display: none;
 }
 
 .webform-element--title-inline label:after {
   display: none;
 }
 
-.form-required:before {
-  color: #F39C12;
-  margin-right: 5px;
-  font-size: 80%;
-  vertical-align: super;
+.webform-progress {
+  margin-bottom: 18px;
 }
 
-.form-managed-file .form-required:before {
-  position: absolute;
-  margin-left: -32px;
+.agora-page-form {
+  padding-top: 30px;
+  padding-bottom: 45px;
 }
 
-.form-required {
-  margin-left: -15px;
+.agora-page-form .form-actions button:not(:last-child) {
+  margin-right: 18px;
 }
 
-.form-managed-file .form-required {
-  margin-left: 0;
+#webform-submission-candidature-aap-form .webform-submission-navigation,
+#webform-submission-candidature-aap-form details[data-webform-element-id="candidature_aap--submission_information"] {
+  display: none;
 }
 
-.form-inline.form-type-tel .control-label {
-  display: block;
-  max-width: 100%;
-  margin-bottom: 6px;
+#webform-submission-candidature-aap-form .description.help-block {
+  margin-left: 18px;
+}
+
+#webform-submission-candidature-aap-form .js-form-managed-file .description {
+  margin-top: 4.5px;
+  margin-bottom: 4.5px;
+}
+
+#webform-submission-candidature-aap-form > ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .webform-file-button + .webform-file-button-input + .button.js-hide + .description {
@@ -15732,15 +15727,6 @@ div[id^="edit-field-actor-type-value"] label.control-label.option::before {
 .webform-file-button + .webform-file-button-input + .button.js-hide + .description .view-next-events .more-link,
 .view-next-events .webform-file-button + .webform-file-button-input + .button.js-hide + .description .more-link {
   margin-top: 1px;
-}
-
-.form-item--error-message {
-  margin: 5px;
-  color: rgba(255, 69, 0, 0.7);
-}
-
-.form-item--error-message:before {
-  margin-right: 5px;
 }
 
 .webform-preview {
@@ -15768,6 +15754,66 @@ div[id^="edit-field-actor-type-value"] label.control-label.option::before {
 
 .sage .webform-submission-navigation {
   display: none;
+}
+
+.checkbox label .icheckbox_flat,
+.checkbox label .icheckbox_flat-aero,
+.checkbox label .icheckbox_flat-blue,
+.checkbox label .icheckbox_flat-green,
+.checkbox label .icheckbox_flat-grey,
+.checkbox label .icheckbox_flat-orange,
+.checkbox label .icheckbox_flat-pink,
+.checkbox label .icheckbox_flat-purple,
+.checkbox label .icheckbox_flat-red,
+.checkbox label .icheckbox_flat-yellow {
+  margin-left: -15px;
+  margin-right: 9px;
+  height: 22px;
+}
+
+.icheckbox_line-red,
+.iradio_line-red {
+  background-color: #F7D3D2;
+}
+
+.icheckbox_line-green,
+.iradio_line-green {
+  background-color: #89E6C4;
+}
+
+.icheckbox_line-blue,
+.iradio_line-blue {
+  background-color: #ADD7F0;
+}
+
+.icheckbox_line-aero,
+.iradio_line-aero {
+  background-color: #D2E4E8;
+}
+
+.icheckbox_line-grey,
+.iradio_line-grey {
+  background-color: #D5D4D3;
+}
+
+.icheckbox_line-orange,
+.iradio_line-orange {
+  background-color: #FFD6B3;
+}
+
+.icheckbox_line-yellow,
+.iradio_line-yellow {
+  background-color: #FFE495;
+}
+
+.icheckbox_line-pink,
+.iradio_line-pink {
+  background-color: #E0D0DA;
+}
+
+.icheckbox_line-purple,
+.iradio_line-purple {
+  background-color: #D2CCDE;
 }
 
 /**
@@ -15851,11 +15897,11 @@ body.navbar-is-fixed-bottom {
   .region-header .navbar.page-header,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.webform-submission-form .navbar.form-group,
   form.webform-submission-form > details.navbar,
   form.webform-submission-form > .navbar.form-type-checkbox,
   form.webform-submission-form > .navbar.form-type-textarea,
   form.webform-submission-form .alert-stretch > .navbar.container,
+  form.webform-submission-form .navbar.form-group,
   .navbar.webform-confirmation,
   .navbar.container-md,
   .project-list > .navbar.view-content {
@@ -15868,11 +15914,11 @@ body.navbar-is-fixed-bottom {
   .region-header .navbar.page-header,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.webform-submission-form .navbar.form-group,
   form.webform-submission-form > details.navbar,
   form.webform-submission-form > .navbar.form-type-checkbox,
   form.webform-submission-form > .navbar.form-type-textarea,
   form.webform-submission-form .alert-stretch > .navbar.container,
+  form.webform-submission-form .navbar.form-group,
   .navbar.webform-confirmation,
   .navbar.container-md,
   .project-list > .navbar.view-content {
@@ -15885,11 +15931,11 @@ body.navbar-is-fixed-bottom {
   .region-header .navbar.page-header,
   .navbar.container-xs,
   .navbar.container-sm,
-  form.webform-submission-form .navbar.form-group,
   form.webform-submission-form > details.navbar,
   form.webform-submission-form > .navbar.form-type-checkbox,
   form.webform-submission-form > .navbar.form-type-textarea,
   form.webform-submission-form .alert-stretch > .navbar.container,
+  form.webform-submission-form .navbar.form-group,
   .navbar.webform-confirmation,
   .navbar.container-md,
   .project-list > .navbar.view-content {
@@ -15901,11 +15947,11 @@ body.navbar-is-fixed-bottom {
 .region-header .navbar.page-header > .container,
 .navbar.container-xs > .container,
 .navbar.container-sm > .container,
-form.webform-submission-form .navbar.form-group > .container,
 form.webform-submission-form > details.navbar > .container,
 form.webform-submission-form > .navbar.form-type-checkbox > .container,
 form.webform-submission-form > .navbar.form-type-textarea > .container,
 form.webform-submission-form .alert-stretch > .navbar.container > .container,
+form.webform-submission-form .navbar.form-group > .container,
 .navbar.webform-confirmation > .container,
 .navbar.container-md > .container,
 .project-list > .navbar.view-content > .container,
@@ -15913,10 +15959,7 @@ form.webform-submission-form .alert-stretch > .navbar.container > .container,
 .region-header .navbar.page-header > .page-header,
 .region-header .navbar.container-xs > .page-header,
 .region-header .navbar.container-sm > .page-header,
-form.webform-submission-form .region-header .navbar.form-group > .page-header,
-.region-header form.webform-submission-form .navbar.form-group > .page-header,
-.region-header
-form.webform-submission-form > details.navbar > .page-header,
+.region-header form.webform-submission-form > details.navbar > .page-header,
 .region-header
 form.webform-submission-form > .navbar.form-type-checkbox > .page-header,
 .region-header
@@ -15924,6 +15967,9 @@ form.webform-submission-form > .navbar.form-type-textarea > .page-header,
 form.webform-submission-form .region-header .alert-stretch > .navbar.container > .page-header,
 .region-header
 form.webform-submission-form .alert-stretch > .navbar.container > .page-header,
+form.webform-submission-form .region-header .navbar.form-group > .page-header,
+.region-header
+form.webform-submission-form .navbar.form-group > .page-header,
 .region-header .navbar.webform-confirmation > .page-header,
 .region-header .navbar.container-md > .page-header,
 .region-header .project-list > .navbar.view-content > .page-header,
@@ -15931,11 +15977,11 @@ form.webform-submission-form .alert-stretch > .navbar.container > .page-header,
 .region-header .navbar.page-header > .container-xs,
 .navbar.container-xs > .container-xs,
 .navbar.container-sm > .container-xs,
-form.webform-submission-form .navbar.form-group > .container-xs,
 form.webform-submission-form > details.navbar > .container-xs,
 form.webform-submission-form > .navbar.form-type-checkbox > .container-xs,
 form.webform-submission-form > .navbar.form-type-textarea > .container-xs,
 form.webform-submission-form .alert-stretch > .navbar.container > .container-xs,
+form.webform-submission-form .navbar.form-group > .container-xs,
 .navbar.webform-confirmation > .container-xs,
 .navbar.container-md > .container-xs,
 .project-list > .navbar.view-content > .container-xs,
@@ -15943,35 +15989,22 @@ form.webform-submission-form .alert-stretch > .navbar.container > .container-xs,
 .region-header .navbar.page-header > .container-sm,
 .navbar.container-xs > .container-sm,
 .navbar.container-sm > .container-sm,
-form.webform-submission-form .navbar.form-group > .container-sm,
 form.webform-submission-form > details.navbar > .container-sm,
 form.webform-submission-form > .navbar.form-type-checkbox > .container-sm,
 form.webform-submission-form > .navbar.form-type-textarea > .container-sm,
 form.webform-submission-form .alert-stretch > .navbar.container > .container-sm,
+form.webform-submission-form .navbar.form-group > .container-sm,
 .navbar.webform-confirmation > .container-sm,
 .navbar.container-md > .container-sm,
 .project-list > .navbar.view-content > .container-sm,
-form.webform-submission-form .navbar.container > .form-group,
-.region-header form.webform-submission-form .navbar.page-header > .form-group,
-form.webform-submission-form .region-header .navbar.page-header > .form-group,
-form.webform-submission-form .navbar.container-xs > .form-group,
-form.webform-submission-form .navbar.container-sm > .form-group,
-form.webform-submission-form .navbar.form-group > .form-group,
-form.webform-submission-form > details.navbar > .form-group,
-form.webform-submission-form > .navbar.form-type-checkbox > .form-group,
-form.webform-submission-form > .navbar.form-type-textarea > .form-group,
-form.webform-submission-form .alert-stretch > .navbar.container > .form-group,
-form.webform-submission-form .navbar.webform-confirmation > .form-group,
-form.webform-submission-form .navbar.container-md > .form-group,
-form.webform-submission-form .project-list > .navbar.view-content > .form-group,
 form.webform-submission-form.navbar.container > details,
 .region-header form.webform-submission-form.navbar.page-header > details,
 form.webform-submission-form.navbar.container-xs > details,
 form.webform-submission-form.navbar.container-sm > details,
-form.webform-submission-form form.webform-submission-form.navbar.form-group > details,
 form.webform-submission-form > form.webform-submission-form.navbar.form-type-checkbox > details,
 form.webform-submission-form > form.webform-submission-form.navbar.form-type-textarea > details,
 form.webform-submission-form .alert-stretch > form.webform-submission-form.navbar.container > details,
+form.webform-submission-form form.webform-submission-form.navbar.form-group > details,
 form.webform-submission-form.navbar.webform-confirmation > details,
 form.webform-submission-form.navbar.container-md > details,
 .project-list > form.webform-submission-form.navbar.view-content > details,
@@ -15979,10 +16012,10 @@ form.webform-submission-form.navbar.container > .form-type-checkbox,
 .region-header form.webform-submission-form.navbar.page-header > .form-type-checkbox,
 form.webform-submission-form.navbar.container-xs > .form-type-checkbox,
 form.webform-submission-form.navbar.container-sm > .form-type-checkbox,
-form.webform-submission-form form.webform-submission-form.navbar.form-group > .form-type-checkbox,
 form.webform-submission-form > form.webform-submission-form.navbar.form-type-checkbox > .form-type-checkbox,
 form.webform-submission-form > form.webform-submission-form.navbar.form-type-textarea > .form-type-checkbox,
 form.webform-submission-form .alert-stretch > form.webform-submission-form.navbar.container > .form-type-checkbox,
+form.webform-submission-form form.webform-submission-form.navbar.form-group > .form-type-checkbox,
 form.webform-submission-form.navbar.webform-confirmation > .form-type-checkbox,
 form.webform-submission-form.navbar.container-md > .form-type-checkbox,
 .project-list > form.webform-submission-form.navbar.view-content > .form-type-checkbox,
@@ -15990,10 +16023,10 @@ form.webform-submission-form.navbar.container > .form-type-textarea,
 .region-header form.webform-submission-form.navbar.page-header > .form-type-textarea,
 form.webform-submission-form.navbar.container-xs > .form-type-textarea,
 form.webform-submission-form.navbar.container-sm > .form-type-textarea,
-form.webform-submission-form form.webform-submission-form.navbar.form-group > .form-type-textarea,
 form.webform-submission-form > form.webform-submission-form.navbar.form-type-checkbox > .form-type-textarea,
 form.webform-submission-form > form.webform-submission-form.navbar.form-type-textarea > .form-type-textarea,
 form.webform-submission-form .alert-stretch > form.webform-submission-form.navbar.container > .form-type-textarea,
+form.webform-submission-form form.webform-submission-form.navbar.form-group > .form-type-textarea,
 form.webform-submission-form.navbar.webform-confirmation > .form-type-textarea,
 form.webform-submission-form.navbar.container-md > .form-type-textarea,
 .project-list > form.webform-submission-form.navbar.view-content > .form-type-textarea,
@@ -16003,23 +16036,37 @@ form.webform-submission-form .alert-stretch.navbar.page-header > .container,
 form.webform-submission-form .region-header .alert-stretch.navbar.page-header > .container,
 form.webform-submission-form .alert-stretch.navbar.container-xs > .container,
 form.webform-submission-form .alert-stretch.navbar.container-sm > .container,
-form.webform-submission-form .alert-stretch.navbar.form-group > .container,
 form.webform-submission-form > details.alert-stretch.navbar > .container,
 form.webform-submission-form > .alert-stretch.navbar.form-type-checkbox > .container,
 form.webform-submission-form > .alert-stretch.navbar.form-type-textarea > .container,
 form.webform-submission-form .alert-stretch > .alert-stretch.navbar.container > .container,
+form.webform-submission-form .alert-stretch.navbar.form-group > .container,
 form.webform-submission-form .alert-stretch.navbar.webform-confirmation > .container,
 form.webform-submission-form .alert-stretch.navbar.container-md > .container,
 form.webform-submission-form .project-list > .alert-stretch.navbar.view-content > .container,
+form.webform-submission-form .navbar.container > .form-group,
+.region-header
+form.webform-submission-form .navbar.page-header > .form-group,
+form.webform-submission-form .region-header .navbar.page-header > .form-group,
+form.webform-submission-form .navbar.container-xs > .form-group,
+form.webform-submission-form .navbar.container-sm > .form-group,
+form.webform-submission-form > details.navbar > .form-group,
+form.webform-submission-form > .navbar.form-type-checkbox > .form-group,
+form.webform-submission-form > .navbar.form-type-textarea > .form-group,
+form.webform-submission-form .alert-stretch > .navbar.container > .form-group,
+form.webform-submission-form .navbar.form-group > .form-group,
+form.webform-submission-form .navbar.webform-confirmation > .form-group,
+form.webform-submission-form .navbar.container-md > .form-group,
+form.webform-submission-form .project-list > .navbar.view-content > .form-group,
 .navbar.container > .webform-confirmation,
 .region-header .navbar.page-header > .webform-confirmation,
 .navbar.container-xs > .webform-confirmation,
 .navbar.container-sm > .webform-confirmation,
-form.webform-submission-form .navbar.form-group > .webform-confirmation,
 form.webform-submission-form > details.navbar > .webform-confirmation,
 form.webform-submission-form > .navbar.form-type-checkbox > .webform-confirmation,
 form.webform-submission-form > .navbar.form-type-textarea > .webform-confirmation,
 form.webform-submission-form .alert-stretch > .navbar.container > .webform-confirmation,
+form.webform-submission-form .navbar.form-group > .webform-confirmation,
 .navbar.webform-confirmation > .webform-confirmation,
 .navbar.container-md > .webform-confirmation,
 .project-list > .navbar.view-content > .webform-confirmation,
@@ -16027,11 +16074,11 @@ form.webform-submission-form .alert-stretch > .navbar.container > .webform-confi
 .region-header .navbar.page-header > .container-md,
 .navbar.container-xs > .container-md,
 .navbar.container-sm > .container-md,
-form.webform-submission-form .navbar.form-group > .container-md,
 form.webform-submission-form > details.navbar > .container-md,
 form.webform-submission-form > .navbar.form-type-checkbox > .container-md,
 form.webform-submission-form > .navbar.form-type-textarea > .container-md,
 form.webform-submission-form .alert-stretch > .navbar.container > .container-md,
+form.webform-submission-form .navbar.form-group > .container-md,
 .navbar.webform-confirmation > .container-md,
 .navbar.container-md > .container-md,
 .project-list > .navbar.view-content > .container-md,
@@ -16039,11 +16086,11 @@ form.webform-submission-form .alert-stretch > .navbar.container > .container-md,
 .region-header .project-list.navbar.page-header > .view-content,
 .project-list.navbar.container-xs > .view-content,
 .project-list.navbar.container-sm > .view-content,
-form.webform-submission-form .project-list.navbar.form-group > .view-content,
 form.webform-submission-form > details.project-list.navbar > .view-content,
 form.webform-submission-form > .project-list.navbar.form-type-checkbox > .view-content,
 form.webform-submission-form > .project-list.navbar.form-type-textarea > .view-content,
 form.webform-submission-form .alert-stretch > .project-list.navbar.container > .view-content,
+form.webform-submission-form .project-list.navbar.form-group > .view-content,
 .project-list.navbar.webform-confirmation > .view-content,
 .project-list.navbar.container-md > .view-content,
 .project-list > .project-list.navbar.view-content > .view-content,
@@ -16214,7 +16261,6 @@ mark,
 }
 
 .field--item .fa,
-.field--item .form-required:before,
 .field--item .form-item--error-message:before {
   margin-right: 5px;
 }
@@ -16320,16 +16366,19 @@ blockquote.info .field--type-address {
   margin-right: 10px;
 }
 
-article.acteur.list {
+article.acteur.list,
+article.arc-actor.list {
   margin-bottom: 21px;
 }
 
-article.acteur.full .panel > .list-group-item {
+article.acteur.full .panel > .list-group-item,
+article.arc-actor.full .panel > .list-group-item {
   border-width: 0;
   border-top-width: 1px;
 }
 
-article.acteur.full .panel > .list-group-item .type-helper-badge {
+article.acteur.full .panel > .list-group-item .type-helper-badge,
+article.arc-actor.full .panel > .list-group-item .type-helper-badge {
   display: inline-block;
   vertical-align: middle;
   height: 20px;
@@ -16337,7 +16386,9 @@ article.acteur.full .panel > .list-group-item .type-helper-badge {
 }
 
 article.acteur.full .panel > .list-group-item .text-left,
-article.acteur.full .panel > .list-group-item .text-right {
+article.acteur.full .panel > .list-group-item .text-right,
+article.arc-actor.full .panel > .list-group-item .text-left,
+article.arc-actor.full .panel > .list-group-item .text-right {
   padding: 2px 7px;
 }
 
@@ -16372,7 +16423,6 @@ article.acteur.full .panel > .list-group-item .text-right {
 }
 
 .panel .media-left .fa,
-.panel .media-left .form-required:before,
 .panel .media-left .form-item--error-message:before {
   font-size: 21px;
   width: 21px;
@@ -16470,7 +16520,6 @@ table.table-condensed .file-entity {
 
 table.table-condensed .file-entity > img,
 table.table-condensed .file-entity > i.fa,
-table.table-condensed .file-entity > i.form-required:before,
 table.table-condensed .file-entity > i.form-item--error-message:before {
   vertical-align: middle;
   line-height: 41px;
@@ -17057,10 +17106,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .agenda-preview .item .time .fa,
-.agenda-preview .item .time .form-required:before,
 .agenda-preview .item .time .form-item--error-message:before,
 .agenda-preview .item .location .fa,
-.agenda-preview .item .location .form-required:before,
 .agenda-preview .item .location .form-item--error-message:before {
   color: #303030;
 }
@@ -17071,7 +17118,6 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .agenda-preview .item .time .fa,
-.agenda-preview .item .time .form-required:before,
 .agenda-preview .item .time .form-item--error-message:before {
   margin-left: 3px;
   margin-right: 7px;
@@ -17108,7 +17154,6 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 }
 
 .map-tooltip .btn-link i.fa,
-.map-tooltip .btn-link i.form-required:before,
 .map-tooltip .btn-link i.form-item--error-message:before {
   vertical-align: middle;
 }
@@ -17185,6 +17230,363 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
 
 .leaflet-control-attribution a:hover {
   text-decoration: none;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2000;
+  box-shadow: none;
+}
+
+.sidebar.leaflet-touch {
+  box-shadow: none;
+  border-right: none;
+}
+
+.sidebar.collapsed {
+  width: 45px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    top: 0;
+    bottom: 0;
+    -webkit-transition: width 400ms;
+    -o-transition: width 400ms;
+    transition: width 400ms;
+    border-radius: 0;
+  }
+
+  .sidebar.leaflet-touch {
+    border: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    width: 300px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar {
+    width: 420px;
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 600px;
+    max-width: 600px;
+  }
+}
+
+.sidebar-left {
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar-left {
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-left ~ .leaflet-control-container .leaflet-left {
+    -webkit-transition: left 400ms;
+    -o-transition: left 400ms;
+    transition: left 400ms;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 300px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 420px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-left.collapsed ~ .leaflet-control-container .leaflet-left {
+    left: 45px;
+  }
+}
+
+.sidebar-right {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar-right {
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-right ~ .leaflet-control-container .leaflet-right {
+    -webkit-transition: right 400ms;
+    -o-transition: right 400ms;
+    transition: right 400ms;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 300px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 420px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-right.collapsed ~ .leaflet-control-container .leaflet-right {
+    right: 45px;
+  }
+}
+
+.sidebar-tabs {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #fff;
+}
+
+.sidebar-left .sidebar-tabs {
+  left: 0;
+}
+
+.sidebar-right .sidebar-tabs {
+  right: 0;
+}
+
+.sidebar-tabs,
+.sidebar-tabs > ul {
+  position: absolute;
+  width: 45px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-tabs > li,
+.sidebar-tabs > ul > li {
+  width: 100%;
+  height: 45px;
+  color: #2C3E50;
+  background: transparent;
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-transition: all 80ms;
+  -o-transition: all 80ms;
+  transition: all 80ms;
+}
+
+.sidebar-tabs > li:hover,
+.sidebar-tabs > ul > li:hover {
+  color: #303030;
+  background-color: rgba(255, 255, 0, 0.9);
+}
+
+.sidebar-tabs > li.active,
+.sidebar-tabs > ul > li.active {
+  color: #fff;
+  background-color: #222222;
+}
+
+.sidebar-tabs > li.disabled,
+.sidebar-tabs > ul > li.disabled {
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.sidebar-tabs > li.disabled:hover,
+.sidebar-tabs > ul > li.disabled:hover {
+  background: transparent;
+}
+
+.sidebar-tabs > li.disabled > a,
+.sidebar-tabs > ul > li.disabled > a {
+  cursor: default;
+}
+
+.sidebar-tabs > li > a,
+.sidebar-tabs > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 45px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sidebar-tabs > li > a .fa,
+.sidebar-tabs > li > a .form-item--error-message:before,
+.sidebar-tabs > ul > li > a .fa,
+.sidebar-tabs > ul > li > a .form-item--error-message:before {
+  margin-left: -2px;
+}
+
+.sidebar-tabs > ul + ul {
+  bottom: 0;
+}
+
+.sidebar-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar-left .sidebar-content {
+  left: 45px;
+  right: 0;
+}
+
+.sidebar-right .sidebar-content {
+  left: 0;
+  right: 45px;
+}
+
+.sidebar.collapsed > .sidebar-content {
+  overflow-y: hidden;
+}
+
+.sidebar-content .media-left .img-responsive,
+.sidebar-content .media-right .img-responsive {
+  max-width: 150px;
+}
+
+.sidebar-content .media {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 9px;
+  margin: 0 -15px 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.sidebar-content .media:hover {
+  border-color: rgba(255, 255, 0, 0.9);
+}
+
+.sidebar-content .media .media-body {
+  position: relative;
+  padding-left: 5px;
+  padding-bottom: 27px;
+}
+
+.sidebar-content .media .media-body h1,
+.sidebar-content .media .media-body .h1,
+.sidebar-content .media .media-body h2,
+.sidebar-content .media .media-body .h2,
+.sidebar-content .media .media-body h3,
+.sidebar-content .media .media-body .h3,
+.sidebar-content .media .media-body h3.alt {
+  margin-top: 0;
+}
+
+.sidebar-content .media .media-body .media-row {
+  margin: 6px auto;
+}
+
+.sidebar-content .media .social {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+
+.sidebar-content .media .social a:hover {
+  color: #222222;
+}
+
+.sidebar-pane {
+  display: none;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.sidebar-pane.active {
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-pane {
+    min-width: 255px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar-pane {
+    min-width: 375px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar-pane {
+    min-width: 555px;
+  }
+}
+
+.sidebar-header {
+  margin: -10px -15px 9px;
+  height: 45px;
+  padding: 0 15px;
+  line-height: 45px;
+  font-size: 16.8px;
+  color: #fff;
+  background-color: #222222;
+}
+
+.sidebar-right .sidebar-header {
+  padding-left: 45px;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar-left .sidebar-close {
+  right: 0;
+}
+
+.sidebar-right .sidebar-close {
+  left: 0;
 }
 
 /**
@@ -17606,32 +18008,27 @@ fieldset[disabled] .view-next-events .focus.more-link,
   background-color: #EBEBEB !important;
 }
 
-.type-helper-1,
-div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-1"]::before {
+.type-helper-1 {
   background-color: #D81E41 !important;
   color: #fff !important;
 }
 
-.type-helper-2,
-div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-2"]::before {
+.type-helper-2 {
   background-color: rgba(0, 191, 255, 0.8) !important;
   color: #fff !important;
 }
 
-.type-helper-3,
-div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-3"]::before {
+.type-helper-3 {
   background-color: rgba(255, 255, 0, 0.9) !important;
   color: #fff !important;
 }
 
-.type-helper-4,
-div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-4"]::before {
+.type-helper-4 {
   background-color: #18BC9C !important;
   color: #fff !important;
 }
 
-.type-helper-5,
-div[id^="edit-field-actor-type-value"] label[for^="edit-field-actor-type-value-5"]::before {
+.type-helper-5 {
   background-color: #F39C12 !important;
   color: #fff !important;
 }
@@ -17707,10 +18104,8 @@ header .navbar-brand {
 }
 
 .sidebar-tabs > li > a .fa,
-.sidebar-tabs > li > a .form-required:before,
 .sidebar-tabs > li > a .form-item--error-message:before,
 .sidebar-tabs > ul > li > a .fa,
-.sidebar-tabs > ul > li > a .form-required:before,
 .sidebar-tabs > ul > li > a .form-item--error-message:before {
   margin-left: -2px;
 }
@@ -17799,7 +18194,6 @@ header .navbar-brand {
 }
 
 .container-sm,
-form.webform-submission-form .form-group,
 form.webform-submission-form > details,
 form.webform-submission-form > .form-type-checkbox,
 form.webform-submission-form > .form-type-textarea,
@@ -17811,6 +18205,7 @@ form.webform-submission-form .alert-stretch > .container-xs,
 form.webform-submission-form .alert-stretch > .container-sm,
 form.webform-submission-form .alert-stretch > .container-md,
 form.webform-submission-form .project-list.alert-stretch > .view-content,
+form.webform-submission-form .form-group,
 .webform-confirmation {
   max-width: 750px;
 }

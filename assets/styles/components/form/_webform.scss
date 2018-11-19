@@ -1,0 +1,108 @@
+form.webform-submission-form {
+  margin-bottom: 25px;
+
+  & > details,
+  & > .form-type-checkbox,
+  & > .form-type-textarea,
+  .alert-stretch > .container,
+  .form-group {
+    @extend .container-sm;
+  }
+
+  .alert-stretch + .form-group,
+  .alert-stretch + details,
+  .form-group:first-child {
+    margin-top: $padding-large-vertical;
+  }
+
+  .js-form-managed-file .alert-stretch {
+    display: none;
+  }
+
+  & > details {
+    @extend .well;
+  }
+}
+
+.webform-element--title-inline label:after {
+  display: none;
+}
+
+.webform-progress {
+  margin-bottom: $padding-large-vertical;
+}
+
+.agora-page-form {
+  padding-top: $padding-base-horizontal * 2;
+  padding-bottom: $padding-base-horizontal * 3;
+
+  .form-actions button:not(:last-child) {
+    margin-right: $padding-large-vertical;
+  }
+}
+
+#webform-submission-candidature-aap-form {
+  .webform-submission-navigation,
+  details[data-webform-element-id="candidature_aap--submission_information"] {
+    display: none;
+  }
+
+  .description.help-block {
+    margin-left: $padding-large-vertical;
+  }
+
+  .js-form-managed-file {
+    .description {
+      @extend .pull-right;
+      @extend .clearfix;
+      margin-top: $padding-small-horizontal / 2;
+      margin-bottom: $padding-small-horizontal / 2;
+    }
+
+    button.js-form-submit.btn-danger {
+      @extend .pull-right;
+      @extend .btn-xs;
+    }
+  }
+}
+
+#webform-submission-candidature-aap-form > ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.webform-file-button + .webform-file-button-input + .button.js-hide + .description {
+  display: inline-block;
+
+  .btn {
+    margin-top: 1px;
+  }
+}
+
+.webform-preview {
+  margin-bottom: $padding-large-vertical * 1.5;
+
+  .webform-element {
+    padding-left: $padding-base-horizontal;
+  }
+
+  label.control-label {
+    display: block;
+    margin-left: -10px;
+    margin-bottom: $padding-small-vertical;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+.webform-confirmation {
+  @extend .container-sm;
+  padding-top: $padding-base-vertical * 1.5;
+}
+
+.sage .webform-submission-navigation {
+  display: none;
+}

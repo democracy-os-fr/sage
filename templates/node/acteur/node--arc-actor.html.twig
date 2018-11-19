@@ -16,8 +16,8 @@
 
 
   <div class="panel panel-default">
-    {% if content.field_image_acteur|field_value %}
-      {{ content.field_image_acteur|field_value }}
+    {% if content.field_image|field_target_entity %}
+      {{ content.field_image|field_value }}
     {% else %}
       <div class="font-avatar">
         {{ label|field_value[0]['#context']['value'][:1]|upper }}
@@ -25,8 +25,8 @@
     {% endif %}
 
     <h3 class="alt">
-    {% if content.field_site_internet|field_value %}
-      <a href="{{content.field_site_internet|field_value[0]['#title']}}" target="_blank">{{ label }}</a>
+    {% if content.field_link_social_web|field_value %}
+      <a href="{{content.field_link_social_web|field_value[0]['#title']}}" target="_blank">{{ label }}</a>
     {% else %}
       {{ label }}
     {% endif %}
@@ -38,27 +38,27 @@
     </h3>
 
     <div class="social pad-bottom">
-      {% if content.field_site_internet|field_value %}
-        <a href="{{content.field_site_internet|field_value[0]['#title']}}" target="_blank"
-          title="{{content.field_site_internet|field_label}}">
+      {% if content.field_link_social_web|field_value %}
+        <a href="{{content.field_link_social_web|field_value[0]['#title']}}" target="_blank"
+          title="{{content.field_link_social_web|field_label}}">
           <i class="fa fa-lg fa-fw fa-link"></i>
         </a>
       {% endif %}
-      {% if content.field_reseau_social_twitter_link|field_value %}
-        <a href="{{content.field_reseau_social_twitter_link|field_value[0]['#url']}}" target="_blank"
-          title="{{content.field_reseau_social_twitter_link|field_label}} : {{content.field_reseau_social_twitter_link|field_value[0]['#title']}}">
+      {% if content.field_link_social_twitter|field_value %}
+        <a href="{{content.field_link_social_twitter|field_value[0]['#url']}}" target="_blank"
+          title="{{content.field_link_social_twitter|field_label}} : {{content.field_link_social_twitter|field_value[0]['#title']}}">
           <i class="fa fa-lg fa-fw fa-twitter"></i>
         </a>
       {% endif %}
-      {% if content.field_reseau_social_facebook|field_value %}
-        <a href="{{content.field_reseau_social_facebook|field_value[0]['#url']}}" target="_blank"
-          title="{{content.field_reseau_social_facebook|field_label}} : {{content.field_reseau_social_facebook|field_value[0]['#title']}}">
+      {% if content.field_link_social_facebook|field_value %}
+        <a href="{{content.field_link_social_facebook|field_value[0]['#url']}}" target="_blank"
+          title="{{content.field_link_social_facebook|field_label}} : {{content.field_link_social_facebook|field_value[0]['#title']}}">
           <i class="fa fa-lg fa-fw fa-facebook"></i>
         </a>
       {% endif %}
-      {% if content.field_reseau_social_youtube|field_value %}
-        <a href="{{content.field_reseau_social_youtube|field_value[0]['#url']}}" target="_blank"
-          title="{{content.field_reseau_social_youtube|field_label}} : {{content.field_reseau_social_youtube|field_value[0]['#title']}}">
+      {% if content.field_link_social_youtube|field_value %}
+        <a href="{{content.field_link_social_youtube|field_value[0]['#url']}}" target="_blank"
+          title="{{content.field_link_social_youtube|field_label}} : {{content.field_link_social_youtube|field_value[0]['#title']}}">
           <i class="fa fa-lg fa-fw fa-youtube-play"></i>
         </a>
       {% endif %}
@@ -70,8 +70,8 @@
 
     <div class="list-group-item">
       {% if content.field_actor_type|field_value %}
-          {% for aType in content.field_actor_type|field_value %}
-            {% set selectedValue = content.field_actor_type['#items'].getValue()[loop.index0].value %}
+          {% for aType in content.field_list_actor_type|field_value %}
+            {% set selectedValue = content.field_list_actor_type['#items'].getValue()[loop.index0].value %}
             <div class="row">
               <div class="col-xs-2 text-right">
                 <span class="label type-helper-badge type-helper-{{ selectedValue ?:0 }}">
@@ -79,7 +79,7 @@
                 </span>
               </div>
               <div class="col-xs-10 text-left">
-                {{content.field_actor_type|field_value[loop.index0]}}
+                {{content.field_list_actor_type|field_value[loop.index0]}}
               </div>
             </div>
           {% endfor %}
@@ -90,7 +90,7 @@
 
   {% if user.hasPermission('administer nodes') %}
     <div class="well text-left">
-      {{ content.field_import_id }}
+      {{ content.import_id }}
       {{ content.field_geofield }}
       {{ content.field_faicon }}
     </div>

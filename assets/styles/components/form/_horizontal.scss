@@ -1,0 +1,36 @@
+.form-horizontal {
+
+  .form-body {
+    padding: 0 $padding-base-horizontal;
+    .form-group {
+      margin-bottom: 5px;
+    }
+  }
+
+  .radio, .checkbox,
+  .radio-inline, .checkbox-inline {
+    padding-top: 0;
+  }
+
+  .form-exposed-group {
+    padding-left: 45px;
+    .form-exposed-group-inner {
+      padding: 0 24px 0 6px;
+    }
+    .btn-group-justified {
+      margin: 0 $padding-small-vertical;
+    }
+  }
+
+  .form-exposed-actions {
+    text-align: right;
+    padding-right: 25px;
+  }
+
+  .form-btn-justified {
+    text-align: center;
+    .form-group {
+      margin: auto;
+    }
+  }
+}

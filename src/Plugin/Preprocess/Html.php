@@ -26,6 +26,7 @@ class Html extends PreprocessBase implements PreprocessInterface {
    * {@inheritdoc}
    */
   public function preprocessVariables(Variables $variables) {
+
     $body_attributes = isset($variables['attributes']) ? $variables['attributes'] : new Attribute();
     if(is_array($body_attributes)) {
       $body_attributes = new Attribute($body_attributes) ;
