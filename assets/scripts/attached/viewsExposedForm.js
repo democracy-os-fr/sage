@@ -62,9 +62,9 @@
         'soon': 'aero',
         'tdb': 'aero',
         'acteur': 'grey',
-        'arc_actor': 'grey',
-        'arc_proposal': 'grey',
-        'project': 'grey',
+        'arc_actor': 'blue',
+        'arc_proposal': 'blue',
+        'project': 'yellow',
       };
 
       $('.views-exposed-form .js-form-type-checkbox input',context).once('ViewsExposedForm').each(function(){
@@ -74,8 +74,8 @@
 
         label.replaceWith(self);
         self.iCheck({
-          checkboxClass: 'icheckbox_line-' + mapping[self.val()],
-          radioClass: 'iradio_line-' + mapping[self.val()],
+          checkboxClass: 'icheckbox_line-' + 'blue', // + mapping[self.val()],
+          radioClass: 'iradio_line-' + 'blue', // + mapping[self.val()],
           uncheckedClass: 'pseudo-disabled',
           indeterminateClass: 'pseudo-disabled',
           insert: '<div class="icheck_line-icon"></div>' + label_text,

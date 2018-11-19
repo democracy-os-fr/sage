@@ -69,21 +69,7 @@
     </div>
 
     <div class="list-group-item">
-      {% if content.field_actor_type|field_value %}
-          {% for aType in content.field_list_actor_type|field_value %}
-            {% set selectedValue = content.field_list_actor_type['#items'].getValue()[loop.index0].value %}
-            <div class="row">
-              <div class="col-xs-2 text-right">
-                <span class="label type-helper-badge type-helper-{{ selectedValue ?:0 }}">
-                  &emsp;
-                </span>
-              </div>
-              <div class="col-xs-10 text-left">
-                {{content.field_list_actor_type|field_value[loop.index0]}}
-              </div>
-            </div>
-          {% endfor %}
-      {% endif %}
+      {{ content.field_type_tags }}
     </div>
 
   </div> <!-- panel -->
