@@ -17257,6 +17257,12 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   width: 45px;
 }
 
+.sidebar .fieldgroup.dropdown .dropdown-menu,
+.sidebar .fieldgroup .dropdown .dropdown-menu {
+  padding: 6px 9px;
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .sidebar {
     top: 0;

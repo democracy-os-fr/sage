@@ -59,6 +59,11 @@ $sidebar-content-padding-horizontal: $padding-base-horizontal !default;
         width: $sidebar-tab-size;
     }
 
+    .fieldgroup.dropdown .dropdown-menu, .fieldgroup .dropdown .dropdown-menu {
+        padding: 6px 9px;
+        width: 100%;
+    }
+
     @media(min-width:$sidebar-threshold-sm) {
         top: $sidebar-margins;
         bottom: $sidebar-margins;
